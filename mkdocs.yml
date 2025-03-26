@@ -1,0 +1,44 @@
+site_name: Grid Mappers
+site_url: https://mydomain.org/gridmappers
+nav:
+  - Projects: index.md
+  - Spreadsheet: spreadsheet.md
+  - Education: education.md
+  - Contribute: contributing.md
+  - Presentations: "presentations.md"
+
+copyright:    <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">
+      Creative Commons Attribution 4.0 International License   </a>
+
+theme:
+  name: material
+  favicon: images/logo_grid.png
+  logo: images/logo_grid.png
+  palette: 
+    # Dark Mode
+    - scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: Dark mode
+      primary: light green
+      accent: indigo
+
+    # Light Mode
+    - scheme: default
+      toggle:
+        icon: material/weather-night
+        name: Light mode
+      primary: light green
+      accent: indigo
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.expand
+    - navigation.indexes
+    - toc.integrate
+    - search.highlight
+    - search.suggest
+    - navigation.top
+
+
+  
