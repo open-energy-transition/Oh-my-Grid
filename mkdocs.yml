@@ -5,11 +5,11 @@ repo_name: 'Grid-mappers'
 repo_url: 'https://github.com/AndreasHD11/Grid-mappers'
 
 nav:
-  - The Initiative: docs/index.md
-  - Starter-kit tutorial: docs/starter-kit.md
-  - Tools: docs/tools.md
-  - Awesome List: docs/awesome.md
-  - Contribute: docs/contributing.md
+  - The Initiative: index.md
+  - Starter-kit tutorial: starter-kit.md
+  - Tools: tools.md
+  - Awesome List: awesome.md
+  - Contribute: contributing.md
 
 copyright:    <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">
       Creative Commons Attribution 4.0 International License   </a>
