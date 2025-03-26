@@ -1,15 +1,15 @@
 site_name: Grid Mappers
 site_url: 'https://gridmappers'
+site_description: We aim to contribute to mapping countries' electricity grid systems around the world. We strive to improving the power infrastructure data on OpenStreetMap, to enhance global energy system modeling. 
 repo_name: 'Grid-mappers'
 repo_url: 'https://github.com/AndreasHD11/Grid-mappers'
 
 nav:
-  - 
-  - Projects: index.md
-  - Spreadsheet: spreadsheet.md
-  - Education: education.md
-  - Contribute: contributing.md
-  - Presentations: "presentations.md"
+  - Our Goal: docs/index.md
+  - Starter-kit tutorial: docs/starter-kit.md
+  - Tools: docs/tools.md
+  - Awesome List: docs/awesome.md
+  - Contribute: docs/contributing.md
 
 copyright:    <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">
       Creative Commons Attribution 4.0 International License   </a>
@@ -43,6 +43,9 @@ theme:
     - search.highlight
     - search.suggest
     - navigation.top
+
+extra_css:
+    - css/extra.css
 
 
   
