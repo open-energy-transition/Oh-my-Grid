@@ -1,5 +1,5 @@
 site_name: Grid Mappers
-site_url: https://mydomain.org/gridmappers
+site_url: https://gridmappers
 nav:
   - Projects: index.md
   - Spreadsheet: spreadsheet.md
