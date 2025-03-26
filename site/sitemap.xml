@@ -4,4 +4,20 @@
          <loc>https://gridmappers/</loc>
          <lastmod>2025-03-26</lastmod>
     </url>
+    <url>
+         <loc>https://gridmappers/awesome/</loc>
+         <lastmod>2025-03-26</lastmod>
+    </url>
+    <url>
+         <loc>https://gridmappers/contributing/</loc>
+         <lastmod>2025-03-26</lastmod>
+    </url>
+    <url>
+         <loc>https://gridmappers/starter-kit/</loc>
+         <lastmod>2025-03-26</lastmod>
+    </url>
+    <url>
+         <loc>https://gridmappers/tools/</loc>
+         <lastmod>2025-03-26</lastmod>
+    </url>
 </urlset>
