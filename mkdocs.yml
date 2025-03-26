@@ -1,6 +1,10 @@
 site_name: Grid Mappers
-site_url: https://gridmappers
+site_url: 'https://gridmappers'
+repo_name: 'Grid-mappers'
+repo_url: 'https://github.com/AndreasHD11/Grid-mappers'
+
 nav:
+  - 
   - Projects: index.md
   - Spreadsheet: spreadsheet.md
   - Education: education.md
