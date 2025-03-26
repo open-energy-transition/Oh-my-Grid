@@ -5,3 +5,5 @@
 
 ## Grid Mapping
 This directory includes information on the initiative, a starter-kit so that you can get started with grid-mapping, a list of tools developed to map more efficiently and accurately, and the awesome list! 
+
+⚠️ **If you're eager to get started with transmission grid mapping in OpenStreetMap, check out the [Grid Mapping Starter Kit](https://github.com/open-energy-transition/grid-mapping-starter-kit) and [our community discord channel](https://discord.gg/6bPK5TXn).** ⚠️
