@@ -5,7 +5,7 @@ repo_name: 'Grid-mappers'
 repo_url: 'https://github.com/AndreasHD11/Grid-mappers'
 
 nav:
-  - Our Goal: docs/index.md
+  - The Initiative: docs/index.md
   - Starter-kit tutorial: docs/starter-kit.md
   - Tools: docs/tools.md
   - Awesome List: docs/awesome.md
