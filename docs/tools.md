@@ -23,11 +23,13 @@ Tip: Certain countries have different names associated, so to fetch the data for
 
 ### How to use the GEM power plants per country tool
 1. Go to the [repository](https://github.com/open-energy-transition/gem_per_country) and copy the line to clone (instructions can be found there)
-2. In your terminal/command prompt: 
+<div class="align-with-heading">
+  <img src="../images/gem_angola.png" class="img-border" width="300">
+</div>
+2. In your terminal/command prompt:
 ```
 git clone https://github.com/open-energy-transition/gem_per_country.git
 ```
-<img src="../images/gem_angola.png" class="img-border" align="right" width="320">
 ```
 cd gem_per_country
 ```
