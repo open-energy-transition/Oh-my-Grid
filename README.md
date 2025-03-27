@@ -3,7 +3,7 @@
 
 <br>
 
-Our inititative aims to contribute to mapping countries' electricity grid systems around the world in OpenStreetMap(OSM).
+Our inititative aims to contribute to mapping countries' electricity grid systems around the world in OpenStreetMap (OSM).
 This directory includes information on the initiative, a starter-kit so that you can get started with grid-mapping, a list of tools developed to map more efficiently and accurately, and the awesome list full of useful datasets! 
 
 [![](https://badgen.net/badge/See/Wiki/A2CDAE?scale=1.6)](https://wiki.openstreetmap.org/wiki/Organised_Editing/Activities/Electricity_Grid_Mapping) [![](https://badgen.net/badge/Follow/Tutorial/A2CDAE?scale=1.6)](https://andreashd11.github.io/Grid-mappers/starter-kit/) [![](https://badgen.net/badge/Join/DiscordGroup/A2CDAE?scale=1.6)](https://discord.gg/6bPK5TXn)  
