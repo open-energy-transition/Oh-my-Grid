@@ -1,7 +1,7 @@
 # Grid Mappers
 
-<div style="float: right; margin-left: 20px; margin-bottom: 20px;">
-  <img src="docs/images/logo.png" width="350">
+<div style="float: right; margin-left: 20px; margin-bottom: 20px; width: 350px;">
+  <img src="docs/images/logo.png" style="width: 100%;">
 </div>
 
 **A directory and guide to power grid infrastructure mapping in OpenStreetMap.**  
