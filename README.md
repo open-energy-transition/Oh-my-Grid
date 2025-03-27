@@ -1,15 +1,13 @@
 # Grid Mappers
+<img src= docs/images/logo.png align="right" width="450">__**A directory and guide to power grid infrastructure mapping in OpenStreetMap.**__ <br> <br> We aim to contribute to mapping countries' electricity grid systems around the world. We strive to improving the power infrastructure data on OpenStreetMap, to enhance global energy system modelling. 
 
-<div style="float: right; margin-left: 15px; margin-bottom: 20px;">
-  <img src="images/logo.png" class="img-border" style="float: right; margin-left: 20px;" width="350">
-</div>
-
+<br>
 **A directory and guide to power grid infrastructure mapping in OpenStreetMap.**  
 
 Our inititative aims to contribute to mapping countries' electricity grid systems around the world in OpenStreetMap(OSM).
 This directory includes information on the initiative, a starter-kit so that you can get started with grid-mapping, a list of tools developed to map more efficiently and accurately, and the awesome list full of useful datasets! 
 
-[![](https://badgen.net/badge/See/Wiki/A2CDAE?scale=1.6)](https://wiki.openstreetmap.org/wiki/Organised_Editing/Activities/Electricity_Grid_Mapping) [![](https://badgen.net/badge/Follow/Tutorial/A2CDAE?scale=1.6)](https://andreashd11.github.io/Grid-mappers/starter-kit/) [![](https://badgen.net/badge/Join/Discord Group/A2CDAE?scale=1.6)](https://discord.gg/6bPK5TXn)  
+[![](https://badgen.net/badge/See/Wiki/A2CDAE?scale=1.6)](https://wiki.openstreetmap.org/wiki/Organised_Editing/Activities/Electricity_Grid_Mapping) [![](https://badgen.net/badge/Follow/Tutorial/A2CDAE?scale=1.6)](https://andreashd11.github.io/Grid-mappers/starter-kit/) [![](https://badgen.net/badge/Join/DiscordGroup/A2CDAE?scale=1.6)](https://discord.gg/6bPK5TXn)  
 [![](https://badgen.net/badge/Use/Tools/A2CDAE?scale=1.6)](https://andreashd11.github.io/Grid-mappers/tools/) [![](https://badgen.net/badge/Find/AwesomeList/A2CDAE?scale=1.6)](https://github.com/open-energy-transition/Awesome-Electric-Grid-Mapping) [![](https://badgen.net/badge/Icon/Contribute/A2CDAE?scale=1.6&label=%F0%9F%9A%80)](https://andreashd11.github.io/Grid-mappers/contributing/)
 
 ## Why map the electricity grid and improve available data?
