@@ -1,16 +1,19 @@
-.md-header__button.md-logo {
-    margin-top: 0;
-    margin-bottom: 0;
-    padding-top: 0;
-    padding-bottom: 0;
-  }
-  
-  .md-header__button.md-logo img,
-  .md-header__button.md-logo svg {
-    height: 40%;
-    width: 40%;
-  }
-
+/* Justify regular content */
 .md-content {
     text-align: justify;
-}
+  }
+  
+
+/* Increase logo size in the header */
+.md-header__button.md-logo img, .md-header__button.md-logo svg {
+    width: auto;
+    height: 2.5rem;  /* Adjust this value (e.g., 2.5rem, 3rem) */
+  }
+
+/* docs/stylesheets/extra.css */
+.img-border {
+    border: 3px solid #000 !important;
+    padding: 2px;
+    border-radius: 0; /* Remove if you want rounded corners */
+  }
+
