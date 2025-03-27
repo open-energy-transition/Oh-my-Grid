@@ -10,3 +10,7 @@
     height: 70%;
     width: 70%;
   }
+
+.md-content {
+    text-align: justify;
+}
