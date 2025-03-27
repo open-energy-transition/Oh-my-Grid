@@ -17,3 +17,9 @@
     border-radius: 0; /* Remove if you want rounded corners */
   }
 
+.align-with-heading {
+    float: right;
+    margin-left: 20px;
+    margin-top: 30px !important; /* Matches heading's top spacing */
+  }
+
