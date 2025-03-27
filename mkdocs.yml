@@ -16,8 +16,8 @@ copyright:    <a href="https://creativecommons.org/licenses/by/4.0/" target="_bl
 
 theme:
   name: material
-  favicon: images/logo_grid.png
-  logo: images/logo_grid.png
+  favicon: images/logo.png
+  logo: images/logo.png
   palette: 
     # Dark Mode
     - scheme: slate
@@ -45,7 +45,7 @@ theme:
     - navigation.top
 
 extra_css:
-    - css/extra.css
+    - stylesheets/extra.css
 
 
   
