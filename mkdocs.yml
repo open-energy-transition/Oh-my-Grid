@@ -8,6 +8,7 @@ nav:
   - The Initiative: index.md
   - Starter-kit tutorial: starter-kit.md
   - Tools: tools.md
+  - Advanced kit: advanced-kit.md
   - Awesome List: awesome.md
   - Contribute: contributing.md
   - Validation checks:  validation-checks.md
@@ -57,4 +58,7 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.superfences
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg 
   
