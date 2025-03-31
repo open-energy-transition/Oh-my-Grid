@@ -9,3 +9,6 @@ Here are some [heatmaps](https://yosmhm.neis-one.org/) of the mapping work some 
   <img src="../images/mwicheheatmarch.png" class="img-border" width="400">
   <img src="../images/andreasheatmarch.png" class="img-border" width="400">
 </div>
+
+**Want to track and see your personal mapping progress (KPI)? :white_check_mark:** <br>
+This [repository](https://github.com/open-energy-transition/KPI-OSM/tree/main) has a few different scripts (Overpass and Python) to measure your KPI's. You can see how many towers you have placed and the respective line voltage, the power line length you have edited, the amount of capacity you added as a % of the country's mapped capacity, and a distribution table by voltage of substations you have added.
