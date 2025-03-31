@@ -33,8 +33,29 @@ Switch to the Download from Overpass API tab. Paste [this](https://github.com/op
 
 3\. Press Download. This will fetch for all the power infrastructure in the country/region. If "No info is found", then try again making sure the bounding box is over the name of the country and more or less centered.
 
+## How to Map and upload your progress :outbox_tray:
+<div style="float: right; margin: 5px 0 20px 20px; width: 300px;">
+  <img src="../images/presets.png" class="img-border" style="width: 100%;">
+</div>
+1\. For ease of mapping, customise your toolbar with presets if you have not used the default preferences. Edit → Preferences → Toolbar. Then select the Presets → Man Made → Man Made/Power and add power towers, power portals and other presets for your mapping acticity.
+<div style="float: right; margin: 5px 0 20px 20px; width: 200px;">
+  <img src="../images/startmapping.png" class="img-border" style="width: 100%;">
+</div>
+2\. Start Mapping. Read more about the general mapping process in JOSM. Place nodes (eg.power towers, power portals) or place polygons to delimit an area (eg. substation, generator), and press on the preset structure you want it to be. <br> :pencil: Example: As seen in the image to the right, the red polygon is a substation which is mapped by adding nodes that are connected to each other and tagges as a substation. <br>
 
-:question: How the bounding box currently works with our Overpass query:
-Currently, the boundary of the country we want is associated
+3\. Whilst having the OpenStreetMap layer activated, press the green Upload arrow. Avoid ignoring validation results. The only acceptable warning when uploading data is "Possible missing line support node within power line".
+
+## Mapping strategies :mag:
+The following strategies outline different approaches to extending the existing transmission network. In general, the larger the tower and substation, the higher the voltage and therefore the greater the importance to the network. Priority should therefore be given to large, high-voltage infrastructure first. The easiest way to start mapping the transmission network is to find the location of new 'towers'. You can hardly go wrong with this and it will help you to familiarise yourself with the tool and the local network. **Only map infrastructure that you can confidently classify using satellite or ground imagery.** <br>
+:eight_spoked_asterisk: Search for all "Unfinished power lines" in Osmose and check if you are able to find new towers at the end of the line. See the [tools](https://andreashd11.github.io/Grid-mappers/tools/) section. <br>
+:eight_spoked_asterisk: Check if windparks, solar farms, and power plants are connected to the transmission grid.  The [GEM per Country](https://andreashd11.github.io/Grid-mappers/tools/) tool helps you to create a geojson file of all the power plants in a country.<br>
+:eight_spoked_asterisk: Ensure all transmission substations are connected to the grid. <br>
+:eight_spoked_asterisk: Check for news reports on new substations and transmission lines that have become operational in recent years. LLMs like ChatGPT allow you to search in the local language: "Please search for news about transmission lines or substation recently opened in country A. Please use the official language of the country for your search". <br>
+:eight_spoked_asterisk: Search for new substation records and national substation records as a reference "hint" layer. LLMs like ChatGPT allow you to search in the local language: "Please search for transmission lines or substation datasets in X. Please use the official language of the country for your search." For a curated list of datasets that may be useful, see Awesome Electric Grid Mapping List.
+
+
+
+<br>:question: How the bounding box currently works with our Overpass query: <br>
+Currently, the boundary of the country we want is associated to the "country node". This node tends to be where the name of the country is on the map or around the center of the country. If this node is within the bounding box then the query should work. To verify where the node is (useful if mapping regions for example), you can check on OpenStreetMap for the node's exact location.
 
 ⭐ More info can be found at the [repository](https://github.com/open-energy-transition/grid-mapping-starter-kit)
