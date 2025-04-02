@@ -2,7 +2,7 @@ site_name: Grid Mappers
 site_url: 'https://open-energy-transition.github.io/Grid-mappers/'
 site_description: We aim to contribute to mapping countries' electricity grid systems around the world. We strive to improving the power infrastructure data on OpenStreetMap, to enhance global energy system modeling. 
 repo_name: 'Grid-mappers'
-repo_url: 'https://open-energy-transition.github.io/Grid-mappers/'
+repo_url: 'https://github.com/open-energy-transition/Grid-mappers'
 
 nav:
   - The Initiative: index.md
