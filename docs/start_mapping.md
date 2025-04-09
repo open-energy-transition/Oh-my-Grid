@@ -8,14 +8,14 @@ Welcome to our interactive mapping tool! Click on a country below to start mappi
 <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
 
 <script>
-// Initialize map
+// Map
 const map = L.map('map').setView([20, 0], 2);
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 18,
     attribution: '© OpenStreetMap'
 }).addTo(map);
 
-// Overpass query template - keep line breaks for readability
+// Overpass query 
 function buildOverpassQuery(iso) {
     return `[out:xml][timeout:300];
 relation["boundary"="administrative"]["admin_level"="2"]["ISO3166-1:alpha2"="${iso}"]->.admin_boundary;
@@ -23,14 +23,22 @@ relation["boundary"="administrative"]["admin_level"="2"]["ISO3166-1:alpha2"="${i
 
 node["power"="tower"](area.searchArea) -> .towers;
 node["power"="pole"](area.searchArea) -> .poles;
-way["power"="line"](area.searchArea)(bn.towers) -> .lines_connected;
+way["power"="line"](area.searchArea) -> .lines_connected;
 way["power"="line"]["voltage"](if:t["voltage"] >= 90000)(area.searchArea) -> .high_voltage_lines;
 way["power"="cable"](area.searchArea) -> .cables;
 node.poles(w.high_voltage_lines) -> .hv_poles;
-nwr["power"="substation"](area.searchArea) -> .substation_nwr;
-nwr["power"="plant"](area.searchArea) -> .plant_nwr;
-nwr["power"="generator"](area.searchArea) -> .generator_nwr;
-nwr["power"="transformer"](area.searchArea) -> .transformer_nwr;
+node["power"="substation"](area.searchArea) -> .substation_nodes;
+way["power"="substation"](area.searchArea) -> .substation_ways;
+relation["power"="substation"](area.searchArea) -> .substation_relations;
+node["power"="plant"](area.searchArea) -> .plant_nodes;
+way["power"="plant"](area.searchArea) -> .plant_ways;
+relation["power"="plant"](area.searchArea) -> .plant_relations;
+node["power"="generator"](area.searchArea) -> .generator_nodes;
+way["power"="generator"](area.searchArea) -> .generator_ways;
+relation["power"="generator"](area.searchArea) -> .generator_relations;
+node["power"="transformer"](area.searchArea) -> .transformer_nodes;
+way["power"="transformer"](area.searchArea) -> .transformer_ways;
+relation["power"="transformer"](area.searchArea) -> .transformer_relations;
 node["power"="portal"](area.searchArea) -> .portal_nodes;
 
 (
@@ -39,17 +47,25 @@ node["power"="portal"](area.searchArea) -> .portal_nodes;
   .cables;
   .lines_connected;
   .high_voltage_lines;
-  .substation_nwr;
-  .plant_nwr;
-  .generator_nwr;
+  .substation_nodes;
+  .substation_ways;
+  .substation_relations;
+  .plant_nodes;
+  .plant_ways;
+  .plant_relations;
+  .generator_nodes;
+  .generator_ways;
+  .generator_relations;
   .portal_nodes;
-  .transformer_nwr;
+  .transformer_nodes;
+  .transformer_ways;
+  .transformer_relations;
   .admin_boundary;
 );
 
-out body;
+out meta;
 >;
-out skel qt;`
+`
 }
 
 // JOSM integration function
@@ -61,25 +77,18 @@ function sendToJosm(iso) {
   // Construct the Overpass URL by inserting the encoded query.
   const overpassUrl = "https://overpass-api.de/api/interpreter?data=" + encodedQuery;
   
-  // IMPORTANT: Do not encode the overpassUrl again.
   // Build the final JOSM URL by concatenating the strings manually.
-  const josmUrl = "http://localhost:8111/import?url=" + overpassUrl + "&new_layer=true";
-  
-  console.log("Final URL to Test:", josmUrl);
-  
-  // Testing by opening a temporary window.
-  const testWindow = window.open(josmUrl, '_josm_test');
-  setTimeout(() => testWindow.close(), 2000);
+  const josmUrl = "http://localhost:8111/import?new_layer=true&url=" + overpassUrl;
 
-  // Also trying via an iframe.
+  // Keep a log to see the actual URL
+  console.log("URL ", josmUrl);
+  
   const iframe = document.createElement('iframe');
   iframe.style.display = 'none';
   iframe.src = josmUrl;
   document.body.appendChild(iframe);
   setTimeout(() => document.body.removeChild(iframe), 1000);
 }
-
-
 
 
 // Load GeoJSON and add interactivity
