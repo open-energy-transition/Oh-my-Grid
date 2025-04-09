@@ -7,6 +7,7 @@ repo_url: 'https://github.com/open-energy-transition/Oh-my-Grid'
 nav:
   - The Initiative: index.md
   - Starter-kit tutorial: starter-kit.md
+  - Start mapping: start_mapping.md
   - Tools: tools.md
   - Advanced kit: advanced-kit.md
   - Awesome List: awesome.md
