@@ -1,6 +1,8 @@
 # Start Mapping
 
-Welcome to our interactive mapping tool! Click on a country below to start mapping power infrastructure directly in JOSM.
+Welcome to our interactive mapping tool! Click on a country below to start mapping power infrastructure directly in JOSM. :rocket:
+
+:exclamation: Remember to allow remote control in Edit>Preferences>Remote Control
 
 <div id="map" style="height: 600px;"></div>
 
