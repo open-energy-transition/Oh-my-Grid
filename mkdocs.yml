@@ -5,14 +5,14 @@ repo_name: 'Oh my Grid!'
 repo_url: 'https://github.com/open-energy-transition/Oh-my-Grid'
 
 nav:
-  - The Initiative: index.md
-  - Starter-kit tutorial: starter-kit.md
-  - Start mapping: start_mapping.md
-  - Tools: tools.md
-  - Advanced kit: advanced-kit.md
-  - Awesome List: awesome.md
-  - Contribute & KPI: contributing.md
-  - Validation checks:  validation-checks.md
+  - The Initiative 🚀: index.md
+  - Starter-kit tutorial 🛠️: starter-kit.md
+  - Start mapping 📍: start_mapping.md
+  - Tools 🧰: tools.md
+  - Advanced kit ⚡: advanced-kit.md
+  - Awesome List 🌟: awesome.md
+  - Contribute & KPI 🤝: contributing.md
+  - Validation checks ✅:  validation-checks.md
 
 copyright:    <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">
       Creative Commons Attribution 4.0 International License   </a>
