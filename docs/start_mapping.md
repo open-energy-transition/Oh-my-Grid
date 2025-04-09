@@ -17,56 +17,74 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 // Overpass query 
 function buildOverpassQuery(iso) {
-    return `[out:xml][timeout:300];
-relation["boundary"="administrative"]["admin_level"="2"]["ISO3166-1:alpha2"="${iso}"]->.admin_boundary;
-.admin_boundary map_to_area ->.searchArea;
-
-node["power"="tower"](area.searchArea) -> .towers;
-node["power"="pole"](area.searchArea) -> .poles;
-way["power"="line"](area.searchArea) -> .lines_connected;
-way["power"="line"]["voltage"](if:t["voltage"] >= 90000)(area.searchArea) -> .high_voltage_lines;
-way["power"="cable"](area.searchArea) -> .cables;
-node.poles(w.high_voltage_lines) -> .hv_poles;
-node["power"="substation"](area.searchArea) -> .substation_nodes;
-way["power"="substation"](area.searchArea) -> .substation_ways;
-relation["power"="substation"](area.searchArea) -> .substation_relations;
-node["power"="plant"](area.searchArea) -> .plant_nodes;
-way["power"="plant"](area.searchArea) -> .plant_ways;
-relation["power"="plant"](area.searchArea) -> .plant_relations;
-node["power"="generator"](area.searchArea) -> .generator_nodes;
-way["power"="generator"](area.searchArea) -> .generator_ways;
-relation["power"="generator"](area.searchArea) -> .generator_relations;
-node["power"="transformer"](area.searchArea) -> .transformer_nodes;
-way["power"="transformer"](area.searchArea) -> .transformer_ways;
-relation["power"="transformer"](area.searchArea) -> .transformer_relations;
-node["power"="portal"](area.searchArea) -> .portal_nodes;
-
-(
-  .towers;
-  .hv_poles;   // Only HV poles
-  .cables;
-  .lines_connected;
-  .high_voltage_lines;
-  .substation_nodes;
-  .substation_ways;
-  .substation_relations;
-  .plant_nodes;
-  .plant_ways;
-  .plant_relations;
-  .generator_nodes;
-  .generator_ways;
-  .generator_relations;
-  .portal_nodes;
-  .transformer_nodes;
-  .transformer_ways;
-  .transformer_relations;
-  .admin_boundary;
-);
-
-out meta;
->;
-`
+  return `[out:xml][timeout:300];
+  
+  // Get the complete administrative boundary relation and its members
+  relation["boundary"="administrative"]["admin_level"="2"]["ISO3166-1:alpha2"="${iso}"]->.admin_boundary;
+  (.admin_boundary; >;);
+  // Convert the full relation into an area, which we use for the subsequent search
+  .admin_boundary map_to_area ->.searchArea;
+  
+  // Get towers, poles, lines, cables, etc.
+  node["power"="tower"](area.searchArea) -> .towers;
+  node["power"="pole"](area.searchArea) -> .poles;
+  way["power"="line"](area.searchArea) -> .lines_connected;
+  way["power"="line"]["voltage"](if:t["voltage"] >= 90000)(area.searchArea) -> .high_voltage_lines;
+  way["power"="cable"](area.searchArea) -> .cables;
+  node.poles(w.high_voltage_lines) -> .hv_poles;
+  
+  // Get substations explicitly as nodes, ways, and relations
+  node["power"="substation"](area.searchArea) -> .substation_nodes;
+  way["power"="substation"](area.searchArea) -> .substation_ways;
+  relation["power"="substation"](area.searchArea) -> .substation_relations;
+  
+  // And similarly for power plants, generators, and transformers
+  node["power"="plant"](area.searchArea) -> .plant_nodes;
+  way["power"="plant"](area.searchArea) -> .plant_ways;
+  relation["power"="plant"](area.searchArea) -> .plant_relations;
+  
+  node["power"="generator"](area.searchArea) -> .generator_nodes;
+  way["power"="generator"](area.searchArea) -> .generator_ways;
+  relation["power"="generator"](area.searchArea) -> .generator_relations;
+  
+  node["power"="transformer"](area.searchArea) -> .transformer_nodes;
+  way["power"="transformer"](area.searchArea) -> .transformer_ways;
+  relation["power"="transformer"](area.searchArea) -> .transformer_relations;
+  
+  node["power"="portal"](area.searchArea) -> .portal_nodes;
+  
+  // Union all elements – note that we also include the original admin boundary
+  (
+    .towers;
+    .hv_poles;
+    .cables;
+    .lines_connected;
+    .high_voltage_lines;
+    .substation_nodes;
+    .substation_ways;
+    .substation_relations;
+    .plant_nodes;
+    .plant_ways;
+    .plant_relations;
+    .generator_nodes;
+    .generator_ways;
+    .generator_relations;
+    .portal_nodes;
+    .transformer_nodes;
+    .transformer_ways;
+    .transformer_relations;
+    .admin_boundary;
+  );
+  
+  // First output: all elements with metadata
+  out meta;
+  // Second recursion: fetch all members of multipolygon relations, etc.
+  >;
+  // Output the full geometry (again with meta) so JOSM receives complete data
+  out meta;
+  `;
 }
+
 
 // JOSM integration function
 function sendToJosm(iso) {
