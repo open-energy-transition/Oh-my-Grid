@@ -1,4 +1,4 @@
-# Grid Mappers
+# Oh my Grid!
 <img src= docs/images/logo.png align="right" width="350">__**A directory and guide to power grid infrastructure mapping in OpenStreetMap.**__ <br> <br> We aim to contribute to mapping countries' electricity grid systems around the world. We strive to improving the power infrastructure data on OpenStreetMap, to enhance global energy system modelling. 
 
 <br>
