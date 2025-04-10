@@ -26,6 +26,5 @@ jobs:
           restore-keys: |
             mkdocs-material-
       - run: wget https://raw.githubusercontent.com/open-energy-transition/Awesome-Electric-Grid-Mapping/refs/heads/main/README.md -P ./docs/awesome.md
-      - run: wget https://raw.githubusercontent.com/open-energy-transition/Awesome-Electric-Grid-Mapping/refs/heads/main/oh_my_grid_logo.png -P ../images/oh_my_grid_logo.png
       - run: pip install mkdocs-material 
       - run: mkdocs gh-deploy --force
