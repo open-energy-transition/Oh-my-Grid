@@ -6,3 +6,17 @@ The following strategies outline different approaches to extending the existing 
 :eight_spoked_asterisk: Ensure all transmission substations are connected to the grid. <br>
 :eight_spoked_asterisk: Check for news reports on new substations and transmission lines that have become operational in recent years. LLMs like ChatGPT allow you to search in the local language: "Please search for news about transmission lines or substation recently opened in country A. Please use the official language of the country for your search". <br>
 :eight_spoked_asterisk: Search for new substation records and national substation records as a reference "hint" layer. LLMs like ChatGPT allow you to search in the local language: "Please search for transmission lines or substation datasets in X. Please use the official language of the country for your search." For a curated list of datasets that may be useful, see Awesome Electric Grid Mapping List.
+
+
+### Bing attribution issue :no_entry:
+<div class="align-with-heading">
+  <img src="../images/bing_issue.png" class="img-border" width="300">
+</div>
+At the moment, there seems to be an issue with Bing attribution where it only seems to load in the mornings (CET). However, you can work around that for the time being using this little trick. <br>
+
+1\. On a day where bing is working for you, copy and save the bing.attribution.xml file in another personal folder somewhere on your device. <br>
+
+On Windows, this is in Appdata>Roaming>JOSM <br>
+On Linux, it can be found in .cache>JOSM <br>
+
+2\. On the day where it is not working, just go this folder and replace the bing.attribution.xml file with the one saved from the previous day. You might have to reload JOSM.
