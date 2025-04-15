@@ -2,7 +2,7 @@
 **We empower individuals, communities and nations around the world to map the global electrical grid.** <br>
 
 ## Why?
-<img src= docs/images/logo.png align="right" width="350">
+<img src= https://raw.githubusercontent.com/open-energy-transition/Oh-my-Grid/refs/heads/main/docs/images/logo.png align="right" width="350">
 Energy Sources from fossil fuels are by far the largest contributor to climate change, accounting for over 75 % of global greenhouse gas emissions. For mitigating away from fossil energy sources the extension and modernization of the electrical grid is one of the main bottlenecks. <br></br>
 
 Despite the urgent need to expand the global electricity grid, the industry has been unable to establish an open data standard for the exchange of transmission grid routing data and specifications across borders. In recent years, OpenStreetMap has established itself as the unofficial de facto standard in academia and industry for cross-border transmission and distribution grid data. For developing countries in particular, the quality and coverage of grid data is inadequate. Closing this gap is not only essential for providing stable energy supply to rural communities, it is also key to mitigating climate change, a key recommendation of the International Energy Agency's latest report:
