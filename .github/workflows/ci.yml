@@ -26,5 +26,6 @@ jobs:
           restore-keys: |
             mkdocs-material-
       - run: wget https://raw.githubusercontent.com/open-energy-transition/Awesome-Electric-Grid-Mapping/refs/heads/main/README.md -P ./docs/awesome.md
+      - run: cp README.md ./docs/index.md
       - run: pip install mkdocs-material 
       - run: mkdocs gh-deploy --force
