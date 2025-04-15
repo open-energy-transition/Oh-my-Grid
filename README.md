@@ -1,6 +1,9 @@
 # Oh my Grid!
 **We empower individuals, communities and nations around the world to map the global electrical grid.** <br>
 
+[![](https://badgen.net/badge/See/Wiki/A2CDAE?scale=1.6)](https://wiki.openstreetmap.org/wiki/Organised_Editing/Activities/Electricity_Grid_Mapping) [![](https://badgen.net/badge/Follow/Tutorial/A2CDAE?scale=1.6)](https://open-energy-transition.github.io/Oh-my-Grid/starter-kit/) [![](https://badgen.net/badge/Join/DiscordGroup/A2CDAE?scale=1.6)](https://discord.gg/a5znpdFWfD)  
+[![](https://badgen.net/badge/Use/Tools/A2CDAE?scale=1.6)](https://open-energy-transition.github.io/Oh-my-Grid/tools/) [![](https://badgen.net/badge/Find/AwesomeList/A2CDAE?scale=1.6)](https://github.com/open-energy-transition/Awesome-Electric-Grid-Mapping) [![](https://badgen.net/badge/Icon/Contribute/A2CDAE?scale=1.6&label=%F0%9F%9A%80)](https://open-energy-transition.github.io/Oh-my-Grid/contributing/)
+
 ## Why?
 <img src= https://raw.githubusercontent.com/open-energy-transition/Oh-my-Grid/refs/heads/main/docs/images/logo.png align="right" width="350">
 Energy Sources from fossil fuels are by far the largest contributor to climate change, accounting for over 75 % of global greenhouse gas emissions. For mitigating away from fossil energy sources the extension and modernization of the electrical grid is one of the main bottlenecks. <br></br>
@@ -12,10 +15,6 @@ Despite the urgent need to expand the global electricity grid, the industry has 
 [Taking Stock to Taking Action: How to implement the COP28 energy goals](https://iea.blob.core.windows.net/assets/f2f6dbe0-ee3d-4ffc-ac8b-b811a868b9b1/FromTakingStocktoTakingAction.pdf)
 
 That's why [Open Energy Transition](https://openenergytransition.org/) has launched this open initiative, working with the OpenStreetMap community, organisations and individuals around the world to not only create an [open digital twin of the European grid](https://www.nature.com/articles/s41597-025-04550-7), but also **to expand the global coverage of the transmission grid in OpenStreetMap from around 70% to 98% over the next three years.**
-
-[![](https://badgen.net/badge/See/Wiki/A2CDAE?scale=1.6)](https://wiki.openstreetmap.org/wiki/Organised_Editing/Activities/Electricity_Grid_Mapping) [![](https://badgen.net/badge/Follow/Tutorial/A2CDAE?scale=1.6)](https://open-energy-transition.github.io/Oh-my-Grid/starter-kit/) [![](https://badgen.net/badge/Join/DiscordGroup/A2CDAE?scale=1.6)](https://discord.gg/a5znpdFWfD)  
-[![](https://badgen.net/badge/Use/Tools/A2CDAE?scale=1.6)](https://open-energy-transition.github.io/Oh-my-Grid/tools/) [![](https://badgen.net/badge/Find/AwesomeList/A2CDAE?scale=1.6)](https://github.com/open-energy-transition/Awesome-Electric-Grid-Mapping) [![](https://badgen.net/badge/Icon/Contribute/A2CDAE?scale=1.6&label=%F0%9F%9A%80)](https://open-energy-transition.github.io/Oh-my-Grid/contributing/)
-
 
 ## How you can get involved?
 Your support can make a significant impact on closing the data gap in the electricity grid. The Oh-my-Grid initiative will empower you! Are you good at online research? Do you like programming? Do you want to recognise power towers and other electrical infrastructure on satellite images? Do you want to use this data for a climate mitigation or the electrification of rural communities? We can help you find the right contribution for your skills and experience:
