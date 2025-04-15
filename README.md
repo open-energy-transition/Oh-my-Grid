@@ -1,5 +1,5 @@
 # Oh my Grid!
-**We empower individuals, communities and nations around the world to map the global electrical grid in OpenStreetMap.** <br>
+**We empower individuals, communities and nations around the world to map the global electrical grid.** <br>
 
 ## Why?
 <img src= docs/images/logo.png align="right" width="350">
