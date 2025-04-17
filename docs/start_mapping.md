@@ -4,7 +4,25 @@ Welcome to our interactive mapping tool! Click on a country below to start mappi
 
 :exclamation: Remember to allow remote control in Edit>Preferences>Remote Control
 
-<div id="map" style="height: 600px;"></div>
+<style>
+#map {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 600px;
+    margin: 20px 0;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+@media (max-width: 768px) {
+    #map {
+        height: 400px;
+    }
+}
+</style>
+
+<div id="map"></div>
 
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
 <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
