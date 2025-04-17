@@ -2,7 +2,7 @@
 
 <img src="../images/osmoseapi.png" class="img-border" align="right" width="320">
 
-## **Osmose per country**
+## **<div class="tools-header">Osmose per country</div>**
 
 [Osmose per country](https://github.com/open-energy-transition/osmose_per_country) - This is a front end interface that allows fetching data on gaps in the OSM data through the OSMOSE API on a country level.
 
@@ -22,7 +22,7 @@ Tip: Certain countries have different names associated, so to fetch the data for
   <img src="../images/gemtracker.png" class="img-border" width="320">
 </div>
 
-## **OSM and Global Energy Monitor comparison tool**
+## **<div class="tools-header">OSM and Global Energy Monitor comparison tool</div>**
 [GEM per Country Power Tracker web application](https://github.com/open-energy-transition/gem_per_country) - The tool allows users to preview and download GeoJSON data for global power plants in the Global Energy Monitor database filtered by country and power plant status.
 
 ### How to use the GEM power plants per country tool
@@ -49,7 +49,7 @@ You can also open the index.html file. <br><br>
   <img src="../images/wikicsv.png" class="img-border" width="320">
 </div>
 
-## **OSM and Wikidata comparison tool**
+## **<div class="tools-header">OSM and Wikidata comparison tool</div>**
 This [repository](https://github.com/open-energy-transition/osm-wikidata-comparison/tree/main) contains a Python script compares power plant data between OpenStreetMap (OSM) and Wikidata. It fetches data from both sources using APIs, performs comparisons based on geographic proximity and name, and identifies missing power plants or coordinate mismatches.<br> The comparison results are saved in CSV and GeoJSON formats.
 <img src="../images/wikigeo.png" class="img-border" align="right" width="320">
 
@@ -76,10 +76,10 @@ mismatch_threshold_km = 0.5 #mismatch_threshold_km (float): The threshold distan
   </div>
 </div>
 
-## Google Maps Substations :lock:
-Google Maps would be the perfect additional data source for the locations and names of substations worldwide, but so far **no official authorisation has been granted** for using the location of substation within OpenStreetMap. Particularly in remote areas of low- and middle-income countries, Google Maps shows many transmission and distribution substations that are difficult to locate using current mapping strategies. <br>
+## <div class="tools-header">Google Maps Substations</div> :lock:
+Google Maps would be the perfect additional data source for the locations and names of substations worldwide, but so far **no official authorisation has been granted** for using the location of substation within OpenStreetMap. Google Maps shows many transmission and distribution substations that are difficult to locate using current mapping strategies, particularly in remote areas of low- and middle-income countries. <br>
 
-Knowing only the locations of these substations would greatly accelerate the progress of grid mapping and allow the discovery of smaller substations that are relevant for estimating distribution network coverage and rural electrification levels. Particularly in remote areas of low- and middle-income countries, Google Maps shows many transmission and distribution substations. Together with the OpenStreetMap community, the data can be integrated using officially authorised satellite images for OpenStreetMap contributors, **if permission is granted!** <br>
+Knowing only the locations of these substations would greatly accelerate the progress of grid mapping and allow the discovery of smaller substations that are relevant for estimating distribution network coverage and rural electrification levels. Together with the OpenStreetMap community, the data can be integrated using officially authorised satellite images for OpenStreetMap contributors, **if** permission is granted! <br>
 
 Google Maps has **not** yet granted official authorisation for the use of its data. Google would provide a significant boost to the sustainable energy transition, tackling climate change and bringing electricity to rural communities at the same time. Therefore, we are kindly requesting formal permission to access and utilize the coordinates of ‘electrical substations’ displayed on Google Maps, for the purpose of enriching OpenStreetMap and advancing global grid mapping initiatives. This task for request is currently in progress and can be found [here](https://github.com/orgs/open-energy-transition/projects/25?pane=issue&itemId=102888888). 
 
