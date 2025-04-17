@@ -44,3 +44,13 @@
   align-items: flex-end;
   margin-left: 20px;
 }
+
+/* Card-style header */
+.tools-header {
+  background-color: #e8f5e9;
+  padding: 8px 15px;
+  border-left: 4px solid #2a8000;
+  border-radius: 0 4px 4px 0;
+  display: inline-block;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
