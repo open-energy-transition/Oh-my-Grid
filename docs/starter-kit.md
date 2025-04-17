@@ -33,7 +33,7 @@ A [starter kit](https://github.com/open-energy-transition/grid-mapping-starter-k
 <div style="float: right; margin: 5px 0 20px 20px; width: 200px;">
   <img src="../images/startmapping.png" class="img-border" style="width: 100%;">
 </div>
-2\. Start Mapping. Read more about the general mapping process in JOSM. Place nodes (eg.power towers, power portals) or place polygons to delimit an area (eg. substation, generator), and press on the preset structure you want it to be. <br> :pencil: Example: As seen in the image to the right, the red polygon is a substation which is mapped by adding nodes that are connected to each other and tagges as a substation. <br>
+2\. Start Mapping. Read more about the general mapping process in JOSM. Place nodes (eg.power towers, power portals) or place polygons to delimit an area (eg. substation, generator), and press on the preset structure you want it to be. <br> :pencil: Example: As seen in the image to the right, the red polygon is a substation which is mapped by adding nodes that are connected to each other and tagged as a substation. <br>
 
 3\. Whilst having the OpenStreetMap layer activated, press the green Upload arrow. Avoid ignoring validation results. The only acceptable warning when uploading data is "Possible missing line support node within power line".
 

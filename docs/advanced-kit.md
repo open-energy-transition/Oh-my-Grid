@@ -20,7 +20,7 @@ If you are mapping an interconnector between two countries for example, and you 
 
 
 
-### Bing attribution issue :no_entry:
+## Bing attribution issue :no_entry:
 <div class="align-with-heading">
   <img src="../images/bing_issue.png" class="img-border" width="300">
 </div>
