@@ -2,7 +2,6 @@
 .md-content {
     text-align: justify;
   }
-  
 
 /* Increase logo size in the header */
 .md-header__button.md-logo img, .md-header__button.md-logo svg {
@@ -28,7 +27,3 @@
   font-size: 1.1rem !important; /* Adjust as needed */
   font-weight: bold;
 }
-
-
-
-
