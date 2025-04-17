@@ -22,21 +22,12 @@ theme:
   favicon: images/logo.png
   logo: images/logo.png
   palette: 
-    # Dark Mode
-    - scheme: slate
-      toggle:
-        icon: material/weather-sunny
-        name: Dark mode
-      primary: light green
-      accent: indigo
-
+    
     # Light Mode
     - scheme: default
-      toggle:
-        icon: material/weather-night
-        name: Light mode
       primary: light green
       accent: indigo
+      toggle: false 
   features:
     - navigation.tabs
     - navigation.tabs.sticky
@@ -63,6 +54,7 @@ markdown_extensions:
   - def_list
   - pymdownx.tasklist:
       custom_checkbox: true
+  - markdown.extensions.md_in_html
 
   
   
