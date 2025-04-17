@@ -123,22 +123,7 @@
   padding-bottom: 3rem;
 }
 
-/* ──────────────────────────────────────────────────────────
-   HIDE any auto‑generated page title <h1> above your hero
-────────────────────────────────────────────────────────── */
-.md-main__inner > h1,
-.md-content__inner > h1,
-article > h1:first-of-type {
-  display: none !important;
-  margin: 0 !important;
-  padding: 0 !important;
-}
 
-/* Bring your Hero even closer to the nav tabs */
-.section-hero {
-  margin-top: 0 !important;
-  padding-top: 0.5rem !important;
-}
 
 
 
