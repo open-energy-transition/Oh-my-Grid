@@ -7,6 +7,18 @@ The following strategies outline different approaches to extending the existing 
 :eight_spoked_asterisk: Check for news reports on new substations and transmission lines that have become operational in recent years. LLMs like ChatGPT allow you to search in the local language: "Please search for news about transmission lines or substation recently opened in country A. Please use the official language of the country for your search". <br>
 :eight_spoked_asterisk: Search for new substation records and national substation records as a reference "hint" layer. LLMs like ChatGPT allow you to search in the local language: "Please search for transmission lines or substation datasets in X. Please use the official language of the country for your search." For a curated list of datasets that may be useful, see Awesome Electric Grid Mapping List.
 
+## Downloading transmission data of an area near a border  :inbox_tray:
+<div style="float: right; margin: 5px 0 30px 20px; width: 300px;">
+  <img src="../images/alternative_query.png" class="img-border" style="width: 100%;">
+</div>
+If you are mapping an interconnector between two countries for example, and you want to see if it is mapped on the "other" side of the border. You can either do a quick Download from OSM in a new layer and see. Or you can use the following overpass query:
+
+1\. Copy this [query](https://github.com/open-energy-transition/grid-mapping-starter-kit/blob/main/scripts/Alternative_overpass.overpassql), and paste it in Download from Overpass API. <br>
+2\. Then draw a small bounding box in the slippy map, and download.
+
+:question: Explanation: The query looks for nodes in the bounding box, finds the admin area of the nodes, and then fetches all power infrastructure in the area. The query is set at admin level 4 (state/region), but can be changed to national (level 2), or to a province (level 6). <br>For that you will have to change the query in the downoad tab, by switching the admin level. Technically, if there are 0 nodes (unlikely) in your bounding box, then it won't work. A small bounding box suffices (and is better as the query execution is faster).
+
+
 
 ### Bing attribution issue :no_entry:
 <div class="align-with-heading">
