@@ -30,3 +30,4 @@ jobs:
       - run: cp README.md ./docs/index.md
       - run: pip install mkdocs-material 
       - run: mkdocs gh-deploy --force
+      - run: (echo -e "---\nhide:\n  - navigation\n  - toc\n  - footer\n---"; cat README.md) > temp && mv temp README.md

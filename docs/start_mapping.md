@@ -14,8 +14,9 @@ Welcome to our interactive mapping tool! Click on a country below to start mappi
 const map = L.map('map').setView([20, 0], 2);
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 18,
-    attribution: '© OpenStreetMap'
+    attribution: '© <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">OpenStreetMap</a> contributors'
 }).addTo(map);
+
 
 // Overpass query 
 function buildOverpassQuery(iso) {
