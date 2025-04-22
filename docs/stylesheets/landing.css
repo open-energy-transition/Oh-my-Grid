@@ -95,7 +95,7 @@ body.landing-page header.md-header {
 
 /* ==== INITIATIVE SECTION ==== */
 .initiative-section {
-  padding: 4rem 2rem;
+  padding: 1rem 2rem;
   background-color: #f8f9fa;
 }
 
@@ -143,14 +143,14 @@ body.landing-page header.md-header {
 
 .initiative-illustration {
   max-width: 200px;
-  margin: 3rem auto 0;
-  width: 100%; /* Make it responsive up to max-width */
+  margin: 1rem auto 0;
+  width: 60%; /* Make it responsive up to max-width */
 }
 
 
 /* ==== GET INVOLVED SECTION ==== */
 .get-involved-section {
-  padding: 4rem 2rem;
+  padding: 1rem 2rem;
   background-color: #e9f5e9;
   text-align: center;
 }
