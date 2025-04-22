@@ -25,7 +25,7 @@ theme:
     
     # Light Mode
     - scheme: default
-      primary: light green
+      primary: green
       accent: indigo
       toggle: false 
   features:
@@ -40,6 +40,7 @@ theme:
 
 extra_css:
     - stylesheets/extra.css
+    - stylesheets/landing.css
 
 
 markdown_extensions:
