@@ -4,7 +4,7 @@ Welcome to our interactive mapping tool! Click on a country below to start mappi
 
 When you make an edit, please use the **#ohmygrid** in the changeset to help the initiative!
 
-:exclamation: Remember to allow remote control in Edit>Preferences>Remote Control
+:exclamation: Remember to allow remote control in Edit>Preferences>Remote Control and to disable all ad blocker.
 
 <style>
 #map {
