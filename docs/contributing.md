@@ -1,4 +1,6 @@
-# **Contribute and map with us!**
+<div class="page-headers">
+<h1>Contribute and map with us! </h1>
+</div>
 
 Our initiative wants to build a community of mappers from all around the world, so that power infrastructure is continuously added and improved in the future.
 You can join this [discord](https://discord.gg/a5znpdFWfD) server to learn more, and chat about OSM grid mapping with us.

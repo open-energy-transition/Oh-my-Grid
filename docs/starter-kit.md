@@ -1,4 +1,6 @@
-# **Grid Mapping starter kit**
+<div class="page-headers">
+<h1>Grid Mapping starter kit</h1>
+</div>
 A [starter kit](https://github.com/open-energy-transition/grid-mapping-starter-kit) for Electrical Transmission Grid Mapping in OpenStreetMap, combining Osmose and Overpass with JOSM.
 <div style="display: flex; gap: 20px; margin: 20px auto; flex-wrap: wrap;">
   <img src="../images/kenyamap.png" class="img-border" style="width: 400px;">

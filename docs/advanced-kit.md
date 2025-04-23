@@ -1,4 +1,7 @@
-# **Grid Mapping advanced kit**
+<div class="page-headers">
+<h1>Grid Mapping advanced kit </h1>
+</div>
+
 ## Mapping strategies :mag:
 The following strategies outline different approaches to extending the existing transmission network. In general, the larger the tower and substation, the higher the voltage and therefore the greater the importance to the network. Priority should therefore be given to large, high-voltage infrastructure first. The easiest way to start mapping the transmission network is to find the location of new 'towers'. You can hardly go wrong with this and it will help you to familiarise yourself with the tool and the local network. **Only map infrastructure that you can confidently classify using satellite or ground imagery.** <br>
 :eight_spoked_asterisk: Search for all "Unfinished power lines" in Osmose and check if you are able to find new towers at the end of the line. See the [tools](https://andreashd11.github.io/Grid-mappers/tools/) section. <br>

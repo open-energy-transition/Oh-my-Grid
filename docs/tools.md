@@ -1,5 +1,6 @@
-# **Useful Grid Mapping tools for OSM**
-
+<div class="page-headers">
+<h1>Useful Grid Mapping tools for OSM </h1>
+</div>
 <img src="../images/osmoseapi.png" class="img-border" align="right" width="320">
 
 ## **<div class="tools-header">Osmose per country</div>**
