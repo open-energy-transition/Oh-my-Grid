@@ -1,5 +1,6 @@
-# Start Mapping
-
+<div class="page-headers">
+<h1>Start Mapping </h1>
+</div>
 Welcome to our interactive mapping tool! Click on a country below to start mapping power infrastructure directly in JOSM. :rocket:
 
 When you make an edit, please use the **#ohmygrid** in the changeset to help the initiative!
