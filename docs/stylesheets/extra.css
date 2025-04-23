@@ -57,18 +57,10 @@
 
 /* Header of pages */
 .page-headers h1 {
-  color: #2a6d3c;
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
-  font-weight: 500;
-}
-
-/*Awesome page header */
-[data-md-component=container] [href$="awesome.md"] ~ .md-content h1 {
-  color: #2a6d3c;
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
-  font-weight: 500;
+  color: #2a6d3c !important;
+  font-size: 2rem !important;
+  margin-bottom: 1.5rem !important;
+  font-weight: 500 !important;
 }
 
 
