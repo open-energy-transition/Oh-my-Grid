@@ -7,9 +7,10 @@ You can join this [discord](https://discord.gg/a5znpdFWfD) server to learn more,
 <br>
 
 Here are some [heatmaps](https://yosmhm.neis-one.org/) of the mapping work some of our team has done:
-<div style="display: flex; justify-content: left; gap: 40px; margin: 20px auto; max-width: 1200px;">
-  <img src="../images/mwicheheatmarch.png" class="img-border" width="400">
-  <img src="../images/andreasheatmarch.png" class="img-border" width="400">
+<div style="display: flex; justify-content: space-between; gap: 20px; margin: 20px 0;">
+  <img src="../images/heatmapahd.png" class="img-border" width="300">
+  <img src="../images/heatmapmwi.png" class="img-border" width="300">
+  <img src="../images/heatmapTA.png" class="img-border" width="300">
 </div>
 
 ##**Want to track and see your personal mapping progress (KPI)? :white_check_mark:** <br>
