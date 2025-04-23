@@ -71,7 +71,7 @@ mismatch_threshold_km = 0.5 #mismatch_threshold_km (float): The threshold distan
 ```
 
 <div class="align-with-heading">
-  <img src="../images/googlesubstation.png" class="img-border" width="320">
+  <img src="../images/angolagoogle.png" class="img-border" width="320">
   <div class="image-caption" markdown>
   *Imagery ©2025 CNES/Airbus, Maxar Technologies. Map data ©2025 Google*
   </div>
