@@ -16,12 +16,6 @@
     border-radius: 0; /* Remove if you want rounded corners */
   }
 
-.align-with-heading {
-    float: right;
-    margin-left: 20px;
-    margin-top: 30px !important; /* Matches heading's top spacing */
-  }
-
 /*Increase size of site name */
 .md-header__topic {
   font-size: 1.1rem !important; /* Adjust as needed */
@@ -37,12 +31,16 @@
   line-height: 1.4;
 }
 
-/* Keep image + caption aligned with heading */
 .align-with-heading {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
+  float: right;
   margin-left: 20px;
+  margin-top: 0 !important; /* Override previous 30px */
+  display: inline-block; /* Add this */
+  vertical-align: middle; /* Align with heading */
+}
+
+.align-with-heading + .align-with-heading {
+  margin-top: 2rem !important;
 }
 
 /* Card-style header */
