@@ -26,7 +26,9 @@ jobs:
           restore-keys: |
             mkdocs-material-
       - run: (echo -e "---\nhide:\n  - navigation\n  - toc\n  - footer\n---"; cat README.md) > temp && mv temp README.md
-      - run: wget https://raw.githubusercontent.com/open-energy-transition/Awesome-Electric-Grid-Mapping/refs/heads/main/README.md -P ./docs/awesome.md
       - run: pip install mkdocs-material 
       - run: mkdocs gh-deploy --force
       - run: (echo -e "---\nhide:\n  - navigation\n  - toc\n  - footer\n---"; cat README.md) > temp && mv temp README.md
+      - run: |
+          wget https://raw.githubusercontent.com/open-energy-transition/Awesome-Electric-Grid-Mapping/main/README.md -O- | \
+          sed '1s/^#.*/<div class="page-headers">\n# 🗺️ Awesome Electric Grid Mapping\n\n🔗 [View on GitHub](https:\/\/github.com\/open-energy-transition\/Awesome-Electric-Grid-Mapping)\n<\/div>/' > ./docs/awesome.md
