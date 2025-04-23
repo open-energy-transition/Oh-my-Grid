@@ -44,8 +44,8 @@ body.landing-page header.md-header {
   margin-bottom: 1rem;
 }
 
-.hero-logo {
-  max-width: 250px;
+.hero-section .hero-logo {
+  max-width: 450px;
 }
 
 .mission-statement {
