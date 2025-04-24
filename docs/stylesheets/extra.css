@@ -76,49 +76,6 @@
     margin-top: 0 !important;
   }
   
-  /* —————————————————————————
-     SECTION 1: HERO
-     ————————————————————————— */
-  .section-hero {
-    background: #f5f5f5;
-    text-align: center;
-  }
-  .hero-logo {
-    max-width: 100px;
-    margin: 0 auto 2rem;
-  }
-
-
-/* Shrink the hero SVG to a comfortable size */
-.hero-logo {
-  max-width: 200px;  /* or whatever fits your design */
-  width: 50%;        /* responsive fallback */
-  height: auto;
-  margin: 0 auto 1.5rem;
-  display: block;
-}
-
-/* Make the mission text bigger and right under the logo */
-.mission-statement {
-  font-size: 1.5rem;      /* bump to taste (1.25–2rem) */
-  line-height: 1.4;
-  margin: 0 auto 1.5rem;
-  max-width: 600px;       /* keeps line-length readable */
-  text-align: center;
-}
-
-/* Center the badges, give them a little breathing room */
-.badge-container {
-  text-align: center;
-  margin-top: 1rem;
-  line-height: 2.5rem;    /* vertically aligns badges if they wrap */
-}
-
-/* Optional: tighten up spacing so the whole hero feels compact */
-.section-hero {
-  padding-top: 1rem !important;      /* reduce from 4rem if you like */
-  padding-bottom: 3rem;
-}
 
 .big-font {
   font-size: 1rem;
