@@ -16,6 +16,12 @@
     border-radius: 0; /* Remove if you want rounded corners */
   }
 
+.align-with-heading {
+    float: right;
+    margin-left: 20px;
+    margin-top: 30px !important; /* Matches heading's top spacing */
+  }
+
 /*Increase size of site name */
 .md-header__topic {
   font-size: 1.1rem !important; /* Adjust as needed */
@@ -31,16 +37,12 @@
   line-height: 1.4;
 }
 
+/* Keep image + caption aligned with heading */
 .align-with-heading {
-  float: right;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
   margin-left: 20px;
-  margin-top: 0 !important; /* Override previous 30px */
-  display: inline-block; /* Add this */
-  vertical-align: middle; /* Align with heading */
-}
-
-.align-with-heading + .align-with-heading {
-  margin-top: 2rem !important;
 }
 
 /* Card-style header */
@@ -53,13 +55,77 @@
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-/* Header of pages */
-.page-headers h1 {
-  color: #2a6d3c !important;
-  font-size: 2rem !important;
-  margin-bottom: 1.5rem !important;
-  font-weight: 500 !important;
+/* —————————————————————————
+   BASE: full‑width sections
+   ————————————————————————— */
+   .section {
+    position: relative;
+    left: 50%;
+    width: 100vw;
+    margin-left: -50vw;
+    padding: 4rem 2rem;
+  }
+  
+  /* nuke any top padding or white gap above the very first .section */
+  .md-app,
+  .md-main,
+  .md-main__inner,
+  .md-content,
+  .md-content__inner {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+  }
+  
+  /* —————————————————————————
+     SECTION 1: HERO
+     ————————————————————————— */
+  .section-hero {
+    background: #f5f5f5;
+    text-align: center;
+  }
+  .hero-logo {
+    max-width: 100px;
+    margin: 0 auto 2rem;
+  }
+
+
+/* Shrink the hero SVG to a comfortable size */
+.hero-logo {
+  max-width: 200px;  /* or whatever fits your design */
+  width: 50%;        /* responsive fallback */
+  height: auto;
+  margin: 0 auto 1.5rem;
+  display: block;
 }
+
+/* Make the mission text bigger and right under the logo */
+.mission-statement {
+  font-size: 1.5rem;      /* bump to taste (1.25–2rem) */
+  line-height: 1.4;
+  margin: 0 auto 1.5rem;
+  max-width: 600px;       /* keeps line-length readable */
+  text-align: center;
+}
+
+/* Center the badges, give them a little breathing room */
+.badge-container {
+  text-align: center;
+  margin-top: 1rem;
+  line-height: 2.5rem;    /* vertically aligns badges if they wrap */
+}
+
+/* Optional: tighten up spacing so the whole hero feels compact */
+.section-hero {
+  padding-top: 1rem !important;      /* reduce from 4rem if you like */
+  padding-bottom: 3rem;
+}
+
+.big-font {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+}
+
 
 
 
