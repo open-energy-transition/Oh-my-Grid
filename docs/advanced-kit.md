@@ -10,6 +10,14 @@ The following strategies outline different approaches to extending the existing 
 :eight_spoked_asterisk: Check for news reports on new substations and transmission lines that have become operational in recent years. LLMs like ChatGPT allow you to search in the local language: "Please search for news about transmission lines or substation recently opened in country A. Please use the official language of the country for your search". <br>
 :eight_spoked_asterisk: Search for new substation records and national substation records as a reference "hint" layer. LLMs like ChatGPT allow you to search in the local language: "Please search for transmission lines or substation datasets in X. Please use the official language of the country for your search." For a curated list of datasets that may be useful, see Awesome Electric Grid Mapping List.
 
+## <div class="tools-header">Map fast  :pushpin:</div>
+If you want to be able to fast efficiently and fast, you will need to know how to correctly place towers and power lines. This will save you loads of time: <br>
+1\. Draw nodes (A) on towers as you follow the towers. This will create a long line of untagged nodes, all connected by a untagged way. <br>
+2\. Click on the way, and select power line to tag it. <br>
+3\. Then press on the way again, and control+F to open up search. Then paste in the bar: _child selected type:node AND untagged_ 
+This will select all untagged nodes of the way. <br>
+4\. Then you can tag all the selected nodes as towers in one go. <br>
+
 ## <div class="tools-header">Downloading transmission data of an area near a border  :inbox_tray:</div>
 <div style="float: right; margin: 5px 0 30px 20px; width: 300px;">
   <img src="../images/alternative_query.png" class="img-border" style="width: 100%;">
