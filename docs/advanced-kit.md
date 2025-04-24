@@ -2,7 +2,7 @@
 <h1>Grid Mapping advanced kit </h1>
 </div>
 
-## Mapping strategies :mag:
+## <div class="tools-header">Mapping strategies :mag:</div>
 The following strategies outline different approaches to extending the existing transmission network. In general, the larger the tower and substation, the higher the voltage and therefore the greater the importance to the network. Priority should therefore be given to large, high-voltage infrastructure first. The easiest way to start mapping the transmission network is to find the location of new 'towers'. You can hardly go wrong with this and it will help you to familiarise yourself with the tool and the local network. **Only map infrastructure that you can confidently classify using satellite or ground imagery.** <br>
 :eight_spoked_asterisk: Search for all "Unfinished power lines" in Osmose and check if you are able to find new towers at the end of the line. See the [tools](https://open-energy-transition.github.io/Oh-my-Grid/tools/) section. <br>
 :eight_spoked_asterisk: Check if windparks, solar farms, and power plants are connected to the transmission grid.  The [GEM per Country](https://open-energy-transition.github.io/gem_per_country/) tool helps you to create a geojson file of all the power plants in a country.<br>
@@ -10,7 +10,7 @@ The following strategies outline different approaches to extending the existing 
 :eight_spoked_asterisk: Check for news reports on new substations and transmission lines that have become operational in recent years. LLMs like ChatGPT allow you to search in the local language: "Please search for news about transmission lines or substation recently opened in country A. Please use the official language of the country for your search". <br>
 :eight_spoked_asterisk: Search for new substation records and national substation records as a reference "hint" layer. LLMs like ChatGPT allow you to search in the local language: "Please search for transmission lines or substation datasets in X. Please use the official language of the country for your search." For a curated list of datasets that may be useful, see Awesome Electric Grid Mapping List.
 
-## Downloading transmission data of an area near a border  :inbox_tray:
+## <div class="tools-header">Downloading transmission data of an area near a border  :inbox_tray:</div>
 <div style="float: right; margin: 5px 0 30px 20px; width: 300px;">
   <img src="../images/alternative_query.png" class="img-border" style="width: 100%;">
 </div>
@@ -23,7 +23,7 @@ If you are mapping an interconnector between two countries for example, and you 
 
 
 
-## Bing attribution issue :no_entry:
+## <div class="tools-header">Bing attribution issue :no_entry:</div>
 <div class="align-with-heading">
   <img src="../images/bing_issue.png" class="img-border" width="300">
 </div>

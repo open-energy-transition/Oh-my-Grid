@@ -6,7 +6,9 @@ A [starter kit](https://github.com/open-energy-transition/grid-mapping-starter-k
   <img src="../images/kenyamap.png" class="img-border" style="width: 400px;">
   <img src="../images/startermap.png" class="img-border" style="width: 380px;">
 </div>
-## Setup JOSM on your device :rocket:
+
+## **<div class="tools-header">Setup JOSM on your device :rocket:</div>**
+
 <div style="float: right; margin: -25px 50px 0 50px;">
   <img src="../images/josm_logo.png"  width="100">
 </div>
@@ -24,10 +26,10 @@ A [starter kit](https://github.com/open-energy-transition/grid-mapping-starter-k
 <div style="float: right; margin: 5px 0 20px 20px; width: 300px;">
   <img src="../images/clickmap.png" class="img-border" style="width: 100%;">
 </div>
-## Loading power infrastructure into JOSM :inbox_tray:
+## **<div class="tools-header">Loading power infrastructure into JOSM :inbox_tray:</div>**
 1\. Make sure remote control is enabled, and then just go to the start mapping [page](http://127.0.0.1:8000/Oh-my-Grid/start_mapping/). Here you can click on the country you want to map, and it will directly open JOSM and load the data of that country. <br>
 
-## How to Map and upload your progress :outbox_tray:
+## **<div class="tools-header">How to Map and upload your progress :outbox_tray:</div>**
 <div style="float: right; margin: 5px 0 20px 20px; width: 300px;">
   <img src="../images/presets.png" class="img-border" style="width: 100%;">
 </div>
@@ -35,7 +37,7 @@ A [starter kit](https://github.com/open-energy-transition/grid-mapping-starter-k
 <div style="float: right; margin: 5px 0 20px 20px; width: 200px;">
   <img src="../images/startmapping.png" class="img-border" style="width: 100%;">
 </div>
-2\. Start Mapping. Read more about the general mapping process in JOSM. Place nodes (eg.power towers, power portals) or place polygons to delimit an area (eg. substation, generator), and press on the preset structure you want it to be. <br> :pencil: Example: As seen in the image to the right, the red polygon is a substation which is mapped by adding nodes that are connected to each other and tagged as a substation. <br>
+2\. Start Mapping. Read more about the general mapping process in JOSM. Place nodes (eg.power towers, power portals) or place polygons to delimit an area (eg. substation, generator), and press on the preset structure you want it to be. If you want to learn how to map fast, go to the advanced kit tab! <br> :pencil: Example: As seen in the image to the right, the red polygon is a substation which is mapped by adding nodes that are connected to each other and tagged as a substation. <br>
 
 3\. Whilst having the OpenStreetMap layer activated, press the green Upload arrow. Avoid ignoring validation results. The only acceptable warning when uploading data is "Possible missing line support node within power line". When you make an edit, please use the **#ohmygrid** in the changeset to help the initiative!
 
