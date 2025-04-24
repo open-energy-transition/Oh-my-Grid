@@ -21,8 +21,7 @@ theme:
   name: material
   favicon: images/logo.png
   logo: images/logo.png
-  palette: 
-    
+  palette:
     # Light Mode
     - scheme: default
       primary: green
