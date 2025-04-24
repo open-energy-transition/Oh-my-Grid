@@ -3,7 +3,10 @@
 </div>
 Welcome to our interactive mapping tool! Click on a country below to start mapping power infrastructure directly in JOSM. :rocket:
 
-When you make an edit, please use the **#ohmygrid** in the changeset to help the initiative!
+<p>
+  When you make an edit, please use the <span class="big-font">#ohmygrid</span> in the changeset to help the initiative!
+</p>
+
 
 :exclamation: Remember to allow remote control in Edit>Preferences>Remote Control and to disable all ad blocker.
 
