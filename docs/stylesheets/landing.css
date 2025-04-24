@@ -44,9 +44,15 @@ body.landing-page header.md-header {
   margin-bottom: 1rem;
 }
 
-.hero-section .hero-logo {
-  max-width: 450px;
-}
+.hero-logo {
+    /* pick the exact pixel width you want: */
+    width: 400px !important;
+    /* undo any “max-width:100%” from the theme */
+    max-width: none !important;
+    height: auto !important;
+    display: block;
+    margin: 0; /* so it doesn’t accidentally center itself */
+  }
 
 .mission-statement {
   font-size: 1.5rem;
@@ -55,6 +61,7 @@ body.landing-page header.md-header {
   margin: 0 auto 2rem;
   line-height: 1.4;
   font-weight: 500;
+  text-align: left !important;
 }
 
 .social-links {
