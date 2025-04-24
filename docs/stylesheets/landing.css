@@ -203,6 +203,7 @@ body.landing-page header.md-header {
 }
 
 
+
 /* ==== MEDIA QUERIES (Adjustments for smaller screens) ==== */
 @media (max-width: 768px) {
   .hero-section {
@@ -256,3 +257,4 @@ body.landing-page header.md-header {
      box-shadow: none;
    }
 }
+
