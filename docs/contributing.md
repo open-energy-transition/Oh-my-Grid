@@ -6,7 +6,7 @@ Our initiative wants to build a community of mappers from all around the world, 
 You can join this [discord](https://discord.gg/a5znpdFWfD) server to learn more, and chat about OSM grid mapping with us.
 <br>
 
-Here are some [heatmaps](https://yosmhm.neis-one.org/) of the mapping work some of our team has done:
+Here are some [heatmaps](https://yosmhm.neis-one.org/) of the mapping work some of our team has done (more than 40k towers placed!):
 <div style="display: flex; justify-content: space-between; gap: 20px; margin: 20px 0;">
   <img src="../images/heatmapahd.png" class="img-border" width="300">
   <img src="../images/heatmapmwi.png" class="img-border" width="300">
