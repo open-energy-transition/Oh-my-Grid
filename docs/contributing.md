@@ -4,6 +4,8 @@
 
 Our initiative wants to build a community of mappers from all around the world, so that power infrastructure is continuously added and improved in the future.
 You can join this [discord](https://discord.gg/a5znpdFWfD) server to learn more, and chat about OSM grid mapping with us.
+
+If you want to join our community, join our OSM [team](https://mapping.team/teams/1570/invitations/eec8b5f8-b212-4013-8707-96245f300fa1), and use our hashtag #ohmygrid!
 <br>
 
 Here are some [heatmaps](https://yosmhm.neis-one.org/) of the mapping work some of our team has done (more than 40k towers placed!):
