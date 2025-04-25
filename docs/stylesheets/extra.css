@@ -121,7 +121,7 @@
   margin-right: 0.5rem;
 }
 
-/* Progress Bars Styling */
+/* Progress Bars on contribute page styling */
 .progress-section {
   margin: 2rem 0;
 }
@@ -133,22 +133,82 @@
   font-weight: 600;
   margin-bottom: 0.25rem;
 }
+
+/* --- Styling for the outer container of the bar --- */
 .progress {
-  background: #eee;
-  border-radius: 4px;
-  overflow: hidden;
-  height: 1rem;
+  background-color: #e9ecef; /* Lighter grey background */
+  border-radius: 0.5rem; /* More rounded corners */
+  overflow: hidden; /* Keep the inner bar contained */
+  height: 1.25rem; /* Make it a bit taller */
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1); /* Subtle inner shadow for depth */
 }
+
+/* --- Styling for the inner fill bar --- */
 .progress-bar {
   height: 100%;
-  background: #54A36A;
-  width: 0;
-  transition: width 0.5s ease;
+  /* Use a nicer green or your theme's primary color */
+  background-color: #28a745; /* A common 'success' green */
+  /* Add a subtle gradient/stripe effect */
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-size: 1rem 1rem; /* Control the size of the stripes */
+
+  width: 0; /* Initial width */
+  border-radius: 0.5rem; /* Match outer radius - adjust if it looks odd */
+  /* Ensure smooth transition */
+  transition: width 0.6s ease;
+
+  /* Optional: Add animation to make stripes move */
+  /* animation: progress-bar-stripes 1s linear infinite; */
 }
+
+/* --- Styling for the count number next to the bar --- */
 .progress-item span {
   display: inline-block;
-  margin-left: 0.5rem;
+  margin-left: 0.75rem; /* Slightly more space */
   font-weight: bold;
+  vertical-align: middle; /* Align better with the taller bar */
+  line-height: 1.25rem; /* Match progress bar height */
+}
+
+/* --- Styling for the Refresh Button --- */
+#refresh-btn {
+  /* Button Base Styles */
+  display: inline-block; /* Behave like a button */
+  padding: 0.5rem 0.5rem; /* Comfortable padding */
+  margin-bottom: 1rem; /* Keep the margin (moved from inline) */
+  font-size: 0.6rem;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: #ffffff; /* White text */
+  background-color: #007bff; /* A standard blue */
+  border: 1px solid #007bff;
+  border-radius: 0.25rem; /* Slightly rounded corners */
+  cursor: pointer; /* Hand cursor on hover */
+  user-select: none; /* Prevent selecting text */
+  vertical-align: middle;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; /* Smooth transitions */
+}
+
+/* Hover State */
+#refresh-btn:hover {
+  background-color: #0056b3; /* Darker blue */
+  border-color: #0056b3;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* Active State (when clicked) */
+#refresh-btn:active {
+  background-color: #004085; /* Even darker blue */
+  border-color: #00376e;
+  transform: translateY(1px); /* Subtle "push" effect */
+}
+
+/* Focus State (for accessibility) */
+#refresh-btn:focus {
+    outline: 0; /* Remove default outline */
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5); /* Add a blue glow */
 }
 
   

@@ -16,9 +16,9 @@ Here are some [heatmaps](https://yosmhm.neis-one.org/) of the mapping work some 
 </div>
 
 <!-- Progress Bars Section -->
-<div class="progress-section">
-  <h2>Community Progress</h2>
-   
+## **<div class="tools-header">Community progress :rocket:</div>**
+
+<div class="progress-section"> 
    <button id="refresh-btn" style="margin-bottom:1rem;">
      🔄 Refresh stats
    </button>
@@ -41,61 +41,127 @@ Here are some [heatmaps](https://yosmhm.neis-one.org/) of the mapping work some 
 </div>
 
 <script>
+  // Function to fetch data and update the DOM/cache - ONLY TOWER COUNT
 async function fetchAndUpdate() {
-  // 1) Changesets
-  const csResp = await fetch('https://osmcha.org/api/v1/changesets/?hashtags=ohmygrid&page_size=1');
-  const csCount = (await csResp.json()).count;
+  console.log("Fetching fresh stats (Towers only)..."); // Debug log
+  // Show loading state ONLY for towers
+  // document.getElementById('cs-count').textContent = 'Loading...'; // Comment out or remove CS elements later
+  document.getElementById('tower-count').textContent = 'Loading...';
+  // document.getElementById('cs-bar').style.width = '0%'; // Comment out or remove CS elements later
+  document.getElementById('tower-bar').style.width = '0%';
 
-  // 2) Towers
-  const towerQuery = `
-    [out:json][timeout:100];
-    (
-      node["power"="tower"](user:"Andreas Hernandez");
-      node["power"="tower"](user:"Tobias Augspurger");
-      node["power"="tower"](user:"Mwiche");
-      node["power"="tower"](user:"davidtt92");
-      node["power"="tower"](user:"relaxxe");
-    );
-    out count;
-  `;
-  const towerResp = await fetch('https://overpass-api.de/api/interpreter', {
-    method: 'POST',
-    body: towerQuery.trim()
-  });
-  const towerCount = (await towerResp.json()).elements[0].count || 0;
+  try {
+    // 1) Changesets -- COMMENTED OUT / REMOVED
+    /*
+    const csResp = await fetch('https://osmcha.org/api/v1/changesets/?hashtags=ohmygrid&page_size=1');
+    if (!csResp.ok) throw new Error(`OSMCha fetch failed: ${csResp.statusText}`);
+    const csData = await csResp.json();
+    const csCount = csData.count || 0;
+    */
+    const csCount = 0; // Set a default value if needed, or remove cs elements entirely
 
-  // 3) DOM updates
-  document.getElementById('cs-count').textContent    = csCount.toLocaleString();
-  document.getElementById('tower-count').textContent = towerCount.toLocaleString();
+    // 2) Towers
+    const towerQuery = `
+      [out:json][timeout:100];
+      (
+        node["power"="tower"](user:"Andreas Hernandez");
+        node["power"="tower"](user:"Tobias Augspurger");
+        node["power"="tower"](user:"Mwiche");
+        node["power"="tower"](user:"davidtt92");
+        node["power"="tower"](user:"relaxxe");
+      );
+      out count;
+    `;
+    console.log("Sending Overpass query..."); // Debug log
+    const towerResp = await fetch('https://overpass-api.de/api/interpreter', {
+      method: 'POST',
+      // Sending the query raw in the body is usually fine for Overpass POST
+      body: towerQuery.trim()
+    });
+    console.log("Overpass response received:", towerResp.status, towerResp.statusText); // Debug log
+    if (!towerResp.ok) throw new Error(`Overpass fetch failed: ${towerResp.statusText}`);
+    const towerData = await towerResp.json();
+    console.log("Overpass JSON data:", towerData); // Debug log
 
-  const csGoal = 500, towerGoal = 10000;
-  document.getElementById('cs-bar').style.width    = Math.min(100, csCount/csGoal*100) + '%';
-  document.getElementById('tower-bar').style.width = Math.min(100, towerCount/towerGoal*100) + '%';
+    const towerCount = parseInt(towerData.elements[0]?.tags?.nodes?.total || towerData.elements[0]?.tags?.total || '0', 10);
 
-  // 4) Cache in localStorage
-  const data = { csCount, towerCount, timestamp: Date.now() };
-  localStorage.setItem('ohmygridStats', JSON.stringify(data));
-}
+    console.log("Counts fetched:", { csCount, towerCount }); // Debug log
 
-async function updateProgress() {
-  // Try to load from cache
-  const cached = JSON.parse(localStorage.getItem('ohmygridStats') || 'null');
-  if (cached && Date.now() - cached.timestamp < 24*60*60*1000) {
-    // use cached
-    document.getElementById('cs-count').textContent    = cached.csCount.toLocaleString();
-    document.getElementById('tower-count').textContent = cached.towerCount.toLocaleString();
-    document.getElementById('cs-bar').style.width    = Math.min(100, cached.csCount/500*100) + '%';
-    document.getElementById('tower-bar').style.width = Math.min(100, cached.towerCount/10000*100) + '%';
-  } else {
-    // fetch fresh
-    await fetchAndUpdate();
+    // 3) DOM updates (Only for towers now)
+    // document.getElementById('cs-count').textContent    = csCount.toLocaleString(); // Comment out
+    document.getElementById('tower-count').textContent = towerCount.toLocaleString();
+
+    const towerGoal = 10000; // Consider making these configurable
+    // document.getElementById('cs-bar').style.width    = Math.min(100, (csCount / csGoal) * 100) + '%'; // Comment out
+    document.getElementById('tower-bar').style.width = Math.min(100, (towerCount / towerGoal) * 100) + '%';
+
+    // 4) Cache in localStorage (Only tower count now)
+    // Adapt the cache structure if you remove csCount permanently
+    const dataToCache = { csCount: null, towerCount, timestamp: Date.now() }; // Set csCount to null or remove
+    localStorage.setItem('ohmygridStats', JSON.stringify(dataToCache));
+    console.log("Stats updated and cached."); // Debug log
+
+  } catch (error) {
+    console.error("Error fetching or updating stats:", error);
+    // Display error message to the user
+    // document.getElementById('cs-count').textContent = 'N/A'; // Update CS display
+    document.getElementById('tower-count').textContent = 'Error';
   }
 }
 
-// Wire up on load + button
-updateProgress();
-document.getElementById('refresh-btn')
-        .addEventListener('click', () => fetchAndUpdate());
+// *** IMPORTANT: Update updateProgressDisplay too ***
+// You'll need to adjust the `updateProgressDisplay` function similarly
+// to only handle the tower count from the cache or remove the csCount logic.
+
+// Example adjusted updateProgressDisplay
+async function updateProgressDisplay() {
+  console.log("Updating progress display...");
+  const cached = JSON.parse(localStorage.getItem('ohmygridStats') || 'null');
+  const cacheExpiry = 60 * 60 * 1000; // 1 hour
+
+  if (cached && cached.towerCount !== null && (Date.now() - cached.timestamp < cacheExpiry)) {
+    console.log("Using cached stats for towers.");
+    document.getElementById('tower-count').textContent = cached.towerCount.toLocaleString();
+    const towerGoal = 10000;
+    document.getElementById('tower-bar').style.width = Math.min(100, (cached.towerCount / towerGoal) * 100) + '%';
+    // Handle CS display if you keep the elements
+    // document.getElementById('cs-count').textContent = cached.csCount !== null ? cached.csCount.toLocaleString() : 'N/A';
+    // document.getElementById('cs-bar').style.width = cached.csCount !== null ? Math.min(100, (cached.csCount / 500) * 100) + '%' : '0%';
+
+  } else {
+    console.log("Cache expired or missing, fetching fresh data.");
+    await fetchAndUpdate();
+  }
+   // If you completely remove the CS HTML elements, you don't need to handle them here.
+   // Otherwise, set a default state for CS count/bar:
+   if (!cached || cached.csCount === null) {
+       document.getElementById('cs-count').textContent = 'N/A';
+       document.getElementById('cs-bar').style.width = '0%';
+   }
+}
+
+
+// Keep the DOMContentLoaded wrapper and button listener as they were
+document.addEventListener('DOMContentLoaded', function() {
+  console.log("DOM fully loaded and parsed.");
+
+  // Initial load
+  updateProgressDisplay();
+
+  // Wire up the refresh button
+  const refreshButton = document.getElementById('refresh-btn');
+  if (refreshButton) {
+     refreshButton.addEventListener('click', () => {
+         console.log("Refresh button clicked.");
+         localStorage.removeItem('ohmygridStats'); // Clear cache on manual refresh
+         fetchAndUpdate(); // Fetch and update immediately
+     });
+     console.log("Refresh button listener attached.");
+  } else {
+     console.error("Refresh button not found!");
+  }
+});
+
 </script>
 
 ##**Want to track and see your personal mapping progress (KPI)? :white_check_mark:** <br>
