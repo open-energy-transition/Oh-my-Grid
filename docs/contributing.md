@@ -20,7 +20,7 @@ Here are some [heatmaps](https://yosmhm.neis-one.org/) of the mapping work some 
 
 <div class="progress-section"> 
    <button id="refresh-btn" style="margin-bottom:1rem;">
-     🔄 Refresh stats
+     🔄 Refresh stats (only click if the bars are not loading)
    </button>
 
   <div class="progress-item">
