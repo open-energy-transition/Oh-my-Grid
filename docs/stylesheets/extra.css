@@ -121,5 +121,35 @@
   margin-right: 0.5rem;
 }
 
+/* Progress Bars Styling */
+.progress-section {
+  margin: 2rem 0;
+}
+.progress-item {
+  margin-bottom: 1.5rem;
+}
+.progress-item label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+.progress {
+  background: #eee;
+  border-radius: 4px;
+  overflow: hidden;
+  height: 1rem;
+}
+.progress-bar {
+  height: 100%;
+  background: #54A36A;
+  width: 0;
+  transition: width 0.5s ease;
+}
+.progress-item span {
+  display: inline-block;
+  margin-left: 0.5rem;
+  font-weight: bold;
+}
+
   
   

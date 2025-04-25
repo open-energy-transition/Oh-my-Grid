@@ -45,6 +45,9 @@ extra_css:
     - stylesheets/landing.css
     - stylesheets/blog.css
 
+extra_javascript:
+  - javascripts/progress.js
+
 
 markdown_extensions:
   - pymdownx.highlight:
