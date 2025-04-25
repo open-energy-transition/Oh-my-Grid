@@ -13,6 +13,9 @@ nav:
   - Awesome List 🌟: awesome.md
   - Contribute & KPI 🤝: contributing.md
   - Validation checks ✅:  validation-checks.md
+  - Blog 💭:
+      2025:
+        - "Liberate the Grid": blog/firstrename.md
 
 copyright:    <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">
       Creative Commons Attribution 4.0 International License   </a>
@@ -40,6 +43,7 @@ theme:
 extra_css:
     - stylesheets/extra.css
     - stylesheets/landing.css
+    - stylesheets/blog.css
 
 
 markdown_extensions:
