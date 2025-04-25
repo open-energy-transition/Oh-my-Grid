@@ -19,11 +19,11 @@
 Tip: Certain countries have different names associated, so to fetch the data for the entire country use an asterisk (wildcard) like: France*
 <br> 
 <br>
-<div class="align-with-heading">
-  <img src="../images/gemtracker.png" class="img-border" width="320">
-</div>
 
 ## **<div class="tools-header">OSM and Global Energy Monitor comparison tool</div>**
+<div style="float: right; margin: -25px 0px 0 50px;">
+  <img src="../images/gemtracker.png" class="img-border" width="300">
+</div>
 [GEM per Country Power Tracker web application](https://github.com/open-energy-transition/gem_per_country) - The tool allows users to preview and download GeoJSON data for global power plants in the Global Energy Monitor database filtered by country and power plant status.
 
 ### How to use the GEM power plants per country tool
@@ -77,7 +77,7 @@ mismatch_threshold_km = 0.5 #mismatch_threshold_km (float): The threshold distan
   </div>
 </div>
 
-## <div class="tools-header">Google Maps Substations</div> :lock:
+## <div class="tools-header">Google Maps Substations :lock:</div> 
 Google Maps would be the perfect additional data source for the locations and names of substations worldwide, but so far **no official authorisation has been granted** for using the location of substation within OpenStreetMap. Google Maps shows many transmission and distribution substations that are difficult to locate using current mapping strategies, particularly in remote areas of low- and middle-income countries. <br>
 
 Knowing only the locations of these substations would greatly accelerate the progress of grid mapping and allow the discovery of smaller substations that are relevant for estimating distribution network coverage and rural electrification levels. Together with the OpenStreetMap community, the data can be integrated using officially authorised satellite images for OpenStreetMap contributors, **if** permission is granted! <br>
