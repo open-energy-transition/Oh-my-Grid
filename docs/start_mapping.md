@@ -8,7 +8,8 @@ Welcome to our interactive mapping tool! Click on a country below to start mappi
 </p>
 
 
-:exclamation: Remember to allow remote control in Edit>Preferences>Remote Control and to disable all ad blocker.
+:exclamation: Remember to allow remote control in _Edit>Preferences>Remote Control_ and to disable all ad blocker.<br>
+:exclamation: Please read the common mistakes section in the starter-kit!
 
 <style>
 #map {
