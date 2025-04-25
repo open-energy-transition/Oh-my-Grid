@@ -20,7 +20,7 @@ Here are some [heatmaps](https://yosmhm.neis-one.org/) of the mapping work some 
 
 <div class="progress-section"> 
    <button id="refresh-btn" style="margin-bottom:1rem;">
-     🔄 Refresh stats (only click if the bars are not loading)
+     🔄 Refresh stats (only click if the bars are not "loading...")
    </button>
 
   <div class="progress-item">
@@ -32,7 +32,7 @@ Here are some [heatmaps](https://yosmhm.neis-one.org/) of the mapping work some 
   </div>
 
   <div class="progress-item">
-    <label>Towers mapped by some of our team:</label>
+    <label>Towers mapped by our team:</label>
     <div class="progress">
       <div class="progress-bar" id="tower-bar"></div>
     </div>
@@ -62,13 +62,21 @@ async function fetchAndUpdate() {
 
     // 2) Towers
     const towerQuery = `
-      [out:json][timeout:100];
+      [out:json][timeout:300];
       (
         node["power"="tower"](user:"Andreas Hernandez");
         node["power"="tower"](user:"Tobias Augspurger");
         node["power"="tower"](user:"Mwiche");
         node["power"="tower"](user:"davidtt92");
         node["power"="tower"](user:"relaxxe");
+        node["power"="tower"](user: "Russ")(newer:"2025-03-01T00:00:00Z");
+        node["power"="tower"](user: "map-dynartio")(newer:"2025-03-01T00:00:00Z");
+        node["power"="tower"](user: "overflorian")(newer:"2025-03-01T00:00:00Z");
+        node["power"="tower"](user: "nlehuby")(newer:"2025-03-01T00:00:00Z");
+        node["power"="tower"](user: "ben10dynartio")(newer:"2025-03-01T00:00:00Z");
+        node["power"="tower"](user: "InfosReseaux")(newer:"2025-03-01T00:00:00Z");
+
+
       );
       out count;
     `;
