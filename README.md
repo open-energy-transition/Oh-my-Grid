@@ -24,4 +24,4 @@ When you make an edit, please use the **#ohmygrid** in the changeset to help the
 ⚠️ **If you're eager to get started with transmission grid mapping in OpenStreetMap, check out the [Grid Mapping Starter Kit](https://github.com/open-energy-transition/grid-mapping-starter-kit) and [our community discord channel](https://discord.gg/a5znpdFWfD).** ⚠️
 
 The link to our website:
-https://open-energy-transition.github.io/Oh-my-Grid/
+ ohmygrid.org/ 
