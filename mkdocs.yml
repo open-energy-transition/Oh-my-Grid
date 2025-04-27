@@ -23,7 +23,7 @@ copyright:    <a href="https://creativecommons.org/licenses/by/4.0/" target="_bl
 theme:
   name: material
   favicon: images/preview.jpg
-  logo: images/preview.jpg
+  logo: images/logo.jpg
   palette:
     # Light Mode
     - scheme: default
