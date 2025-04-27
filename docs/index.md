@@ -24,7 +24,7 @@ body_class: landing-page
     </div>
   </div>
   <div class="hero-content-right">
-    <img src="images/logo.png" alt="Oh My Grid Logo" class="hero-logo" />
+    <img src="images/logo.png" style="width: 100%; height: auto; display: block; margin: 0 auto; >
   </div>
 </div>
 
