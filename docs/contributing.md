@@ -32,7 +32,7 @@ Here are some [heatmaps](https://yosmhm.neis-one.org/) of the mapping work some 
   </div>
 
   <div class="progress-item">
-    <label>Towers mapped by our team:</label>
+    <label>Towers mapped by our team: (will currently take 3 minutes to load)</label>
     <div class="progress">
       <div class="progress-bar" id="tower-bar"></div>
     </div>
