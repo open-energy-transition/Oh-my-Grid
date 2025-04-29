@@ -5,7 +5,7 @@
 
 ## **<div class="tools-header">Osmose per country</div>**
 
-[Osmose per country](https://github.com/open-energy-transition/osmose_per_country) - This is a front end interface that allows fetching data on gaps in the OSM data through the OSMOSE API on a country level.
+[Osmose per country](https://open-energy-transition.github.io/osmose_per_country/) - This is a front end interface that allows fetching data on gaps in the OSM data through the OSMOSE API on a country level.
 
 ### What is Osmose?
 
@@ -24,7 +24,7 @@ Tip: Certain countries have different names associated, so to fetch the data for
 <div style="float: right; margin: -25px 0px 0 50px;">
   <img src="../images/gemtracker.png" class="img-border" width="300">
 </div>
-[GEM per Country Power Tracker web application](https://github.com/open-energy-transition/gem_per_country) - The tool allows users to preview and download GeoJSON data for global power plants in the Global Energy Monitor database filtered by country and power plant status.
+[GEM per Country Power Tracker web application](https://open-energy-transition.github.io/gem_per_country/) - The tool allows users to preview and download GeoJSON data for global power plants in the Global Energy Monitor database filtered by country and power plant status.
 
 ### How to use the GEM power plants per country tool
 1. Go to the [repository](https://github.com/open-energy-transition/gem_per_country) and copy the line to clone (instructions can be found there)
