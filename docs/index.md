@@ -37,7 +37,7 @@ body_class: landing-page
       Improve data reliability and availability to better assess and manage risks for clean energy projects in emerging market and developing economies.
     </blockquote>
     <p class="reference">
-      International Energy Agency: Taking Stock to Taking Action: How to implement the COP28 energy goals
+      International Energy Agency: How to implement the COP28 energy goals
     </p>
     <p>That's why <a href="https://openenergytransition.org/" target="_blank" rel="noopener">Open Energy Transition</a> has launched this open initiative in collaboration with <a href="https://datactivist.coop/en/" target="_blank" rel="noopener">Datactivist</a>, <a href="https://junglebus.io/" target="_blank" rel="noopener">Jungle Bus</a>, <a href="https://dynartio.com/" target="_blank" rel="noopener">Dynartio</a> and <a href="https://www.infrageomatics.com/" target="_blank" rel="noopener">Infrageomatics</a>. We are working with the OpenStreetMap community, organisations and individuals around the world to not only create an <a href="https://www.nature.com/articles/s41597-025-04550-7" target="_blank" rel="noopener">open digital twin of the European grid</a>, but also to expand the global coverage of the transmission grid in OpenStreetMap from around 70% to 98% over the next three years.</p>
     <img src="images/illustration.svg" alt="Grid Illustration" class="initiative-illustration" />
