@@ -9,7 +9,7 @@ body_class: landing-page
 <div class="hero-section">
   <div class="hero-content-left">
     <h1 class="hero-title">Oh my Grid</h1>
-    <p class="mission-statement"> We empower individuals, communities and nations around the world to map the global electrical grid.
+    <p class="mission-statement"> We empower individuals, communities and nations around the world to map the electrical grid.
     </p>
     <div class="social-links">
       <a href="https://discord.gg/a5znpdFWfD" target="_blank" rel="noopener">
@@ -24,20 +24,20 @@ body_class: landing-page
     </div>
   </div>
   <div class="hero-content-right">
-    <img src="images/logo.png" style="width: 100%; height: auto; display: block; margin: 0 auto;">
+    <img src="images/logo.png" style="width: 70%; height: auto; display: block; margin: 0 auto;">
   </div>
 </div>
 
 <div class="initiative-section">
   <div class="initiative-content">
     <h2>Why This Matters</h2>
-    <p>Energy from fossil fuels are by far the largest contributor to climate change, accounting for over 75 % of global greenhouse gas emissions. Mitigating away from fossil energy sources requires the rapid extension and modernization of the electrical grid, which is currently one of the main bottlenecks to decarbonising our energy.</p>
-    <p>Despite the urgent need to expand the global electricity grid, the industry has been unable to establish an open data standard for the exchange of transmission grid routing data and specifications across borders. In recent years, OpenStreetMap has established itself as the unofficial de facto standard in academia and industry for cross-border transmission and distribution grid data. For developing countries in particular, the quality and coverage of grid data is inadequate. Closing this gap is not only essential for providing stable energy supply to rural communities, it is also key to mitigating climate change, a key recommendation of the International Energy Agency's latest report:</p>
+    <p> Transitioning away from fossil energy sources—which account for over 75% of global greenhouse gas emissions—requires rapid modernization of the electrical grid, currently a major bottleneck to energy decarbonization</p>
+    <p>Despite the urgent need to expand the electricity grid, no open industrial data standard has been established for cross-border transmission. OpenStreetMap has emerged as the unofficial de facto standard in academia and industry. However, in developing countries, grid data remains poor, hindering both rural energy access and efforts to combat climate change:</p>
     <blockquote>
       Improve data reliability and availability to better assess and manage risks for clean energy projects in emerging market and developing economies.
     </blockquote>
     <p class="reference">
-      IEA: Taking Stock to Taking Action: How to implement the COP28 energy goals
+      International Energy Agency: Taking Stock to Taking Action: How to implement the COP28 energy goals
     </p>
     <p>That's why <a href="https://openenergytransition.org/" target="_blank" rel="noopener">Open Energy Transition</a> has launched this open initiative in collaboration with <a href="https://datactivist.coop/en/" target="_blank" rel="noopener">Datactivist</a>, <a href="https://junglebus.io/" target="_blank" rel="noopener">Jungle Bus</a>, <a href="https://dynartio.com/" target="_blank" rel="noopener">Dynartio</a> and <a href="https://www.infrageomatics.com/" target="_blank" rel="noopener">Infrageomatics</a>. We are working with the OpenStreetMap community, organisations and individuals around the world to not only create an <a href="https://www.nature.com/articles/s41597-025-04550-7" target="_blank" rel="noopener">open digital twin of the European grid</a>, but also to expand the global coverage of the transmission grid in OpenStreetMap from around 70% to 98% over the next three years.</p>
     <img src="images/illustration.svg" alt="Grid Illustration" class="initiative-illustration" />
@@ -57,7 +57,7 @@ body_class: landing-page
     </a>
     <a href="https://wiki.openstreetmap.org/wiki/Power_networks" class="get-involved-card">
       <h3>Contribute to the wiki</h3>
-      <p>Help develop tools and  improve countries' power networks page by including your progress.</p>
+      <p>Help develop tools and improve countries' power networks page by including your progress.</p>
     </a>
   </div>
 </div>
