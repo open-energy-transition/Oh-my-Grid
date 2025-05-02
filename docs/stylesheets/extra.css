@@ -37,22 +37,116 @@
   line-height: 1.4;
 }
 
-/* Keep image + caption aligned with heading */
-.align-with-heading {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  margin-left: 20px;
+  
+  /* Ensure headers within the content area don't have excessive top margin */
+  .tool-content h2:first-child,
+  .tool-content h3:first-child {
+    margin-top: 0;
+  }
+  
+  /* Card-style header - looks good, keep as is */
+  .tools-header {
+    background-color: #e8f5e9;
+    padding: 8px 15px;
+    border-left: 4px solid #2a8000;
+    border-radius: 0 4px 4px 0;
+    display: inline-block; /* Keep this */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 0.75rem; /* Add some space below the header */
+  }
+  /* Make the H2 itself have no extra margin if the div has it */
+  .tool-content h2 {
+      margin-bottom: 0;
+      font-weight: bold;
+  }
+  
+  
+  /* --- Responsive Adjustments --- */
+  @media (max-width: 768px) { /* Adjust breakpoint as needed (e.g., 992px for tablets) */
+    .tool-section {
+      flex-direction: column; /* Stack text and images vertically */
+      gap: 1.5rem; /* Adjust gap for vertical layout */
+      align-items: stretch; /* Let items take full width */
+    }
+  
+    .tool-images {
+      flex-basis: auto; /* Let width be determined by content */
+      width: 100%; /* Take full width */
+      max-width: 400px; /* Optional: Limit image size even on mobile */
+      margin: 0 auto; /* Center the image block if it's narrower than the container */
+      align-items: center; /* Center images within the container */
+    }
+  
+    .tool-images img.img-border {
+       max-width: 100%; /* Ensure it doesn't exceed container */
+    }
+  }
+
+/* --- NEW STYLES FOR TOOL SECTIONS --- */
+
+/* Main container for each tool */
+.tool-section {
+  display: flex; /* Use flexbox for layout */
+  flex-wrap: wrap; /* Allow wrapping on smaller screens if needed, though media query is better */
+  align-items: flex-start; /* Align items to the top */
+  gap: 2rem; /* Space between text content and image block */
+  margin-bottom: 3rem; /* Space below each tool section */
+  padding-bottom: 1.5rem; /* Space before the border */
+  border-bottom: 1px solid #eee; /* Visual separator between tools */
 }
 
-/* Card-style header */
-.tools-header {
-  background-color: #e8f5e9;
-  padding: 8px 15px;
-  border-left: 4px solid #2a8000;
-  border-radius: 0 4px 4px 0;
-  display: inline-block;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+/* Ensure the last tool doesn't have a bottom border */
+.tool-section:last-of-type {
+  border-bottom: none;
+  margin-bottom: 1rem; /* Adjust margin for the very last item */
+  padding-bottom: 0;
+}
+
+/* Container for the text content */
+.tool-content {
+  flex: 1; /* Allow text content to grow and fill available space */
+  min-width: 0; /* Prevents flex items from overflowing if content is too wide (e.g., long code lines) */
+  /* Adjust min-width if needed, e.g., min-width: 300px; */
+}
+
+/* Container for the image(s) on the right */
+.tool-images {
+  flex-basis: 320px; /* Preferred starting width for the image container */
+  flex-shrink: 0; /* Prevent the image container from shrinking */
+  display: flex;
+  flex-direction: column; /* Stack images vertically */
+  gap: 1rem; /* Space between multiple images within the same tool */
+  /* margin-top: 0.5rem; */ /* Optional: Add slight top margin to align better with text flow if needed */
+}
+
+/* Styling for images within the tool section */
+.tool-images img.img-border {
+  display: block; /* Remove extra space below image */
+  max-width: 100%; /* Ensure image scales down within its container */
+  height: auto; /* Maintain aspect ratio */
+  margin: 0; /* Reset any default margins */
+  /* Keep your existing border style */
+  border: 2px solid #000 !important;
+  padding: 1px; /* Reduced padding slightly */
+  border-radius: 0;
+}
+
+/* Styling for figure/figcaption if used */
+.tool-images figure {
+  margin: 0; /* Reset default figure margins */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center caption below image if figure is wider */
+}
+
+.tool-images figcaption.image-caption {
+  /* Keep your existing caption style, adjust as needed */
+  font-size: 0.4rem; /* Slightly larger for readability */
+  color: #555; /* Slightly darker */
+  text-align: center;
+  margin-top: 0.5rem;
+  line-height: 1.3;
+  width: 100%; /* Ensure caption uses the width of the figure */
 }
 
 /* —————————————————————————
@@ -66,15 +160,7 @@
     padding: 4rem 2rem;
   }
   
-  /* nuke any top padding or white gap above the very first .section */
-  .md-app,
-  .md-main,
-  .md-main__inner,
-  .md-content,
-  .md-content__inner {
-    padding-top: 1 !important;
-    margin-top: 1 !important;
-  }
+ 
   
 
 .big-font {
@@ -87,7 +173,7 @@
 
 /* Titles of pages*/
 .page-headers {
-  margin: 0.5rem 0 1.5rem;  /* drop it below the nav and give breathing room */
+  margin: 0.5rem 0 10rem;  /* drop it below the nav and give breathing room */
   text-align: left;
 }
 
@@ -285,20 +371,6 @@
   user-select: none;
 }
 
-/* --- Ensure Featherlight elements are visible --- */
-/* Override potential conflicts hiding Featherlight UI */
-.featherlight-close,
-.featherlight-prev,
-.featherlight-next {
-    display: block !important; /* Ensure they are displayed */
-    visibility: visible !important; /* Ensure they are visible */
-    opacity: 1 !important; /* Ensure they are not transparent */
-    /* Add z-index if they are being covered */
-    /* z-index: 10001 !important; */ /* Featherlight's default z-index is usually 10000 */
-}
-
-/* If comments are showing, it's highly unusual, check the HTML source */
-/* The comments you added should not display */
 
 /* ─── Notes Section Styling ───────────────────────────────────────── */
 .country-notes {
