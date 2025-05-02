@@ -36,3 +36,6 @@ venv/
 
 #Vscode
 .vscode/
+
+#site
+site/

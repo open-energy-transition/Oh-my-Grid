@@ -83,6 +83,8 @@
   color: #333;
 }
 
+--------------------------------------------------------------------
+
 /* Titles of pages*/
 .page-headers {
   margin: 0.5rem 0 1.5rem;  /* drop it below the nav and give breathing room */
@@ -121,7 +123,8 @@
   margin-right: 0.5rem;
 }
 
-/* Progress Bars on contribute page styling */
+--------------------------------------------------------------------
+/* PROGRESS BAR ON CONTRIBUTING PAGE */
 .progress-section {
   margin: 2rem 0;
 }
@@ -211,5 +214,114 @@
     box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5); /* Add a blue glow */
 }
 
+/*-------------------------------------------------------------------------------
   
-  
+/* LOGBOOK CSS*/
+/* ─── Details/Summary reset ───────────────────────────────────────── */
+.country-entry {
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+.country-entry summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 0.75rem 1rem;
+  background: #f7f9f7;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+.country-entry summary::-webkit-details-marker { display: none; }
+.country-entry summary:before {
+  content: "▶";
+  display: inline-block;
+  margin-right: 0.5rem;
+  transition: transform 0.2s ease;
+}
+.country-entry[open] summary:before {
+  transform: rotate(90deg);
+}
+
+/* ─── Flag next to name ───────────────────────────────────────────── */
+.flag {
+  width: 1.2rem;
+  height: auto;
+  margin-right: 0.5rem;
+  vertical-align: middle;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+}
+
+/* ─── Inner “before/after” layout ─────────────────────────────────── */
+.progress-entry {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding: 1rem;
+  background: white;
+}
+.img-block {
+  text-align: center;
+  margin: 0 1rem;
+}
+.img-block img {
+  display: block;
+  max-width: 520px;
+  height: auto;
+}
+.image-caption {
+  font-size: 0.8rem;
+  color: #000;
+  margin-top: 0.4rem;
+}
+
+/* ─── Arrow styling ───────────────────────────────────────────────── */
+.arrow {
+  font-size: 1.5rem;
+  color: #28a745;
+  user-select: none;
+}
+
+/* --- Ensure Featherlight elements are visible --- */
+/* Override potential conflicts hiding Featherlight UI */
+.featherlight-close,
+.featherlight-prev,
+.featherlight-next {
+    display: block !important; /* Ensure they are displayed */
+    visibility: visible !important; /* Ensure they are visible */
+    opacity: 1 !important; /* Ensure they are not transparent */
+    /* Add z-index if they are being covered */
+    /* z-index: 10001 !important; */ /* Featherlight's default z-index is usually 10000 */
+}
+
+/* If comments are showing, it's highly unusual, check the HTML source */
+/* The comments you added should not display */
+
+/* ─── Notes Section Styling ───────────────────────────────────────── */
+.country-notes {
+  padding: 1rem;
+  background-color: #e9f5e9;
+  border-top: 1px solid #eee;
+}
+
+.country-notes h3 {
+  margin-top: 0.75rem;
+  margin-bottom: 0.5rem;
+  color: #2A6D3C;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.country-notes ul {
+  margin: 0.25rem 0 1rem 1.25rem;
+  padding: 0;
+  list-style: disc;
+}
+
+.country-notes ul li {
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
