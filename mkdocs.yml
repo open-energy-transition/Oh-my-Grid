@@ -11,8 +11,8 @@ nav:
   - Tools 🧰: tools.md
   - Advanced kit ⚡: advanced-kit.md
   - Awesome List 🌟: awesome.md
+  - Country Logbook 🌍 : country-logbook.md
   - Contribute & KPI 🤝: contributing.md
-  - Validation checks ✅:  validation-checks.md
   - Blog 💭:
       2025:
         - "Liberate the Grid": blog/firstrename.md
@@ -45,9 +45,7 @@ extra_css:
     - stylesheets/extra.css
     - stylesheets/landing.css
     - stylesheets/blog.css
-
-extra_javascript:
-  - javascripts/progress.js
+    - https://cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.css
 
 
 markdown_extensions:
