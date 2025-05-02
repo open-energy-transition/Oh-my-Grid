@@ -39,6 +39,7 @@ theme:
     - search.highlight
     - search.suggest
     - navigation.top
+    - content.image.zoom
 
 extra_css:
     - stylesheets/extra.css
