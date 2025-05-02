@@ -40,8 +40,9 @@ body_class: landing-page
       International Energy Agency: How to implement the COP28 energy goals
     </p>
     <p>That's why <a href="https://openenergytransition.org/" target="_blank" rel="noopener">Open Energy Transition</a> has launched this open initiative in collaboration with <a href="https://datactivist.coop/en/" target="_blank" rel="noopener">Datactivist</a>, <a href="https://junglebus.io/" target="_blank" rel="noopener">Jungle Bus</a>, <a href="https://dynartio.com/" target="_blank" rel="noopener">Dynartio</a> and <a href="https://www.infrageomatics.com/" target="_blank" rel="noopener">Infrageomatics</a>. We are working with the OpenStreetMap community, organisations and individuals around the world to not only create an <a href="https://www.nature.com/articles/s41597-025-04550-7" target="_blank" rel="noopener">open digital twin of the European grid</a>, but also to expand the global coverage of the transmission grid in OpenStreetMap from around 70% to 98% over the next three years.</p> 
-    <img src="images/openinframap-globe.png" alt="Grid Illustration" class="initiative-content" style="width: 120%;">
-    <p>Visualisation of the already extensive OpenStreetMap data of the electricity network on the <a href="https://openinframap.org/#3.34/8.66/41.06/B,E,L,N,P" target="_blank" rel="noopener">Open Infrastructure Map</a>.</p>
+  <img src="images/openinframap_crop.png" alt="Grid Illustration" class="initiative-content" style="width: 120%; border: 4px solid #4cae4f;">
+
+    <p>Visualisation of the already extensive OpenStreetMap data of the electricity network by <a href="https://openinframap.org/#3.34/8.66/41.06/B,E,L,N,P" target="_blank" rel="noopener">Open Infrastructure Map</a>.</p>
     
   </div>
 </div>
