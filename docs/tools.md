@@ -47,9 +47,9 @@
   <div class="tool-content">
     <p> In order to map more effectively, it is recommended to try and find maps and datasets that can help you find power lines, substations and power plants. National transmission system operators sometimes have publicly available maps, which can help you visualise the current state of the grid, and locate what is missing in OSM. Furthermore, having the names of substations can also help locate them. <br><br>
     
-    We have made an "awesome list" which you can access on this website too, which has datasets, maps, and information for many countries around the world. <br><br>
+    We have made an "[awesome list](https://ohmygrid.org/awesome/)" which you can access on this website too, which has datasets, maps, and information for many countries around the world. <br><br>
     
-    ❗ Please use these datasets as hint layers, and check licenses to see how/if you are allowed to use them.</p>
+    ❗ Please use these datasets as hint layers, and check licenses to see how/if you are allowed to use them. Do not copy/data from these maps directly into OpenStreetMap. Each data point of the transmission network must be set manually and [verified](https://wiki.openstreetmap.org/wiki/Verifiability) with official satellite data provided by the OpenStreetMap community.</p>
   </div>
   <div class="tool-images">
     <img src="../images/awesomelist.jpg" class="img-border" alt="GEM Tracker Interface">
