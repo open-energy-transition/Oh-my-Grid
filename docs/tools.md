@@ -26,7 +26,7 @@
 ## <div class="tools-header">OSM and Global Energy Monitor comparison tool</div></h2>
 <div class="tool-section">
   <div class="tool-content">
-    <p><a href="https://open-energy-transition.github.io/gem_per_country/">GEM per Country Power Tracker web application</a> - The tool allows users to preview and download GeoJSON data for global power plants in the Global Energy Monitor database filtered by country and power plant status.</p>
+    <p><a href="https://open-energy-transition.github.io/gem_per_country/">GEM per Country Power Tracker web application</a> - The tool allows users to preview and download GeoJSON data for global power plants in the <a href="https://globalenergymonitor.org/">Global Energy Monitor</a> database filtered by country and power plant status.</p>
 
     <h3>How to use the GEM power plants per country tool</h3>
     <ol>
@@ -36,8 +36,24 @@
     </ol>
   </div>
   <div class="tool-images">
-    <img src="../images/gemtracker.png" class="img-border" alt="GEM Tracker Interface">
+    <img src="../images/gemtracker1.png" class="img-border" alt="GEM Tracker Interface">
     <img src="../images/gem_angola.png" class="img-border" alt="GEM Angola Data Example in JOSM">
+  </div>
+</div>
+
+
+## <div class="tools-header">Data and maps as hint layers</div></h2>
+<div class="tool-section">
+  <div class="tool-content">
+    <p> In order to map more effectively, it is recommended to try and find maps and datasets that can help you find power lines, substations and power plants. National transmission system operators sometimes have publicly available maps, which can help you visualise the current state of the grid, and locate what is missing in OSM. Furthermore, having the names of substations can also help locate them. <br><br>
+    
+    We have made an "awesome list" which you can access on this website too, which has datasets, maps, and information for many countries around the world. <br><br>
+    
+    ❗ Please use these datasets as hint layers, and check licenses to see how/if you are allowed to use them.</p>
+  </div>
+  <div class="tool-images">
+    <img src="../images/awesomelist.png" class="img-border" alt="GEM Tracker Interface">
+    <img src="../images/bangladeshawesome.png" class="img-border" alt="GEM Angola Data Example in JOSM">
   </div>
 </div>
 
