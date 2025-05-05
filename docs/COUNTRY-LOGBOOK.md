@@ -8,6 +8,8 @@ Welcome to our country logbook where you can see our mapping progress in many di
 
 <!-- Add your country below the last country. Some css (in extra.css at "Hide ### from logbook") is being used to remove the ### from the table of contents so please use the same name or tell me -->
 
+<!-- You can find country flag emojis or codes here https://www.webnots.com/copy-paste-country-flag-emoji-symbols/-->
+
 ## [**Nepal**](https://wiki.openstreetmap.org/wiki/Power_networks/Nepal) 🇳🇵 
 ??? success "Mapping progress"
     **Progress timeline**
@@ -20,13 +22,13 @@ Welcome to our country logbook where you can see our mapping progress in many di
         ![Nepal after mapping](images/logbook/nepal-may2025.png){: .img-border }
         *May 2, 2025*
 
-    ### Success stories {: .no-toc }
+    ### Success stories 
     - Added Nepal's largest power plant (456 MW)
     - Mapped 132kv Nepal-India interconnector
     - Finalised 400kv lines
     - Connected Pokhara-Butwal substations
 
-    ### Key numbers {: .no-toc }
+    ### Key numbers 
     - **+3137** power towers added (10k total)
     - **+1120km** power lines (44% increase, as prior to our mapping, the transmission grid was 2560km)
     - **+980 MW** added capacity (1260 MW total)
