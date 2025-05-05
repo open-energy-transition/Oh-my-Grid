@@ -267,11 +267,7 @@ body.landing-page header.md-header {
   object-fit: contain; /* Ensure the logo scales nicely without distortion */
 }
 
-.partner-name {
-  font-size: 0.5rem;
-  font-weight: 500;
-  color: #333; /* Slightly darker text for names */
-}
+
 
 
 /* ==== MEDIA QUERIES (Adjustments for smaller screens) ==== */
@@ -349,9 +345,6 @@ body.landing-page header.md-header {
     max-height: 60px; /* Smaller logos on mobile */
   }
 
-  .partner-name {
-    font-size: 0.9rem;
-  }
 }
 
 @media (max-width: 480px) {
