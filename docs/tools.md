@@ -18,8 +18,8 @@
     <p>Tip: Certain countries have different names associated, so to fetch the data for the entire country use an asterisk (wildcard) like: <code>France*</code></p>
   </div>
   <div class="tool-images">
-    <img src="../images/osmoseapi.png" class="img-border" alt="Osmose API Tool Interface">
-    <img src="../images/osmosenamib.png" class="img-border" alt="Osmose example">
+    <img src="../images/osmoseapi.jpg" class="img-border" alt="Osmose API Tool Interface">
+    <img src="../images/osmosenamib.jpg" class="img-border" alt="Osmose example">
   </div>
 </div>
 
@@ -36,8 +36,8 @@
     </ol>
   </div>
   <div class="tool-images">
-    <img src="../images/gemtracker1.png" class="img-border" alt="GEM Tracker Interface">
-    <img src="../images/gem_angola.png" class="img-border" alt="GEM Angola Data Example in JOSM">
+    <img src="../images/gemtracker1.jpg" class="img-border" alt="GEM Tracker Interface">
+    <img src="../images/gem_angola.jpg" class="img-border" alt="GEM Angola Data Example in JOSM">
   </div>
 </div>
 
@@ -52,8 +52,8 @@
     ❗ Please use these datasets as hint layers, and check licenses to see how/if you are allowed to use them.</p>
   </div>
   <div class="tool-images">
-    <img src="../images/awesomelist.png" class="img-border" alt="GEM Tracker Interface">
-    <img src="../images/bangladeshawesome.png" class="img-border" alt="GEM Angola Data Example in JOSM">
+    <img src="../images/awesomelist.jpg" class="img-border" alt="GEM Tracker Interface">
+    <img src="../images/bangladeshawesome.jpg" class="img-border" alt="GEM Angola Data Example in JOSM">
   </div>
 </div>
 
@@ -80,8 +80,8 @@ mismatch_threshold_km = 0.5 #mismatch_threshold_km (float): The threshold distan
     </ol>
   </div>
   <div class="tool-images">
-     <img src="../images/wikicsv.png" class="img-border" alt="Wikidata Comparison CSV Output">
-     <img src="../images/wikigeo.png" class="img-border" alt="Wikidata Comparison GeoJSON Output">
+     <img src="../images/wikicsv.jpg" class="img-border" alt="Wikidata Comparison CSV Output">
+     <img src="../images/wikigeo.jpg" class="img-border" alt="Wikidata Comparison GeoJSON Output">
   </div>
 </div>
 
@@ -95,8 +95,8 @@ mismatch_threshold_km = 0.5 #mismatch_threshold_km (float): The threshold distan
    </ol>
   </div> 
   <div class="tool-images">
-     <img src="../images/openinfranight.png" class="img-border" alt="Wikidata Comparison CSV Output">
-     <img src="../images/openinfraosmose.png" class="img-border" alt="Wikidata Comparison GeoJSON Output">
+     <img src="../images/openinfranight.jpg" class="img-border" alt="Wikidata Comparison CSV Output">
+     <img src="../images/openinfraosmose.jpg" class="img-border" alt="Wikidata Comparison GeoJSON Output">
   </div>
 </div>
 
@@ -109,7 +109,7 @@ mismatch_threshold_km = 0.5 #mismatch_threshold_km (float): The threshold distan
   </div>
   <div class="tool-images">
     <figure>
-      <img src="../images/angolagoogle.png" class="img-border" alt="Google Maps Satellite view showing substations in Angola">
+      <img src="../images/angolagoogle.jpg" class="img-border" alt="Google Maps Satellite view showing substations in Angola">
       <figcaption class="image-caption">Imagery ©2025 CNES/Airbus, Maxar Technologies. Map data ©2025 Google</figcaption>
     </figure>
   </div>

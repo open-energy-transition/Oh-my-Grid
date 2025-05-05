@@ -4,19 +4,19 @@
 A [starter kit](https://github.com/open-energy-transition/grid-mapping-starter-kit) for Electrical Transmission Grid Mapping in OpenStreetMap, combining Osmose and Overpass with JOSM.
 <div style="display: flex; gap: 20px; margin: 20px auto; flex-wrap: wrap;">
   <img src="../images/kenyamap.jpg" class="img-border" style="width: 400px;">
-  <img src="../images/startermap.png" class="img-border" style="width: 380px;">
+  <img src="../images/startermap.jpg" class="img-border" style="width: 380px;">
 </div>
 
 ## **<div class="tools-header">Setup JOSM on your device :rocket:</div>**
 
 <div style="float: right; margin: -25px 50px 0 50px;">
-  <img src="../images/josm_logo.png"  width="100">
+  <img src="../images/josm_logo.jpg"  width="100">
 </div>
 1\. Install [Java](https://www.java.com/en/download/help/download_options.html) on your device if not installed. <br>
 2\. Install [JOSM](https://josm.openstreetmap.de/) on your device.<br>
 3\. (Optional) If you want preconfigured preferences, download this preferences.xml [file](https://github.com/open-energy-transition/grid-mapping-starter-kit/blob/main/josm-config/preferences.xml) and paste it in the correct folder on your device. The [JOSM wiki](https://josm.openstreetmap.de/wiki/Help/Preferences) provides details on where to place it.<!-- No space here -->
 <div style="float: right; margin: 5px 0 20px 20px; width: 350px;">
-  <img src="../images/mapcss_tutorial.png" class="img-border" style="width: 100%;">
+  <img src="../images/mapcss_tutorial.jpg" class="img-border" style="width: 100%;">
 </div>
 4\. Add our custom paint style which you can find [here](https://github.com/open-energy-transition/grid-mapping-starter-kit/blob/main/josm-config/transmission_grid_mapping_style.mapcss). To add to JOSM, go to Edit>Preferences>Map Paint Styles and press the "+" in the top right. Then you can paste this [URL](https://raw.githubusercontent.com/open-energy-transition/grid-mapping-starter-kit/refs/heads/main/josm-config/transmission_grid_mapping_style.mapcss) or the file saved on your device.<br>
 5. Download this <a href="https://github.com/open-energy-transition/grid-mapping-starter-kit/blob/main/josm-config/transmission_grid_mapping_template.joz" target="_blank">template</a> session, and in JOSM go to File>Open and open the .joz file. <br>
@@ -24,18 +24,18 @@ A [starter kit](https://github.com/open-energy-transition/grid-mapping-starter-k
 7. Finally, activate "expert mode" in View>Expert mode. This will enable using Overpass API. Also, make sure remote control is enabled in Edit>Preferences>Remote Control. You will need this enabled for the next step!
 
 <div style="float: right; margin: 5px 0 20px 20px; width: 300px;">
-  <img src="../images/clickmap.png" class="img-border" style="width: 100%;">
+  <img src="../images/clickmap.jpg" class="img-border" style="width: 100%;">
 </div>
 ## **<div class="tools-header">Loading power infrastructure into JOSM :inbox_tray:</div>**
 1\. Make sure remote control is enabled, and then just go to the start mapping [page](http://127.0.0.1:8000/Oh-my-Grid/start_mapping/). Here you can click on the country you want to map, and it will directly open JOSM and load the data of that country. <br>
 
 ## **<div class="tools-header">How to Map and upload your progress :outbox_tray:</div>**
 <div style="float: right; margin: 5px 0 20px 20px; width: 300px;">
-  <img src="../images/presets.png" class="img-border" style="width: 100%;">
+  <img src="../images/presets.jpg" class="img-border" style="width: 100%;">
 </div>
 1\. For ease of mapping, customise your toolbar with presets if you have not used the default preferences. Edit → Preferences → Toolbar. Then select the Presets → Man Made → Man Made/Power and add power towers, power portals and other presets for your mapping acticity.
 <div style="float: right; margin: 5px 0 20px 20px; width: 200px;">
-  <img src="../images/startmapping.png" class="img-border" style="width: 100%;">
+  <img src="../images/startmapping.jpg" class="img-border" style="width: 100%;">
 </div>
 2\. Start Mapping. Read more about the general mapping process in JOSM. Place nodes (eg.power towers, power portals) or place polygons to delimit an area (eg. substation, generator), and press on the preset structure you want it to be. If you want to learn how to map fast, go to the advanced kit tab! <br> 
 
