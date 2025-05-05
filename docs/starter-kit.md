@@ -43,6 +43,14 @@ A [starter kit](https://github.com/open-energy-transition/grid-mapping-starter-k
 
 3\. Whilst having the OpenStreetMap layer activated, press the green Upload arrow. Avoid ignoring validation results. The only acceptable warning when uploading data is "Possible missing line support node within power line". When you make an edit, please use the **#ohmygrid** in the changeset to help the initiative!
 
+## <div class="tools-header">Map fast  :pushpin:</div>
+If you want to be able to fast efficiently and fast, you will need to know how to correctly place towers and power lines. This will save you loads of time: <br>
+1\. Draw nodes (A) on towers as you follow the towers. This will create a long line of untagged nodes, all connected by a untagged way. <br>
+2\. Click on the way, and select power line to tag it. <br>
+3\. Then press on the way again, and control+F to open up search. Then paste in the bar: _child selected type:node AND untagged_ 
+This will select all untagged nodes of the way. <br>
+4\. Then you can tag all the selected nodes as towers in one go. <br>
+
 ## **<div class="tools-header">Common Mistakes :name_badge:</div>**
 1\. Do not use the interactive map or the default queries for distribution grid mapping. The Overpass Turbo script provided with this starter kit and present in the interactive map is optimised for transmission grid mapping. Lines on towers below 90 kV are not visualised in JOSM and should not be mapped with the standard configuration of this script. <br>
 
