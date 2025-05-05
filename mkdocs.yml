@@ -65,12 +65,11 @@ markdown_extensions:
   - pymdownx.tasklist:
       custom_checkbox: true
   - markdown.extensions.md_in_html
-  - markdown.extensions.attr_list
   - admonition
   - pymdownx.details
   - attr_list
-  - pymdownx.tabbed
-  
+  - pymdownx.tabbed:
+      alternate_style: true
 
   
   
