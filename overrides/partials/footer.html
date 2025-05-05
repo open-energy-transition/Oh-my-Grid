@@ -1,20 +1,18 @@
-{% extends "base.html" %}
-
 {% block footer %}
-<footer class="md-footer">
-  <div class="md-footer-meta md-typeset">
-    <div class="md-footer-meta__inner md-grid">
+  <footer class="md-footer">
+    <div class="md-footer-meta md-typeset">
+      <div class="md-footer-meta__inner md-grid">
 
-      {% if config.copyright %}
-        <div class="md-copyright">
-          {% if config.copyright %}
-            <div class="md-copyright__highlight">
-              {{ config.copyright }} </div>
-          {% endif %}
+        {% if config.copyright %}
+          <div class="md-copyright">
+            {% if config.copyright %}
+              <div class="md-copyright__highlight">
+                {{ config.copyright }} </div>
+            {% endif %}
+          </div>
+        {% endif %}
+
         </div>
-      {% endif %}
-
-      </div>
-  </div>
-</footer>
+    </div>
+  </footer>
 {% endblock %}
