@@ -50,6 +50,8 @@ If you want to be able to fast efficiently and fast, you will need to know how t
 3\. Then press on the way again, and control+F to open up search. Then paste in the bar: _child selected type:node AND untagged_ 
 This will select all untagged nodes of the way. <br>
 4\. Then you can tag all the selected nodes as towers in one go. <br>
+5\. Use the preset power tower or poles to set all nodes at once.  <br>
+6\. If you ever lose this query, click the right arrow on the search window and select it from your history. <br>
 
 ## **<div class="tools-header">Common Mistakes :name_badge:</div>**
 1\. Do not use the interactive map or the default queries for distribution grid mapping. The Overpass Turbo script provided with this starter kit and present in the interactive map is optimised for transmission grid mapping. Lines on towers below 90 kV are not visualised in JOSM and should not be mapped with the standard configuration of this script. <br>
