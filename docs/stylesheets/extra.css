@@ -36,29 +36,6 @@
   margin-top: 0.4rem;
   line-height: 1.4;
 }
-
-  
-  /* Ensure headers within the content area don't have excessive top margin */
-  .tool-content h2:first-child,
-  .tool-content h3:first-child {
-    margin-top: 0;
-  }
-  
-  /* Card-style header - looks good, keep as is */
-  .tools-header {
-    background-color: #e8f5e9;
-    padding: 8px 15px;
-    border-left: 4px solid #2a8000;
-    border-radius: 0 4px 4px 0;
-    display: inline-block; /* Keep this */
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    margin-bottom: 0.75rem; /* Add some space below the header */
-  }
-  /* Make the H2 itself have no extra margin if the div has it */
-  .tool-content h2 {
-      margin-bottom: 0;
-      font-weight: bold;
-  }
   
   
   /* --- Responsive Adjustments --- */
@@ -148,6 +125,25 @@
   line-height: 1.3;
   width: 100%; /* Ensure caption uses the width of the figure */
 }
+
+/* Ensure headers within the content area don't have excessive top margin */
+.tool-content h2:first-child,
+.tool-content h3:first-child {
+  margin-top: 0;
+}
+
+/* Card-style header - looks good, keep as is */
+.tools-header {
+  background-color: #e8f5e9;
+  padding: 8px 15px;
+  border-left: 4px solid #2a8000;
+  border-radius: 0 4px 4px 0;
+  display: inline-block; /* Keep this */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin-bottom: 0.75rem; /* Add some space below the header */
+  font-weight: bold;
+}
+
 
 /* —————————————————————————
    BASE: full‑width sections
