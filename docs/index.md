@@ -81,7 +81,7 @@ body_class: landing-page
     </div>
     <div class="partner-item">
       <a href="https://datactivist.coop/en/" target="_blank" rel="noopener">
-        <img src="images/logos/datactivist_logo.png" alt="Datactivist Logo" class="partner-logo"> <span class="partner-name">Datactivist</span>
+        <img src="images/logos/datactivist-logo.png" alt="Datactivist Logo" class="partner-logo"> <span class="partner-name">Datactivist</span>
       </a>
     </div>
     <div class="partner-item">
@@ -91,7 +91,7 @@ body_class: landing-page
     </div>
     <div class="partner-item">
       <a href="https://dynartio.com/" target="_blank" rel="noopener">
-        <img src="images/logos/artio_logo.png" alt="Dynartio Logo" class="partner-logo"> <span class="partner-name">Dynartio</span>
+        <img src="images/logos/dynartio-logo.svg" alt="Dynartio Logo" class="partner-logo"> <span class="partner-name">Dynartio</span>
       </a>
     </div>
     <div class="partner-item">
