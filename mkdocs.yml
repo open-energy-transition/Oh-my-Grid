@@ -47,6 +47,8 @@ extra_css:
     - stylesheets/blog.css
     - https://cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.css
 
+extra:
+  generator: false
 
 markdown_extensions:
   - pymdownx.highlight:
