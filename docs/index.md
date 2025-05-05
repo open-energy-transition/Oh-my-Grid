@@ -76,27 +76,26 @@ body_class: landing-page
     <div class="partner-item">
       <a href="https://openenergytransition.org/" target="_blank" rel="noopener">
         <img src="images/logos/oet-logo.png" alt="Open Energy Transition Logo" class="partner-logo">
-        <span class="partner-name">Open Energy Transition</span>
       </a>
     </div>
     <div class="partner-item">
       <a href="https://datactivist.coop/en/" target="_blank" rel="noopener">
-        <img src="images/logos/datactivist-logo.png" alt="Datactivist Logo" class="partner-logo"> <span class="partner-name">Datactivist</span>
+        <img src="images/logos/datactivist-logo.png" alt="Datactivist Logo" class="partner-logo"> 
       </a>
     </div>
     <div class="partner-item">
       <a href="https://junglebus.io/" target="_blank" rel="noopener">
-        <img src="images/logos/unglebus_logo.png" alt="Jungle Bus Logo" class="partner-logo"> <span class="partner-name">Jungle Bus</span>
+        <img src="images/logos/unglebus_logo.png" alt="Jungle Bus Logo" class="partner-logo"> 
       </a>
     </div>
     <div class="partner-item">
       <a href="https://dynartio.com/" target="_blank" rel="noopener">
-        <img src="images/logos/dynartio-logo.svg" alt="Dynartio Logo" class="partner-logo"> <span class="partner-name">Dynartio</span>
+        <img src="images/logos/dynartio-logo.svg" alt="Dynartio Logo" class="partner-logo"> 
       </a>
     </div>
     <div class="partner-item">
       <a href="https://www.infrageomatics.com/" target="_blank" rel="noopener">
-        <img src="images/logos/eomatics_logo.png" alt="Infrageomatics Logo" class="partner-logo"> <span class="partner-name">Infrageomatics</span>
+        <img src="images/logos/eomatics_logo.png" alt="Infrageomatics Logo" class="partner-logo"> 
       </a>
     </div>
   </div>
