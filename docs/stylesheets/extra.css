@@ -3,6 +3,11 @@
     text-align: justify;
   }
 
+/* Remove footer mkdocs material */
+.md-footer__generator {
+    display: none !important;
+  }
+
 /* Increase logo size in the header */
 .md-header__button.md-logo img, .md-header__button.md-logo svg {
     width: auto;
