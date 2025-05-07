@@ -12,6 +12,7 @@ Welcome to our interactive mapping tool! Click on a country below to start mappi
 :exclamation: Please read the common mistakes section in the starter-kit! <br>
 :exclamation: Certain big countries should not be clicked on at a national level (eg. Brasil, USA, India), but you can zoom in to click on regions/states.
 
+You can select what power infrastructure you want by clicking on the different choices. The **Default** pulls all power infrastructure and should be used when mapping generally. 
 <style>
 #map {
     position: relative;
@@ -56,145 +57,96 @@ const regionsLayer = L.geoJSON(null, {
     style: { color: '#3388ff', weight: 1 }
 });
 
-// Overpass query 
-function buildOverpassQuery(iso) {
-  return `[out:xml][timeout:300];
-  
-  // Get the complete administrative boundary relation and its members
-  relation["boundary"="administrative"]["admin_level"="2"]["ISO3166-1:alpha2"="${iso}"]->.admin_boundary;
-  (.admin_boundary; >;);
-  // Convert the full relation into an area, which we use for the subsequent search
-  .admin_boundary map_to_area ->.searchArea;
-  
-  // Get towers, poles, lines, cables, etc.
-  node["power"="tower"](area.searchArea) -> .towers;
-  node["power"="pole"](area.searchArea) -> .poles;
-  way["power"="line"](area.searchArea) -> .lines_connected;
-  way["power"="line"]["voltage"](if:t["voltage"] >= 90000)(area.searchArea) -> .high_voltage_lines;
-  way["power"="cable"](area.searchArea) -> .cables;
-  node.poles(w.high_voltage_lines) -> .hv_poles;
-  
-  // Get substations explicitly as nodes, ways, and relations
-  node["power"="substation"](area.searchArea) -> .substation_nodes;
-  way["power"="substation"](area.searchArea) -> .substation_ways;
-  relation["power"="substation"](area.searchArea) -> .substation_relations;
-  
-  // And similarly for power plants, generators, and transformers
-  node["power"="plant"](area.searchArea) -> .plant_nodes;
-  way["power"="plant"](area.searchArea) -> .plant_ways;
-  relation["power"="plant"](area.searchArea) -> .plant_relations;
-  
-  node["power"="generator"](area.searchArea) -> .generator_nodes;
-  way["power"="generator"](area.searchArea) -> .generator_ways;
-  relation["power"="generator"](area.searchArea) -> .generator_relations;
-  
-  node["power"="transformer"](area.searchArea) -> .transformer_nodes;
-  way["power"="transformer"](area.searchArea) -> .transformer_ways;
-  relation["power"="transformer"](area.searchArea) -> .transformer_relations;
-  
-  node["power"="portal"](area.searchArea) -> .portal_nodes;
-  
-  // Union all elements – note that we also include the original admin boundary
-  (
-    .towers;
-    .hv_poles;
-    .cables;
-    .lines_connected;
-    .high_voltage_lines;
-    .substation_nodes;
-    .substation_ways;
-    .substation_relations;
-    .plant_nodes;
-    .plant_ways;
-    .plant_relations;
-    .generator_nodes;
-    .generator_ways;
-    .generator_relations;
-    .portal_nodes;
-    .transformer_nodes;
-    .transformer_ways;
-    .transformer_relations;
-    .admin_boundary;
-  );
-  
-  // First output: all elements with metadata
-  out meta;
-  // Second recursion: fetch all members of multipolygon relations, etc.
-  >;
-  // Output the full geometry (again with meta) so JOSM receives complete data
-  out meta;
-  `;
+// 2) Dynamic query‑mode discovery via GitHub Contents API
+const GITHUB_API_QUERIES =
+  'https://api.github.com/repos/open-energy-transition/osm-grid-definition/contents/queries';
+let currentMode = null;
+
+// 2a) discover all folders under /queries
+async function loadModes() {
+  const res = await fetch(GITHUB_API_QUERIES);
+  if (!res.ok) throw new Error('Cannot load query modes from GitHub API');
+  const items = await res.json();
+  // keep only directory entries
+  const modes = items.filter(i => i.type === 'dir').map(i => i.name);
+  if (modes.length === 0) throw new Error('No query folders found');
+  return modes;
 }
 
-// Overpass query for regions
-function buildRegionOverpassQuery(iso3166_2) {
-  return `[out:xml][timeout:300];
-  
-  // Get the complete administrative boundary relation and its members
-  relation["boundary"="administrative"]["admin_level"="4"]["ISO3166-2"="${iso3166_2}"]->.admin_boundary;
-  (.admin_boundary; >;);
-  // Convert the full relation into an area, which we use for the subsequent search
-  .admin_boundary map_to_area ->.searchArea;
-  
-  // Get towers, poles, lines, cables, etc.
-  node["power"="tower"](area.searchArea) -> .towers;
-  node["power"="pole"](area.searchArea) -> .poles;
-  way["power"="line"](area.searchArea) -> .lines_connected;
-  way["power"="line"]["voltage"](if:t["voltage"] >= 90000)(area.searchArea) -> .high_voltage_lines;
-  way["power"="cable"](area.searchArea) -> .cables;
-  node.poles(w.high_voltage_lines) -> .hv_poles;
-  
-  // Get substations explicitly as nodes, ways, and relations
-  node["power"="substation"](area.searchArea) -> .substation_nodes;
-  way["power"="substation"](area.searchArea) -> .substation_ways;
-  relation["power"="substation"](area.searchArea) -> .substation_relations;
-  
-  // And similarly for power plants, generators, and transformers
-  node["power"="plant"](area.searchArea) -> .plant_nodes;
-  way["power"="plant"](area.searchArea) -> .plant_ways;
-  relation["power"="plant"](area.searchArea) -> .plant_relations;
-  
-  node["power"="generator"](area.searchArea) -> .generator_nodes;
-  way["power"="generator"](area.searchArea) -> .generator_ways;
-  relation["power"="generator"](area.searchArea) -> .generator_relations;
-  
-  node["power"="transformer"](area.searchArea) -> .transformer_nodes;
-  way["power"="transformer"](area.searchArea) -> .transformer_ways;
-  relation["power"="transformer"](area.searchArea) -> .transformer_relations;
-  
-  node["power"="portal"](area.searchArea) -> .portal_nodes;
-  
-  // Union all elements – note that we also include the original admin boundary
-  (
-    .towers;
-    .hv_poles;
-    .cables;
-    .lines_connected;
-    .high_voltage_lines;
-    .substation_nodes;
-    .substation_ways;
-    .substation_relations;
-    .plant_nodes;
-    .plant_ways;
-    .plant_relations;
-    .generator_nodes;
-    .generator_ways;
-    .generator_relations;
-    .portal_nodes;
-    .transformer_nodes;
-    .transformer_ways;
-    .transformer_relations;
-    .admin_boundary;
-  );
-  
-  // First output: all elements with metadata
-  out meta;
-  // Second recursion: fetch all members of multipolygon relations, etc.
-  >;
-  // Output the full geometry (again with meta) so JOSM receives complete data
-  out meta;
-  `;
+// 2b) render one button per folder name
+async function initQueryUI() {
+  const modes = await loadModes();
+
+  // sort so “default” is first
+  modes.sort((a, b) => {
+    if (a === 'Default') return -1;
+    if (b === 'Default') return 1;
+    return a.localeCompare(b);
+  });
+
+  currentMode = modes.includes('Default') ? 'Default' : modes[0];
+
+  // create container
+  const container = document.createElement('div');
+  container.id = 'query-buttons';
+
+  // insert *before* the map div, so it's right above the map
+  const mapEl = document.getElementById('map');
+  mapEl.parentNode.insertBefore(container, mapEl);
+
+  // now add one button per mode
+  modes.forEach(mode => {
+    const btn = document.createElement('button');
+    btn.textContent = mode.replace(/_/g, ' ');
+    btn.classList.add('query-btn');
+    if (mode === currentMode) btn.classList.add('active');
+    btn.onclick = () => {
+      currentMode = mode;
+      document.querySelectorAll('.query-btn').forEach(b =>
+        b.classList.toggle('active', b === btn)
+      );
+    };
+    container.appendChild(btn);
+  });
 }
+
+
+// 2c) fetch the correct OverpassQL file on demand
+async function fetchQuery(mode, adminLevel) {
+  const rawUrl =
+    `https://raw.githubusercontent.com/open-energy-transition/osm-grid-definition/` +
+    `main/queries/${mode}/admin${adminLevel}.overpassql`;
+  const r = await fetch(rawUrl);
+  if (!r.ok) throw new Error(`Query file not found: ${mode}/admin${adminLevel}`);
+  return r.text();
+}
+
+// 2d) unified click handler for country (level 2) & region (level 4)
+async function handleAreaClick(iso, level, layer) {
+  const name = layer.feature.properties.NAME;
+  layer.setStyle({ color: '#ff7800' });
+  layer.getPopup().setContent(`Loading ${name}…`).update();
+
+  try {
+    let tpl = await fetchQuery(currentMode, level);
+    tpl = tpl.replace(/\$\{iso\}/g, iso);
+    sendToJosm(tpl);
+  } catch (err) {
+    layer.getPopup().setContent(`Error: ${err.message}`).update();
+  }
+
+  setTimeout(() => {
+    layer.setStyle({ color: '#3388ff' });
+    layer
+      .getPopup()
+      .setContent(`<b>${name}</b><br>Click to load in JOSM`)
+      .update();
+  }, 2000);
+}
+
+// initialize the UI immediately
+initQueryUI().catch(console.error);
+
 
 // JOSM integration function
 function sendToJosm(query) {
@@ -236,73 +188,45 @@ map.on('zoomend', function() {
 
 // Load country GeoJSON and add interactivity
 fetch('../data/countries.geojson')
-    .then(response => response.json())
-    .then(countries => {
-        countriesLayer.addData(countries);
-        
-        countriesLayer.eachLayer(layer => {
-            const iso = layer.feature.properties.ISO_A2;
-            const name = layer.feature.properties.NAME;
-            
-            layer.bindPopup(`<b>${name}</b><br>Click to load in JOSM`);
-            layer.on('click', () => {
-                // Don't allow clicks on large countries when zoomed in enough
-                if (largeCountries.includes(iso) && map.getZoom() >= zoomThreshold) {
-                    layer.getPopup().setContent(`<b>${name}</b><br>Please click on a specific region`).update();
-                    return;
-                }
-                
-                // Show loading feedback
-                layer.setStyle({ color: '#ff7800' });
-                layer.getPopup().setContent(`Loading ${name}...`).update();
-                
-                try {
-                    const query = buildOverpassQuery(iso);
-                    sendToJosm(query);
-                } catch (error) {
-                    layer.getPopup().setContent(`Error: ${error.message}`).update();
-                }
-                
-                // Reset style after 2 seconds
-                setTimeout(() => {
-                    layer.setStyle({ color: '#3388ff' });
-                    layer.getPopup().setContent(`<b>${name}</b><br>Click to load in JOSM`).update();
-                }, 2000);
-            });
-        });
-    })
-    .catch(error => console.error('Countries GeoJSON error:', error));
+  .then(response => response.json())
+  .then(countries => {
+    countriesLayer.addData(countries);
 
-// Load regions GeoJSON and add interactivity
+    countriesLayer.eachLayer(layer => {
+      const iso  = layer.feature.properties.ISO_A2;
+      const name = layer.feature.properties.NAME;
+
+      layer.bindPopup(`<b>${name}</b><br>Click to load in JOSM`);
+      layer.on('click', () => {
+        // large countries should be clicked at region level when zoomed in
+        if (largeCountries.includes(iso) && map.getZoom() >= zoomThreshold) {
+          layer
+            .getPopup()
+            .setContent(`<b>${name}</b><br>Please click on a specific region`)
+            .update();
+          return;
+        }
+        handleAreaClick(iso, 2, layer);
+      });
+    });
+  })
+  .catch(error => console.error('Countries GeoJSON error:', error));
+
+// Load region GeoJSON and add interactivity
 fetch('../data/regions.geojson')
-    .then(response => response.json())
-    .then(regions => {
-        regionsLayer.addData(regions);
-        
-        regionsLayer.eachLayer(layer => {
-            const iso3166_2 = layer.feature.properties.ISO_1;
-            const name = layer.feature.properties.NAME;
-            
-            layer.bindPopup(`<b>${name}</b><br>Click to load in JOSM`);
-            layer.on('click', () => {
-                // Show loading feedback
-                layer.setStyle({ color: '#ff7800' });
-                layer.getPopup().setContent(`Loading ${name}...`).update();
-                
-                try {
-                    const query = buildRegionOverpassQuery(iso3166_2);
-                    sendToJosm(query);
-                } catch (error) {
-                    layer.getPopup().setContent(`Error: ${error.message}`).update();
-                }
-                
-                // Reset style after 2 seconds
-                setTimeout(() => {
-                    layer.setStyle({ color: '#3388ff' });
-                    layer.getPopup().setContent(`<b>${name}</b><br>Click to load in JOSM`).update();
-                }, 2000);
-            });
-        });
-    })
-    .catch(error => console.error('Regions GeoJSON error:', error));
+  .then(response => response.json())
+  .then(regions => {
+    regionsLayer.addData(regions);
+
+    regionsLayer.eachLayer(layer => {
+      const iso3166_2 = layer.feature.properties.ISO_1;
+      const name      = layer.feature.properties.NAME;
+
+      layer.bindPopup(`<b>${name}</b><br>Click to load in JOSM`);
+      layer.on('click', () => {
+        handleAreaClick(iso3166_2, 4, layer);
+      });
+    });
+  })
+  .catch(error => console.error('Regions GeoJSON error:', error));
 </script>

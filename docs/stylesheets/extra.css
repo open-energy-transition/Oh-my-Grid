@@ -1,3 +1,34 @@
+/* Start mapping buttons css */
+#query-buttons {
+  margin: 0.5em 0;      /* small gap above & below */
+  text-align: center;
+}
+.query-btn {
+  font-size: 0.85rem;   /* a bit smaller text */
+  padding: 0.3em 0.6em;  /* tighter padding */
+  margin: 0 0.3em;
+  border: 1.5px solid #3388ff;
+  border-radius: 4px;
+  background: #f0f8ff;
+  color: #2050a0;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s, transform 0.1s;
+}
+.query-btn:hover {
+  background: #3388ff;
+  color: #fff;
+}
+.query-btn.active {
+  background: #005bb5;
+  border-color: #003f7f;
+  color: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  transform: translateY(-1px);
+}
+
+
+/* --------------------------------------------------------------------------------------------------------------*/
+
 /* Justify regular content */
 .md-content {
     text-align: justify;
@@ -65,6 +96,7 @@
     }
   }
 
+/* --------------------------------------------------------------------------------------------------------------*/
 /* --- NEW STYLES FOR TOOL SECTIONS --- */
 
 /* Main container for each tool */
@@ -150,7 +182,7 @@
   font-weight: bold;
 }
 
-
+/* --------------------------------------------------------------------------------------------------------------*/
 /* —————————————————————————
    BASE: full‑width sections
    ————————————————————————— */
@@ -171,11 +203,11 @@
   color: #333;
 }
 
---------------------------------------------------------------------
+/* --------------------------------------------------------------------------------------------------------------*/
 
 /* Titles of pages*/
 .page-headers {
-  margin: 0.5rem 0 10rem;  /* drop it below the nav and give breathing room */
+  margin: 0.5rem 0 1rem;  /* drop it below the nav and give breathing room */
   text-align: left;
 }
 
@@ -211,7 +243,7 @@
   margin-right: 0.5rem;
 }
 
---------------------------------------------------------------------
+/* --------------------------------------------------------------------------------------------------------------*/
 /* PROGRESS BAR ON CONTRIBUTING PAGE */
 .progress-section {
   margin: 2rem 0;
@@ -302,7 +334,8 @@
     box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5); /* Add a blue glow */
 }
 
-/* Add this to your docs/stylesheets/extra.css file */
+/* --------------------------------------------------------------------------------------------------------------*/
+/* Hide ### from logbook */
 .md-nav__item a[href$="#success-stories"],
 .md-nav__item a[href$="#key-numbers"] {
   display: none;
