@@ -1,8 +1,12 @@
 /* Start mapping buttons css */
 #query-buttons {
-  margin: 0.5em 0;      /* small gap above & below */
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1rem;         /* space between each group */
+  margin: 4em 0 0.3em;
 }
+
 .query-btn {
   font-size: 0.85rem;   /* a bit smaller text */
   padding: 0.3em 0.6em;  /* tighter padding */
@@ -26,7 +30,18 @@
   transform: translateY(-1px);
 }
 
+.query-version {
+  font-size: 0.5rem;
+  color: #666;
+  margin-top: 0.2em;
+  text-align: center;
+}
 
+.query-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 /* --------------------------------------------------------------------------------------------------------------*/
 
 /* Justify regular content */

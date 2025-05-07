@@ -60,6 +60,11 @@ const regionsLayer = L.geoJSON(null, {
 // 2) Dynamic query‑mode discovery via GitHub Contents API
 const GITHUB_API_QUERIES =
   'https://api.github.com/repos/open-energy-transition/osm-grid-definition/contents/queries';
+
+/** Base URL for raw file fetches (OverpassQL and version.txt) */
+const RAW_BASE =
+  'https://raw.githubusercontent.com/open-energy-transition/osm-grid-definition/main/queries';
+
 let currentMode = null;
 
 // 2a) discover all folders under /queries
@@ -71,6 +76,14 @@ async function loadModes() {
   const modes = items.filter(i => i.type === 'dir').map(i => i.name);
   if (modes.length === 0) throw new Error('No query folders found');
   return modes;
+}
+
+// 2.1a) fetch the version.txt for the given mode
+async function fetchVersion(mode) {
+  const url = `${RAW_BASE}/${mode}/version.txt`;
+  const r   = await fetch(url);
+  if (!r.ok) throw new Error('version not found');
+  return (await r.text()).trim();
 }
 
 // 2b) render one button per folder name
@@ -95,7 +108,8 @@ async function initQueryUI() {
   mapEl.parentNode.insertBefore(container, mapEl);
 
   // now add one button per mode
-  modes.forEach(mode => {
+  modes.forEach(async mode => {
+  // — your existing button code —
     const btn = document.createElement('button');
     btn.textContent = mode.replace(/_/g, ' ');
     btn.classList.add('query-btn');
@@ -103,11 +117,32 @@ async function initQueryUI() {
     btn.onclick = () => {
       currentMode = mode;
       document.querySelectorAll('.query-btn').forEach(b =>
-        b.classList.toggle('active', b === btn)
-      );
-    };
-    container.appendChild(btn);
-  });
+       b.classList.toggle('active', b === btn)
+    );
+  };
+ 
+// 2) version label
+    const ver = document.createElement('div');
+    ver.classList.add('query-version');
+    ver.textContent = '…';  // placeholder
+
+    // 3) wrap them in a group
+    const group = document.createElement('div');
+    group.classList.add('query-group');
+    group.appendChild(btn);
+    group.appendChild(ver);
+
+    // 4) append the group
+    container.appendChild(group);
+
+  try {
+    const v = await fetchVersion(mode);
+    ver.textContent = `v${v}`;
+  } catch {
+    ver.textContent = 'v?';
+  }
+});
+
 }
 
 
