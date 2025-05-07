@@ -83,19 +83,19 @@ body_class: landing-page
         <img src="images/logos/datactivist-logo.png" alt="Datactivist Logo" class="partner-logo"> 
       </a>
     </div>
-    <div class="partner-item">
-      <a href="https://junglebus.io/" target="_blank" rel="noopener">
-        <img src="images/logos/unglebus_logo.png" alt="Jungle Bus Logo" class="partner-logo"> 
-      </a>
-    </div>
-    <div class="partner-item">
+        <div class="partner-item">
       <a href="https://dynartio.com/" target="_blank" rel="noopener">
         <img src="images/logos/dynartio-logo.svg" alt="Dynartio Logo" class="partner-logo"> 
       </a>
     </div>
     <div class="partner-item">
+      <a href="https://junglebus.io/" target="_blank" rel="noopener">
+        <img src="images/logos/junglebus-logo.jpg" alt="Jungle Bus Logo" class="partner-logo-smaller"> 
+      </a>
+    </div>
+    <div class="partner-item">
       <a href="https://www.infrageomatics.com/" target="_blank" rel="noopener">
-        <img src="images/logos/eomatics_logo.png" alt="Infrageomatics Logo" class="partner-logo"> 
+        <img src="images/logos/infrageomatics-logo.jpg" alt="Infrageomatics Logo" class="partner-logo"> 
       </a>
     </div>
   </div>

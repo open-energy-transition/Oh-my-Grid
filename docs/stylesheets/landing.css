@@ -267,6 +267,13 @@ body.landing-page header.md-header {
   object-fit: contain; /* Ensure the logo scales nicely without distortion */
 }
 
+.partner-logo-smaller {
+  max-height: 50px; /* Control maximum logo height */
+  max-width: 100%;  /* Ensure logo fits within its container */
+  height: auto;     /* Maintain aspect ratio */
+  object-fit: contain; /* Ensure the logo scales nicely without distortion */
+}
+
 
 
 
