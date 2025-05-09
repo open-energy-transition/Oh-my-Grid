@@ -57,33 +57,56 @@
   </div>
 </div>
 
-## <div class="tools-header">OSM and Wikidata comparison tool</div></h2>
+## <div class="tools-header">OSM and Wikidata comparison tool</div>
 <div class="tool-section">
-  <div class="tool-content">
-    <p>This <a href="https://github.com/open-energy-transition/osm-wikidata-comparison/tree/main">repository</a> contains a Python script compares power plant data between OpenStreetMap (OSM) and Wikidata. It fetches data from both sources using APIs, performs comparisons based on geographic proximity and name, and identifies missing power plants or coordinate mismatches.<br> The comparison results are saved in CSV and GeoJSON formats.</p>
 
-    <h3>How to use the OSM-Wikidata comparison tool</h3>
+  <div class="tool-content">
+    <p>
+      This <a href="https://github.com/open-energy-transition/osm-wikidata-comparison/tree/main">repository</a>
+      contains two Python scripts that compare power plant data between OpenStreetMap (OSM) and Wikidata, and also substation data.
+      The power plant tool fetches data from both sources using APIs, performs comparisons based on geographic proximity
+      and name, and identifies missing power plants or coordinate mismatches. The comparison results are saved in CSV
+      and GeoJSON formats.
+    </p>
+
+    <h3>How to use the OSM‑Wikidata powerplant comparison tool</h3>
     <ol>
-      <li>Paste the <a href="https://github.com/open-energy-transition/osm-wikidata-comparison/blob/main/requirements.txt">requirements.txt</a> file in your current directory/folder.</li>
-      <li>Install dependencies needed:
+      <li>Paste the <a href="https://github.com/open-energy-transition/osm-wikidata-comparison/blob/main/requirements.txt">requirements.txt</a> into your working directory.</li>
+      <li>Install dependencies:
         <pre><code class="language-bash">pip install -r requirements.txt</code></pre>
       </li>
-      <li>Choose the country you want in the code by changing the name and Wikidata code. Run the script:
-        <pre><code class="language-py"># ---------------------- CONFIGURATION ---------------------- #
-# Specify the country you want to analyze. Adjust the 'COUNTRY_NAME' and 'country_code' accordingly.
-COUNTRY_NAME = "Kenya" # Example: "Germany", "Brazil", "France"
-#country_code = "Q1033"   # Country code according to Wikidata
-max_distance_km = 0.7  #max_distance_km (float): The maximum distance to consider a match (in kilometers).
-mismatch_threshold_km = 0.5 #mismatch_threshold_km (float): The threshold distance beyond which the coordinates are considered mismatched.
-</code></pre>
+      <li>Configure and run the script:
+        <pre><code class="language-python"># ---------------------- CONFIGURATION ---------------------- #
+COUNTRY_NAME = "Kenya"        # e.g. "Germany", "Brazil"
+country_code  = "Q1033"       # Wikidata country code
+max_distance_km    = 0.7      # match radius in km
+mismatch_threshold_km = 0.5   # coordinate‑mismatch threshold in km
+        </code></pre>
       </li>
+      <li>Open the resulting GeoJSON in JOSM to inspect and map powerplants.</li>
+    </ol>
+
+    <h3>How to use the OSM‑Wikidata substation comparison tool</h3>
+    <ol>
+      <li>Ensure the same <a href="https://github.com/open-energy-transition/osm-wikidata-comparison/blob/main/requirements.txt">requirements.txt</a> is in place.</li>
+      <li>Install dependencies (if not already done):
+        <pre><code class="language-bash">pip install -r requirements.txt</code></pre>
+      </li>
+      <li>Run the substation comparison script.
+      </li>
+      <li>Inside the output folder, open any country’s GeoJSON in JOSM to locate and verify substations.</li>
     </ol>
   </div>
+
   <div class="tool-images">
-     <img src="../images/wikicsv.jpg" class="img-border" alt="Wikidata Comparison CSV Output">
-     <img src="../images/wikigeo.jpg" class="img-border" alt="Wikidata Comparison GeoJSON Output">
+    <img src="../images/wikicsv.jpg" class="img-border" alt="Wikidata Comparison CSV Output">
+    <img src="../images/wikigeo.jpg" class="img-border" alt="Wikidata Comparison GeoJSON Output">
+    <img src="../images/wiki_substation.png" class="img-border" alt="Wikidata OSM substation Output">
   </div>
+
 </div>
+
+     
 
 ## <div class="tools-header">Open Infrastructure Map </div></h2>
 <div class="tool-section">
