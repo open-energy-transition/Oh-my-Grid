@@ -100,6 +100,38 @@ body.landing-page header.md-header {
   height: 20px;
 }
 
+/* — Primary “Start Mapping!” button — */
+.primary-link {
+  /* push the social-links further down */
+  margin-bottom: 1.5rem;
+}
+
+.primary-link a {
+  /* same base style as .social-links a, but slightly larger */
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;           /* a bit more space between icon & text */
+  padding: 0.6rem 1.3rem; /* increase click‐area */
+  font-size: 1.1rem;      /* slightly bigger text */
+  font-weight: 700;       /* maybe bolder? */
+  color: #ffffff;         /* invert colors if you like—optional */
+  background: #54a36a;    /* solid brand color for emphasis */
+  border: none;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  transition: transform 0.2s, filter 0.2s;
+}
+
+.primary-link a:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.1);
+}
+
+.primary-icon {
+  font-size: 1.2rem;    /* bump it up a bit */
+  line-height: 1;       /* prevent weird vertical alignment */
+}
+
 /* ==== INITIATIVE SECTION ==== */
 .initiative-section {
   padding: 1rem 2rem;

@@ -11,6 +11,12 @@ body_class: landing-page
     <h1 class="hero-title">Oh my Grid</h1>
     <p class="mission-statement"> We empower individuals, communities and nations around the world to map the electrical grid.
     </p>
+    <div class="primary-link">
+     <a href="https://ohmygrid.org/start_mapping/" target="_blank" rel="noopener">
+    <span class="primary-icon">🌍</span>
+    Interactive World Map
+     </a>
+    </div>
     <div class="social-links">
       <a href="https://discord.gg/a5znpdFWfD" target="_blank" rel="noopener">
         <img src="icons/discord.svg" alt="Discord" class="social-icon" /> Discord
