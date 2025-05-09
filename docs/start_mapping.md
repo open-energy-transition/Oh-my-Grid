@@ -3,6 +3,8 @@
 </div>
 Welcome to our interactive mapping tool! Click on a country below to start mapping power infrastructure directly in JOSM. :rocket:
 
+If this is your first time mapping, please go through the [starter-kit tutorial](https://ohmygrid.org/starter-kit/).
+
 <p>
   When you make an edit, please use the <span class="big-font">#ohmygrid</span> in the changeset to help the initiative!
 </p>
@@ -12,7 +14,7 @@ Welcome to our interactive mapping tool! Click on a country below to start mappi
 :exclamation: Please read the common mistakes section in the starter-kit! <br>
 :exclamation: Certain big countries should not be clicked on at a national level (eg. Brasil, USA, India), but you can zoom in to click on regions/states.
 
-You can select what power infrastructure you want by clicking on the different choices. The **Default** pulls all power infrastructure and should be used when mapping generally. 
+You can select what power infrastructure you want by clicking on the different choices. The **Default** pulls all power infrastructure and should be used when mapping generally. The repository with all the overpass queries can be found [here](https://github.com/open-energy-transition/osm-grid-definition).
 <style>
 #map {
     position: relative;
