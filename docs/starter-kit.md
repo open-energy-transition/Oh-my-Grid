@@ -27,7 +27,7 @@ A [starter kit](https://github.com/open-energy-transition/grid-mapping-starter-k
   <img src="../images/clickmap.jpg" class="img-border" style="width: 100%;">
 </div>
 ## **<div class="tools-header">Loading power infrastructure into JOSM :inbox_tray:</div>**
-1\. Make sure remote control is enabled, and then just go to the start mapping [page](http://127.0.0.1:8000/Oh-my-Grid/start_mapping/). Here you can click on the country you want to map, and it will directly open JOSM and load the data of that country. <br>
+1\. Make sure remote control is enabled, and then just go to the start mapping [page](https://ohmygrid.org/start_mapping/). Here you can click on the country you want to map, and it will directly open JOSM and load the data of that country. <br>
 
 ## **<div class="tools-header">How to Map and upload your progress :outbox_tray:</div>**
 <div style="float: right; margin: 5px 0 20px 20px; width: 300px;">
