@@ -10,11 +10,12 @@ If this is your first time mapping, please go through the [starter-kit tutorial]
 </p>
 
 
-:exclamation: Remember to allow remote control in _Edit>Preferences>Remote Control_ and to disable all ad blocker.<br>
+:exclamation: Remember to allow remote control in _Edit>Preferences>Remote Control_ and to **disable all ad blocker**.<br>
 :exclamation: Please read the common mistakes section in the starter-kit! <br>
 :exclamation: Certain big countries should not be clicked on at a national level (eg. Brasil, USA, India), but you can zoom in to click on regions/states.
+:exclamation: 
 
-You can select what power infrastructure you want by clicking on the different choices. The **Default** pulls all power infrastructure and should be used when mapping generally. The repository with all the overpass queries can be found [here](https://github.com/open-energy-transition/osm-grid-definition).
+You can select what power infrastructure you want by clicking on the different choices. The **Default** pulls all **transmission** power infrastructure and should be used when mapping generally. The repository with all the overpass queries can be found [here](https://github.com/open-energy-transition/osm-grid-definition).
 <style>
 #map {
     position: relative;
