@@ -7,34 +7,46 @@ A [starter kit](https://github.com/open-energy-transition/grid-mapping-starter-k
   <img src="../images/startermap.jpg" class="img-border" style="width: 380px;">
 </div>
 
-## **<div class="tools-header">Setup JOSM on your device :rocket:</div>**
+## **<div class="tools-header">Get started with OpenStreetMap</div>**
+
+If you don't already have an OpenStreetMap account, [create one first](https://www.openstreetmap.org/user/new). If you're new to OpenStreetMap, now is a good time to learn the basics of editing using the in-browser editor (iD) - find something which is missing from the map in your local area and add it!
+
+The [OpenStreetMap Wiki](https://wiki.openstreetmap.org) has lots of information about how to map with OpenStreetMap, and you can start by reading the [Beginners' Guide](https://wiki.openstreetmap.org/wiki/Beginners%27_guide).
+
+## **<div class="tools-header">Install JOSM :rocket:</div>**
+
+JOSM is a more advanced desktop OpenStreetMap editor which is more suitable for power grid mapping.
 
 <div style="float: right; margin: -25px 50px 0 50px;">
   <img src="../images/josm_logo.jpg"  width="100">
 </div>
+
+!!! note
+    The JOSM Preferences window is accessed through the `Edit → Preferences` menu on Windows and Linux, and `JOSM → Settings` on Mac.
+
 1\. Install [Java](https://www.java.com/en/download/help/download_options.html) on your device if not installed. <br>
 2\. Install [JOSM](https://josm.openstreetmap.de/) on your device.<br>
 3\. (Optional) If you want preconfigured preferences, download this preferences.xml [file](https://github.com/open-energy-transition/grid-mapping-starter-kit/blob/main/josm-config/preferences.xml) and paste it in the correct folder on your device. The [JOSM wiki](https://josm.openstreetmap.de/wiki/Help/Preferences) provides details on where to place it.<!-- No space here -->
 <div style="float: right; margin: 5px 0 20px 20px; width: 350px;">
   <img src="../images/mapcss_tutorial.jpg" class="img-border" style="width: 100%;">
 </div>
-4\. Add our custom paint style which you can find [here](https://github.com/open-energy-transition/grid-mapping-starter-kit/blob/main/josm-config/transmission_grid_mapping_style.mapcss). To add to JOSM, go to Edit>Preferences>Map Paint Styles and press the "+" in the top right. Then you can paste this [URL](https://raw.githubusercontent.com/open-energy-transition/grid-mapping-starter-kit/refs/heads/main/josm-config/transmission_grid_mapping_style.mapcss) or the file saved on your device.<br>
+4\. Add our custom paint style which you can find [here](https://github.com/open-energy-transition/grid-mapping-starter-kit/blob/main/josm-config/transmission_grid_mapping_style.mapcss). To add to JOSM, go to `Preferences → Map Paint Styles` and press the "+" in the top right. Then you can paste this [URL](https://raw.githubusercontent.com/open-energy-transition/grid-mapping-starter-kit/refs/heads/main/josm-config/transmission_grid_mapping_style.mapcss) or the file saved on your device.<br>
 5. Download this <a href="https://github.com/open-energy-transition/grid-mapping-starter-kit/blob/main/josm-config/transmission_grid_mapping_template.joz" target="_blank">template</a> session, and in JOSM go to File>Open and open the .joz file. <br>
-6. Create an OSM [account](https://www.openstreetmap.org/user/new?cookie_test=true) if you don't have one. Once you do, go to Edit>Preferences>OSM Server and press authorise now. Login with your OSM account, and authorise. Your account is now linked to JOSM on your device. <br>
-7. Finally, activate "expert mode" in View>Expert mode. This will enable using Overpass API. <br>
-8. Make sure remote control is enabled in **Edit>Preferences>Remote Control**. You will need this enabled for the next step!
+6. Create an OSM [account](https://www.openstreetmap.org/user/new?cookie_test=true) if you don't have one. Once you do, go to `Preferences → OSM Server` and press authorise now. Login with your OSM account, and authorise. Your account is now linked to JOSM on your device. <br>
+7. Finally, activate "expert mode" in `View → Expert mode`. This will enable using Overpass API. <br>
+8. Make sure remote control is enabled in `Preferences → Remote Control`. You will need this enabled for the next step!
 
 <div style="float: right; margin: 5px 0 20px 20px; width: 300px;">
   <img src="../images/clickmap.jpg" class="img-border" style="width: 100%;">
 </div>
 ## **<div class="tools-header">Loading power infrastructure into JOSM :inbox_tray:</div>**
-1\. Make sure remote control is enabled, and then just go to the start mapping [page](https://ohmygrid.org/start_mapping/). Here you can click on the country you want to map, and it will directly open JOSM and load the data of that country. <br>
+Make sure remote control is enabled, and then go to the start mapping [page](https://ohmygrid.org/start_mapping/). Here you can click on the country you want to map, and it will directly open JOSM and load the data of that country. <br>
 
 ## **<div class="tools-header">How to Map and upload your progress :outbox_tray:</div>**
 <div style="float: right; margin: 5px 0 20px 20px; width: 300px;">
   <img src="../images/presets.jpg" class="img-border" style="width: 100%;">
 </div>
-1\. For ease of mapping, customise your toolbar with presets if you have not used the default preferences. Edit → Preferences → Toolbar. Then select the Presets → Man Made → Man Made/Power and add power towers, power portals and other presets for your mapping acticity.
+1\. For ease of mapping, customise your top toolbar with presets if you have not used the default preferences. Right click the toolbar and choose `Configure toolbar`, then select `Presets → Man Made → Man Made/Power` and add power towers, power portals and other presets for your mapping acticity.
 <div style="float: right; margin: 5px 0 20px 20px; width: 200px;">
   <img src="../images/startmapping.jpg" class="img-border" style="width: 100%;">
 </div>
@@ -45,14 +57,14 @@ A [starter kit](https://github.com/open-energy-transition/grid-mapping-starter-k
 3\. Whilst having the OpenStreetMap layer activated, press the green Upload arrow. Avoid ignoring validation results. The only acceptable warning when uploading data is "Possible missing line support node within power line". When you make an edit, please use the **#ohmygrid** in the changeset to help the initiative!
 
 ## <div class="tools-header">Map fast  :pushpin:</div>
-If you want to be able to map efficiently and fast, you will need to know how to correctly place towers and power lines. This will save you loads of time: <br>
-1\. Press A and draw nodes as you follow the towers. This will create a long line of untagged nodes, all connected by a untagged way. <br>
-2\. Click on the way, and select power line to tag it. <br>
-3\. Then press on the way again, and control+F to open up search. Then paste in the bar: _child selected type:node AND untagged_ 
-This will select all untagged nodes of the way. <br>
-4\. Then you can tag all the selected nodes as towers in one go. <br>
-5\. Use the preset power tower or poles to set all nodes at once.  <br>
-6\. If you ever lose this query, click the right arrow on the search window and select it from your history. <br>
+If you want to be able to map efficiently and fast, you will need to know how to correctly place towers and power lines. This will save you loads of time:
+
+1. Press `A` and draw nodes as you follow the towers. This will create a long line of untagged nodes, all connected by a untagged way.
+1. Click on the way, and tag it as a power line.
+1. Click on the way again, and `control+F` to open up search. Then paste in the bar: `child selected type:node AND untagged`. This will select all untagged nodes of the way.
+1. Then you can tag all the selected nodes as towers in one go.
+1. Use the preset power tower or poles to set all nodes at once.
+1. If you ever lose this query, click the right arrow on the search window and select it from your history.
 
 ## **<div class="tools-header">Common Mistakes :name_badge:</div>**
 1\. Do not use the interactive map or the default queries for distribution grid mapping. The Overpass Turbo script provided with this starter kit and present in the interactive map is optimised for transmission grid mapping. Lines on towers below 90 kV are not visualised in JOSM and should not be mapped with the standard configuration of this script. <br>
