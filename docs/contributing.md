@@ -8,7 +8,7 @@ You can join this [discord](https://discord.gg/a5znpdFWfD) server to learn more,
 If you want to join our community, join our OSM [team](https://mapping.team/teams/1570/invitations/eec8b5f8-b212-4013-8707-96245f300fa1), and use our hashtag **#ohmygrid**!
 <br>
 
-Here are some [heatmaps](https://yosmhm.neis-one.org/) of the mapping work some of our team has done (more than 40k towers placed!):
+Here are some [heatmaps](https://yosmhm.neis-one.org/) of the mapping work some of our team has done (more than 92k towers placed!):
 <div style="display: flex; justify-content: space-between; gap: 20px; margin: 20px 0;">
   <img src="../images/heatmapahd.png" class="img-border" width="300">
   <img src="../images/heatmapmwi.png" class="img-border" width="300">
@@ -178,3 +178,7 @@ This [repository](https://github.com/open-energy-transition/KPI-OSM/tree/main) h
   <img src="../images/kp3.png" class="img-border" width="400">
   <img src="../images/kp4.png" class="img-border" width="400">
 </div>
+
+## <div class="tools-header">Join the Community </div>
+We welcome everyone to join our community calls and tutorials, to learn more about the mapping process and the initiative.
+<iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=Europe%2FBerlin&showPrint=0&title=Community%20live%20sessions&src=Y182ODE3NjE1MGIzMjY4MGRkZmUzMGM1ZTE1MDU0YTc5MTVhMzY2NmY1OGY5NjkxOGVjOTZhNDJjZWQwODQ2ZGVmQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23AD1457" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
