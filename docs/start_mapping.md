@@ -162,6 +162,7 @@ async function fetchQuery(mode, adminLevel) {
 // 2d) unified click handler for country (level 2) & region (level 4)
 async function handleAreaClick(iso, level, layer) {
   const name = layer.feature.properties.NAME;
+  umami.track('map-click');
   layer.setStyle({ color: '#ff7800' });
   layer.getPopup().setContent(`Loading ${name}…`).update();
 
