@@ -31,10 +31,14 @@ JOSM is a more advanced desktop OpenStreetMap editor which is more suitable for 
   <img src="../images/mapcss_tutorial.jpg" class="img-border" style="width: 100%;">
 </div>
 4\. Add our custom paint style which you can find [here](https://github.com/open-energy-transition/grid-mapping-starter-kit/blob/main/josm-config/transmission_grid_mapping_style.mapcss). To add to JOSM, go to `Preferences → Map Paint Styles` and press the "+" in the top right. Then you can paste this [URL](https://raw.githubusercontent.com/open-energy-transition/grid-mapping-starter-kit/refs/heads/main/josm-config/transmission_grid_mapping_style.mapcss) or the file saved on your device.<br>
-5. Download this <a href="https://github.com/open-energy-transition/grid-mapping-starter-kit/blob/main/josm-config/transmission_grid_mapping_template.joz" target="_blank">template</a> session, and in JOSM go to File>Open and open the .joz file. <br>
-6. Create an OSM [account](https://www.openstreetmap.org/user/new?cookie_test=true) if you don't have one. Once you do, go to `Preferences → OSM Server` and press authorise now. Login with your OSM account, and authorise. Your account is now linked to JOSM on your device. <br>
-7. Finally, activate "expert mode" in `View → Expert mode`. This will enable using Overpass API. <br>
-8. Make sure remote control is enabled in `Preferences → Remote Control`. You will need this enabled for the next step!
+
+5\. Download this <a href="https://github.com/open-energy-transition/grid-mapping-starter-kit/blob/main/josm-config/transmission_grid_mapping_template.joz" target="_blank">template</a> session, and in JOSM go to File>Open and open the .joz file. <br>
+
+6\. Create an OSM [account](https://www.openstreetmap.org/user/new?cookie_test=true) if you don't have one. Once you do, go to `Preferences → OSM Server` and press authorise now. Login with your OSM account, and authorise. Your account is now linked to JOSM on your device. Be aware that your token will be stored in your local preferences.xml file. Do not share this file with anyone. <br>
+
+7\. Finally, activate "expert mode" in `View → Expert mode`. This will enable using Overpass API. <br>
+
+8\. Make sure remote control is enabled in `Preferences → Remote Control`. You will need this enabled for the next step!
 
 <div style="float: right; margin: 5px 0 20px 20px; width: 300px;">
   <img src="../images/clickmap.jpg" class="img-border" style="width: 100%;">
