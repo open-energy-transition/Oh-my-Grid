@@ -17,8 +17,8 @@ The [OpenStreetMap Wiki](https://wiki.openstreetmap.org) has lots of information
 
 JOSM is a more advanced desktop OpenStreetMap editor which is more suitable for power grid mapping.
 
-<div style="float: right; margin: -25px 50px 0 50px;">
-  <img src="../images/josm_logo.jpg"  width="100">
+<div style="float: right; margin: -25px 20px 0 50px;">
+  <img src="../images/josm_logo.jpg"  width="90">
 </div>
 
 !!! note
