@@ -50,6 +50,15 @@ extra_css:
 extra:
   generator: false
 
+extra:
+  head:
+    - |
+      <script defer
+              src="https://cloud.umami.is/script.js"
+              data-website-id="3b4b0fcd-7240-4083-82b3-d8c562563407">
+      </script>
+
+
 markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
