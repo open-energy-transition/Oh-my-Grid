@@ -1,5 +1,5 @@
 <div class="page-headers">
-<h1>Useful Grid Mapping tools for OSM </h1>
+<h1>Useful Grid Mapping Tools for OSM </h1>
 </div>
 ## <div class="tools-header">Osmose per country</div></h2>
 <div class="tool-section">
@@ -134,6 +134,59 @@ mismatch_threshold_km = 0.5   # coordinate‑mismatch threshold in km
     <figure>
       <img src="../images/angolagoogle.jpg" class="img-border" alt="Google Maps Satellite view showing substations in Angola">
       <figcaption class="image-caption">Imagery ©2025 CNES/Airbus, Maxar Technologies. Map data ©2025 Google</figcaption>
+    </figure>
+  </div>
+</div>
+
+## <div class="tools-header">Mapping strategies 🔍</div>
+<div class="tool-section">
+  <div class="tool-content">
+    <p>The following strategies outline different approaches to extending the existing transmission network. In general, the larger the tower and substation, the higher the voltage and therefore the greater the importance to the network. Priority should therefore be given to large, high-voltage infrastructure first. The easiest way to start mapping the transmission network is to find the location of new “towers.” You can hardly go wrong with this and it will help you to familiarise yourself with the tool and the local network. <strong>Only map infrastructure that you can confidently classify using satellite or ground imagery.</strong></p>
+    <ul class="strategy-list">
+      <li>Search for all “Unfinished power lines” in Osmose and check if you are able to find new towers at the end of the line. See the <a href="https://open-energy-transition.github.io/Oh-my-Grid/tools/">tools</a> section.</li>
+      <li>Check if wind parks, solar farms, and power plants are connected to the transmission grid. The <a href="https://open-energy-transition.github.io/gem_per_country/">GEM per Country</a> tool helps you to create a GeoJSON file of all the power plants in a country.</li>
+      <li>Ensure all transmission substations are connected to the grid.</li>
+      <li>Check for news reports on new substations and transmission lines that have become operational in recent years. LLMs like ChatGPT allow you to search in the local language: “Please search for news about transmission lines or substations recently opened in Country A. Please use the official language of the country for your search.”</li>
+      <li>Search for new substation records and national substation datasets as a reference “hint” layer. LLMs like ChatGPT allow you to search in the local language: “Please search for transmission lines or substation datasets in X. Please use the official language of the country for your search.” For a curated list of datasets that may be useful, see the Awesome Electric Grid Mapping List.</li>
+    </ul>
+  </div>
+  <div class="tool-images">
+    <!-- No images for this section -->
+  </div>
+</div>
+
+## <div class="tools-header">Downloading transmission data of an area near a border 📥</div>
+<div class="tool-section">
+  <div class="tool-content">
+    <p>If you are mapping an interconnector between two countries and want to see what’s mapped on the “other” side of the border, you can either do a quick Download from OSM in a new layer or use the following Overpass query:</p>
+    <ol>
+      <li>Copy this <a href="https://github.com/open-energy-transition/grid-mapping-starter-kit/blob/main/scripts/Alternative_overpass.overpassql">query</a> and paste it into “Download from Overpass API” in JOSM.</li>
+      <li>Draw a small bounding box in the slippy map, then run the query to download.</li>
+    </ol>
+    <p><strong>Explanation:</strong> The query finds nodes in your bounding box, detects their admin area (level 4 by default), and fetches all power infrastructure within it. You can adjust the “admin level” in the query (e.g. level 2 for national, level 6 for province) by editing the <code>admin_level</code> parameter in the download tab. A smaller bounding box is better (faster execution).</p>
+  </div>
+  <div class="tool-images">
+    <img src="../images/alternative_query.png" class="img-border" alt="Overpass Query Example" style="width:100%; float:right; margin: 5px 0 30px 20px;">
+  </div>
+</div>
+
+## <div class="tools-header">Bing attribution issue ⛔</div>
+<div class="tool-section">
+  <div class="tool-content">
+    <p>At the moment, there seems to be an issue with Bing attribution in JOSM where it only loads in the mornings (CET). To work around this:</p>
+    <ol>
+      <li>On a day when Bing attribution is working, copy the <code>bing.attribution.xml</code> file from your JOSM folder to a safe place:
+        <ul>
+          <li><strong>Windows:</strong> <code>%APPDATA%\JOSM\bing.attribution.xml</code></li>
+          <li><strong>Linux:</strong> <code>~/.cache/JOSM/bing.attribution.xml</code></li>
+        </ul>
+      </li>
+      <li>On a day when it isn’t working, replace the broken file with your saved copy, then restart or reload JOSM.</li>
+    </ol>
+  </div>
+  <div class="tool-images">
+    <figure>
+      <img src="../images/bing_issue.png" class="img-border" width="300" alt="Bing Attribution in JOSM">
     </figure>
   </div>
 </div>
