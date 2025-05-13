@@ -78,6 +78,7 @@ body_class: landing-page
   <p class="lead-statement">
     This initiative is launched by <strong>Open Energy Transition (OET)</strong> in collaboration with:
   </p>
+  <div class="partners-grid">
     <div class="partner-item">
       <a href="https://datactivist.coop/en/" target="_blank" rel="noopener">
         <img src="images/logos/datactivist-logo.png" alt="Datactivist Logo" class="partner-logo"> 
