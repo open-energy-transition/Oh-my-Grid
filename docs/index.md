@@ -76,7 +76,7 @@ body_class: landing-page
 <div class="who-we-are-section">
   <h2>Who We Are</h2>
   <p class="lead-statement">
-    This initiative is launched by <strong>Open Energy Transition (OET)</strong> in collaboration with:
+    This initiative is launched by <strong>Open Energy Transition</strong> in collaboration with:
   </p>
   <div class="partners-grid">
     <div class="partner-item">

@@ -1,5 +1,5 @@
 <div class="page-headers">
-<h1>Grid Mapping starter kit</h1>
+<h1>Grid Mapping Starter Kit</h1>
 </div>
 A [starter kit](https://github.com/open-energy-transition/grid-mapping-starter-kit) for Electrical Transmission Grid Mapping in OpenStreetMap, combining Osmose and Overpass with JOSM.
 <div style="display: flex; gap: 20px; margin: 20px auto; flex-wrap: wrap;">
