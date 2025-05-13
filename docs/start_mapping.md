@@ -252,7 +252,7 @@ fetch('../data/countries.geojson')
   .catch(error => console.error('Countries GeoJSON error:', error));
 
 // Load region GeoJSON and add interactivity
-fetch('../data/regions.geojson')
+fetch('../data/regionsv1.geojson')
   .then(response => response.json())
   .then(regions => {
     regionsLayer.addData(regions);
