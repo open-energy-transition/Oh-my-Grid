@@ -123,6 +123,22 @@ mismatch_threshold_km = 0.5   # coordinate‑mismatch threshold in km
   </div>
 </div>
 
+## <div class="tools-header">Find new Lines that Branch off from Substations </div></h2>
+<div class="tool-section">
+  <div class="tool-content">
+   A simple yet efficient strategy for mapping the transmission grid is to check every substation for new lines branching out from it. 
+   As most national transmission grids are entirely connected, this strategy enables you to trace and therefore map the entire grid network. 
+   One single unmapped power tower can sometimes trace to a missing interconnector to another country as shown in the image of a substation in Malawi.
+   Can you see the power tower that's missing from the bottom Left corner?
+  </div> 
+  <div class="tool-images">
+     <img src="../images/substation_malawi.jpg" class="img-border" alt="Substation in Malawi with unmapped interconnector in the left corner">
+     <figcaption class="image-caption">A substation in Malawi with an unmapped interconnector in the left corner.</figcaption>
+  </div>
+</div>
+
+
+
 ## <div class="tools-header">Google Maps Substations </div></h2>
 <div class="tool-section">
   <div class="tool-content">
@@ -133,7 +149,7 @@ mismatch_threshold_km = 0.5   # coordinate‑mismatch threshold in km
   <div class="tool-images">
     <figure>
       <img src="../images/angolagoogle.jpg" class="img-border" alt="Google Maps Satellite view showing substations in Angola">
-      <figcaption class="image-caption">Imagery ©2025 CNES/Airbus, Maxar Technologies. Map data ©2025 Google</figcaption>
+      <figcaption class="image-caption"> An Angola distribution substation missing OpenStreetMap. Imagery ©2025 CNES/Airbus, Maxar Technologies. Map data ©2025 Google</figcaption>
     </figure>
   </div>
 </div>
