@@ -76,14 +76,8 @@ body_class: landing-page
 <div class="who-we-are-section">
   <h2>Who We Are</h2>
   <p class="lead-statement">
-    This initiative is led by <strong>Open Energy Transition (OET)</strong> in collaboration with key partners.
+    This initiative is launched by <strong>Open Energy Transition (OET)</strong> in collaboration with:
   </p>
-  <div class="partners-grid">
-    <div class="partner-item">
-      <a href="https://openenergytransition.org/" target="_blank" rel="noopener">
-        <img src="images/logos/oet-logo.png" alt="Open Energy Transition Logo" class="partner-logo">
-      </a>
-    </div>
     <div class="partner-item">
       <a href="https://datactivist.coop/en/" target="_blank" rel="noopener">
         <img src="images/logos/datactivist-logo.png" alt="Datactivist Logo" class="partner-logo"> 
