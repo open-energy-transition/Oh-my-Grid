@@ -8,7 +8,7 @@ body_class: landing-page
 
 <div class="hero-section">
   <div class="hero-content-left">
-    <h1 class="hero-title">Oh my Grid</h1>
+    <h1 class="hero-title">OhmyGrid</h1>
     <p class="mission-statement"> We empower individuals, communities and nations around the world to map the electrical grid.
     </p>
     <div class="primary-link">
