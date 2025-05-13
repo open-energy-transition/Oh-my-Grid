@@ -1,5 +1,5 @@
 <div class="page-headers">
-<h1>Start Mapping </h1>
+<h1>Map It </h1>
 </div>
 Welcome to our interactive mapping tool! Click on a country below to start mapping power infrastructure directly in JOSM. :rocket:
 
@@ -16,6 +16,7 @@ If this is your first time mapping, please go through the [starter-kit tutorial]
 :exclamation: 
 
 You can select what power infrastructure you want by clicking on the different choices. The **Default** pulls all **transmission** power infrastructure and should be used when mapping generally. The repository with all the overpass queries can be found [here](https://github.com/open-energy-transition/osm-grid-definition).
+<!-- Beginning of Map section-->
 <style>
 #map {
     position: relative;
@@ -269,3 +270,10 @@ fetch('../data/regionsv1.geojson')
   })
   .catch(error => console.error('Regions GeoJSON error:', error));
 </script>
+
+
+<!-- End of Map section-->
+
+## <div class="tools-header">Join the Community  :calendar: </div>
+We welcome everyone to join our community calls and tutorials, to learn more about the mapping process and the initiative.
+<iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=Europe%2FBerlin&showPrint=0&title=Community%20live%20sessions&src=Y182ODE3NjE1MGIzMjY4MGRkZmUzMGM1ZTE1MDU0YTc5MTVhMzY2NmY1OGY5NjkxOGVjOTZhNDJjZWQwODQ2ZGVmQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23AD1457" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
