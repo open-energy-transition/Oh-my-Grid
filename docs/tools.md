@@ -132,8 +132,10 @@ mismatch_threshold_km = 0.5   # coordinate‑mismatch threshold in km
    Can you see the power tower that's missing from the bottom Left corner?
   </div> 
   <div class="tool-images">
+   <figure>
      <img src="../images/substation_malawi.jpg" class="img-border" alt="Substation in Malawi with unmapped interconnector in the left corner">
      <figcaption class="image-caption">A substation in Malawi with an unmapped interconnector in the left corner.</figcaption>
+   </figure>
   </div>
 </div>
 
@@ -149,7 +151,7 @@ mismatch_threshold_km = 0.5   # coordinate‑mismatch threshold in km
   <div class="tool-images">
     <figure>
       <img src="../images/angolagoogle.jpg" class="img-border" alt="Google Maps Satellite view showing substations in Angola">
-      <figcaption class="image-caption"> An Angola distribution substation missing OpenStreetMap. Imagery ©2025 CNES/Airbus, Maxar Technologies. Map data ©2025 Google</figcaption>
+      <figcaption class="image-caption"> An Angola distribution substation missing in OpenStreetMap. Imagery ©2025 CNES/Airbus, Maxar Technologies. Map data ©2025 Google</figcaption>
     </figure>
   </div>
 </div>
@@ -167,7 +169,10 @@ mismatch_threshold_km = 0.5   # coordinate‑mismatch threshold in km
     </ul>
   </div>
   <div class="tool-images">
-    <!-- No images for this section -->
+    <figure>
+      <img src="../images/mapstrats.jpg" class="img-border" alt="Google Maps Satellite view showing substations in Angola">
+      <figcaption class="image-caption"> A wind farm in Bangladesh in OSM</figcaption>
+    </figure>
   </div>
 </div>
 
