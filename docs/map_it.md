@@ -29,6 +29,59 @@ You can select what power infrastructure you want by clicking on the different c
 }
 </style>
 
+<!-- Osmose button-->
+<div id="osmose-panel" style="display:none; margin-bottom:1em;">
+  <label for="osmoseIssue">Issue type:</label>
+  <select id="osmoseIssue">
+    <option value="" disabled selected>Select an Osmose issue…</option>
+    <optgroup label="Power lines (item 7040)">
+                <option value="7040:1">Lone power tower or pole (Class 1)</option>
+                <option value="7040:2">Unfinished power transmission line (Class 2)</option>
+                <option value="7040:3">Connection between different voltages (Class 3)</option>
+                <option value="7040:4">None power node on power way (Class 4)</option>
+                <option value="7040:5">Missing power tower or pole (Class 5)</option>
+                <option value="7040:6">Unfinished power distribution line (Class 6)</option>
+                <option value="7040:7">Unmatched voltage of line on substation (Class 7)</option>
+                <option value="7040:8">Power support line management suggestion (Class 8)</option>
+                <option value="7040:95">missing power=line in the area (Class 95)</option>
+              </optgroup>
+              <optgroup label="Power substation, ref not integrated (item 7190)">
+                <option value="7190:2">Power substation is not known by the operator or misses substation=* value (Class 2)</option>
+                <option value="7190:22">Power line branch not known by the operator (Class 22)</option>
+              </optgroup>
+              <optgroup label="Power plant (item 8270)">
+                <option value="8270:1">Power plant not integrated, geocoded at municipality level (Class 1)</option>
+                <option value="8270:6">Wind turbine not integrated (Class 6)</option>
+              </optgroup>
+              <optgroup label="Power substation (item 8280)">
+                <option value="8280:1">Power substation missing in OSM or without tag "ref:FR:RTE" (Class 1)</option>
+                <option value="8280:11">Minor distribution power substation missing in OSM (Class 11)</option>
+                <option value="8280:21">Power line branch is missing in OSM or without tag "ref:FR:RTE" (Class 21)</option>
+                <option value="8280:94">power=substation from opendata (Class 94)</option>
+              </optgroup>
+              <optgroup label="Power substation, could be integrated (item 8281)">
+                <option value="8281:3">Power substation, integration suggestion (Class 3)</option>
+                <option value="8281:13">Power minor distribution substation, integration suggestion (Class 13)</option>
+                <option value="8281:23">Power line branch, integration suggestion (Class 23)</option>
+                <option value="8281:94">power=substation from opendata (Class 94)</option>
+              </optgroup>
+              <optgroup label="Power substation, need update (item 8282)">
+                <option value="8282:4">Power substation update (Class 4)</option>
+                <option value="8282:24">Power line branch update (Class 24)</option>
+              </optgroup>
+              <optgroup label="Power support (item 8290)">
+                <option value="8290:1">Power support not integrated (Class 1)</option>
+                <option value="8290:2">Power support, line management suggestion (Class 2)</option>
+                <option value="8290:10">Power line not integrated (Class 10)</option>
+                <option value="8290:1001">Power pole not integrated (Class 1001)</option>
+                <option value="8290:1004">Power pole update (Class 1004)</option>
+                <option value="8290:1011">Power pole not integrated (Class 1011)</option>
+              </optgroup>
+    </select>
+</div>
+
+
+
 <div id="map"></div>
 
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
@@ -86,63 +139,94 @@ async function fetchVersion(mode) {
 
 // 2b) render one button per folder name
 async function initQueryUI() {
-  const modes = await loadModes();
+  // 1. Load real modes from GitHub
+  let modes = await loadModes();
 
-  // sort so “default” is first
+  // 2. Ensure no residual 'Osmose_issues' in that list
+  modes = modes.filter(m => m !== 'Osmose_issues');
+
+  // 3. Sort so Default is first, then alphabetical
   modes.sort((a, b) => {
     if (a === 'Default') return -1;
     if (b === 'Default') return 1;
     return a.localeCompare(b);
   });
 
+  // 4. Inject our one Osmose mode at index 2
+  modes.splice(2, 0, 'Osmose_issues');
+
+  // 5. Decide which should start active
   currentMode = modes.includes('Default') ? 'Default' : modes[0];
 
-  // create container
+  // 6. Build the button container
   const container = document.createElement('div');
   container.id = 'query-buttons';
-
-  // insert *before* the map div, so it's right above the map
   const mapEl = document.getElementById('map');
   mapEl.parentNode.insertBefore(container, mapEl);
 
-  // now add one button per mode
-  modes.forEach(async mode => {
-  // — your existing button code —
-    const btn = document.createElement('button');
-    btn.textContent = mode.replace(/_/g, ' ');
-    btn.classList.add('query-btn');
-    if (mode === currentMode) btn.classList.add('active');
-    btn.onclick = () => {
-      currentMode = mode;
-      document.querySelectorAll('.query-btn').forEach(b =>
-       b.classList.toggle('active', b === btn)
-    );
-  };
- 
-// 2) version label
-    const ver = document.createElement('div');
-    ver.classList.add('query-version');
-    ver.textContent = '…';  // placeholder
-
-    // 3) wrap them in a group
-    const group = document.createElement('div');
-    group.classList.add('query-group');
-    group.appendChild(btn);
-    group.appendChild(ver);
-
-    // 4) append the group
+  // 7. Render them in order
+  for (const mode of modes) {
+    let group;
+    if (mode === 'Osmose_issues') {
+      group = renderOsmoseButtonGroup();
+    } else {
+      group = await renderModeButtonGroup(mode);
+    }
     container.appendChild(group);
+  }
+}
 
+function renderOsmoseButtonGroup() {
+  const btn = document.createElement('button');
+  btn.textContent = 'Osmose issues';
+  btn.classList.add('query-btn');
+  if (currentMode === 'Osmose_issues') btn.classList.add('active');
+  btn.onclick = () => selectMode('Osmose_issues', btn);
+
+  const ver = document.createElement('div');
+  ver.classList.add('query-version');
+  ver.textContent = '';  // no version
+
+  const group = document.createElement('div');
+  group.classList.add('query-group');
+  group.appendChild(btn);
+  group.appendChild(ver);
+  return group;
+}
+
+async function renderModeButtonGroup(mode) {
+  const btn = document.createElement('button');
+  btn.textContent = mode.replace(/_/g, ' ');
+  btn.classList.add('query-btn');
+  if (mode === currentMode) btn.classList.add('active');
+  btn.onclick = () => selectMode(mode, btn);
+
+  const ver = document.createElement('div');
+  ver.classList.add('query-version');
   try {
     const v = await fetchVersion(mode);
     ver.textContent = `v${v}`;
   } catch {
     ver.textContent = 'v?';
   }
-});
 
+  const group = document.createElement('div');
+  group.classList.add('query-group');
+  group.appendChild(btn);
+  group.appendChild(ver);
+  return group;
 }
 
+// helper to swap modes and show/hide the Osmose UI panel
+function selectMode(mode, btn) {
+  currentMode = mode;
+  document.querySelectorAll('.query-btn').forEach(b =>
+    b.classList.toggle('active', b === btn));
+  
+  // Show or hide the issue-type dropdown panel
+  document.getElementById('osmose-panel')
+          .style.display = mode==='Osmose_issues' ? 'block' : 'none';
+}
 
 // 2c) fetch the correct OverpassQL file on demand
 async function fetchQuery(mode, adminLevel) {
@@ -157,14 +241,20 @@ async function fetchQuery(mode, adminLevel) {
 // 2d) unified click handler for country (level 2) & region (level 4)
 async function handleAreaClick(iso, level, layer) {
   const name = layer.feature.properties.NAME;
+  const sovName= layer.feature.properties.SOVEREIGNT; // for linking to Osmose
   umami.track('map-click');
   layer.setStyle({ color: '#ff7800' });
   layer.getPopup().setContent(`Loading ${name}…`).update();
 
   try {
-    let tpl = await fetchQuery(currentMode, level);
-    tpl = tpl.replace(/\$\{iso\}/g, iso);
-    sendToJosm(tpl);
+    if (currentMode === 'Osmose_issues') {
+      await fetchOsmoseAndDownload(sovName);
+    } else {
+
+       let tpl = await fetchQuery(currentMode, level);
+       tpl = tpl.replace(/\$\{iso\}/g, iso);
+       sendToJosm(tpl);
+    }
   } catch (err) {
     layer.getPopup().setContent(`Error: ${err.message}`).update();
   }
@@ -181,6 +271,54 @@ async function handleAreaClick(iso, level, layer) {
 // initialize the UI immediately
 initQueryUI().catch(console.error);
 
+// Osmose API fetcher
+async function fetchOsmoseAndDownload(sovName) {
+  const sel = document.getElementById('osmoseIssue');
+  if (!sel.value) {
+    alert('Please select an issue type first.');
+    return;
+  }
+  const [item, cls] = sel.value.split(':');
+  /// normalize to lowercase, add underscore for +1 words  and add wildcard
+  let base = sovName
+               .toLowerCase()
+               .replace(/\s+/g, '_');
+  if (!base.endsWith('*')) base += '*';
+
+  const apiUrl = 
+    `https://osmose.openstreetmap.fr/api/0.3/issues.json?` +
+    `country=${encodeURIComponent(base)}` +
+    `&item=${item}&class=${cls}&limit=500`;
+
+  const resp = await fetch(apiUrl);
+  if (!resp.ok) throw new Error(`Osmose API ${resp.statusText}`);
+  const data = await resp.json();
+
+  const features = (data.issues||[]).map(i => ({
+    type: 'Feature',
+    properties: { id: i.id, item: i.item, clazz: i.class },
+    geometry: { type: 'Point', coordinates: [i.lon, i.lat] }
+  }));
+
+  // If no features, notify and stop
+  if (features.length === 0) {
+    alert(`No issues found for "${sel.options[sel.selectedIndex].text}" in ${sovName.replace('*','')}. Try another osmose issue type!`);
+    return;
+  }
+
+  const geojson = { type: 'FeatureCollection', features };
+
+  const blob = new Blob([JSON.stringify(geojson, null,2)],
+                        {type:'application/json'});
+  const url  = URL.createObjectURL(blob);
+  const a    = document.createElement('a');
+  a.href     = url;
+  a.download = `${sovName.replace('*','')}_osmose_${item}_${cls}.geojson`;
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+  URL.revokeObjectURL(url);
+}
 
 // JOSM integration function
 function sendToJosm(query) {
