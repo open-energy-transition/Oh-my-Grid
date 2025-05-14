@@ -8,13 +8,13 @@ body_class: landing-page
 
 <div class="hero-section">
   <div class="hero-content-left">
-    <h1 class="hero-title">OhmyGrid</h1>
+    <h1 class="hero-title">OhMyGrid</h1>
     <p class="mission-statement"> We empower individuals, communities and nations around the world to map the electrical grid.
     </p>
     <div class="primary-link">
-     <a href="https://ohmygrid.org/start_mapping/" target="_blank" rel="noopener">
+     <a href="https://ohmygrid.org/map_it/" target="_blank" rel="noopener">
     <span class="primary-icon">🌍</span>
-    Interactive World Map
+    Map It 📍
      </a>
     </div>
     <div class="social-links">
@@ -76,9 +76,14 @@ body_class: landing-page
 <div class="who-we-are-section">
   <h2>Who We Are</h2>
   <p class="lead-statement">
-    This initiative is launched by <strong>Open Energy Transition</strong> in collaboration with:
+    The OhMyGrid is a free and open initiative launched by the following organizations:
   </p>
   <div class="partners-grid">
+      <div class="partner-item">
+      <a href="https://openenergytransition.org/" target="_blank" rel="noopener">
+        <img src="images/logos/oet-logo.png" alt="Open Energy Transition Logo" class="partner-logo">
+        </a>
+        </div>
     <div class="partner-item">
       <a href="https://datactivist.coop/en/" target="_blank" rel="noopener">
         <img src="images/logos/datactivist-logo.png" alt="Datactivist Logo" class="partner-logo"> 

@@ -1,7 +1,7 @@
-site_name: OhmyGrid
+site_name: OhMyGrid
 site_url: 'https://ohmygrid.org/'
 site_description: We aim to contribute to mapping countries' electricity grid systems around the world. We strive to improving the power infrastructure data on OpenStreetMap, to enhance global energy system modeling. 
-repo_name: 'OhmyGrid'
+repo_name: 'OhMyGrid'
 repo_url: 'https://github.com/open-energy-transition/Oh-my-Grid'
 
 nav:
