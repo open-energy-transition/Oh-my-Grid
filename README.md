@@ -1,10 +1,10 @@
 # OhMyGrid
 **We empower individuals, communities and nations around the world to map the global electrical grid.** <br>
 
-This is the repository for the [OhMyGrid website](https://ohmygrid.org/): 
-
 [![](https://badgen.net/badge/See/Wiki/A2CDAE?scale=1.6)](https://wiki.openstreetmap.org/wiki/Organised_Editing/Activities/Electricity_Grid_Mapping) [![](https://badgen.net/badge/Follow/Tutorial/A2CDAE?scale=1.6)](https://open-energy-transition.github.io/Oh-my-Grid/starter-kit/) [![](https://badgen.net/badge/Join/DiscordGroup/A2CDAE?scale=1.6)](https://discord.gg/a5znpdFWfD)  
 [![](https://badgen.net/badge/Use/Tools/A2CDAE?scale=1.6)](https://open-energy-transition.github.io/Oh-my-Grid/tools/) [![](https://badgen.net/badge/Find/AwesomeList/A2CDAE?scale=1.6)](https://github.com/open-energy-transition/Awesome-Electric-Grid-Mapping) [![](https://badgen.net/badge/Icon/Contribute/A2CDAE?scale=1.6&label=%F0%9F%9A%80)](https://open-energy-transition.github.io/Oh-my-Grid/contributing/)
+
+> This is the repository of the [OhMyGrid website](https://ohmygrid.org/)
 
 ## Why?
 <img src= https://raw.githubusercontent.com/open-energy-transition/Oh-my-Grid/refs/heads/main/docs/images/logo.png align="right" width="350">
