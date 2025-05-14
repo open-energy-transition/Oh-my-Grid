@@ -59,7 +59,3 @@ git push origin your-branch-name
 ```
 
 8. Create a pull request.
-
-License: Creative Commons Attribution 4.0 International License
-
-
