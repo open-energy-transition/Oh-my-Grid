@@ -54,12 +54,18 @@ Here are some [heatmaps](https://yosmhm.neis-one.org/) of the mapping work some 
      🔄 Refresh stats (only click if the bars are not "loading...")
    </button>
 
+
   <div class="progress-item">
-    <label>CHANGE TO EDITS <code>#ohmygrid</code>:</label>
+    <label>Contributors for <code>#ohmygrid</code>:</label>
+    <div class="progress"> <div class="progress-bar" id="contributors-bar" style="background-color: #28a745;"></div> </div>
+    <span id="contributors-count">Loading…</span>
+  </div>
+
+  <div class="progress-item">
+    <label>Total Edits for <code>#ohmygrid</code>:</label>
     <div class="progress">
-      <div class="progress-bar" id="cs-bar"></div>
-    </div>
-    <span id="cs-count">Loading…</span>
+      <div class="progress-bar" id="edits-bar" style="background-color: #17a2b8;"></div> </div>
+    <span id="edits-count">Loading…</span>
   </div>
 
   <div class="progress-item">
@@ -71,137 +77,159 @@ Here are some [heatmaps](https://yosmhm.neis-one.org/) of the mapping work some 
   </div>
 </div>
 
+
 <script>
-  // Function to fetch data and update the DOM/cache - ONLY TOWER COUNT
-async function fetchAndUpdate() {
-  console.log("Fetching fresh stats (Towers only)..."); // Debug log
-  // Show loading state ONLY for towers
-  // document.getElementById('cs-count').textContent = 'Loading...'; // Comment out or remove CS elements later
-  document.getElementById('tower-count').textContent = 'Loading...';
-  // document.getElementById('cs-bar').style.width = '0%'; // Comment out or remove CS elements later
-  document.getElementById('tower-bar').style.width = '0%';
 
-  try {
-    // 1) Changesets -- COMMENTED OUT / REMOVED
-    /*
-    const csResp = await fetch('https://osmcha.org/api/v1/changesets/?hashtags=ohmygrid&page_size=1');
-    if (!csResp.ok) throw new Error(`OSMCha fetch failed: ${csResp.statusText}`);
-    const csData = await csResp.json();
-    const csCount = csData.count || 0;
-    */
-    const csCount = 0; // Set a default value if needed, or remove cs elements entirely
+    // —— CONFIGURE THESE GOALS ——
+  const CONTRIBUTORS_GOAL = 1;
+  const EDITS_GOAL        = 10000;
+  const TOWER_GOAL        = 10000;
+   // —— UPDATE Ohsome (#ohmygrid) —— 
+  async function updateOhsome() {
+    const contribCountEl = document.getElementById('contributors-count');
+    const editsCountEl   = document.getElementById('edits-count');
+    const contribBar     = document.getElementById('contributors-bar');
+    const editsBar       = document.getElementById('edits-bar');
 
-    // 2) Towers
-    const towerQuery = `
-      [out:json][timeout:300];
-      (
-        node["power"="tower"](user:"Andreas Hernandez");
-        node["power"="tower"](user:"Tobias Augspurger");
-        node["power"="tower"](user:"Mwiche");
-        node["power"="tower"](user:"davidtt92");
-        node["power"="tower"](user:"relaxxe");
-        node["power"="tower"](user: "Russ")(newer:"2025-03-01T00:00:00Z");
-        node["power"="tower"](user: "map-dynartio")(newer:"2025-03-01T00:00:00Z");
-        node["power"="tower"](user: "overflorian")(newer:"2025-03-01T00:00:00Z");
-        node["power"="tower"](user: "nlehuby")(newer:"2025-03-01T00:00:00Z");
-        node["power"="tower"](user: "ben10dynartio")(newer:"2025-03-01T00:00:00Z");
-        node["power"="tower"](user: "InfosReseaux")(newer:"2025-03-01T00:00:00Z");
+    // set loading
+    contribCountEl.textContent = 'Loading…';
+    editsCountEl.textContent   = 'Loading…';
+    contribBar.style.width     = '0%';
+    editsBar.style.width       = '0%';
 
+    try {
+      const startDate = '2025-03-12T22:00:00Z';
+      const endDate   = new Date().toISOString();
+      const url       = `https://stats.now.ohsome.org/api/stats/ohmygrid?startdate=${startDate}&enddate=${endDate}`;
 
-      );
-      out count;
-    `;
-    console.log("Sending Overpass query..."); // Debug log
-    const towerResp = await fetch('https://overpass-api.de/api/interpreter', {
-      method: 'POST',
-      // Sending the query raw in the body is usually fine for Overpass POST
-      body: towerQuery.trim()
-    });
-    console.log("Overpass response received:", towerResp.status, towerResp.statusText); // Debug log
-    if (!towerResp.ok) throw new Error(`Overpass fetch failed: ${towerResp.statusText}`);
-    const towerData = await towerResp.json();
-    console.log("Overpass JSON data:", towerData); // Debug log
+      const resp = await fetch(url);
+      if (!resp.ok) throw new Error(resp.statusText);
+      const data = await resp.json();
 
-    const towerCount = parseInt(towerData.elements[0]?.tags?.nodes?.total || towerData.elements[0]?.tags?.total || '0', 10);
+      // your payload is in data.result
+      const users = data.result.users  ?? 0;
+      const edits = data.result.edits  ?? 0;
 
-    console.log("Counts fetched:", { csCount, towerCount }); // Debug log
+      // write DOM
+      contribCountEl.textContent = users.toLocaleString();
+      editsCountEl.textContent   = edits.toLocaleString();
 
-    // 3) DOM updates (Only for towers now)
-    // document.getElementById('cs-count').textContent    = csCount.toLocaleString(); // Comment out
-    document.getElementById('tower-count').textContent = towerCount.toLocaleString();
+      contribBar.style.width = Math.min(100, users / CONTRIBUTORS_GOAL * 100) + '%';
+      editsBar.style.width   = Math.min(100, edits / EDITS_GOAL        * 100) + '%';
 
-    const towerGoal = 10000; // Consider making these configurable
-    // document.getElementById('cs-bar').style.width    = Math.min(100, (csCount / csGoal) * 100) + '%'; // Comment out
-    document.getElementById('tower-bar').style.width = Math.min(100, (towerCount / towerGoal) * 100) + '%';
-
-    // 4) Cache in localStorage (Only tower count now)
-    // Adapt the cache structure if you remove csCount permanently
-    const dataToCache = { csCount: null, towerCount, timestamp: Date.now() }; // Set csCount to null or remove
-    localStorage.setItem('ohmygridStats', JSON.stringify(dataToCache));
-    console.log("Stats updated and cached."); // Debug log
-
-  } catch (error) {
-    console.error("Error fetching or updating stats:", error);
-    // Display error message to the user
-    // document.getElementById('cs-count').textContent = 'N/A'; // Update CS display
-    document.getElementById('tower-count').textContent = 'Error';
+      // cache
+      localStorage.setItem('ohmygrid-ohsome', JSON.stringify({
+        users, edits, ts: Date.now()
+      }));
+    }
+    catch(err) {
+      console.error('Ohsome error', err);
+      contribCountEl.textContent = 'Error';
+      editsCountEl.textContent   = 'Error';
+    }
   }
-}
 
-// *** IMPORTANT: Update updateProgressDisplay too ***
-// You'll need to adjust the `updateProgressDisplay` function similarly
-// to only handle the tower count from the cache or remove the csCount logic.
+  async function updateTowers() {
+    const towerCountEl = document.getElementById('tower-count');
+    const towerBar     = document.getElementById('tower-bar');
 
-// Example adjusted updateProgressDisplay
-async function updateProgressDisplay() {
-  console.log("Updating progress display...");
-  const cached = JSON.parse(localStorage.getItem('ohmygridStats') || 'null');
-  const cacheExpiry = 60 * 60 * 1000; // 1 hour
+    towerCountEl.textContent = 'Loading…';
+    towerBar.style.width     = '0%';
 
-  if (cached && cached.towerCount !== null && (Date.now() - cached.timestamp < cacheExpiry)) {
-    console.log("Using cached stats for towers.");
-    document.getElementById('tower-count').textContent = cached.towerCount.toLocaleString();
-    const towerGoal = 10000;
-    document.getElementById('tower-bar').style.width = Math.min(100, (cached.towerCount / towerGoal) * 100) + '%';
-    // Handle CS display if you keep the elements
-    // document.getElementById('cs-count').textContent = cached.csCount !== null ? cached.csCount.toLocaleString() : 'N/A';
-    // document.getElementById('cs-bar').style.width = cached.csCount !== null ? Math.min(100, (cached.csCount / 500) * 100) + '%' : '0%';
+    try {
+      const q = `
+       [out:json][timeout:400];
+    (
+      node["power"="tower"](user:"Andreas Hernandez");
+      node["power"="tower"](user:"Tobias Augspurger");
+      node["power"="tower"](user:"Mwiche");
+      node["power"="tower"](user:"davidtt92");
+      node["power"="tower"](user:"relaxxe");
+      node["power"="tower"](user: "Russ")(newer:"2025-03-01T00:00:00Z");
+      node["power"="tower"](user: "map-dynartio")(newer:"2025-03-01T00:00:00Z");
+      node["power"="tower"](user: "overflorian")(newer:"2025-03-01T00:00:00Z");
+      node["power"="tower"](user: "nlehuby")(newer:"2025-03-01T00:00:00Z");
+      node["power"="tower"](user: "ben10dynartio")(newer:"2025-03-01T00:00:00Z");
+      node["power"="tower"](user: "InfosReseaux")(newer:"2025-03-01T00:00:00Z");
 
-  } else {
-    console.log("Cache expired or missing, fetching fresh data.");
-    await fetchAndUpdate();
+
+    );
+    out count;
+    `.trim();
+    const resp = await fetch('https://overpass-api.de/api/interpreter', {
+        method: 'POST', body: q
+      });
+      if (!resp.ok) throw new Error(resp.statusText);
+      const json = await resp.json();
+      // Overpass returns { elements: [ { type:"count", count:<n> } ] }
+      const el = json.elements?.[0] || {};
+      const count = el.tags?.total
+       ? parseInt(el.tags.total, 10)
+       : (el.count ?? 0);
+
+      towerCountEl.textContent = count.toLocaleString();
+      towerBar.style.width     = Math.min(100, count / TOWER_GOAL * 100) + '%';
+
+      localStorage.setItem('ohmygrid-towers', JSON.stringify({
+        count, ts: Date.now()
+      }));
+    }
+    catch(err) {
+      console.error('Overpass error', err);
+      towerCountEl.textContent = 'Error';
+    }
   }
-   // If you completely remove the CS HTML elements, you don't need to handle them here.
-   // Otherwise, set a default state for CS count/bar:
-   if (!cached || cached.csCount === null) {
-       document.getElementById('cs-count').textContent = 'N/A';
-       document.getElementById('cs-bar').style.width = '0%';
-   }
-}
-
-
-// Keep the DOMContentLoaded wrapper and button listener as they were
-document.addEventListener('DOMContentLoaded', function() {
-  console.log("DOM fully loaded and parsed.");
-
-  // Initial load
-  updateProgressDisplay();
-
-  // Wire up the refresh button
-  const refreshButton = document.getElementById('refresh-btn');
-  if (refreshButton) {
-     refreshButton.addEventListener('click', () => {
-         console.log("Refresh button clicked.");
-         localStorage.removeItem('ohmygridStats'); // Clear cache on manual refresh
-         fetchAndUpdate(); // Fetch and update immediately
-     });
-     console.log("Refresh button listener attached.");
-  } else {
-     console.error("Refresh button not found!");
+    // —— MAIN & CACHE HANDLING ——
+  function attemptCacheLoad(id, maxAgeMs) {
+    try {
+      const raw = localStorage.getItem(id);
+      if (!raw) return null;
+      const { ts, ...rest } = JSON.parse(raw);
+      if (Date.now() - ts > maxAgeMs) return null;
+      return rest;
+    }
+    catch { return null; }
   }
-});
 
+  document.addEventListener('DOMContentLoaded', () => {
+    // 1h cache
+    const oneHour = 60*60*1000;
+
+    // try Ohsome cache
+    const oCache = attemptCacheLoad('ohmygrid-ohsome', oneHour);
+    if (oCache) {
+      // populate from cache
+      document.getElementById('contributors-count').textContent = oCache.users.toLocaleString();
+      document.getElementById('edits-count').textContent       = oCache.edits.toLocaleString();
+      document.getElementById('contributors-bar').style.width = Math.min(100, oCache.users / CONTRIBUTORS_GOAL * 100) + '%';
+      document.getElementById('edits-bar').style.width       = Math.min(100, oCache.edits / EDITS_GOAL * 100) + '%';
+    } else {
+      updateOhsome();
+    }
+
+    // try Towers cache
+    const tCache = attemptCacheLoad('ohmygrid-towers', oneHour);
+    if (tCache) {
+      document.getElementById('tower-count').textContent = tCache.count.toLocaleString();
+      document.getElementById('tower-bar').style.width   = Math.min(100, tCache.count / TOWER_GOAL * 100) + '%';
+    } else {
+      updateTowers();
+    }
+
+    // refresh button now refreshes both
+    const btn = document.getElementById('refresh-btn');
+    if (btn) {
+      btn.addEventListener('click', () => {
+        localStorage.removeItem('ohmygrid-ohsome');
+        localStorage.removeItem('ohmygrid-towers');
+        updateOhsome();
+        updateTowers();
+      });
+    }
+  });
 </script>
+
+You can find more stats for #ohmygrid at [OhsomeNowstats](https://stats.now.ohsome.org/dashboard#hashtag=ohmygrid&start=2025-03-12T22:00:00Z&end=2025-05-14T21:59:59Z&interval=P1M&countries=&topics=).
 
 ##**Want to track and see your personal mapping progress (KPI)? :white_check_mark:** <br>
 This [repository](https://github.com/open-energy-transition/KPI-OSM/tree/main) has a few different scripts (Overpass and Python) to measure your KPI's, as well as a [web-interface](https://open-energy-transition.github.io/KPI-OSM/). You can see how many towers you have placed and the respective line voltage, the power line length you have edited in km, the amount of MW capacity you added as a % of the country's mapped capacity, and a distribution table by voltage of substations you have added. <br>
