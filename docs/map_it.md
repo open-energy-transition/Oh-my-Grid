@@ -2,10 +2,10 @@
 <h1>Map It 📍</h1>
 </div>
 Welcome to our interactive mapping tool! Click on a country below to start mapping power infrastructure directly in JOSM. :rocket:
-If this is your first time mapping, go through the [starter-kit tutorial](https://ohmygrid.org/starter-kit/) we prepared for you.
+If this is your first time mapping, go through the [starter-kit tutorial](https://ohmygrid.org/starter-kit/) we prepared for you. <br>
 Please use the <span class="big-font">#ohmygrid</span> hashtag in your changeset to show your support for our initiative when you make an edit!
 
-* Remember to allow remote control in _Edit>Preferences>Remote Control_ and to **disable all ad blocker**.
+* Remember to allow remote control in `Edit>Preferences>Remote Control` and to **disable all ad blocker**.
 * Please read the common mistakes section in the starter-kit! 
 * Certain countries should not be mapped on at a national level (eg. Brasil, USA, India), but you can zoom in to click on regions/states.
 
