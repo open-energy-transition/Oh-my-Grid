@@ -1,5 +1,7 @@
-# Oh my Grid!
+# OhMyGrid
 **We empower individuals, communities and nations around the world to map the global electrical grid.** <br>
+
+This is the repository for the [OhMyGrid website](https://ohmygrid.org/): 
 
 [![](https://badgen.net/badge/See/Wiki/A2CDAE?scale=1.6)](https://wiki.openstreetmap.org/wiki/Organised_Editing/Activities/Electricity_Grid_Mapping) [![](https://badgen.net/badge/Follow/Tutorial/A2CDAE?scale=1.6)](https://open-energy-transition.github.io/Oh-my-Grid/starter-kit/) [![](https://badgen.net/badge/Join/DiscordGroup/A2CDAE?scale=1.6)](https://discord.gg/a5znpdFWfD)  
 [![](https://badgen.net/badge/Use/Tools/A2CDAE?scale=1.6)](https://open-energy-transition.github.io/Oh-my-Grid/tools/) [![](https://badgen.net/badge/Find/AwesomeList/A2CDAE?scale=1.6)](https://github.com/open-energy-transition/Awesome-Electric-Grid-Mapping) [![](https://badgen.net/badge/Icon/Contribute/A2CDAE?scale=1.6&label=%F0%9F%9A%80)](https://open-energy-transition.github.io/Oh-my-Grid/contributing/)
@@ -23,7 +25,41 @@ When you make an edit, please use the **#ohmygrid** in the changeset to help the
 
 ⚠️ **If you're eager to get started with transmission grid mapping in OpenStreetMap, check out the [Grid Mapping Starter Kit](https://github.com/open-energy-transition/grid-mapping-starter-kit) and [our community discord channel](https://discord.gg/a5znpdFWfD).** ⚠️
 
+
+## Contribute to this website
+
+1. Install mkdocs material on your machine:
+```bash
+pip install mkdocs-material
+```
+
+2. Clone this repository our your fork of this repository:
+```bash
+git clone git@github.com:open-energy-transition/Oh-my-Grid.git
+```
+3. Create a branch to work on:
+```bash
+git checkout -b "your-branch-name"
+```
+4. Edit the website. mkdocs material offers [comprehensive documention](https://squidfunk.github.io/mkdocs-material/getting-started/).
+
+5. Run the website on your machine:
+```bash
+cd Oh-my-Grid
+mkdocs serve
+```
+
+6. Open http://127.0.0.1:8000/ in your browser to see your changes. If you change a file, the website is automatically recreated.
+
+7. Commit your changes and push:
+```bash
+git add your-filename
+git commit -m "my commit message"
+git push origin your-branch-name
+```
+
+8. Create a pull request.
+
 License: Creative Commons Attribution 4.0 International License
 
-The link to our website:
- ohmygrid.org/ 
+

@@ -23,7 +23,7 @@
   </div>
 </div>
 
-## <div class="tools-header">OSM and Global Energy Monitor comparison tool</div></h2>
+## <div class="tools-header">OpenStreetMap and Global Energy Monitor comparison tool</div></h2>
 <div class="tool-section">
   <div class="tool-content">
     <p><a href="https://open-energy-transition.github.io/gem_per_country/">GEM per Country Power Tracker web application</a> - The tool allows users to preview and download GeoJSON data for global power plants in the <a href="https://globalenergymonitor.org/">Global Energy Monitor</a> database filtered by country and power plant status.</p>
