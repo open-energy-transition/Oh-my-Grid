@@ -28,6 +28,16 @@ This frequently asked question is important to answer to show how mapping is imp
     === "[Mapa del Sistema Eléctrico Nacional (link)](https://energia.conacyt.mx/planeas/electricidad/sistema-electrico-nacional)"
         ![map](images/impact/mexicogov-map.png){: .img-border }
 
+###  
+**European Commission - Joint Research Centre**  ![EUC logo](images/impact/euc-logo.jpg){width=40px} 
+??? "Africa Knowledge Platform"
+    
+    === "[Africa Knowledge Platform (link)](https://africa-knowledge-platform.ec.europa.eu/explore_maps)"
+        ![map](images/impact/africa-euc.png){: .img-border }
+
+    ### **More Information**
+    - The electricity network data on the image is a mix of World Bank and OpenStreetMap data 
+
 ## **<div class="tools-header">How and why is it used?</div>**
 
 
