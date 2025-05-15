@@ -71,7 +71,7 @@ A simple but very efficient way of mapping the network is the continuation of â€
 1. Download the [Unfinished Power Transmission lines (Class 2) via Osmose](https://ohmygrid.org/map_it/) for your country.
 1. Drag and drop the downloaded geojson file into JSOM.
 1. Download the todo plugin for JSOM. Edit --> Preferences. Search for todo, mark it and press OK. Press Windows --> todo list to show the todo list window. 
-1. Press STRG+A to select all issues in the new layer. Press the Add in the todo plugin window.
+1. Press STRG+A (CTRL + A or COMMAND + A)  to select all issues in the new layer. Press the Add in the todo plugin window.
 1. Switch back to the OSM data layer.
 1. You can now systematically step through all the issues by pressing Mark.  
 
