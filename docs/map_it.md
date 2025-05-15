@@ -89,7 +89,18 @@ You can select what power infrastructure you want by clicking on the different c
 
 <script>
 // Map
-const map = L.map('map').setView([20, 0], 2);
+// Define world bounds (southWest & northEast corners)
+const southWest = L.latLng(-90, -200);
+const northEast = L.latLng( 90,  200);
+const worldBounds = L.latLngBounds(southWest, northEast);
+
+// Create the map with maxBounds & disable world wrapping
+const map = L.map('map', {
+  worldCopyJump: false,      // disable dragging to duplicate worlds
+  maxBounds: worldBounds,    // restrict the view
+  maxBoundsViscosity: 0.3    // “sticky” at the edges
+}).setView([20, 0], 2);
+
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 18,
     attribution: '© <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">OpenStreetMap</a> contributors'
