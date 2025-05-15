@@ -357,9 +357,3 @@
 }
 
 /* --------------------------------------------------------------------------------------------------------------*/
-/* Recommend button colour for osmose issue class 2 */
-#osmoseIssue option.recommended {
-  color: #53961d;            /* a strong, attention-grabbing text color */
-  font-weight: bold;         /* make it pop */
-  background-color: #238815; /* very light red background */
-}

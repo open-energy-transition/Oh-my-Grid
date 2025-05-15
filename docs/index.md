@@ -62,7 +62,7 @@ body_class: landing-page
       <h3>Join Our Community</h3>
       <p>Connect with fellow contributors on Discord and participate in our community discussions.</p>
     </a>
-    <a href="https://open-energy-transition.github.io/Oh-my-Grid/starter-kit/" class="get-involved-card">
+    <a href="https://ohmygrid.org/starter-kit/" class="get-involved-card">
       <h3>Start Mapping</h3>
       <p>Learn how to contribute to OpenStreetMap and help map the electrical grid in your area.</p>
     </a>
@@ -76,7 +76,7 @@ body_class: landing-page
 <div class="who-we-are-section">
   <h2>Who We Are</h2>
   <p class="lead-statement">
-    The OhMyGrid is a free and open initiative launched by the following organizations:
+    OhMyGrid is a free and open initiative launched by the following organizations:
   </p>
   <div class="partners-grid">
       <div class="partner-item">
