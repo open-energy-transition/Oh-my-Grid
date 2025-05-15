@@ -36,7 +36,7 @@ You can select what power infrastructure you want by clicking on the different c
     <option value="" disabled selected>Select an Osmose issue…</option>
     <optgroup label="Power lines (item 7040)">
                 <option value="7040:1">Lone power tower or pole (Class 1)</option>
-                <option value="7040:2">Unfinished power transmission line (Class 2)</option>
+                <option value="7040:2">Unfinished power transmission line (Class 2) (recommended ⭐)</option>
                 <option value="7040:3">Connection between different voltages (Class 3)</option>
                 <option value="7040:4">None power node on power way (Class 4)</option>
                 <option value="7040:5">Missing power tower or pole (Class 5)</option>
@@ -78,6 +78,7 @@ You can select what power infrastructure you want by clicking on the different c
                 <option value="8290:1011">Power pole not integrated (Class 1011)</option>
               </optgroup>
     </select>
+    <div class="query-version">Warning: GeoJSON file. "Open" in JOSM, but do not "upload" this layer</div>
 </div>
 
 
