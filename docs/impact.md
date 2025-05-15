@@ -4,7 +4,7 @@
 
 ## **<div class="tools-header">Who uses OpenStreetMap grid data?</div>**
 
-This frequently asked question is important to answer to show how mapping is impactful. When you map towers, substations, powerplants in OpenStreetMap (OSM), you are essentially adding valuable data that is used by many different actors. This data is used by the following list, which is not exhaustive.
+This frequently asked question is important to answer to show how mapping is impactful. When you map towers, substations, powerplants in OpenStreetMap (OSM), you are essentially adding valuable data that is used by many different entities. This data is used by the following list, which is not exhaustive.
 
 
 ###  
@@ -35,8 +35,23 @@ This frequently asked question is important to answer to show how mapping is imp
     === "[Africa Knowledge Platform (link)](https://africa-knowledge-platform.ec.europa.eu/explore_maps)"
         ![map](images/impact/africa-euc.png){: .img-border }
 
-    ### **More Information**
+    **More Information**
     - The electricity network data on the image is a mix of World Bank and OpenStreetMap data 
+
+###  
+**IRENA**  ![GWA logo](images/impact/irenalogo.jpg){width=55px} 
+??? "Global Atlas for Renewable Energy"
+    
+    === "[Global Atlas for Renewable Energy (link)](https://globalatlas.irena.org/workspace)"
+        ![map](images/impact/irenaatlas.png){: .img-border }
+
+###  
+**Global Wind Atlas**  ![GWA logo](images/impact/globalwindatlaslogo.jpg){width=15px} 
+??? "Global Wind Atlas"
+    
+    === "[Global Wind Atlas (link)](https://globalwindatlas.info/en/)"
+        ![map](images/impact/globalwindatlas.jpg){: .img-border }
+
 
 ## **<div class="tools-header">How and why is it used?</div>**
 
