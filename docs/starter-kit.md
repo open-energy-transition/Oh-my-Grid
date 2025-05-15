@@ -1,5 +1,5 @@
 <div class="page-headers">
-<h1>Grid Mapping Starter Kit</h1>
+<h1>Grid Mapping Starter Kit 🏁</h1>
 </div>
 A [starter kit](https://github.com/open-energy-transition/grid-mapping-starter-kit) for Electrical Transmission Grid Mapping in OpenStreetMap, combining Osmose and Overpass with JOSM.
 <div style="display: flex; gap: 20px; margin: 20px auto; flex-wrap: wrap;">
@@ -59,6 +59,22 @@ Make sure remote control is enabled and ad-blocker disabled, and then go to the 
 :pencil: Example: As seen in the image to the right, the red polygon is a substation which is mapped by adding nodes that are connected to each other and tagged as a substation. <br>
 
 3\. Whilst having the OpenStreetMap layer activated, press the green Upload arrow. Avoid ignoring validation results. The only acceptable warning when uploading data is "Possible missing line support node within power line". When you make an edit, please use the **#ohmygrid** in the changeset to help the initiative!
+
+
+## **<div class="tools-header">Checking Unfinished lines with Osmose and the todo Plugin 📝</div>**
+<div style="float: right; margin: 5px 0 20px 20px; width: 300px;">
+  <img src="../images/todo.jpg" class="img-border" style="width: 100%;">
+</div>
+
+A simple but very efficient way of mapping the network is the continuation of “Unfinished Transmission Lines”:
+
+1. Download the [Unfinished Power Transmission lines (Class 2) via Osmose](https://ohmygrid.org/map_it/) for your country.
+1. Drag and drop the downloaded geojson file into JSOM.
+1. Download the todo plugin for JSOM. Edit --> Preferences. Search for todo, mark it and press OK. Press Windows --> todo list to show the todo list window. 
+1. Press STRG+A to select all issues in the new layer. Press the Add in the todo plugin window.
+1. Switch back to the OSM data layer.
+1. You can now systematically step through all the issues by pressing Mark.  
+
 
 ## <div class="tools-header">Map fast  :pushpin:</div>
 If you want to be able to map efficiently and fast, you will need to know how to correctly place towers and power lines. This will save you loads of time:
