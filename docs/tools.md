@@ -199,6 +199,7 @@ mismatch_threshold_km = 0.5   # coordinate‑mismatch threshold in km
       <li>On a day when Bing attribution is working, copy the <code>bing.attribution.xml</code> file from your JOSM folder to a safe place:
         <ul>
           <li><strong>Windows:</strong> <code>%APPDATA%\JOSM\bing.attribution.xml</code></li>
+          <li><strong>Mac:</strong> <code>~/Library/Caches/JOSM/bing.attribution.xml</code></li>
           <li><strong>Linux:</strong> <code>~/.cache/JOSM/bing.attribution.xml</code></li>
         </ul>
       </li>
