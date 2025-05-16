@@ -1,6 +1,8 @@
 <div class="page-headers">
-<h1>Useful Grid Mapping Tools for OSM </h1>
+<h1>Useful Grid Mapping Tools </h1>
 </div>
+<p>The following strategies and tooles will help you to extend the existing transmission grid networks in OpenStreetMap. In general, the larger the tower and substation, the higher the voltage and therefore the greater the importance to the network. Priority should therefore be given to large, high-voltage infrastructure first. The easiest way to start mapping the transmission network is to find the location of missing towers with the help of osmose.</p>
+
 ## <div class="tools-header">Osmose per country</div></h2>
 <div class="tool-section">
   <div class="tool-content"> 
@@ -156,22 +158,21 @@ mismatch_threshold_km = 0.5   # coordinate‑mismatch threshold in km
   </div>
 </div>
 
-## <div class="tools-header">Mapping strategies 🔍</div>
+## <div class="tools-header">Online Investigation 🔍</div>
 <div class="tool-section">
   <div class="tool-content">
-    <p>The following strategies outline different approaches to extending the existing transmission network. In general, the larger the tower and substation, the higher the voltage and therefore the greater the importance to the network. Priority should therefore be given to large, high-voltage infrastructure first. The easiest way to start mapping the transmission network is to find the location of new “towers.” You can hardly go wrong with this and it will help you to familiarise yourself with the tool and the local network. <strong>Only map infrastructure that you can confidently classify using satellite or ground imagery.</strong></p>
-    <ul class="strategy-list">
-      <li>Search for all “Unfinished power lines” in Osmose and check if you are able to find new towers at the end of the line. See the <a href="https://open-energy-transition.github.io/Oh-my-Grid/tools/">tools</a> section.</li>
-      <li>Check if wind parks, solar farms, and power plants are connected to the transmission grid. The <a href="https://open-energy-transition.github.io/gem_per_country/">GEM per Country</a> tool helps you to create a GeoJSON file of all the power plants in a country.</li>
-      <li>Ensure all transmission substations are connected to the grid.</li>
-      <li>Check for news reports on new substations and transmission lines that have become operational in recent years. LLMs like ChatGPT allow you to search in the local language: “Please search for news about transmission lines or substations recently opened in Country A. Please use the official language of the country for your search.”</li>
-      <li>Search for new substation records and national substation datasets as a reference “hint” layer. LLMs like ChatGPT allow you to search in the local language: “Please search for transmission lines or substation datasets in X. Please use the official language of the country for your search.” For a curated list of datasets that may be useful, see the Awesome Electric Grid Mapping List.</li>
-    </ul>
+
+  <p>Looking for recent news articles, reports, academic studies, or datasets related to newly operational substations and transmission lines is a simple way to find information about larger infrastructure that just started construction or operation. Politicians and investors love to be photographed with such new infrastructure. That's why you find almost always news articles and reports about new substations, transmission lines and power plants.</p>
+    
+  <p>Local Large Language Models (LLMs) can help by conducting searches in the country’s official language. For example: “Please search for news articles, reports, academic studies, or datasets about transmission lines or substations opened in Country A in the last 5 years. Use the official language of the country A. Only include resources not already listed in the <a href='https://github.com/open-energy-transition/Awesome-Electric-Grid-Mapping'>Awesome Electric Grid Mapping</a> repository.”</p>
+
+  <p>Please be aware of the licence and quality of the documents you are finding. If you cannot validate the information you find by different sources, you can at least use the names of substations, regions and towns to identify the locations of new substations or transmission lines, and verify their visibility in satellite images.</p>
+
   </div>
   <div class="tool-images">
     <figure>
-      <img src="../images/mapstrats.jpg" class="img-border" alt="Google Maps Satellite view showing substations in Angola">
-      <figcaption class="image-caption"> A wind farm in Bangladesh in OSM</figcaption>
+      <img src="../images/mapstrats.jpg" class="img-border" alt="A wind farm in Bangladesh displayed in OpenStreetMap">
+      <figcaption class="image-caption">A wind farm in Bangladesh displayed in OpenStreetMap that has been discovered by offical documents.</figcaption>
     </figure>
   </div>
 </div>

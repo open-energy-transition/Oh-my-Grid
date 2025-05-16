@@ -1,5 +1,5 @@
 <div class="page-headers">
-<h1>Grid Mapping Starter Kit 🏁</h1>
+<h1>Grid Mapping Starter Kit 🌱</h1>
 </div>
 A [starter kit](https://github.com/open-energy-transition/grid-mapping-starter-kit) for Electrical Transmission Grid Mapping in OpenStreetMap, combining Osmose and Overpass with JOSM.
 <div style="display: flex; gap: 20px; margin: 20px auto; flex-wrap: wrap;">
@@ -98,4 +98,3 @@ If you want to be able to map efficiently and fast, you will need to know how to
 ## Mapping Regulations
 **⚠️ Before you start mapping, please find out about the mapping restrictions in the respective country. In some countries, the mapping of transmission lines is not permitted. Get in touch with local users by finding out about [local projects](https://wiki.openstreetmap.org/wiki/Power_networks). ⚠️**
 
-⭐ More info can be found at the [repository](https://github.com/open-energy-transition/grid-mapping-starter-kit)
