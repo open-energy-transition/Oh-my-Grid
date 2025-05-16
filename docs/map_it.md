@@ -9,7 +9,7 @@ Please use the <span class="big-font">#ohmygrid</span> hashtag in your changeset
 * Please read the common mistakes section in the starter-kit! 
 * Certain countries should not be mapped on at a national level (eg. Brasil, USA, India), but you can zoom in to click on regions/states.
 
-You can select what power infrastructure you want by clicking on the different choices. The **Default** pulls all **transmission** power infrastructure and should be used when mapping generally. The repository with all the overpass queries can be found [here](https://github.com/open-energy-transition/osm-grid-definition). The Osmose and Global energy monitor buttons are tools, which you can read about in our [tools](https://ohmygrid.org/tools/) page.
+You can select what power infrastructure you want by clicking on the different choices. The **Default** pulls all **transmission** power infrastructure and should be used when mapping generally. The repository with all the overpass queries can be found [here](https://github.com/open-energy-transition/osm-grid-definition). The Osmose, Global energy monitor, and Wikidata buttons are **hint layer** tools, which you can read about in our [tools](https://ohmygrid.org/tools/) page.
 <!-- Beginning of Map section-->
 <style>
 #map {
