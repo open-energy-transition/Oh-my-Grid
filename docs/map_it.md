@@ -88,6 +88,10 @@ You can select what power infrastructure you want by clicking on the different c
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
 <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
 
+<!-- SheetJS for in‑browser XLSX parsing -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+
+
 <script>
 // Map
 // Define world bounds (southWest & northEast corners)
@@ -166,6 +170,8 @@ async function initQueryUI() {
 
   // 4. Inject our one Osmose mode at index 2
   modes.splice(2, 0, 'Osmose_issues');
+  // 4.1. Inject GEM Powerplants right after Osmose
+  modes.splice(3, 0, 'GEM_powerplants');
 
   // 5. Decide which should start active
   currentMode = modes.includes('Default') ? 'Default' : modes[0];
@@ -178,13 +184,15 @@ async function initQueryUI() {
 
   // 7. Render them in order
   for (const mode of modes) {
-    let group;
-    if (mode === 'Osmose_issues') {
-      group = renderOsmoseButtonGroup();
-    } else {
-      group = await renderModeButtonGroup(mode);
-    }
-    container.appendChild(group);
+   let group;
+   if (mode === 'Osmose_issues') {
+    group = renderOsmoseButtonGroup();
+  } else if (mode === 'GEM_powerplants') {
+    group = renderGEMButtonGroup();
+  } else {
+    group = await renderModeButtonGroup(mode);
+  }
+   container.appendChild(group);
   }
 }
 
@@ -198,6 +206,24 @@ function renderOsmoseButtonGroup() {
   const ver = document.createElement('div');
   ver.classList.add('query-version');
   ver.textContent = '';  // no version
+
+  const group = document.createElement('div');
+  group.classList.add('query-group');
+  group.appendChild(btn);
+  group.appendChild(ver);
+  return group;
+}
+
+function renderGEMButtonGroup() {
+  const btn = document.createElement('button');
+  btn.textContent = 'GEM Power Plants';
+  btn.classList.add('query-btn');
+  if (currentMode === 'GEM_powerplants') btn.classList.add('active');
+  btn.onclick = () => selectMode('GEM_powerplants', btn);
+
+  const ver = document.createElement('div');
+  ver.classList.add('query-version');
+  ver.textContent = ''; // no version for now
 
   const group = document.createElement('div');
   group.classList.add('query-group');
@@ -261,8 +287,11 @@ async function handleAreaClick(iso, level, layer) {
   try {
     if (currentMode === 'Osmose_issues') {
       await fetchOsmoseAndDownload(sovName);
-    } else {
-
+    }
+    else if (currentMode === 'GEM_powerplants') {
+      await fetchGEMAndDownload(sovName);
+    }
+    else {
        let tpl = await fetchQuery(currentMode, level);
        tpl = tpl.replace(/\$\{iso\}/g, iso);
        sendToJosm(tpl);
@@ -329,6 +358,48 @@ async function fetchOsmoseAndDownload(sovName) {
   document.body.appendChild(a);
   a.click();
   a.remove();
+  URL.revokeObjectURL(url);
+}
+
+async function fetchGEMAndDownload(sovName) {
+  const countryKey = sovName.trim().toLowerCase();
+
+  // 1) fetch the XLSX from your own /data/ folder
+  const resp   = await fetch('/data/Global-Integrated-Power-February-2025-update-II.xlsx');
+  if (!resp.ok) throw new Error(`XLSX fetch failed: ${resp.statusText}`);
+  const arrayBuffer = await resp.arrayBuffer();
+
+  // 2) parse it with SheetJS
+  const wb        = XLSX.read(arrayBuffer, { type: 'array' });
+  const sheetName = wb.SheetNames[1];          // second tab → index 1
+  const rows      = XLSX.utils.sheet_to_json(wb.Sheets[sheetName], { defval: '' });
+
+  // 3) filter + map into GeoJSON Features
+  const features  = rows
+    .filter(r => (r['Country/area'] || '').trim().toLowerCase() === countryKey)
+    .map(r => ({
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [Number(r.Longitude), Number(r.Latitude)]
+      },
+      properties: Object.fromEntries(
+        Object.entries(r).filter(([k]) => !['Latitude','Longitude'].includes(k))
+      )
+    }));
+
+  if (features.length === 0) {
+    return alert(`No GEM powerplants found for ${sovName}.`);
+  }
+
+  // 4) download as GeoJSON
+  const geojson = { type: 'FeatureCollection', features };
+  const blob    = new Blob([JSON.stringify(geojson, null, 2)], { type: 'application/json' });
+  const url     = URL.createObjectURL(blob);
+  const a       = document.createElement('a');
+  a.href        = url;
+  a.download    = `${sovName.replace(/\s+/g, '_')}_gem_powerplants.geojson`;
+  a.click();
   URL.revokeObjectURL(url);
 }
 

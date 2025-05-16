@@ -4,7 +4,7 @@
 
 ## **<div class="tools-header">Who uses OpenStreetMap grid data?</div>**
 
-This frequently asked question is important to answer to show how mapping is impactful. When you map towers, substations, powerplants in OpenStreetMap (OSM), you are essentially adding valuable data that is used by many different entities. This data is used by the following list, which is not exhaustive.
+This frequently asked question is important to answer to show how mapping is impactful. When you map towers, substations, powerplants in OpenStreetMap (OSM), you are essentially adding valuable data that is used by many different entities. This data has been used by the following list of organisations, which is not exhaustive.
 <br> <br>
 
 **International Energy Agency**  ![IEA logo](images/impact/International-energy-agency-logo.png){width=30px} 
@@ -54,6 +54,11 @@ This frequently asked question is important to answer to show how mapping is imp
 
 
 ## **<div class="tools-header">How and why is it used?</div>**
+
+Our team also ran an "impact analysis" to see how many times the keywords _OpenStreetMap_ AND power related keywords (eg. _power grid_, _electrical grid_, _renewable_, _energy model_, etc...) were used together in google scholar. 
+
+ - 📈 **10,700 publications** since 2005 included a combination of these keywords.
+ - 🚀 **7,520 publications** (70% of total) were published in the **last 5 years alone**, which shows the increasingly important role OpenStreetMap power data is having in academia.
 
 
 ## **<div class="tools-header">Why is it important that this data is open?</div>**
