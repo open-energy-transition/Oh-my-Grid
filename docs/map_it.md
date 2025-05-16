@@ -173,6 +173,9 @@ async function initQueryUI() {
   // 4.1. Inject GEM Powerplants right after Osmose
   modes.splice(3, 0, 'GEM_powerplants');
 
+  // 4.2. Inject Wikidata substations next
+  modes.splice(4, 0, 'Wikidata');
+
   // 5. Decide which should start active
   currentMode = modes.includes('Default') ? 'Default' : modes[0];
 
@@ -189,9 +192,11 @@ async function initQueryUI() {
     group = renderOsmoseButtonGroup();
   } else if (mode === 'GEM_powerplants') {
     group = renderGEMButtonGroup();
+  } else if (mode === 'Wikidata') {
+    group = renderWikidataButtonGroup();
   } else {
     group = await renderModeButtonGroup(mode);
-  }
+  } 
    container.appendChild(group);
   }
 }
@@ -241,6 +246,32 @@ function renderGEMButtonGroup() {
   info.innerHTML =
    '<a href="https://globalenergymonitor.org/" target="_blank">globalenergymonitor.org</a>' +
    ' | CC BY 4.0';
+
+  const group = document.createElement('div');
+  group.classList.add('query-group');
+  group.appendChild(btn);
+  group.appendChild(ver);
+  group.appendChild(info);
+  return group;
+}
+
+function renderWikidataButtonGroup() {
+  const btn = document.createElement('button');
+  btn.textContent = 'Wikidata';
+  btn.classList.add('query-btn');
+  if (currentMode === 'Wikidata') btn.classList.add('active');
+  btn.onclick = () => selectMode('Wikidata', btn);
+
+  const ver = document.createElement('div');
+  ver.classList.add('query-version');
+  ver.textContent = ''; // I can add the date of the wikidata fetch
+
+  // Link to the GitHub repo folder
+  const info = document.createElement('div');
+  info.classList.add('query-version');
+  info.style.marginTop = '0.2rem';
+  info.innerHTML =
+    '<a href="https://github.com/open-energy-transition/osm-wikidata-toolset/tree/main/wikidata_substations_geojson_by_country" target="_blank">Repository</a>';
 
   const group = document.createElement('div');
   group.classList.add('query-group');
@@ -308,6 +339,9 @@ async function handleAreaClick(iso, level, layer) {
     }
     else if (currentMode === 'GEM_powerplants') {
       await fetchGEMAndDownload(sovName);
+    }
+    else if (currentMode === 'Wikidata') {
+      await fetchWikidataAndDownload(sovName);
     }
     else {
        let tpl = await fetchQuery(currentMode, level);
@@ -419,6 +453,27 @@ async function fetchGEMAndDownload(sovName) {
   a.download    = `${sovName.replace(/\s+/g, '_')}_gem_powerplants.geojson`;
   a.click();
   URL.revokeObjectURL(url);
+}
+
+async function fetchWikidataAndDownload(sovName) {
+  // Build the filename from the SOVEREIGNT name:
+  // Replace spaces with underscores, e.g. "United Kingdom" → "United_Kingdom"
+  const fileName = sovName.replace(/\s+/g, '_') + '.geojson';
+  const url = `https://raw.githubusercontent.com/open-energy-transition/osm-wikidata-toolset/main/wikidata_substations_geojson_by_country/${fileName}`;
+
+  const resp = await fetch(url);
+  if (!resp.ok) {
+    return alert(`No Wikidata substations file found for ${sovName}.`);
+  }
+  const geojson = await resp.json();
+
+  // Trigger download
+  const blob = new Blob([JSON.stringify(geojson, null, 2)], { type: 'application/json' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = `${sovName.replace(/\s+/g, '_')}_wikidata_substations.geojson`;
+  a.click();
+  URL.revokeObjectURL(a.href);
 }
 
 // JOSM integration function
