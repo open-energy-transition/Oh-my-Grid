@@ -76,7 +76,7 @@ body_class: landing-page
 <div class="who-we-are-section">
   <h2>Who We Are</h2>
   <p class="lead-statement">
-    OhMyGrid is a free, open-source initiative supported by the following organisations. Would you like to support? Write <a href="mailto:ohmygrid@openenergytransition.org" target="_blank" rel="noopener">us an email</a>. 
+    OhMyGrid is a free, open-source initiative supported by the following organisations. Would you like to join or support us? Contact <a href="mailto:ohmygrid@openenergytransition.org" target="_blank" rel="noopener">us via email</a>. 
   </p>
   <div class="partners-grid">
       <div class="partner-item">
