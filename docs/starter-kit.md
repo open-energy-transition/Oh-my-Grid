@@ -43,8 +43,9 @@ JOSM is a more advanced desktop OpenStreetMap editor which is more suitable for 
 <div style="float: right; margin: 5px 0 20px 20px; width: 300px;">
   <img src="../images/clickmap.jpg" class="img-border" style="width: 100%;">
 </div>
+
 ## **<div class="tools-header">Loading power infrastructure into JOSM :inbox_tray:</div>**
-Make sure remote control is enabled and ad-blocker disabled, and then go to the start mapping [page](https://ohmygrid.org/map_it/). Here you can click on the country you want to map, and it will directly open JOSM and load the data of that country. <br>
+Make sure remote control is enabled and ad-blocker disabled, and then go to the start mapping [page](https://ohmygrid.org/map_it/). Here you can click on the country you want to map, and it will directly open JOSM and load the data of that country. Use the "Default" to pull the data. <br>
 
 ## **<div class="tools-header">How to Map and upload your progress :outbox_tray:</div>**
 <div style="float: right; margin: 5px 0 20px 20px; width: 300px;">

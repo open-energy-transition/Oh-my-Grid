@@ -6,18 +6,17 @@
 ## <div class="tools-header">Osmose per country (integrated in Map It 📍)</div></h2>
 <div class="tool-section">
   <div class="tool-content"> 
-    <p><a href="https://open-energy-transition.github.io/osmose_per_country/">Osmose per country</a> - This tool is integrated in Map It 📍, but can also be found at this front end interface. The tool allows fetching data on gaps in the OSM data through the OSMOSE API on a country level.</p>
+    <p> This tool is integrated in Map It 📍, but can also be found at <a href="https://open-energy-transition.github.io/osmose_per_country/">this</a> front end interface. The tool allows fetching data on gaps in the OSM data through the OSMOSE API on a country level.</p>
 
     <h3>What is Osmose?</h3>
-    <p>"<a href="https://osmose.openstreetmap.fr/en/map/">Osmose-QA</a> is a quality assurance tool that detects issues in OpenStreetMap data"</p>
+    <p>"<a href="https://osmose.openstreetmap.fr/en/map/">Osmose-QA</a> is a quality assurance tool that detects issues in OpenStreetMap data". These include different classes of issues, such as "unfinished power transmission lines".</p>
 
     <h3>How to use the Osmose per country tool</h3>
     <ol>
-      <li>Go to the tool <a href="https://open-energy-transition.github.io/osmose_per_country/">website</a> or the repository to find it.</li>
-      <li>Type the name of the country you want to find osmose issues for.</li>
-      <li>Press Fetch Data. This will download a geojson file you can use as a hint layer in JOSM.</li>
+      <li>Click on the Osmose issues button in Map It 📍 or go to the tool interface <a href="https://open-energy-transition.github.io/osmose_per_country/">website</a>.</li>
+      <li>In Map It 📍, you can simply choose the issue you want to look at, and then click on a country/region. This will download a geojson file for you which you can open in JOSM and use as a hint layer.</li>
     </ol>
-    <p>Tip: Certain countries have different names associated, so to fetch the data for the entire country use an asterisk (wildcard) like: <code>France*</code></p>
+    <p>Tip: On the tool website, certain countries have different names associated, so to fetch the data for the entire country use an asterisk (wildcard) like: <code>France*</code></p>
   </div>
   <div class="tool-images">
     <img src="../images/osmoseapi.jpg" class="img-border" alt="Osmose API Tool Interface">
@@ -32,8 +31,9 @@
 
     <h3>How to use the GEM power plants per country tool</h3>
     <ol>
-      <li>Go to the <a href="https://open-energy-transition.github.io/gem_per_country/">website</a>.</li>
-      <li>Type the name of the country you want data for. Press preview, and download the geojson file.</li>
+      <li>Click on the Global Energy Monitor Power Plant button in Map It 📍 or go to the <a href="https://open-energy-transition.github.io/gem_per_country/">website</a>.</li>
+      <li>A) In Map It 📍, you can simply choose the issue you want to look at, and then click on a country/region. This will download a geojson file for you.<br>
+          B) On the website, type the name of the country you want data for. Press preview, and download the geojson file.</li>
       <li>You can open this geojson file in JOSM, where you will be able to see all power plants from the GEM database.</li>
     </ol>
   </div>
