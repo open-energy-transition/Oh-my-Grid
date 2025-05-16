@@ -125,7 +125,7 @@ mismatch_threshold_km = 0.5   # coordinate‑mismatch threshold in km
   </div>
 </div>
 
-## <div class="tools-header">Find new Lines that Branch off from Substations </div></h2>
+## <div class="tools-header">Find new lines that branch off from substations </div></h2>
 <div class="tool-section">
   <div class="tool-content">
    A simple yet efficient strategy for mapping the transmission grid is to check every substation for new lines branching out from it. 
@@ -143,7 +143,7 @@ mismatch_threshold_km = 0.5   # coordinate‑mismatch threshold in km
 
 
 
-## <div class="tools-header">Google Maps Substations </div></h2>
+## <div class="tools-header">Google Maps substations </div></h2>
 <div class="tool-section">
   <div class="tool-content">
     <p>Google Maps would be the perfect additional data source for the locations and names of substations worldwide, but so far <strong>no official authorisation has been granted</strong> for using the location of substation within OpenStreetMap. Google Maps shows many transmission and distribution substations that are difficult to locate using current mapping strategies, particularly in remote areas of low- and middle-income countries.</p>
@@ -158,7 +158,7 @@ mismatch_threshold_km = 0.5   # coordinate‑mismatch threshold in km
   </div>
 </div>
 
-## <div class="tools-header">Online Investigation 🔍</div>
+## <div class="tools-header">Online investigation 🔍</div>
 <div class="tool-section">
   <div class="tool-content">
 
@@ -166,7 +166,7 @@ mismatch_threshold_km = 0.5   # coordinate‑mismatch threshold in km
     
   <p>Local Large Language Models (LLMs) can help by conducting searches in the country’s official language. For example: “Please search for news articles, reports, academic studies, or datasets about transmission lines or substations opened in Country A in the last 5 years. Use the official language of the country A. Only include resources not already listed in the <a href='https://github.com/open-energy-transition/Awesome-Electric-Grid-Mapping'>Awesome Electric Grid Mapping</a> repository.”</p>
 
-  <p>Please be aware of the licence and quality of the documents you are finding. If you cannot validate the information you find by different sources, you can at least use the names of substations, regions and towns to identify the locations of new substations or transmission lines, and verify their visibility in satellite images.</p>
+  <p>Please be aware of the licence and quality of the documents you are finding. If you cannot validate the information you find by different sources, you can at least use the names of substations, regions and towns to identify the locations of new substations or transmission lines, and verify their visibility in satellite images. The fastest way to search global power infrastructure like power plants, substations or country interconnector by name is by the search function of <a href="https://openinframap.org/#2/26/12">Open Infrastructure Map</a>.</p>
 
   </div>
   <div class="tool-images">
