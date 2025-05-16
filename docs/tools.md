@@ -3,10 +3,10 @@
 </div>
 <p>The following strategies and tooles will help you to extend the existing transmission grid networks in OpenStreetMap. In general, the larger the tower and substation, the higher the voltage and therefore the greater the importance to the network. Priority should therefore be given to large, high-voltage infrastructure first. The easiest way to start mapping the transmission network is to find the location of missing towers with the help of osmose.</p>
 
-## <div class="tools-header">Osmose per country</div></h2>
+## <div class="tools-header">Osmose per country (integrated in Map It 📍)</div></h2>
 <div class="tool-section">
   <div class="tool-content"> 
-    <p><a href="https://open-energy-transition.github.io/osmose_per_country/">Osmose per country</a> - This is a front end interface that allows fetching data on gaps in the OSM data through the OSMOSE API on a country level.</p>
+    <p><a href="https://open-energy-transition.github.io/osmose_per_country/">Osmose per country</a> - This tool is integrated in Map It 📍, but can also be found at this front end interface. The tool allows fetching data on gaps in the OSM data through the OSMOSE API on a country level.</p>
 
     <h3>What is Osmose?</h3>
     <p>"<a href="https://osmose.openstreetmap.fr/en/map/">Osmose-QA</a> is a quality assurance tool that detects issues in OpenStreetMap data"</p>
@@ -25,10 +25,10 @@
   </div>
 </div>
 
-## <div class="tools-header">OpenStreetMap and Global Energy Monitor comparison tool</div></h2>
+## <div class="tools-header"> Global Energy Monitor tool (integrated in Map It 📍)</div></h2>
 <div class="tool-section">
   <div class="tool-content">
-    <p><a href="https://open-energy-transition.github.io/gem_per_country/">GEM per Country Power Tracker web application</a> - The tool allows users to preview and download GeoJSON data for global power plants in the <a href="https://globalenergymonitor.org/">Global Energy Monitor</a> database filtered by country and power plant status.</p>
+    <p><a href="https://open-energy-transition.github.io/gem_per_country/">GEM per Country Power Tracker web application</a> - This tool is integrated in Map It 📍, and it allows users to preview and download GeoJSON data for global power plants in the <a href="https://globalenergymonitor.org/">Global Energy Monitor</a> database filtered by country and power plant status.</p>
 
     <h3>How to use the GEM power plants per country tool</h3>
     <ol>

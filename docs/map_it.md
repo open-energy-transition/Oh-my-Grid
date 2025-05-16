@@ -207,16 +207,25 @@ function renderOsmoseButtonGroup() {
   ver.classList.add('query-version');
   ver.textContent = '';  // no version
 
+  // Osmose website link
+  const info = document.createElement('div');
+  info.classList.add('query-version');
+  info.style.marginTop = '0.2rem';
+  info.innerHTML =
+   '<a href="https://osmose.openstreetmap.fr/" target="_blank">osmose.openstreetmap.fr/</a>';
+   
+
   const group = document.createElement('div');
   group.classList.add('query-group');
   group.appendChild(btn);
   group.appendChild(ver);
+  group.appendChild(info);
   return group;
 }
 
 function renderGEMButtonGroup() {
   const btn = document.createElement('button');
-  btn.textContent = 'GEM Power Plants';
+  btn.textContent = 'Global Energy Monitor Power Plants';
   btn.classList.add('query-btn');
   if (currentMode === 'GEM_powerplants') btn.classList.add('active');
   btn.onclick = () => selectMode('GEM_powerplants', btn);
@@ -225,10 +234,19 @@ function renderGEMButtonGroup() {
   ver.classList.add('query-version');
   ver.textContent = ''; // no version for now
 
+  // GEM website link + CC BY 4.0
+  const info = document.createElement('div');
+  info.classList.add('query-version');
+  info.style.marginTop = '0.2rem';
+  info.innerHTML =
+   '<a href="https://globalenergymonitor.org/" target="_blank">globalenergymonitor.org</a>' +
+   ' | CC BY 4.0';
+
   const group = document.createElement('div');
   group.classList.add('query-group');
   group.appendChild(btn);
   group.appendChild(ver);
+  group.appendChild(info);
   return group;
 }
 
@@ -365,7 +383,7 @@ async function fetchGEMAndDownload(sovName) {
   const countryKey = sovName.trim().toLowerCase();
 
   // 1) fetch the XLSX from your own /data/ folder
-  const resp   = await fetch('/data/Global-Integrated-Power-February-2025-update-II.xlsx');
+  const resp   = await fetch('/data/GEM-Global-Integrated-Power-February-2025-update-II.xlsx');
   if (!resp.ok) throw new Error(`XLSX fetch failed: ${resp.statusText}`);
   const arrayBuffer = await resp.arrayBuffer();
 
