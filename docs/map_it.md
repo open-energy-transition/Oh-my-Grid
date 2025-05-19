@@ -562,6 +562,9 @@ fetch('../data/regionsv2.geojson')
 
 <!-- End of Map section-->
 
+## Join the Chat <img src="/icons/discord.svg" alt="Discord" class="social-icon" style="width:1.2em; vertical-align:middle; margin-left:0.5ch;"> {.tools-header style="font-weight:700"}
+We welcome everyone to join our [chat](https://discord.gg/a5znpdFWfD) called _ohmygrid_ on the PyPsa discord channel. Here you can ask questions, and interact with our team and the rest of the community. 
+
 ## <div class="tools-header">Join the Community  :calendar: </div>
 We welcome everyone to join our community calls and tutorials, to learn more about the mapping process and the initiative.
 <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=Europe%2FBerlin&showPrint=0&title=Community%20live%20sessions&src=Y182ODE3NjE1MGIzMjY4MGRkZmUzMGM1ZTE1MDU0YTc5MTVhMzY2NmY1OGY5NjkxOGVjOTZhNDJjZWQwODQ2ZGVmQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23AD1457" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
