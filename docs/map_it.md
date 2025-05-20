@@ -9,7 +9,7 @@ Please use the <span class="big-font">#ohmygrid</span> hashtag in your changeset
 * Please read the common mistakes section in the starter-kit! 
 * Certain countries should not be mapped on at a national level (eg. Brasil, USA, India), but you can zoom in to click on regions/states.
 
-You can select what power infrastructure you want by clicking on the different choices. The **Default** pulls all **transmission** power infrastructure and should be used when mapping generally. The repository with all the overpass queries can be found [here](https://github.com/open-energy-transition/osm-grid-definition). The Osmose, Global energy monitor, and Wikidata buttons are **hint layer** tools, which you can read about in our [tools](https://ohmygrid.org/tools/) page.
+You can select what power infrastructure you want by clicking on the different choices. The **Default** pulls all **transmission** power infrastructure and should be used when mapping generally. The repository with all the overpass queries can be found [here](https://github.com/open-energy-transition/osm-grid-definition). The Osmose, Global energy monitor, and Wikidata buttons are **hint layer** tools, which you can read about in our [tools](https://ohmygrid.org/tools/) page. Please do NOT upload these hint layers or data directly into JOSM.
 <!-- Beginning of Map section-->
 <style>
 #map {
@@ -79,6 +79,15 @@ You can select what power infrastructure you want by clicking on the different c
               </optgroup>
     </select>
     <div class="query-version">Warning: GeoJSON file. "Open" in JOSM, but do not "upload" this layer</div>
+</div>
+
+<!-- Wikidata button-->
+<div id="wikidata-panel" style="display:none; margin-bottom:1em;">
+  <label for="wikidataType">Data type:</label>
+  <select id="wikidataType">
+    <option value="substations" selected>Substations</option>
+    <option value="powerplants">Power Plants</option>
+  </select>
 </div>
 
 
@@ -159,48 +168,76 @@ async function fetchVersion(mode) {
 async function initQueryUI() {
   // 1. Load real modes from GitHub
   let modes = await loadModes();
-
-  // 2. Ensure no residual 'Osmose_issues' in that list
   modes = modes.filter(m => m !== 'Osmose_issues');
-
-  // 3. Sort so Default is first, then alphabetical
   modes.sort((a, b) => {
     if (a === 'Default') return -1;
     if (b === 'Default') return 1;
     return a.localeCompare(b);
   });
 
-  // 4. Inject our one Osmose mode at index 2
-  modes.splice(2, 0, 'Osmose_issues');
-  // 4.1. Inject GEM Powerplants right after Osmose
-  modes.splice(3, 0, 'GEM_powerplants');
+  // inject our special modes:
+  modes.splice(2, 0, 'Osmose_issues', 'GEM_powerplants', 'Wikidata');
 
-  // 4.2. Inject Wikidata substations next
-  modes.splice(4, 0, 'Wikidata');
-
-  // 5. Decide which should start active
   currentMode = modes.includes('Default') ? 'Default' : modes[0];
 
-  // 6. Build the button container
-  const container = document.createElement('div');
-  container.id = 'query-buttons';
+  // 2. Create two sibling containers, then insert them above the map
   const mapEl = document.getElementById('map');
-  mapEl.parentNode.insertBefore(container, mapEl);
 
-  // 7. Render them in order
+  // — Row 1 title —
+  const overpassTitle = document.createElement('div');
+  overpassTitle.className = 'tools-header';
+  overpassTitle.textContent = 'Overpass OSM';
+  mapEl.parentNode.insertBefore(overpassTitle, mapEl);
+
+  const overpassContainer = document.createElement('div');
+  overpassContainer.id = 'overpass-buttons';
+  mapEl.parentNode.insertBefore(overpassContainer, mapEl);
+  
+  // — Row 2 title —
+  const toolTitle = document.createElement('div');
+  toolTitle.className = 'tools-header';
+  toolTitle.textContent = 'Tools (❗hint layer❗)';
+  mapEl.parentNode.insertBefore(toolTitle, mapEl);
+
+  const toolContainer = document.createElement('div');
+  toolContainer.id = 'tool-buttons';
+  mapEl.parentNode.insertBefore(toolContainer, mapEl);
+
+  // 3. Render each mode into the appropriate row
   for (const mode of modes) {
-   let group;
-   if (mode === 'Osmose_issues') {
-    group = renderOsmoseButtonGroup();
-  } else if (mode === 'GEM_powerplants') {
-    group = renderGEMButtonGroup();
-  } else if (mode === 'Wikidata') {
-    group = renderWikidataButtonGroup();
-  } else {
-    group = await renderModeButtonGroup(mode);
-  } 
-   container.appendChild(group);
+    let group;
+    if (mode === 'Osmose_issues') {
+      group = renderOsmoseButtonGroup();
+    } else if (mode === 'GEM_powerplants') {
+      group = renderGEMButtonGroup();
+    } else if (mode === 'Wikidata') {
+      group = renderWikidataButtonGroup();
+    } else {
+      group = await renderModeButtonGroup(mode);
+    }
+
+    // Tools go in the second row, everything else in the first
+    if (['Osmose_issues', 'GEM_powerplants', 'Wikidata'].includes(mode)) {
+      toolContainer.appendChild(group);
+    } else {
+      overpassContainer.appendChild(group);
+    }
   }
+
+  const panelWrapper = document.createElement('div');
+  panelWrapper.id = 'panel-wrapper';
+  panelWrapper.style.margin = '1em 0';  // optional spacing
+
+  // grab (and remove) the existing panels from their old position
+  const osmose   = document.getElementById('osmose-panel');
+  const wikidata = document.getElementById('wikidata-panel');
+
+  // append them into our wrapper
+  panelWrapper.appendChild(osmose);
+  panelWrapper.appendChild(wikidata);
+
+  // finally, drop that wrapper just before the map div
+  mapEl.parentNode.insertBefore(panelWrapper, mapEl);
 }
 
 function renderOsmoseButtonGroup() {
@@ -236,11 +273,7 @@ function renderGEMButtonGroup() {
   btn.classList.add('query-btn');
   if (currentMode === 'GEM_powerplants') btn.classList.add('active');
   btn.onclick = () => selectMode('GEM_powerplants', btn);
-
-  const ver = document.createElement('div');
-  ver.classList.add('query-version');
-  ver.textContent = ''; // no version for now
-
+  
   // GEM website link + CC BY 4.0
   const info = document.createElement('div');
   info.classList.add('query-version');
@@ -252,7 +285,6 @@ function renderGEMButtonGroup() {
   const group = document.createElement('div');
   group.classList.add('query-group');
   group.appendChild(btn);
-  group.appendChild(ver);
   group.appendChild(info);
   return group;
 }
@@ -264,21 +296,21 @@ function renderWikidataButtonGroup() {
   if (currentMode === 'Wikidata') btn.classList.add('active');
   btn.onclick = () => selectMode('Wikidata', btn);
 
+   // Wiki repo link
+
   const ver = document.createElement('div');
   ver.classList.add('query-version');
-  ver.textContent = ''; // I can add the date of the wikidata fetch
+  ver.textContent = ''; // no version for now
 
-  // Link to the GitHub repo folder
   const info = document.createElement('div');
   info.classList.add('query-version');
   info.style.marginTop = '0.2rem';
   info.innerHTML =
-    '<a href="https://github.com/open-energy-transition/osm-wikidata-toolset/tree/main/wikidata_substations_geojson_by_country" target="_blank">Repository</a>';
+   '<a href="https://github.com/open-energy-transition/osm-wikidata-toolset" target="_blank">Repository</a>';
 
   const group = document.createElement('div');
   group.classList.add('query-group');
   group.appendChild(btn);
-  group.appendChild(ver);
   group.appendChild(info);
   return group;
 }
@@ -306,16 +338,21 @@ async function renderModeButtonGroup(mode) {
   return group;
 }
 
-// helper to swap modes and show/hide the Osmose UI panel
+// helper to swap modes and show/hide the Osmose and wikidata UI panels
 function selectMode(mode, btn) {
   currentMode = mode;
-  document.querySelectorAll('.query-btn').forEach(b =>
-    b.classList.toggle('active', b === btn));
-  
-  // Show or hide the issue-type dropdown panel
-  document.getElementById('osmose-panel')
-          .style.display = mode==='Osmose_issues' ? 'block' : 'none';
+  document.querySelectorAll('.query-btn')
+          .forEach(b => b.classList.toggle('active', b === btn));
+
+  // Osmose
+  document.getElementById('osmose-panel').style.display =
+    mode === 'Osmose_issues' ? 'block' : 'none';
+
+  // Wikidata
+  document.getElementById('wikidata-panel').style.display =
+    mode === 'Wikidata' ? 'block' : 'none';
 }
+
 
 // 2c) fetch the correct OverpassQL file on demand
 async function fetchQuery(mode, adminLevel) {
@@ -458,22 +495,29 @@ async function fetchGEMAndDownload(sovName) {
 }
 
 async function fetchWikidataAndDownload(sovName) {
-  // Build the filename from the SOVEREIGNT name:
-  // Replace spaces with underscores, e.g. "United Kingdom" → "United_Kingdom"
-  const fileName = sovName.replace(/\s+/g, '_') + '.geojson';
-  const url = `https://raw.githubusercontent.com/open-energy-transition/osm-wikidata-toolset/main/wikidata_substations_geojson_by_country/${fileName}`;
+  // grab exactly "substations" or "powerplants"
+  const type = document.getElementById('wikidataType').value;
+
+  // now matches your two repo folders:
+  //   wikidata_substations_geojson_by_country
+  //   wikidata_powerplants_geojson_by_country
+  const folder = `wikidata_${type}_geojson_by_country`;
+
+  const fileName = sovName.replace(/\s+/g,'_') + '.geojson';
+  const url = `https://raw.githubusercontent.com/open-energy-transition/osm-wikidata-toolset/main/`
+            + `${folder}/${fileName}`;
 
   const resp = await fetch(url);
   if (!resp.ok) {
-    return alert(`No Wikidata substations file found for ${sovName}.`);
+    return alert(`No Wikidata ${type.replace(/_/g,' ')} file for ${sovName}.`);
   }
   const geojson = await resp.json();
 
   // Trigger download
-  const blob = new Blob([JSON.stringify(geojson, null, 2)], { type: 'application/json' });
-  const a = document.createElement('a');
-  a.href = URL.createObjectURL(blob);
-  a.download = `${sovName.replace(/\s+/g, '_')}_wikidata_substations.geojson`;
+  const blob = new Blob([JSON.stringify(geojson, null,2)], {type:'application/json'});
+  const a    = document.createElement('a');
+  a.href     = URL.createObjectURL(blob);
+  a.download = `${sovName.replace(/\s+/g,'_')}_wikidata_${type}.geojson`;
   a.click();
   URL.revokeObjectURL(a.href);
 }
