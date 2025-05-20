@@ -254,13 +254,17 @@
   font-weight: bold;
 }
 @media (max-width: 480px) {
-  /* On very small screens, allow wrapping but only between words */
   .tools-header {
+    /* shrink the text a bit */
+    font-size: 1rem;            /* adjust to taste */
+    padding: 6px 12px;          /* tighter padding */
+    /* never hyphenate on mobile */
+    hyphens: none !important;
+    /* keep it left-aligned */
     text-align: left !important;
-    /* and keep normal wrapping at word boundaries */
+    /* ensure it wraps only between words */
     white-space: normal;
     overflow-wrap: break-word;
-    hyphens: auto;
   }
 }
 
