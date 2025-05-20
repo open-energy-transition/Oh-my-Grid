@@ -7,7 +7,7 @@ A [starter kit](https://github.com/open-energy-transition/grid-mapping-starter-k
   <img src="../images/startermap.jpg" class="img-border" style="width: 380px;">
 </div>
 
-## **<div class="tools-header">Get started with OpenStreetMap</div>**
+## **<div class="tools-header">Get started with OpenStreetMap 🗺️</div>**
 
 If you don't already have an OpenStreetMap account, [create one first](https://www.openstreetmap.org/user/new). If you're new to OpenStreetMap, now is a good time to learn the basics of editing using the in-browser editor (iD) - find something which is missing from the map in your local area and add it!
 
@@ -34,7 +34,8 @@ JOSM is a more advanced desktop OpenStreetMap editor which is more suitable for 
 
 5\. Download this <a href="https://github.com/open-energy-transition/grid-mapping-starter-kit/blob/main/josm-config/transmission_grid_mapping_template.joz" target="_blank">template</a> session, and in JOSM go to File>Open and open the .joz file. <br>
 
-6\. Create an OSM [account](https://www.openstreetmap.org/user/new?cookie_test=true) if you don't have one. Once you do, go to `Preferences → OSM Server` and press authorise now. Login with your OSM account, and authorise. Your account is now linked to JOSM on your device. :exclamation: Be aware that your token will be stored in your local preferences.xml file. Do not share your preferences file with anyone. <br>
+6\. Create an OSM [account](https://www.openstreetmap.org/user/new?cookie_test=true) if you don't have one. Once you do, go to `Preferences → OSM Server` and press authorise now. Login with your OSM account, and authorise. Your account is now linked to JOSM on your device. 
+:exclamation: Be aware that your token will be stored in your local preferences.xml file. Do not share your preferences file with anyone. <br>
 
 7\. Finally, activate "expert mode" in `View → Expert mode`. This will enable using Overpass API. <br>
 
