@@ -253,6 +253,16 @@
   /* Add some space below the header */
   font-weight: bold;
 }
+@media (max-width: 480px) {
+  /* On very small screens, allow wrapping but only between words */
+  .tools-header {
+    text-align: left !important;
+    /* and keep normal wrapping at word boundaries */
+    white-space: normal;
+    overflow-wrap: break-word;
+    hyphens: auto;
+  }
+}
 
 /* --------------------------------------------------------------------------------------------------------------*/
 /* —————————————————————————
