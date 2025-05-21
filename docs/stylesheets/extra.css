@@ -77,13 +77,37 @@
 }
 
 
-/* Border of images black */
+/* CSS of images on starterkit and other pages  */
 .img-border {
   border: 2px solid #000 !important;
   padding: 0.25px;
   border-radius: 0;
   /* Remove if you want rounded corners */
 }
+
+/* IMAGE CSS (starterkit page for now) */
+.float-right {
+  float: right;
+  margin: 0.5em 1em 1em 1em;
+}
+/* MOBILE IMAGE TWEAKS for starterit for ex */
+@media (max-width: 768px) {
+  /* 1) Give all bordered images a bit more breathing room */
+  .img-border {
+    max-width: 90% !important;      /* don’t overflow */
+    height: auto !important;
+    display: block;
+    margin: 1em auto !important;    /* center & separate each image */
+  }
+  .float-right {
+    float: none !important;
+    display: block !important;
+    margin: 1em auto !important;
+    width: 90%;
+  }
+}
+
+
 
 .align-with-heading {
   float: right;
@@ -228,7 +252,7 @@
   color: #555;
   /* Slightly darker */
   text-align: center;
-  margin-top: 0.5rem;
+  margin-top: 0.3rem;
   line-height: 1.3;
   width: 100%;
   /* Ensure caption uses the width of the figure */

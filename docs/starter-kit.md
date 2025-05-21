@@ -27,9 +27,12 @@ JOSM is a more advanced desktop OpenStreetMap editor which is more suitable for 
 1\. Install [Java](https://www.java.com/en/download/help/download_options.html) on your device if not installed. <br>
 2\. Install [JOSM](https://josm.openstreetmap.de/) on your device.<br>
 3\. (Optional) If you want preconfigured preferences, download this preferences.xml [file](https://github.com/open-energy-transition/grid-mapping-starter-kit/blob/main/josm-config/preferences.xml) and paste it in the correct folder on your device. The [JOSM wiki](https://josm.openstreetmap.de/wiki/Help/Preferences) provides details on where to place it.<!-- No space here -->
-<div style="float: right; margin: 5px 0 20px 20px; width: 350px;">
-  <img src="../images/mapcss_tutorial.jpg" class="img-border" style="width: 100%;">
-</div>
+
+<img 
+  src="../images/mapcss_tutorial.jpg" 
+  class="img-border float-right" 
+  alt="Clickmap screenshot"
+  width="300">
 4\. Add our custom paint style which you can find [here](https://github.com/open-energy-transition/grid-mapping-starter-kit/blob/main/josm-config/transmission_grid_mapping_style.mapcss). To add to JOSM, go to `Preferences → Map Paint Styles` and press the "+" in the top right. Then you can paste this [URL](https://raw.githubusercontent.com/open-energy-transition/grid-mapping-starter-kit/refs/heads/main/josm-config/transmission_grid_mapping_style.mapcss) or the file saved on your device.<br>
 
 5\. Download this <a href="https://github.com/open-energy-transition/grid-mapping-starter-kit/blob/main/josm-config/transmission_grid_mapping_template.joz" target="_blank">template</a> session, and in JOSM go to File>Open and open the .joz file. <br>
@@ -41,33 +44,40 @@ JOSM is a more advanced desktop OpenStreetMap editor which is more suitable for 
 
 8\. Make sure remote control is enabled in `Preferences → Remote Control`. You will need this enabled for the next step!
 
-<div style="float: right; margin: 5px 0 20px 20px; width: 300px;">
-  <img src="../images/clickmap.jpg" class="img-border" style="width: 100%;">
-</div>
+<img 
+  src="../images/clickmap.jpg" 
+  class="img-border float-right" 
+  alt="Clickmap screenshot"
+  width="300">
 
 ## **<div class="tools-header">Loading power infrastructure into JOSM :inbox_tray:</div>**
 Make sure remote control is enabled and ad-blocker disabled, and then go to the start mapping [page](https://ohmygrid.org/map_it/). Here you can click on the country you want to map, and it will directly open JOSM and load the data of that country. Use the "Default" to pull the data. <br>
 
 ## **<div class="tools-header">How to Map and upload your progress :outbox_tray:</div>**
-<div style="float: right; margin: 5px 0 20px 20px; width: 300px;">
-  <img src="../images/presets.jpg" class="img-border" style="width: 100%;">
-</div>
+<img 
+  src="../images/presets.jpg" 
+  class="img-border float-right" 
+  alt="Clickmap screenshot"
+  width="300">
 1\. For ease of mapping, customise your top toolbar with presets if you have not used the default preferences. Right click the toolbar and choose `Configure toolbar`, then select `Presets → Man Made → Man Made/Power` and add power towers, power portals and other presets for your mapping acticity.
-<div style="float: right; margin: 5px 0 20px 20px; width: 200px;">
-  <img src="../images/startmapping.jpg" class="img-border" style="width: 100%;">
-</div>
 2\. Start Mapping. Read more about the general mapping process in JOSM. Place nodes (eg.power towers, power portals) or place polygons to delimit an area (eg. substation, generator), and press on the preset structure you want it to be. If you want to learn how to map fast, go to the advanced kit tab! <br> 
-
-:pencil: Example: As seen in the image to the right, the red polygon is a substation which is mapped by adding nodes that are connected to each other and tagged as a substation. <br>
+<img 
+  src="../images/startmapping.jpg" 
+  class="img-border float-right" 
+  alt="Clickmap screenshot"
+  width="300">
+:pencil: Example: As seen in the image, the red polygon is a substation which is mapped by adding nodes that are connected to each other and tagged as a substation. <br>
 
 3\. Whilst having the OpenStreetMap layer activated, press the green Upload arrow. Avoid ignoring validation results. The only acceptable warning when uploading data is "Possible missing line support node within power line". When you make an edit, please use the **#ohmygrid** in the changeset to help the initiative!
 
 
 ## **<div class="tools-header">Checking Unfinished lines with Osmose and the todo Plugin 📝</div>**
-<div style="float: right; margin: 5px 0 20px 20px; width: 300px;">
-  <img src="../images/todo.jpg" class="img-border" style="width: 100%;">
-</div>
-
+<img 
+  src="../images/todo.jpg" 
+  class="img-border float-right" 
+  alt="Clickmap screenshot"
+  width="300">
+:pencil: Example
 A simple but very efficient way of mapping the network is the continuation of “Unfinished Transmission Lines”:
 
 1. Download the [Unfinished Power Transmission lines (Class 2) via Osmose](https://ohmygrid.org/map_it/) for your country.

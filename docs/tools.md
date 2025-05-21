@@ -19,10 +19,17 @@
     <p>Tip: On the tool website, certain countries have different names associated, so to fetch the data for the entire country use an asterisk (wildcard) like: <code>France*</code></p>
   </div>
   <div class="tool-images">
+  <figure>
     <img src="../images/osmoseapi.jpg" class="img-border" alt="Osmose API Tool Interface">
+    <figcaption class="image-caption">Web interface.</figcaption>
+    </figure>
+  <figure>
     <img src="../images/osmosenamib.jpg" class="img-border" alt="Osmose example">
+    <figcaption class="image-caption">Geojson layer in JOSM with Osmose issues in Namibia.</figcaption>
+    </figure>
   </div>
 </div>
+
 
 ## <div class="tools-header"> Global Energy Monitor tool (integrated in Map It 📍)</div></h2>
 <div class="tool-section">
@@ -38,8 +45,14 @@
     </ol>
   </div>
   <div class="tool-images">
+  <figure>
     <img src="../images/gemtracker1.jpg" class="img-border" alt="GEM Tracker Interface">
+    <figcaption class="image-caption">Web interface.</figcaption>
+    </figure>
+  <figure>
     <img src="../images/gem_angola.jpg" class="img-border" alt="GEM Angola Data Example in JOSM">
+    <figcaption class="image-caption">Geojson layer in JOSM, of GEM power plants in Angola.</figcaption>
+    </figure>
   </div>
 </div>
 
@@ -55,11 +68,14 @@
   </div>
   <div class="tool-images">
     <img src="../images/awesomelist.jpg" class="img-border" alt="GEM Tracker Interface">
+  <figure>
     <img src="../images/bangladeshawesome.jpg" class="img-border" alt="GEM Angola Data Example in JOSM">
+    <figcaption class="image-caption">Power Grid Company of Bangladesh transmission grid map.</figcaption>
+    </figure>
   </div>
 </div>
 
-## <div class="tools-header">OSM and Wikidata comparison tool</div>
+## <div class="tools-header">OSM and Wikidata comparison tool (integrated in Map It 📍)</div>
 <div class="tool-section">
 
   <div class="tool-content">
@@ -73,43 +89,28 @@
 
     <h3>How to use the OSM‑Wikidata powerplant comparison tool</h3>
     <ol>
-      <li>Paste the <a href="https://github.com/open-energy-transition/osm-wikidata-comparison/blob/main/requirements.txt">requirements.txt</a> into your working directory.</li>
-      <li>Install dependencies:
-        <pre><code class="language-bash">pip install -r requirements.txt</code></pre>
+      <li> Since it is integrated in <a href="https://ohmygrid.org/map_it/">Map It 📍</a>, you can select the _Wikidata_ button.</li>
+      <li> Once selected, you can choose between substations and powerplants.</li>
+      <li> Press on a country of your choice, and it will download a geojson file of that country, if there is Wikidata data.
       </li>
-      <li>Configure and run the script:
-        <pre><code class="language-python"># ---------------------- CONFIGURATION ---------------------- #
-COUNTRY_NAME = "Kenya"        # e.g. "Germany", "Brazil"
-country_code  = "Q1033"       # Wikidata country code
-max_distance_km    = 0.7      # match radius in km
-mismatch_threshold_km = 0.5   # coordinate‑mismatch threshold in km
-        </code></pre>
-      </li>
-      <li>Open the resulting GeoJSON in JOSM to inspect and map powerplants.</li>
-    </ol>
-
-    <h3>How to use the OSM‑Wikidata substation comparison tool</h3>
-    <ol>
-      <li>Ensure the same <a href="https://github.com/open-energy-transition/osm-wikidata-comparison/blob/main/requirements.txt">requirements.txt</a> is in place.</li>
-      <li>Install dependencies (if not already done):
-        <pre><code class="language-bash">pip install -r requirements.txt</code></pre>
-      </li>
-      <li>Run the substation comparison script.
-      </li>
-      <li>Inside the output folder, open any country’s GeoJSON in JOSM to locate and verify substations.</li>
+      <li>Open the resulting GeoJSON, as a hint layer, in JOSM to inspect and map powerplants. Do not upload this layer though!</li>
     </ol>
   </div>
 
   <div class="tool-images">
+  <figure>
     <img src="../images/wikicsv.jpg" class="img-border" alt="Wikidata Comparison CSV Output">
+    <figcaption class="image-caption">Wikidata power plant CSV output file for Bolivia.</figcaption>
+    </figure>
+    <figure>
     <img src="../images/wikigeo.jpg" class="img-border" alt="Wikidata Comparison GeoJSON Output">
-    <img src="../images/wiki_substation.png" class="img-border" alt="Wikidata OSM substation Output">
+    <figcaption class="image-caption">Geojson layer in JOSM, of Wikidata power plants in Bolivia.</figcaption>
+    </figure>
   </div>
 
 </div>
 
      
-
 ## <div class="tools-header">Open Infrastructure Map </div></h2>
 <div class="tool-section">
   <div class="tool-content">
@@ -120,7 +121,10 @@ mismatch_threshold_km = 0.5   # coordinate‑mismatch threshold in km
    </ol>
   </div> 
   <div class="tool-images">
+  <figure>
      <img src="../images/openinfranight.jpg" class="img-border" alt="Wikidata Comparison CSV Output">
+      <figcaption class="image-caption">OpenInfraMap</figcaption>
+      </figure>
      <img src="../images/openinfraosmose.jpg" class="img-border" alt="Wikidata Comparison GeoJSON Output">
   </div>
 </div>
