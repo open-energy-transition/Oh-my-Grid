@@ -181,6 +181,23 @@
   </div>
 </div>
 
+## <div class="tools-header">Using the mapcss to locate "holes"  in the grid〰️</div>
+<div class="tool-section">
+  <div class="tool-content">
+
+  <p>Another fast and efficient way to locate transmission lines that are unfinished, is to simply use the mapcss and look for unfinished lines. A lack of lines in a large area, could also tell you that a line might be missing there. <br>
+  <br>
+  If you haven't yet added our mapcss to JOSM, you can find it <a href="https://github.com/open-energy-transition/grid-mapping-starter-kit/tree/main/josm-config">here.</a></p>
+
+  </div>
+  <div class="tool-images">
+    <figure>
+      <img src="../images/mapcss_tool.jpg" class="img-border" alt="Mapcss of Bosnia displayed in OpenStreetMap">
+      <figcaption class="image-caption">Mapcss layer of the Bosnian transmission grid in JOSM.</figcaption>
+    </figure>
+  </div>
+</div>
+
 ## <div class="tools-header">Downloading transmission data of an area near a border 📥</div>
 <div class="tool-section">
   <div class="tool-content">
