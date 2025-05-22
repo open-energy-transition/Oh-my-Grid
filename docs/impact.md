@@ -18,6 +18,19 @@ This frequently asked question is important to answer to show how mapping is imp
     
     === "[Africa Electricity Grids Explorer (link)](https://africagrid.energydata.info/)"
         ![map](images/impact/africa_grid_explorer.jpg){: .img-border }
+
+
+**PyPSA-Earth**  ![PyPSA-Earth](images/impact/pypsa-earth-logo.png){width=70px} 
+??? "PyPSA Earth uses OpenStreetMap data for energy system studies all around the world."
+    
+    === "[PyPSA-Earth (link)](https://pypsa-earth.readthedocs.io/)"
+        ![map](images/impact/pypsa-earth.jpg){: .img-border }
+
+**Enedis**  ![Enedis](images/impact/enedis-logo.png){width=70px} 
+??? "The French utility company Enedis operating the electricity distribution network mapped power poles and substations with the help of a strong local OpenStreetMap community."
+    
+    === "[Enedis (link)](https://enedis.openstreetmap.fr/)"
+        ![map](images/impact/enedis-osm.png){: .img-border }
  
 **CONAHCYT (Gobierno de Mexico)**  ![CONAHCYT logo](images/impact/conahcyt.png){width=70px} 
 ??? "Mapa del Sistema Eléctrico Nacional"

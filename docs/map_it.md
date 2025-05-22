@@ -199,7 +199,7 @@ async function initQueryUI() {
   // — Row 2 title —
   const toolTitle = document.createElement('div');
   toolTitle.className = 'tools-header';
-  toolTitle.textContent = 'Tools and Hints)';
+  toolTitle.textContent = 'Tools and Hints';
   mapEl.parentNode.insertBefore(toolTitle, mapEl);
 
   const toolContainer = document.createElement('div');
