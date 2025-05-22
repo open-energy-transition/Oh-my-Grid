@@ -32,6 +32,7 @@ JOSM is a more advanced desktop OpenStreetMap editor which is more suitable for 
 1\. Install [Java](https://www.java.com/en/download/help/download_options.html) on your device if not installed. <br>
 2\. Install [JOSM](https://josm.openstreetmap.de/) on your device.<br>
 3\. (Optional) If you want preconfigured preferences, download this preferences.xml [file](https://github.com/open-energy-transition/grid-mapping-starter-kit/blob/main/josm-config/preferences.xml) and paste it in the correct folder on your device. The [JOSM wiki](https://josm.openstreetmap.de/wiki/Help/Preferences) provides details on where to place it.<!-- No space here -->
+4\. Further instructions on how to install and use JOSM on your device can be found at [learnOSM](https://learnosm.org/en/josm/start-josm/).<br> 
 
 <img 
   src="../images/mapcss_tutorial.jpg" 
