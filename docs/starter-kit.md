@@ -76,7 +76,7 @@ Make sure remote control is enabled and ad-blocker disabled, and then go to the 
 3\. Whilst having the OpenStreetMap layer activated, press the green Upload arrow. Avoid ignoring validation results. The only acceptable warning when uploading data is "Possible missing line support node within power line". When you make an edit, please use the **#ohmygrid** in the changeset to help the initiative!
 
 
-## **<div class="tools-header">Checking Unfinished lines with Osmose and the todo Plugin 📝</div>**
+## **<div class="tools-header">Unfinished lines with Osmose and the todo Plugin ✅</div>**
 <img 
   src="../images/todo.jpg" 
   class="img-border float-right" 
