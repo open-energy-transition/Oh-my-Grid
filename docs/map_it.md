@@ -9,7 +9,10 @@ Please use the <span class="big-font">#ohmygrid</span> hashtag in your changeset
 * Please read the common mistakes section in the starter-kit! 
 * Certain countries should not be mapped on at a national level (eg. Brasil, USA, India), but you can zoom in to click on regions/states.
 
-You can select what power infrastructure you want by clicking on the different choices. The **Default** pulls all **transmission** power infrastructure and should be used when mapping generally. The repository with all the overpass queries can be found [here](https://github.com/open-energy-transition/osm-grid-definition). The Osmose, Global energy monitor, and Wikidata buttons are **hint layer** tools, which you can read about in our [tools](https://ohmygrid.org/tools/) page. Please do NOT upload these hint layers or data directly into JOSM.
+You can select what power infrastructure you want by clicking on the different choices. The **Default** pulls all **transmission** power infrastructure and should be used when mapping generally. The repository with all the overpass queries can be found [here](https://github.com/open-energy-transition/osm-grid-definition). The Osmose, Global energy monitor, and Wikidata buttons are **hint layer** tools, which you can read about in our [tools](https://ohmygrid.org/tools/) page. 
+
+⚠️Please do NOT copy any data from **hint layer** directly into your OpenStreetMap data layer. Every data point in your OpenStreetMap data layer must be manually set and [verified](https://wiki.openstreetmap.org/wiki/Verifiability). The metadata must also be verified against compatible licensed sources or by people on the ground. If you cannot verify the data using satellite images or any other compatible source, please do not add this information from hint layers. This may seem like a high burden at first, but it ensures the high quality of OpenStreetMap.⚠️
+
 <!-- Beginning of Map section-->
 <style>
 #map {
@@ -196,7 +199,7 @@ async function initQueryUI() {
   // — Row 2 title —
   const toolTitle = document.createElement('div');
   toolTitle.className = 'tools-header';
-  toolTitle.textContent = 'Tools (❗hint layer❗)';
+  toolTitle.textContent = 'Tools and Hints)';
   mapEl.parentNode.insertBefore(toolTitle, mapEl);
 
   const toolContainer = document.createElement('div');
