@@ -7,7 +7,7 @@ The following strategies and tooles will help you to extend the existing transmi
 
 <div style="float: right; margin: 5px 0 20px 20px; width: 350px;">
     <img src="../images/osmosenamib.jpg" class="img-border" alt="Osmose example">
-    <figcaption class="image-caption">Open infrastructure map showing the highly detailed transmission and distribution grid in Portugal.</figcaption>
+    <figcaption class="image-caption">Osmose will provide you with a GeoJSON file containing the power issues you selected for the country you specified. In this case, it is Namibia. </figcaption>
 </div>
 
 This tool is integrated in [Map It📍](https://ohmygrid.org/map_it/), but can also be found at <a href="https://open-energy-transition.github.io/osmose_per_country/">this</a> front end interface. The tool allows fetching data on gaps in the OSM data through the OSMOSE API on a country level.</p>
@@ -21,12 +21,12 @@ This tool is integrated in [Map It📍](https://ohmygrid.org/map_it/), but can a
 Tip: On the tool website, certain countries have different names associated, so to fetch the data for the entire country use an asterisk (wildcard) like: <code>France*</code>
 
 
-## <div class="tools-header"> Global Energy Monitor tool (integrated in Map It 📍)</div></h2>
+## <div class="tools-header"> Global Energy Monitor (integrated in Map It 📍)</div></h2>
 [GEM per Country Power Tracker web application](https://github.com/open-energy-transition/gem_per_country) - This tool is integrated in Map It📍, and it allows users to preview and download GeoJSON data for global power plants in the [Global Energy Monitor](https://globalenergymonitor.org) database filtered by country and power plant status.
 
 <div style="float: right; margin: 5px 0 20px 20px; width: 350px;">
     <img src="../images/gem_angola.jpg" class="img-border" alt="GEM Angola Data Example in JOSM">
-  <figcaption class="image-caption">Open infrastructure map showing the highly detailed transmission and distribution grid in Portugal.</figcaption>
+  <figcaption class="image-caption">Global Energy Monitor power plants(red) in relation to the grid data(green) for Angola</figcaption>
 </div>
 
 
@@ -140,7 +140,7 @@ and name, and identifies missing power plants or coordinate mismatches. The comp
 
 <div style="float: right; margin: 5px 0 20px 20px; width: 350px;">
     <img src="../images/wikigeo.jpg" class="img-border" alt="Wikidata Comparison GeoJSON Output">
-    <figcaption class="image-caption">Offical transmission grid map of Power Grid Bangladesh PLC.</figcaption>   
+    <figcaption class="image-caption">Wikidata Comparison GeoJSON Output(red) in comparision to grid data(green).</figcaption>   
 </div>
 
 ### How to use the OSM‑Wikidata powerplant comparison tool</h3>
