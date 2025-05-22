@@ -43,18 +43,18 @@ Tip: On the tool website, certain countries have different names associated, so 
 1. You can open this geojson file in JOSM, where you will be able to see all power plants from the GEM database.
 
 
-## <div class="tools-header"> Searching and Using fixme Tags</div></h2>
+## <div class="tools-header"> Searching and using fixme tags</div></h2>
 OpenStreetMap allows mappers to quickly mark an object that seems to be wrong and needs fixing using the [Key:fixme](https://wiki.openstreetmap.org/wiki/Key:fixme) tag. For example, you can write `fixme=wrong voltage` if you think the voltage on a line is incorrect, but you don't know the correct value. A small F will then be visible on the edge of the symbol to indicate the fixme tag. Stepping through all the `fixme` tags in a country is also a great way to search for errors in the grid that you can try to fix. We recommend using the `todo list` plugin for this.
 
 <div style="float: right; margin: 5px 0 20px 20px; width: 350px;">
     <img src="../images/fixme.jpg" class="img-border" alt="Fixme tags loaded in the todo list.">
-  <figcaption class="image-caption">Open infrastructure map showing the highly detailed transmission and distribution grid in Portugal.</figcaption>
+  <figcaption class="image-caption">Fixme tags loaded in the todo list.</figcaption>
 </div>
 
 1. Download the grid you want to look into using at the [Map It📍](https://ohmygrid.org/map_it/) page.
 2. Press `STRG+F`and search for `fixme=*`.
 3. In the todo list window press `Add`.
-4. After you fixed and issues please remove the fixme tag
+4. After you fixed and issues please remove the fixme tag.
 
 ## <div class="tools-header">Data and maps as hint layers</div></h2>
 
