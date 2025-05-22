@@ -49,12 +49,12 @@
 }
 
 #overpass-buttons,
-  #tool-buttons {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    margin-bottom: 1em;
-  }
+#tool-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1em;
+}
 
 /* --------------------------------------------------------------------------------------------------------------*/
 
@@ -90,15 +90,20 @@
   float: right;
   margin: 0.5em 1em 1em 1em;
 }
+
 /* MOBILE IMAGE TWEAKS for starterit for ex */
 @media (max-width: 768px) {
+
   /* 1) Give all bordered images a bit more breathing room */
   .img-border {
-    max-width: 90% !important;      /* don’t overflow */
+    max-width: 90% !important;
+    /* don’t overflow */
     height: auto !important;
     display: block;
-    margin: 1em auto !important;    /* center & separate each image */
+    margin: 1em auto !important;
+    /* center & separate each image */
   }
+
   .float-right {
     float: none !important;
     display: block !important;
@@ -125,7 +130,7 @@
 
 /* Image caption styling */
 .image-caption {
-  font-size: 0.4rem;
+  font-size: 0.7rem;
   color: #666;
   text-align: center;
   margin-top: 0.2rem;
@@ -277,11 +282,14 @@
   /* Add some space below the header */
   font-weight: bold;
 }
+
 @media (max-width: 480px) {
   .tools-header {
     /* shrink the text a bit */
-    font-size: 1rem;            /* adjust to taste */
-    padding: 6px 12px;          /* tighter padding */
+    font-size: 1rem;
+    /* adjust to taste */
+    padding: 6px 12px;
+    /* tighter padding */
     /* never hyphenate on mobile */
     hyphens: none !important;
     /* keep it left-aligned */

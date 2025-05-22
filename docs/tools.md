@@ -52,28 +52,6 @@ We have made an [awesome list](https://ohmygrid.org/awesome/) which you can acce
 ⚠️ Please use these datasets as hint layers, and check licenses to see how/if you are allowed to use them. Do not copy/data from these maps directly into OpenStreetMap. Each data point of the transmission network must be set manually and <a href="https://wiki.openstreetmap.org/wiki/Verifiability">verified</a> with official satellite data provided by the OpenStreetMap community.⚠️
 
 
-
-
-## <div class="tools-header">OpenStreetMap and Wikidata comparison tool</div></h2>
-
-This [repository](https://github.com/open-energy-transition/osm-wikidata-comparison/) contains two Python scripts that compare power plant data between OpenStreetMap (OSM) and Wikidata, and also substation data.The power plant tool fetches data from both sources using APIs, performs comparisons based on geographic proximity
-and name, and identifies missing power plants or coordinate mismatches. The comparison results are saved in CSV and GeoJSON formats.
-
-<div style="float: right; margin: 5px 0 20px 20px; width: 350px;">
-    <img src="../images/wikigeo.jpg" class="img-border" alt="Wikidata Comparison GeoJSON Output">
-    <figcaption class="image-caption">Offical transmission grid map of Power Grid Bangladesh PLC.</figcaption>   
-</div>
-
-### How to use the OSM‑Wikidata powerplant comparison tool</h3>
-1. This tool is integrated into [Map It📍](https://ohmygrid.org/map_it/).
-2. Click on the WikiData button.
-3. Select the infrastructure you are looking for from the drop-down menu.
-4. Drag and drop the GeoJSON file into JOSM.
-5. If you want to work with the command line tool directly, please refer to the instructions in the repository's [README](https://github.com/open-energy-transition/osm-wikidata-toolset/).
-
-     
-
-
 ## <div class="tools-header">Open Infrastructure Map - Nighttime Lights and Osmose </div></h2>
 <div style="float: right; margin: 5px 0 20px 20px; width: 350px;">
     <img src="../images/openinfraosmose.jpg" class="img-border" alt="Open Infrastructure Map - Osmose">
@@ -112,7 +90,6 @@ Google Maps has <strong>not</strong> yet granted official authorisation for the 
 
 
 
-
 ## <div class="tools-header">Online investigation 🔍</div>
 
 Looking for recent news articles, reports, academic studies, or datasets related to newly operational substations and transmission lines is a simple way to find information about larger infrastructure that just started construction or operation. Politicians and investors love to be photographed with such new infrastructure. That's why you find almost always news articles and reports about new substations, transmission lines and power plants.
@@ -127,22 +104,34 @@ Local Large Language Models (LLMs) can help by conducting searches in the countr
 Please be aware of the licence and quality of the documents you are finding. If you cannot validate the information you find by different sources, you can at least use the names of substations, regions and towns to identify the locations of new substations or transmission lines, and verify their visibility in satellite images. The fastest way to search global power infrastructure like power plants, substations or country interconnector by name is by the search function of <a href="https://openinframap.org/#2/26/12">Open Infrastructure Map</a>.
 
 
-## <div class="tools-header">Using the mapcss to locate "holes"  in the grid〰️</div>
-<div class="tool-section">
-  <div class="tool-content">
+## <div class="tools-header">Using the mapcss to locate "holes" in the grid </div>
+1. Another fast and efficient way to locate transmission lines that are unfinished, is to simply use the mapcss and look for unfinished lines. A lack of lines in a large area, could also tell you that a line might be missing there. 
+2. If you haven't yet added our mapcss to JOSM, you can find it <a href="https://github.com/open-energy-transition/grid-mapping-starter-kit/tree/main/josm-config">here.</a>
 
-  <p>Another fast and efficient way to locate transmission lines that are unfinished, is to simply use the mapcss and look for unfinished lines. A lack of lines in a large area, could also tell you that a line might be missing there. <br>
-  <br>
-  If you haven't yet added our mapcss to JOSM, you can find it <a href="https://github.com/open-energy-transition/grid-mapping-starter-kit/tree/main/josm-config">here.</a></p>
-
-  </div>
-  <div class="tool-images">
-    <figure>
+<div style="float: right; margin: 5px 0 20px 20px; width: 350px;">
       <img src="../images/mapcss_tool.jpg" class="img-border" alt="Mapcss of Bosnia displayed in OpenStreetMap">
       <figcaption class="image-caption">Mapcss layer of the Bosnian transmission grid in JOSM.</figcaption>
-    </figure>
-  </div>
 </div>
+
+
+## <div class="tools-header">OpenStreetMap and Wikidata comparison tool (integrated in Map It 📍)</div></h2>
+
+This [repository](https://github.com/open-energy-transition/osm-wikidata-comparison/) contains two Python scripts that compare power plant data between OpenStreetMap (OSM) and Wikidata, and also substation data.The power plant tool fetches data from both sources using APIs, performs comparisons based on geographic proximity
+and name, and identifies missing power plants or coordinate mismatches. The comparison results are saved in CSV and GeoJSON formats.
+
+<div style="float: right; margin: 5px 0 20px 20px; width: 350px;">
+    <img src="../images/wikigeo.jpg" class="img-border" alt="Wikidata Comparison GeoJSON Output">
+    <figcaption class="image-caption">Offical transmission grid map of Power Grid Bangladesh PLC.</figcaption>   
+</div>
+
+### How to use the OSM‑Wikidata powerplant comparison tool</h3>
+1. This tool is integrated into [Map It📍](https://ohmygrid.org/map_it/).
+2. Click on the WikiData button.
+3. Select the infrastructure you are looking for from the drop-down menu.
+4. Drag and drop the GeoJSON file into JOSM.
+5. If you want to work with the command line tool directly, please refer to the instructions in the repository's [README](https://github.com/open-energy-transition/osm-wikidata-toolset/).
+
+
 
 ## <div class="tools-header">Downloading transmission data of an area near a border 📥</div>
 <div style="float: right; margin: 5px 0 20px 20px; width: 350px;">
