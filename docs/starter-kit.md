@@ -133,7 +133,8 @@ The [Learning Curve](https://www.youtube.com/@TheLearningCurveBenila/videos) pro
 The following image is take from the report Key technology components of electricity grids Source: IEA - [Electricity Grids and Secure Energy Transitions](https://iea.blob.core.windows.net/assets/ea2ff609-8180-4312-8de9-494bcf21696d/ElectricityGridsandSecureEnergyTransitions.pdf).
 
 <div style="float: left; margin: 5px 0 20px 20px; width: 900px;">
-  <img src="../images/grid-design.png" class="img-border" style="width: 900px;">
+  <a href="../images/grid-design.png" target="_blank">
+  <img src="../images/grid-design.png" class="img-border" style="width: 900px;"> </a>
   <figcaption class="image-caption">Key technology components of electricity grids Source: IEA - Electricity Grids and Secure Energy Transitions.</figcaption>
 </div>
 
