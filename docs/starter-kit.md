@@ -6,7 +6,8 @@ A [starter kit](https://github.com/open-energy-transition/grid-mapping-starter-k
 ## **<div class="tools-header">Get started with OpenStreetMap and Open Infrastructure Map 🗺️</div>**
 
 <div style="float: right; margin: 5px 0 20px 20px; width: 350px;">
-  <img src="../images/openinframap-portugal.jpg" class="img-border" style="width: 100%;">
+  <a href="https://openinframap.org/#6.54/39.026/-7.548" target="_blank">
+  <img src="../images/openinframap-portugal.jpg" class="img-border" style="width: 100%;"> </a>
   <figcaption class="image-caption">Open infrastructure map showing the highly detailed transmission and distribution grid in Portugal.</figcaption>
 </div>
 
