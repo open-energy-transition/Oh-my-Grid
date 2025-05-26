@@ -164,7 +164,7 @@ At the moment, there seems to be an issue with Bing attribution in JOSM where it
     * <strong>Linux:</strong> <code>~/.cache/JOSM/bing.attribution.xml</code>
 2. On a day when it isn’t working, replace the broken file with your saved copy, then restart or reload JOSM.</li>
 
-## <div class="tools-header"> 🚫 Google Maps substations 🚫 </div></h2>
+## <div class="tools-header"> Google Maps substations 🚫 </div></h2>
 Google Maps would be the perfect additional data source for the locations and names of substations worldwide, but so far <strong>no official authorisation has been granted</strong> for using the location of substation within OpenStreetMap. Google Maps shows many transmission and distribution substations that are difficult to locate using current mapping strategies, particularly in remote areas of low- and middle-income countries.
 
 <div style="float: right; margin: 5px 0 20px 20px; width: 350px;">
