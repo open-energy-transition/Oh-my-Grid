@@ -109,31 +109,44 @@ Please be aware of the licence and quality of the documents you are finding. If 
 
 
 ## <div class="tools-header">Using the mapcss to locate "holes" in the grid </div>
-1. Another fast and efficient way to locate transmission lines that are unfinished, is to simply use the mapcss and look for unfinished lines. A lack of lines in a large area, could also tell you that a line might be missing there. 
-2. If you haven't yet added our mapcss to JOSM, you can find it <a href="https://github.com/open-energy-transition/grid-mapping-starter-kit/tree/main/josm-config">here.</a>
 
 <div style="float: right; margin: 5px 0 20px 20px; width: 350px;">
       <img src="../images/mapcss_tool.jpg" class="img-border" alt="Mapcss of Bosnia displayed in OpenStreetMap">
       <figcaption class="image-caption">Mapcss layer of the Bosnian transmission grid in JOSM.</figcaption>
 </div>
 
+1. Another fast and efficient way to locate transmission lines that are unfinished, is to simply use the mapcss and look for unfinished lines. A lack of lines in a large area, could also tell you that a line might be missing there. 
+2. If you haven't yet added our mapcss to JOSM, you can find it <a href="https://github.com/open-energy-transition/grid-mapping-starter-kit/tree/main/josm-config">here.</a>
+
+
+
 
 ## <div class="tools-header">OpenStreetMap and Wikidata comparison tool (integrated in Map It 📍)</div></h2>
-
-This [repository](https://github.com/open-energy-transition/osm-wikidata-comparison/) contains two Python scripts that compare power plant data between OpenStreetMap (OSM) and Wikidata, and also substation data.The power plant tool fetches data from both sources using APIs, performs comparisons based on geographic proximity
-and name, and identifies missing power plants or coordinate mismatches. The comparison results are saved in CSV and GeoJSON formats.
 
 <div style="float: right; margin: 5px 0 20px 20px; width: 350px;">
     <img src="../images/wikigeo.jpg" class="img-border" alt="Wikidata Comparison GeoJSON Output">
     <figcaption class="image-caption">Wikidata Comparison GeoJSON Output(red) in comparision to grid data(green).</figcaption>   
 </div>
 
-### How to use the OSM‑Wikidata powerplant comparison tool</h3>
-1. This tool is integrated into [Map It📍](https://ohmygrid.org/map-it/).
-2. Click on the WikiData button.
-3. Select the infrastructure you are looking for from the drop-down menu.
-4. Drag and drop the GeoJSON file into JOSM.
-5. If you want to work with the command line tool directly, please refer to the instructions in the repository's [README](https://github.com/open-energy-transition/osm-wikidata-toolset/).
+This [repository](https://github.com/open-energy-transition/osm-wikidata-comparison/) contains two Python scripts that compare power plant data between OpenStreetMap (OSM) and Wikidata, and also substation data.The power plant tool fetches data from both sources using APIs, performs comparisons based on geographic proximity
+and name, and identifies missing power plants or coordinate mismatches. The comparison results are saved in CSV and GeoJSON formats.
+
+
+
+## <div class="tools-header">JOSM PowerNetworkTools Plugin 🔌</div></h2>
+
+This tool estimates the voltage of a substation busbar from aerial imagery by measuring the clearance between conductors. The clearance is dictated by the voltage and so allows an estimate of the voltage to be made. Although not a perfect method, when combined with knowledge of a country's standard power grid voltages and power infrastructure layout this can greatly assist mappers in assigning voltages to power infrastructure from aerial imagery.
+
+<div style="float: right; margin: 5px 0 20px 20px; width: 350px;">
+    <img src="../images/plugin.png" class="img-border" alt="JOSM PowerNetworkTools Plugin">
+    <figcaption class="image-caption">The OpenStreetMap Editor plugin that allows to roughly estimate the voltage levels based on phase to phase clearance measurements.</figcaption>   
+</div>
+
+1. Download the `PowerNetworkTools` plugin for JSOM. Go to Edit > Preferences. Search for `PowerNetworkTools`, select it and press OK. Press Windows > Todo List to show the Todo List window.
+1. Activate the Volage Estimator in the `Windows` menu.
+2. Press V to measure the distance between the two phases at the busbar.
+3. Read more about how to use the plugin in the README of the [official repository](https://github.com/openinframap/josm-power-network-tools).
+
 
 
 
