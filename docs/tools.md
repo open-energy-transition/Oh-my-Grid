@@ -70,6 +70,12 @@ We have made an [awesome list](https://ohmygrid.org/awesome/) which you can acce
 
 ⚠️ Please use these datasets as hint layers, and check licenses to see how/if you are allowed to use them. Do not copy/data from these maps directly into OpenStreetMap. Each data point of the transmission network must be set manually and <a href="https://wiki.openstreetmap.org/wiki/Verifiability">verified</a> with official satellite data provided by the OpenStreetMap community.⚠️
 
+### OpenData Plugin
+The OpenData plugin will allow you to load all kinds of GIS formats directly into JOSM.
+
+1. Download the `OpenData` plugin for JSOM. Go to Edit > Preferences. Search for `OpenData`, select it and press OK.
+1. You should now be able to import much more data formats like (csv, xls, ods, kml, kmz, shp, mif) as another hint layer into JOSM.
+
 
 ## <div class="tools-header">Open Infrastructure Map - Nighttime Lights and Osmose </div></h2>
 <div style="float: right; margin: 5px 0 20px 20px; width: 350px;">
@@ -142,10 +148,10 @@ This tool estimates the voltage of a substation busbar from aerial imagery by me
     <figcaption class="image-caption">The OpenStreetMap Editor plugin that allows to roughly estimate the voltage levels based on phase to phase clearance measurements.</figcaption>   
 </div>
 
-1. Download the `PowerNetworkTools` plugin for JSOM. Go to Edit > Preferences. Search for `PowerNetworkTools`, select it and press OK. Press Windows > Todo List to show the Todo List window.
+1. Download the `PowerNetworkTools` plugin for JSOM. Go to Edit > Preferences. Search for `PowerNetworkTools`, select it and press OK. 
 1. Activate the Volage Estimator in the `Windows` menu.
-2. Press V to measure the distance between the two phases at the busbar.
-3. Read more about how to use the plugin in the README of the [official repository](https://github.com/openinframap/josm-power-network-tools).
+1. Press V to measure the distance between the two phases at the busbar.
+1. Read more about how to use the plugin in the README of the [official repository](https://github.com/openinframap/josm-power-network-tools).
 
 
 
