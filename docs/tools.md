@@ -85,14 +85,13 @@ We have made an [awesome list](https://ohmygrid.org/awesome/) which you can acce
 
 <div style="float: right; margin: 5px 0 20px 20px; width: 350px;">
   <img src="../images/substation_malawi.jpg" class="img-border" alt="Substation in Malawi with unmapped interconnector in the left corner">
-  <figcaption class="image-caption">A substation in Malawi with an unmapped interconnector in the left corner.</figcaption>
+  <figcaption class="image-caption">A substation in Malawi with an unmapped interconnector with the first tower in image center.</figcaption>
 </div>
 
 A simple yet efficient strategy for mapping the transmission grid is to check every substation for new lines branching out from it. 
 As most national transmission grids are entirely connected, this strategy enables you to trace and therefore map the entire grid network. 
 One single unmapped power tower can sometimes trace to a missing interconnector to another country as shown in the image of a substation in Malawi.
 Can you see the power tower that's missing from the bottom Left corner?
-
 
 
 ## <div class="tools-header">Online investigation 🔍</div>
