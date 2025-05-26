@@ -27,7 +27,7 @@ This frequently asked question is important to answer to show how mapping is imp
         ![map](images/impact/pypsa-earth.jpg){: .img-border }
 
 **Enedis**  ![Enedis](images/impact/enedis-logo.png){width=70px} 
-??? "The French utility company Enedis operating the electricity distribution network mapped power poles and substations with the help of a strong local OpenStreetMap community."
+??? "The French utility company Enedis, operating the electricity distribution network, mapped power poles and substations with the help of a strong local OpenStreetMap community."
     
     === "[Enedis (link)](https://enedis.openstreetmap.fr/)"
         ![map](images/impact/enedis-osm.png){: .img-border }
