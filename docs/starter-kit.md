@@ -25,6 +25,13 @@ JOSM is a more advanced desktop OpenStreetMap editor which is more suitable for 
 !!! note
     The JOSM Preferences window is accessed through the `Edit → Preferences` menu on Windows and Linux, and `JOSM → Settings` on Mac.
 
+<div style="float: right; margin: 5px 0 20px 20px; width: 350px;">
+  <a href="../images/kenyamap1.jpg" target="_blank">
+  <img src="../images/kenyamap1.jpg" class="img-border" style="width: 100%;"> </a>
+  <figcaption class="image-caption">Default OhmyGrid Presets in JOSM toolbar. Click to enlarge.</figcaption>
+</div>
+
+
 1. Install [Java](https://www.java.com/en/download/help/download_options.html) on your device if not installed. <br>
 2. Install [JOSM](https://josm.openstreetmap.de/) on your device.<br>
 3. (Optional) If you want preconfigured preferences, download this preferences.xml [file](https://github.com/open-energy-transition/grid-mapping-starter-kit/blob/main/josm-config/preferences.xml) and paste it in the correct folder on your device. The [JOSM wiki](https://josm.openstreetmap.de/wiki/Help/Preferences) provides details on where to place it.<!-- No space here -->
@@ -34,17 +41,6 @@ JOSM is a more advanced desktop OpenStreetMap editor which is more suitable for 
 :exclamation: Be aware that your token will be stored in your local preferences.xml file. Do not share your preferences file with anyone. <br>
 7. Finally, activate "expert mode" in `View → Expert mode`. This will enable using Overpass API. <br>
 8. Make sure remote control is enabled in `Preferences → Remote Control`. This must be activated for the grid data to be loaded automatically.
-
-<div style="display: flex; gap: 20px; margin: 20px auto; flex-wrap: wrap;">
-  <img src="./images/kenyamap1.jpg" class="img-border" style="width: 400px;">
-</div>
-
-<div style="float: right; margin: 5px 0 20px 20px; width: 350px;">
-  <a href="./images/kenyamap1.jpg" target="_blank">
-  <img src="./images/kenyamap1.jpg" class="img-border" style="width: 100%;"> </a>
-  <figcaption class="image-caption">Default OhmyGrid JOSM configuration showing the Kenya. Click to enlarge.</figcaption>
-</div>
-
 
 
 ## **<div class="tools-header">Coloring your grid map and legend 🎨</div>**
@@ -101,6 +97,13 @@ Mapping is an iterative process, so you will make mistakes at first. However, th
 1. You can now systematically step through all the issues by pressing Mark.  
 
 ## <div class="tools-header">Map fast  :pushpin:</div>
+
+<div style="float: right; margin: 5px 0 20px 20px; width: 350px;">
+  <img src="../images/mapfast.png"  class="img-border" style="width: 100%;"> 
+  <figcaption class="image-caption">Selecting all the finished notes in a line enables you to quickly turn them into Power Towers.</figcaption>
+</div>
+
+
 If you want to be able to map efficiently and fast, you will need to know how to correctly place towers and power lines. This will save you loads of time:
 
 1. Press `A` and draw nodes as you follow the towers. This will create a long line of untagged nodes, all connected by a untagged way.
@@ -118,12 +121,22 @@ If you want to be able to map efficiently and fast, you will need to know how to
 4. Mapping beyond your experience is something you should avoid. Mapping is an iterative process and you should not expect to be able to finish all the details you are mapping. If you cannot map with a high degree of certainty, leave it to local mappers, better satellite imagery or experienced grid mappers.
 
 
-## **<div class="tools-header">Grid Basics for Mappers :name_badge:</div>**
-The following documents and materials will give you a basic understanding of how to map an electrical grid. You don't need to be a grid expert to start mapping your first transmission lines. However, to map larger parts of the grid, you need to understand typical electrical grid design.
+## **<div class="tools-header">Fundamentals of the Electrical Grid for Mappers 🧱</div>**
+The following documents and materials will give you a basic understanding of how to map an electrical grid. You don't need to be a grid expert to start mapping your first transmission lines. However, to map larger parts of the grid, you need to understand typical electrical grid design. 
+
+The [Learning Curve](https://www.youtube.com/@TheLearningCurveBenila/videos) provides multiple videos that will help your understand the basic of the electrical grid needed for grid mapping:
+
+1. [Electrical Line Supports - Transmission Towers & Poles](https://www.youtube.com/watch?v=AB1qYsiDm0M)
+1. [Components of Overhead Transmission Lines](https://www.youtube.com/watch?v=A6fwq3yHRXQ)
+1. [Comparison between HVAC and HVDC transmission system](https://www.youtube.com/watch?v=l9nHs8e0WUg)
+
+The following image is take from the report Key technology components of electricity grids Source: IEA - [Electricity Grids and Secure Energy Transitions](https://iea.blob.core.windows.net/assets/ea2ff609-8180-4312-8de9-494bcf21696d/ElectricityGridsandSecureEnergyTransitions.pdf).
 
 <div style="float: left; margin: 5px 0 20px 20px; width: 900px;">
   <img src="../images/grid-design.png" class="img-border" style="width: 900px;">
   <figcaption class="image-caption">Key technology components of electricity grids Source: IEA - Electricity Grids and Secure Energy Transitions.</figcaption>
 </div>
+
+
 
 
