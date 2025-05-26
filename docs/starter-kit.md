@@ -2,10 +2,6 @@
 <h1>Grid Mapping Starter Kit 🌱</h1>
 </div>
 A [starter kit](https://github.com/open-energy-transition/grid-mapping-starter-kit) for Electrical Transmission Grid Mapping in OpenStreetMap, combining Osmose and Overpass with JOSM.
-<div style="display: flex; gap: 20px; margin: 20px auto; flex-wrap: wrap;">
-  <img src="../images/kenyamap1.jpg" class="img-border" style="width: 400px;">
-  <img src="../images/starter_map.jpg" class="img-border" style="width: 380px;">
-</div>
 
 ## **<div class="tools-header">Get started with OpenStreetMap and Open Infrastructure Map 🗺️</div>**
 
@@ -39,16 +35,25 @@ JOSM is a more advanced desktop OpenStreetMap editor which is more suitable for 
 7. Finally, activate "expert mode" in `View → Expert mode`. This will enable using Overpass API. <br>
 8. Make sure remote control is enabled in `Preferences → Remote Control`. This must be activated for the grid data to be loaded automatically.
 
+<div style="display: flex; gap: 20px; margin: 20px auto; flex-wrap: wrap;">
+  <img src="./images/kenyamap1.jpg" class="img-border" style="width: 400px;">
+</div>
+
+<div style="float: right; margin: 5px 0 20px 20px; width: 350px;">
+  <a href="./images/kenyamap1.jpg" target="_blank">
+  <img src="./images/kenyamap1.jpg" class="img-border" style="width: 100%;"> </a>
+  <figcaption class="image-caption">Default OhmyGrid JOSM configuration showing the Kenya. Click to enlarge.</figcaption>
+</div>
+
+
 
 ## **<div class="tools-header">Coloring your grid map and legend 🎨</div>**
 
-<a href="https://raw.githubusercontent.com/open-energy-transition/color-my-grid/refs/heads/main/legend/power-grid-legend.png" target="_blank">
-  <img 
-    src="https://raw.githubusercontent.com/open-energy-transition/color-my-grid/refs/heads/main/legend/power-grid-legend.png" 
-    class="img-border float-right" 
-    alt="Power Grid Legend"
-    width="300">
-</a>
+<div style="float: right; margin: 5px 0 20px 20px; width: 350px;">
+  <a href="https://raw.githubusercontent.com/open-energy-transition/color-my-grid/refs/heads/main/legend/power-grid-legend.png" target="_blank">
+  <img src="https://raw.githubusercontent.com/open-energy-transition/color-my-grid/refs/heads/main/legend/power-grid-legend.png" class="img-border" style="width: 100%;"> </a>
+  <figcaption class="image-caption">OhmyGrid legend for transmission grid mapping. Click to enlarge.</figcaption>
+</div>
 
 
 1. Add our custom paint style which you can find [here](https://raw.githubusercontent.com/open-energy-transition/color-my-grid/refs/heads/main/ohmygrid-default.mapcss). 
@@ -59,36 +64,34 @@ JOSM is a more advanced desktop OpenStreetMap editor which is more suitable for 
 
 
 ## **<div class="tools-header">Loading power infrastructure into JOSM :inbox_tray:</div>**
-Make sure remote control is enabled and ad-blocker disabled, and then go to the start mapping [page](https://ohmygrid.org/map-it/). Here you can click on the country you want to map, and it will directly open JOSM and load the data of that country. Use the "Default" to pull the data. <br>
+Make sure remote control is enabled and ad-blocker disabled, and then go to the start mapping [page](https://ohmygrid.org/map-it/). Here you can click on the country you want to map, and it will directly open JOSM and load the data of that country. Use the "Default Transmission (90kV+)" to pull the data. <br>
 
 
+<div style="float: right; margin: 5px 0 20px 20px; width: 350px;">
+  <a href="../images/josm-toolbar.png" target="_blank">
+  <img src="../images/josm-toolbar.png" class="img-border" style="width: 100%;"> </a>
+  <figcaption class="image-caption">Default OhmyGrid Presets in JOSM toolbar. Click to enlarge.</figcaption>
+</div>
 
 ## **<div class="tools-header">How to Map and upload your progress :outbox_tray:</div>**
-<img 
-  src="../images/presets.jpg" 
-  class="img-border float-right" 
-  alt="Clickmap screenshot"
-  width="300">
-1. For ease of mapping, customise your top toolbar with presets if you have not used the default preferences. Right click the toolbar and choose `Configure toolbar`, then select `Presets → Man Made → Man Made/Power` and add power towers, power portals and other presets for your mapping acticity.
-2. Start Mapping. Read more about the general mapping process in JOSM. Place nodes (eg.power towers, power portals) or place polygons to delimit an area (eg. substation, generator), and press on the preset structure you want it to be. If you want to learn how to map fast, go to the advanced kit tab! <br> 
-<img 
-  src="../images/startmapping.jpg" 
-  class="img-border float-right" 
-  alt="Clickmap screenshot"
-  width="300">
-:pencil: Example: As seen in the image, the red polygon is a substation which is mapped by adding nodes that are connected to each other and tagged as a substation. <br>
+Mapping is an iterative process, so you will make mistakes at first. However, this should not stop you from mapping; simply map what you can verify based on your skillset. If a tower, lines or key are missing, our quality assurance tool Osmose will automatically detect this.
 
-3\. Whilst having the OpenStreetMap layer activated, press the green Upload arrow. Avoid ignoring validation results. The only acceptable warning when uploading data is "Possible missing line support node within power line". When you make an edit, please use the **#ohmygrid** in the changeset to help the initiative!
+<div style="float: right; margin: 5px 0 20px 20px; width: 350px;">
+  <img src="../images/startmapping.jpg" class="img-border" style="width: 100%;">
+  <figcaption class="image-caption">This is a highlighted substation on OpenStreetMap, with multiple lines leading away from it.</figcaption>
+</div>
+
+1. For ease of mapping, customise your top toolbar with presets if you have not used the default preferences. Right click the toolbar and choose `Configure toolbar`, then select `Presets → Man Made → Man Made/Power` and add power towers, power portals and other presets for your mapping acticity.
+2. Start Mapping. Read more about the general mapping process in JOSM. Place nodes (eg.power towers, power portals) or place polygons to delimit an area (eg. substation, generator), and press on the preset structure you want it to be.:pencil: Example: As seen in the image, the red polygon is a substation which is mapped by adding nodes that are connected to each other and tagged as a substation. 
+3. Whilst having the OpenStreetMap layer activated, press the green Upload arrow. Avoid ignoring validation results. The only acceptable warning when uploading data is "Possible missing line support node within power line". When you make an edit, please use the **#ohmygrid** in the changeset to help the initiative!
 
 
 ## **<div class="tools-header">Unfinished lines with Osmose and the todo Plugin ✅</div>**
-<img 
-  src="../images/todo.jpg" 
-  class="img-border float-right" 
-  alt="Clickmap screenshot"
-  width="300">
-:pencil: Example
-A simple but very efficient way of mapping the network is the continuation of “Unfinished Transmission Lines”:
+
+<div style="float: right; margin: 5px 0 20px 20px; width: 350px;">
+  <img src="../images/todo.jpg" class="img-border" style="width: 100%;">
+  <figcaption class="image-caption"> A simple but very efficient way of mapping the network is the continuation of “Unfinished Transmission Lines loaded into the todo plugin”:</figcaption>
+</div>
 
 1. Download the [Unfinished Power Transmission lines (Class 2) via Osmose](https://ohmygrid.org/map-it/) for your country.
 1. Drag and drop the downloaded geojson file into JSOM.
@@ -96,7 +99,6 @@ A simple but very efficient way of mapping the network is the continuation of �
 1. Press STRG+A (CTRL + A or COMMAND + A)  to select all issues in the new layer. Press the Add in the todo plugin window.
 1. Switch back to the OSM data layer.
 1. You can now systematically step through all the issues by pressing Mark.  
-
 
 ## <div class="tools-header">Map fast  :pushpin:</div>
 If you want to be able to map efficiently and fast, you will need to know how to correctly place towers and power lines. This will save you loads of time:
@@ -108,11 +110,20 @@ If you want to be able to map efficiently and fast, you will need to know how to
 1. Use the preset power tower or poles to set all nodes at once.
 1. If you ever lose this query, click the right arrow on the search window and select it from your history.
 
+
 ## **<div class="tools-header">Common Mistakes :name_badge:</div>**
 1. Do not use the interactive map or the default queries for distribution grid mapping. The Overpass Turbo script provided with this starter kit and present in the interactive map is optimised for transmission grid mapping. Lines on towers below 90 kV are not visualised in JOSM and should not be mapped with the standard configuration of this script. 
 2. Not reading about [good practices](https://wiki.openstreetmap.org/wiki/Good_practice).
 3. When you leave the downloaded area, you may find transmission grids that do not appear to have been mapped. Actually, they were not downloaded to JOSM and you map them 2 times. To avoid this always be aware of the country boundary and be careful when crossing highlighted dashed orange lines. Due to the design of Overpass Turbo, some elements such as power lines may still be visible. across the border, but other objects such as substations will appear as if they have not yet been mapped.
 4. Mapping beyond your experience is something you should avoid. Mapping is an iterative process and you should not expect to be able to finish all the details you are mapping. If you cannot map with a high degree of certainty, leave it to local mappers, better satellite imagery or experienced grid mappers.
 
+
+## **<div class="tools-header">Grid Basics for Mappers :name_badge:</div>**
+The following documents and materials will give you a basic understanding of how to map an electrical grid. You don't need to be a grid expert to start mapping your first transmission lines. However, to map larger parts of the grid, you need to understand typical electrical grid design.
+
+<div style="float: left; margin: 5px 0 20px 20px; width: 900px;">
+  <img src="../images/grid-design.png" class="img-border" style="width: 900px;">
+  <figcaption class="image-caption">Key technology components of electricity grids Source: IEA - Electricity Grids and Secure Energy Transitions.</figcaption>
+</div>
 
 
