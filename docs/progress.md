@@ -1,5 +1,5 @@
 <div class="page-headers">
-<h1>Our Progress and Country Logbook</h1>
+<h1>Our Progress and Country Logbook ↗📈 </h1>
 </div>
 
 Welcome to our team's progress page, where you can see our mapping progress in many different countries.

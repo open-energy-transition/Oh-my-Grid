@@ -1,10 +1,10 @@
 <div class="page-headers">
-<h1>Impact of OSM grid mapping data </h1>
+<h1>Impact of Open Electrical Grid Data </h1>
 </div>
 
 ## **<div class="tools-header">Who uses OpenStreetMap grid data?</div>**
 
-This frequently asked question is important to answer to show how mapping is impactful. When you map towers, substations, powerplants in OpenStreetMap (OSM), you are essentially adding valuable data that is used by many different entities. This data has been used by the following list of organisations, which is not exhaustive.
+How does mapping have an impact? When you map towers, substations, powerplants in OpenStreetMap (OSM), you are essentially adding valuable data that is used by many different entities. This data has been used by the following list of organisations, which is not exhaustive.
 <br> <br>
 
 **International Energy Agency**  ![IEA logo](images/impact/International-energy-agency-logo.png){width=30px} 
@@ -31,6 +31,13 @@ This frequently asked question is important to answer to show how mapping is imp
     
     === "[Enedis (link)](https://enedis.openstreetmap.fr/)"
         ![map](images/impact/enedis-osm.png){: .img-border }
+
+
+**Enedis**  ![Enedis](images/impact/ms-logo.png){width=70px} 
+??? "The Global Renewables Watch maps and measures renewable energy installations and their estimated capacities at the subnational, national, and global levels. The machine learning behind the detection process is mainly trained using OpenStreetMap data."
+    
+    === "[Global Renewables Watch (link)](https://www.globalrenewableswatch.org/)"
+        ![map](images/impact/renewable-watch.png){: .img-border }
  
 **CONAHCYT (Gobierno de Mexico)**  ![CONAHCYT logo](images/impact/conahcyt.png){width=70px} 
 ??? "Mapa del Sistema Eléctrico Nacional"
@@ -64,7 +71,6 @@ This frequently asked question is important to answer to show how mapping is imp
     
     === "[Energy Charts(link)](https://www.energy-charts.info/map/map.htm?l=en&c=DE&country=DE&lines=1110000&pp-source=bnetza&pp-bitmap=none)"
         ![map](images/impact/fraunhofermap.jpg){: .img-border }
-
 
 ## **<div class="tools-header">How and why is it used?</div>**
 
