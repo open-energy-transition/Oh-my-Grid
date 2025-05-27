@@ -46,17 +46,20 @@ For developing countries and emerging economies the expansion of the electricity
 
 In particular, the scaling of this infrastructure in low to medium income countries has been hindered because of poor data quality and data governance on the state of the electrical grid. One reason for the low data quality is the obscurity of this data due to security concerns similar to security through obscurity practices in software development. This is why OpenStreetMap is so widely used in these areas. Another reasons for the lack of OpenStreetMap grid data in low- to medium-income countries is the poor quality and outdated nature of the satellite imagery provided by ESRI and Microsoft. 
 
-For many developed countries, high-quality open data is published by companies or agencies outside of OpenStreetMap. For example [ENTSO-E publishes the Transmission System Map](https://www.entsoe.eu/data/map/) containing geo-information on transmission infrastructure across Europe. [The French operator of the transmission grid RTE publishes its grid topology including 5-minute resolution time-series](https://github.com/rte-france/structural-french-grid-data-with-detailed-topology-time-series). For the United States, agencies including the Department of Homeland Security publish and regularly update a dataset containing transmission grid information to support agencies, emergency response and economic development, with the publication of electronic geospatial dataset dating back [to legislation in the 1990s](https://www.govinfo.gov/content/pkg/WCPD-1994-04-18/pdf/WCPD-1994-04-18-Pg779.pdf). In comparison with OpenStreetMap data, the [Homeland Infrastructure Foundation-Level Data shows the high similarity between the two datasets](https://resilience.climate.gov/datasets/fedmaps::u-s-electric-power-transmission-lines/explore?location=38.846475%2C-76.984997%2C8.86). 
+For many developed countries, high-quality open data is published by companies or agencies outside of OpenStreetMap. For example [ENTSO-E publishes the Transmission System Map](https://www.entsoe.eu/data/map/) containing geo-information on transmission infrastructure across Europe. [The French operator of the transmission grid RTE publishes its grid topology including 5-minute resolution time-series](https://github.com/rte-france/structural-french-grid-data-with-detailed-topology-time-series). 
 
-
-<div style="margin: 5px auto 20px auto; width: 600px; text-align: center;">
+<div style="float: right; margin: -25px 0 10px 50px; width: 350px;">
   <a href="../images/homeland-osm.png" target="_blank">
-    <img src="../images/homeland-osm.png" class="img-border" style="width: 600px;">
+    <img src="../images/homeland-osm.png" class="img-border float-right" style="width: 400px;">
   </a>
   <figcaption class="image-caption">
     The comparison between Homeland Infrastructure Foundation-Level Data (Grey Lines) and OpenStreetMap Transmission Grid data (Green Lines) shows that both datasets have the same spatial resolution.
   </figcaption>
 </div>
+
+For the United States, agencies including the Department of Homeland Security publish and regularly update a dataset containing transmission grid information to support agencies, emergency response and economic development, with the publication of electronic geospatial dataset dating back [to legislation in the 1990s](https://www.govinfo.gov/content/pkg/WCPD-1994-04-18/pdf/WCPD-1994-04-18-Pg779.pdf). In comparison with OpenStreetMap data, the [Homeland Infrastructure Foundation-Level Data shows the high similarity between the two datasets](https://resilience.climate.gov/datasets/fedmaps::u-s-electric-power-transmission-lines/explore?location=38.846475%2C-76.984997%2C8.86). 
+<br><br>
+
 
 ## **<div class="tools-header">Who uses OpenStreetMap grid data?</div>**
 
