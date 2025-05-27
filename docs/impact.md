@@ -20,8 +20,8 @@ This frequently asked question is important to answer to show how mapping is imp
         ![map](images/impact/africa_grid_explorer.jpg){: .img-border }
 
 
-**PyPSA-Earth**  ![PyPSA-Earth](images/impact/pypsa-earth-logo.png){width=70px} 
-??? "PyPSA Earth uses OpenStreetMap data for energy system studies all around the world."
+**PyPSA-Earth** ![PyPSA-Earth](images/impact/pypsa-earth-logo.png){: width=70px} **+** **PyPSA-Eur** ![PyPSA-Eur](images/impact/pypsa-eur-logo.jpg){: width=30px}
+??? "PyPSA Earth and Europe use OpenStreetMap data for energy system studies all around the world."
     
     === "[PyPSA-Earth (link)](https://pypsa-earth.readthedocs.io/)"
         ![map](images/impact/pypsa-earth.jpg){: .img-border }
@@ -74,7 +74,7 @@ Our team also ran an "impact analysis" to see how many times the keywords _OpenS
  - 🚀 **7,520 publications** (70% of total) were published in the **last 5 years alone**, which shows the increasingly important role OpenStreetMap power data is having in academia.
 
 
-## **<div class="tools-header">Why is it important that this data is open?</div>**
+## **<div class="tools-header">Why is it important that this data are open?</div>**
 
 
 

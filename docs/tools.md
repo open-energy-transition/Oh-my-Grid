@@ -47,7 +47,7 @@ Tip: On the tool website, certain countries have different names associated, so 
 OpenStreetMap allows mappers to quickly mark an object that seems to be wrong and needs fixing using the [Key:fixme](https://wiki.openstreetmap.org/wiki/Key:fixme) tag. For example, you can write `fixme=wrong voltage` if you think the voltage on a line is incorrect, but you don't know the correct value. A small F will then be visible on the edge of the symbol to indicate the fixme tag. Stepping through all the `fixme` tags in a country is also a great way to search for errors in the grid that you can try to fix. We recommend using the `todo list` plugin for this.
 
 <div style="float: right; margin: 5px 0 20px 20px; width: 350px;">
-    <img src="../images/fixme.jpg" class="img-border" alt="Fixme tags loaded in the todo list.">
+    <img src="../images/fixme.jpg" class="img-border float-right" alt="Fixme tags loaded in the todo list.">
   <figcaption class="image-caption">Fixme tags loaded in the todo list.</figcaption>
 </div>
 
