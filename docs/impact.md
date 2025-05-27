@@ -64,8 +64,9 @@ For the United States, agencies including the Department of Homeland Security pu
 
 ## **<div class="tools-header">Who uses OpenStreetMap grid data?</div>**
 
-How does mapping have an impact? When you map towers, substations, powerplants in OpenStreetMap (OSM), you are essentially adding valuable data that is used by many different entities. This data has been used by the following list of organisations, which is not exhaustive.
-<br> <br>
+How does mapping have an impact? When you map towers, substations, powerplants in OpenStreetMap (OSM), you are essentially adding valuable data that is used by many different entities. This data has been used by the following list of organisations, which is not exhaustive. 
+!!! info
+    Data such as the _Africa Electricity Grids Explorer_ by the World Bank are often used by other organisations and communities, so the impact of OpenStreetMap data goes even further indirectly!
 
 **International Energy Agency**  ![IEA logo](images/impact/International-energy-agency-logo.png){width=30px} 
 ??? "Latin America Energy Outlook Interactive Map"
