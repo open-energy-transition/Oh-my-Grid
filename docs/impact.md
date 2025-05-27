@@ -37,7 +37,7 @@ How does mapping have an impact? When you map towers, substations, powerplants i
 ??? "The Global Renewables Watch maps and measures renewable energy installations and their estimated capacities at the subnational, national, and global levels. The machine learning behind the detection process is mainly trained using OpenStreetMap data."
     
     === "[Global Renewables Watch (link)](https://www.globalrenewableswatch.org/)"
-        ![map](images/impact/renewable-watch.png){: .img-border }
+        ![map](images/renewable-watch.png){: .img-border }
  
 **CONAHCYT (Gobierno de Mexico)**  ![CONAHCYT logo](images/impact/conahcyt.png){width=70px} 
 ??? "Mapa del Sistema Eléctrico Nacional"
