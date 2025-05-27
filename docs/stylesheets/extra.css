@@ -110,6 +110,11 @@
     margin: 1em auto !important;
     width: 90%;
   }
+
+  /* Prevent interference with lists */
+  ol, ul {
+    clear: both;
+  }
 }
 
 
