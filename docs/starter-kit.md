@@ -46,7 +46,7 @@ JOSM is a more advanced desktop OpenStreetMap editor which is more suitable for 
 
 ## **<div class="tools-header">Coloring your grid map and legend 🎨</div>**
 
-<div style="float: right; margin: 5px 0 20px 20px; width: 350px;">
+<div style="float: right; margin: 5px 0 10px 20px; width: 350px;">
   <a href="https://raw.githubusercontent.com/open-energy-transition/color-my-grid/refs/heads/main/legend/power-grid-legend.png" target="_blank">
   <img src="https://raw.githubusercontent.com/open-energy-transition/color-my-grid/refs/heads/main/legend/power-grid-legend.png" class="img-border" style="width: 100%;"> </a>
   <figcaption class="image-caption">OhmyGrid legend for transmission grid mapping. Click to enlarge.</figcaption>
@@ -65,7 +65,7 @@ JOSM is a more advanced desktop OpenStreetMap editor which is more suitable for 
 Make sure remote control is enabled and ad-blocker disabled, and then go to the start mapping [page](https://ohmygrid.org/map-it/). Here you can click on the country you want to map, and it will directly open JOSM and load the data of that country. Use the "Default Transmission (90kV+)" to pull the data. <br>
 
 
-<div style="float: right; margin: 5px 0 20px 20px; width: 350px;">
+<div style="float: right; margin: 10px 0 20px 20px; width: 350px;">
   <a href="../images/josm-toolbar.png" target="_blank">
   <img src="../images/josm-toolbar.png" class="img-border" style="width: 100%;"> </a>
   <figcaption class="image-caption">Default OhmyGrid Presets in JOSM toolbar. Click to enlarge.</figcaption>
