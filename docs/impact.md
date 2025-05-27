@@ -2,13 +2,9 @@
 <h1>Impact of Open Electrical Grid Data </h1>
 </div>
 
-!!! question
-    **Why "map"? Why place towers, lines, power plants and substations? Who and how is this information used?** <br>
-
-    **Well, when you map towers, substations, powerplants in OpenStreetMap (OSM), you are essentially adding valuable data that is used by many different entities.**
-
-
 ## **<div class="tools-header">How and why is it used?</div>**
+
+**When you map towers, substations, powerplants in OpenStreetMap (OSM), you are essentially adding valuable data that is used by many different entities.**<br>
 
 🔵 OpenStreetMap powergrid data is used by academia, institutions, local authorities and private organisations.
 
@@ -33,7 +29,7 @@ Availability of reliable data has therefore a direct impact on the adoption of c
 
 
 ## **<div class="tools-header">Why is it important that this data are open?</div>**
-
+<!-- To put squares either find the emoji or type :yellow_square:-->
 🟧 Firstly, many developing countries' data is outdated, incomplete or scattered, which makes it harder for governments and utilities to plan grid and power developments. Although developed countries tend to have better quality network data, it can be often difficult to access as it is not always open or easily usable due to licensing. This also reduces transparency and makes it harder to cross-check results and collaborate, since data needs to be collected and re-collected often. 
 
 🟦 Moreover, transparency of strategies and thus data is key for public acceptance of infrastructure expansions and investments ([Ciupuliga & Cuppen, 2013](https://www.sciencedirect.com/science/article/abs/pii/S0301421513003601)). Open-data can empower local governments, communities and NGO's to participate in energy planning, as well as improve and fix the data as OpenStreetMap is open. A good example of how mapping the grid has helped empower local communities, is YouthMappers' initiative in Sierra Leone. Their power grid mapping project enabled information about electricity infrastructure to be reliable and easily accessible, which helps local electricity agencies plan and reduces their costs (see this [paper](https://link.springer.com/chapter/10.1007/978-3-031-05182-1_11#:~:text=One%20of%20the%20things%20that,they%20start%20constructing%20electricity%20infrastructure)). Additionally, power infrastructure such as generation plants, transmission networks, substations, and distribution networks data are also important to evaluate the connectivity potential of isolated communities to the wider grid ([Arderne et al.2020](https://www.nature.com/articles/s41597-019-0347-4
