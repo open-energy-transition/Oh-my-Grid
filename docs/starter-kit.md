@@ -62,7 +62,7 @@ JOSM is a more advanced desktop OpenStreetMap editor which is more suitable for 
 
 
 ## **<div class="tools-header">Loading power infrastructure into JOSM :inbox_tray:</div>**
-Make sure remote control is enabled and ad-blocker disabled, and then go to the start mapping [page](https://ohmygrid.org/map-it/). Here you can click on the country you want to map, and it will directly open JOSM and load the data of that country. Use the "Default Transmission (90kV+)" to pull the data. <br>
+1. Make sure remote control is enabled and ad-blocker disabled, and then go to the start mapping [page](https://ohmygrid.org/map-it/). Here you can click on the country you want to map, and it will directly open JOSM and load the data of that country. Use the "Default Transmission (90kV+)" to pull the data. <br>
 
 
 <div style="float: right; margin: 10px 0 20px 20px; width: 350px;">
