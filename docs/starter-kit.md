@@ -1,7 +1,7 @@
 <div class="page-headers">
 <h1>Grid Mapping Starter Kit 🌱</h1>
 </div>
-A [starter kit](https://github.com/open-energy-transition/grid-mapping-starter-kit) for Electrical Transmission Grid Mapping in OpenStreetMap, combining Osmose and Overpass with JOSM.
+A [starter kit](https://github.com/open-energy-transition/grid-mapping-starter-kit) for Electrical Transmission Grid Mapping in OpenStreetMap, combining Osmose and Overpass with JOSM. The tutorial for mapping using JOSM starts with "Install JOSM".
 
 ## **<div class="tools-header">Get started with OpenStreetMap and Open Infrastructure Map 🗺️</div>**
 
@@ -80,7 +80,7 @@ Mapping is an iterative process, so you will make mistakes at first. However, th
 </div>
 
 1. For ease of mapping, customise your top toolbar with presets if you have not used the default preferences. Right click the toolbar and choose `Configure toolbar`, then select `Presets → Man Made → Man Made/Power` and add power towers, power portals and other presets for your mapping acticity.
-2. Start Mapping. Read more about the general mapping process in JOSM. Place nodes (eg.power towers, power portals) or place polygons to delimit an area (eg. substation, generator), and press on the preset structure you want it to be.:pencil: Example: As seen in the image, the red polygon is a substation which is mapped by adding nodes that are connected to each other and tagged as a substation. 
+2. Start Mapping. Read more about the general mapping process in JOSM. Place nodes (eg. power towers, power portals) or place polygons to delimit an area (eg. substation, generator), and press on the preset structure you want it to be.:pencil: Example: As seen in the image, the red polygon is a substation which is mapped by adding nodes that are connected to each other and tagged as a substation. 
 3. Whilst having the OpenStreetMap layer activated, press the green Upload arrow. Avoid ignoring validation results. The only acceptable warning when uploading data is "Possible missing line support node within power line". When you make an edit, please use the **#ohmygrid** in the changeset to help the initiative!
 
 
