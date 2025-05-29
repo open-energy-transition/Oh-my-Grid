@@ -632,7 +632,7 @@ fetch('../data/regionsv2.geojson')
 <!-- End of Map section-->
 
 ## Join the Chat <img src="/icons/discord.svg" alt="Discord" class="social-icon" style="width:1.2em; vertical-align:middle; margin-left:0.5ch;"> {.tools-header style="font-weight:700"}
-We welcome everyone to join our [chat](https://discord.gg/a5znpdFWfD) called _📍-ohmygrid_ on the PyPSA-Earth discord channel. Here you can ask questions, and interact with the community. 
+We welcome everyone to join our [community chat](https://discord.gg/a5znpdFWfD) called _📍-ohmygrid_ on the PyPSA-Earth discord channel. Here you can ask questions, and interact with the community. For mapping specific questions and to participate in our free personalized training, please join our [📍-ohmygrid-support-and-training](https://discord.gg/fBw7ARTUeR) channel. 
 
 ## <div class="tools-header">Join the Community  :calendar: </div>
 We welcome everyone to join our community calls and tutorials, to learn more about the mapping process and the initiative.
