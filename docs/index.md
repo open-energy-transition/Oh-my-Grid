@@ -50,7 +50,8 @@ body_class: landing-page
   <a href="https://openinframap.org/#3.34/8.66/41.06/B,E,L,N,P" target="_blank">
   <img src="images/openinframap_crop.png" alt="Grid Illustration" class="initiative-content" style="width: 120%; border: 4px solid #4cae4f;">
   </a>
-  <p>OpenStreetMap's already extensive data on the electrical grid can be browsed on <a href="https://openinframap.org/#3.34/8.66/41.06/B,E,L,N,P" target="_blank" rel="noopener">Open Infrastructure Map</a>, showing the global scale of data collected over more than 10 years, mostly by volunteers.</p>
+  <p>OpenStreetMap's already extensive data on the electrical grid can be browsed on <a href="https://openinframap.org/#3.34/8.66/41.06/B,E,L,N,P" target="_blank" rel="noopener">Open Infrastructure Map</a>, showing the global scale of data collected over more than 17 years, mostly by volunteers.</p> 
+  <p>A global community of citizen contributors creates and maintains data on the core infrastructures of our modern society. Let's empower them!</p>
     
   </div>
 </div>
@@ -67,7 +68,7 @@ body_class: landing-page
       <p>Learn how to contribute to OpenStreetMap and help map the electrical grid in your area.</p>
     </a>
     <a href="https://wiki.openstreetmap.org/wiki/Power_networks" class="get-involved-card">
-      <h3>Contribute to the wiki</h3>
+      <h3>Contribute to the Wiki</h3>
       <p>Help develop tools and improve countries' power networks page by including your progress.</p>
     </a>
   </div>
