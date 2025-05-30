@@ -103,8 +103,17 @@ You can select what power infrastructure you want by clicking on the different c
 <!-- SheetJS for in‑browser XLSX parsing -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 
-
 <script>
+
+// ———————————————
+// Osmose name overrides (some names are different, check the API)
+// ———————————————
+const osmoseNameOverrides = {
+  "Bosnia and Herzegovina": "bosnia_herzegovina",
+  // add more special cases here if needed
+};
+
+
 // Map
 // Define world bounds (southWest & northEast corners)
 const southWest = L.latLng(-90, -200);
@@ -426,9 +435,11 @@ async function fetchOsmoseAndDownload(sovName) {
   }
   const [item, cls] = sel.value.split(':');
   /// normalize to lowercase, add underscore for +1 words  and add wildcard
-  let base = sovName
-               .toLowerCase()
-               .replace(/\s+/g, '_');
+  // apply override if present, else slugify normally
+  const key = osmoseNameOverrides[sovName] || sovName;
+  let base = key
+             .toLowerCase()
+             .replace(/\s+/g, '_');
   if (!base.endsWith('*')) base += '*';
 
   const apiUrl = 
