@@ -147,6 +147,10 @@ const regionsLayer = L.geoJSON(null, {
     style: { color: '#3388ff', weight: 1 }
 });
 
+
+// Make the popup message bigger and nicer for new mappers (like Ad-blocker...)
+map.options.maxPopupWidth = 300;
+
 // 2) Dynamic query‑mode discovery via GitHub Contents API
 const GITHUB_API_QUERIES =
   'https://api.github.com/repos/open-energy-transition/osm-grid-definition/contents/queries';
@@ -414,13 +418,26 @@ async function handleAreaClick(iso, level, layer) {
     layer.getPopup().setContent(`Error: ${err.message}`).update();
   }
 
-  setTimeout(() => {
-    layer.setStyle({ color: '#3388ff' });
-    layer
-      .getPopup()
-      .setContent(`<b>${name}</b><br>Click to load in JOSM.  ⚠️ If it doesn't work, it might be your ad-blocker, or you haven't enabled remote control! Sometimes you might need to turn on and off remote control for it to refresh.`)
-      .update();
-  }, 2000);
+setTimeout(() => {
+  layer.setStyle({ color: '#3388ff' });
+
+  const html = `
+    <div class="popup-success">
+      <p>🎉 <strong>Great!</strong> Now go back to JOSM and check if it is downloading. Depending on the country, this may take <em>30 seconds or more</em>.</p>
+      <p>⚠️ <strong>If nothing happens:</strong></p>
+      <ol>
+        <li>Check if your ad-blocker is off</li>
+        <li>Make sure JOSM is open</li>
+        <li>Make sure Remote Control is enabled in JOSM</li>
+        <li>If it’s enabled but still not working, toggle it off and on again</li>
+      </ol>
+    </div>
+  `;
+
+  layer.getPopup()
+       .setContent(html)
+       .update();
+}, 2000);
 }
 
 // initialize the UI immediately
