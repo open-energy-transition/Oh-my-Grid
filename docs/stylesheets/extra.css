@@ -1,4 +1,5 @@
-/* Start mapping buttons css */
+/* ----------------Map it page----------------------------------------------------------------------------------------------*/
+/* Map it pagebuttons css */
 #query-buttons {
   display: flex;
   justify-content: center;
@@ -56,7 +57,24 @@
   margin-bottom: 1em;
 }
 
-/* --------------------------------------------------------------------------------------------------------------*/
+.popup-success h3 {
+  margin: 0 0 0.5em;
+  font-size: 1.1em;
+}
+.popup-success ul {
+  margin: 0;
+  padding-left: 1.2em;
+  line-height: 1.3;
+}
+.popup-success ul ul {
+  padding-left: 1em;
+  margin-top: 0.3em;
+}
+.popup-success li {
+  margin-bottom: 0.4em;
+}
+
+/* -------------------------Pages-------------------------------------------------------------------------------------*/
 
 /* Justify regular content */
 .md-content {
