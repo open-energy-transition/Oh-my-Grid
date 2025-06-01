@@ -46,6 +46,7 @@ Here are some [heatmaps](https://yosmhm.neis-one.org/) of the mapping work some 
 
 <!-- End of country logbook -->
 <br>
+<!-- COUNTRY_LIST_INSERTION -->
 <!-- Progress Bars Section -->
 ## **<div class="tools-header">Community mapping progress :rocket:</div>**
 
