@@ -22,6 +22,7 @@ copyright:    <a href="https://creativecommons.org/licenses/by/4.0/" target="_bl
 
 theme:
   name: material
+  custom_dir: docs/overrides
   favicon: images/logo.png
   logo: images/logo.png
   palette:
