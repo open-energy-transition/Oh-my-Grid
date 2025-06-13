@@ -662,8 +662,54 @@ fetch('../data/regionsv2.geojson')
     <iframe
      src="https://docs.google.com/spreadsheets/d/13YZftK9xZ09t2oSvhwjE0Zb7P25nl9OaUAxIBVNH0js/edit?usp=sharing&rm=minimal"
      class="iframestyle"
-     style="width:100%; height: 500px; border:1px solid #ddd;">
+     style="width:100%; height: 500px; border:1px solid #ddd; ">
     </iframe>
+<!-- I couldn't make the page not go "up" when using this iframe, so for now there is this chatgpt js script that prevents this. It was very annoying, but if you have a better solution that would be great-->
+
+<script>
+  let lastScrollY = window.scrollY;
+  // Select your iframe by its class or ID. Make sure 'iframestyle' is unique enough
+  // If you have multiple iframes with 'iframestyle', you might need a more specific selector
+  // e.g., document.querySelector('.iframestyle[src*="google.com/spreadsheets"]')
+  const iframe = document.querySelector('.iframestyle'); 
+
+  if (iframe) { // Check if the iframe element exists
+    // Add a listener to the window for scroll events
+    window.addEventListener('scroll', () => {
+      // Check if the scroll difference is significant, suggesting an iframe-triggered jump
+      const scrollDiff = Math.abs(window.scrollY - lastScrollY);
+
+      // You might need to adjust this threshold (e.g., 100, 150, 250, etc.)
+      // A large scroll difference is likely an automatic scroll, not a user scroll
+      if (scrollDiff > 100 && document.activeElement === iframe) {
+        // If the iframe is currently focused and a large scroll occurred,
+        // revert the scroll position to where it was before the jump
+        window.scrollTo(0, lastScrollY);
+      } else {
+        // Otherwise, update the last scroll position
+        lastScrollY = window.scrollY;
+      }
+    });
+
+    // Ensure lastScrollY is correctly set when the iframe loads
+    iframe.addEventListener('load', () => {
+      lastScrollY = window.scrollY; // Reset lastScrollY after iframe loads
+    });
+
+    // Also update lastScrollY on mouseleave from iframe (user scrolled away from iframe)
+    iframe.addEventListener('mouseleave', () => {
+      lastScrollY = window.scrollY;
+    });
+
+    // And on mousedown (when user clicks inside the iframe)
+    iframe.addEventListener('mousedown', () => {
+        lastScrollY = window.scrollY;
+    });
+
+  } else {
+    console.warn("Google Sheets iframe not found for scroll-prevention script.");
+  }
+</script>
 
 
 <!-- End of Map section-->

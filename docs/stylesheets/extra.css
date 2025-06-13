@@ -515,4 +515,17 @@
   display: none;
 }
 
+/* ---------------------------------------------Iframes jumping around-----------------------------------------------------------------*/
+.iframe-container {
+  position: relative;
+  overflow: hidden;
+  scroll-margin-top: 0;
+  scroll-margin-bottom: 0;
+}
+
+.iframe-container .iframestyle {
+  display: block;
+  scroll-margin: 0;
+  scroll-snap-margin: 0;
+}
 /* --------------------------------------------------------------------------------------------------------------*/
