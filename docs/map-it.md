@@ -647,7 +647,7 @@ fetch('../data/regionsv2.geojson')
   .catch(error => console.error('Regions GeoJSON error:', error));
 </script>
 
-??? "Mapcss Legend"
+??? info "Mapcss Legend"
     <img 
       src="https://raw.githubusercontent.com/open-energy-transition/color-my-grid/refs/heads/main/legend/power-grid-legend.png" 
       class="img-border image-caption" 
@@ -655,6 +655,15 @@ fetch('../data/regionsv2.geojson')
       style="display: block; margin-left: auto; margin-right: auto;"
       width="400">
 
+:mag: Below you can find "Starter powerlines" where we have found some lines which you can map if you are new. <br>
+**Please** check the box if you mapped this line, so as to not waste other people's time! Once part of the community, we can grant you access to this spreadsheet so you can add other lines if you want.
+
+??? success "Starter powerlines"
+    <iframe
+     src="https://docs.google.com/spreadsheets/d/13YZftK9xZ09t2oSvhwjE0Zb7P25nl9OaUAxIBVNH0js/edit?usp=sharing&rm=minimal"
+     class="iframestyle"
+     style="width:100%; height: 500px; border:1px solid #ddd;">
+    </iframe>
 
 
 <!-- End of Map section-->
