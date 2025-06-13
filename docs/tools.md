@@ -1,7 +1,7 @@
 <div class="page-headers">
 <h1>Useful Grid Mapping Tools </h1>
 </div>
-The following strategies and tooles will help you to extend the existing transmission grid networks in OpenStreetMap. In general, the larger the tower and substation, the higher the voltage and therefore the greater the importance to the network. Priority should therefore be given to large, high-voltage infrastructure first. The easiest way to start mapping the transmission network is to find the location of missing towers with the help of osmose.
+The following strategies and tools will help you to extend the existing transmission grid networks in OpenStreetMap. In general, the larger the tower and substation, the higher the voltage and therefore the greater the importance to the network. Priority should therefore be given to large, high-voltage infrastructure first. The easiest way to start mapping the transmission network is to find the location of missing towers with the help of osmose.
 
 ## <div class="tools-header">Osmose per country (integrated in Map It📍)</div></h2>
 

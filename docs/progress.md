@@ -9,12 +9,13 @@ Welcome to our team's progress page, where you can see our mapping progress in m
 If you want to join our community, join our OSM [team](https://mapping.team/teams/1570/invitations/eec8b5f8-b212-4013-8707-96245f300fa1), and use our hashtag **#ohmygrid**!
 <br>
 
-Here are some [heatmaps](https://yosmhm.neis-one.org/) of the mapping work some of our team has done (more than 100k towers placed!):
-<div style="display: flex; justify-content: space-between; gap: 20px; margin: 20px 0;">
-  <img src="../images/heatmapahd.png" class="img-border" width="300">
-  <img src="../images/heatmapmwi.png" class="img-border" width="300">
-  <img src="../images/heatmapTA.png" class="img-border" width="300">
+Here are some [heatmaps](https://yosmhm.neis-one.org/) of the mapping work some of our team has done:
+<div class="heatmap-container">
+  <img src="../images/progress-page/heatmapAHD.jpg" class="img-border" width="300">
+  <img src="../images/progress-page/heatmapMWI.jpg" class="img-border" width="300">
+  <img src="../images/progress-page/heatmapTA1.jpg" class="img-border" width="300">
 </div>
+
 
 <!-- Progress Bars Section -->
 ## **<div class="tools-header">Community mapping progress :rocket:</div>**
