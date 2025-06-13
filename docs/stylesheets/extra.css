@@ -515,17 +515,32 @@
   display: none;
 }
 
-/* ---------------------------------------------Iframes jumping around-----------------------------------------------------------------*/
-.iframe-container {
-  position: relative;
-  overflow: hidden;
-  scroll-margin-top: 0;
-  scroll-margin-bottom: 0;
+/* -------------------------------------------Heatmaps (progress.md)-------------------------------------------------------------------*/
+/* Heatmap images container - responsive layout */
+.heatmap-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin: 20px 0;
 }
 
-.iframe-container .iframestyle {
-  display: block;
-  scroll-margin: 0;
-  scroll-snap-margin: 0;
+.heatmap-container img {
+  width: 300px;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Mobile adjustments for heatmap images */
+@media (max-width: 768px) {
+  .heatmap-container {
+    flex-direction: column !important;
+    align-items: center;
+    gap: 1px;
+  }
+  
+  .heatmap-container img {
+    width: 200px !important; /* Slightly smaller on mobile */
+    max-width: 90% !important;
+  }
 }
 /* --------------------------------------------------------------------------------------------------------------*/
