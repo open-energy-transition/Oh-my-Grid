@@ -100,7 +100,7 @@ One single unmapped power tower can sometimes trace to a missing interconnector 
 Can you see the power tower that's missing from the bottom Left corner?
 
 
-## <div class="tools-header">Online investigation 🔍</div>
+## <div class="tools-header">Online investigation :mag:</div>
 
 Looking for recent news articles, reports, academic studies, or datasets related to newly operational substations and transmission lines is a simple way to find information about larger infrastructure that just started construction or operation. Politicians and investors love to be photographed with such new infrastructure. That's why you find almost always news articles and reports about new substations, transmission lines and power plants.
 
