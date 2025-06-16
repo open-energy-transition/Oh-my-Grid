@@ -423,7 +423,7 @@ setTimeout(() => {
 
   const html = `
     <div class="popup-success">
-      <p>🎉 <strong>Great!</strong> Now go back to JOSM and check if it is downloading. Depending on the country, this may take <em>30 seconds or more</em>.</p>
+      <p>🎉 <strong>Great!</strong> Now go back to JOSM and check if it is downloading. Depending on the country, this may take <em>30 seconds or more</em>. For "tools and hints", you should have a geojson download.</p>
       <p>⚠️ <strong>If nothing happens:</strong></p>
       <ol>
         <li>Check if your ad-blocker is off</li>
