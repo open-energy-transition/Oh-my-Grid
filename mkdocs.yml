@@ -5,14 +5,14 @@ repo_name: 'OhMyGrid'
 repo_url: 'https://github.com/open-energy-transition/Oh-my-Grid'
 
 nav:
-  - The Initiative 🚀: index.md
+  - The Initiative : index.md
   - Starter-Kit Tutorial 🌱: starter-kit.md
   - Map It! 📍: map-it.md
-  - Tools and Strategies 🛠️: tools.md
+  - Tools and Strategies: tools.md
   - Impact 💡: impact.md
-  - Guidelines ⚡: guidelines.md
+  - Guidelines : guidelines.md
   - Awesome List 🌟: awesome.md
-  - Our Progress 📈 : progress.md
+  - Our Progress : progress.md
   - Blog 💭:
       2025:
         - "Liberate the Grid": blog/firstrename.md
