@@ -66,7 +66,7 @@ In order to map more effectively, it is recommended to try and find maps and dat
 </div>
 
 
-We have made an [awesome list](https://ohmygrid.org/awesome/) which you can access on this website too, which has datasets, maps, and information for many countries around the world.
+We have made list of [Curated Grid Maps](https://ohmygrid.org/awesome/) which you can access on this website too, which has datasets, maps, and information for many countries around the world.
 
 ⚠️ Please use these datasets as hint layers, and check licenses to see how/if you are allowed to use them. Do not copy/data from these maps directly into OpenStreetMap. Each data point of the transmission network must be set manually and <a href="https://wiki.openstreetmap.org/wiki/Verifiability">verified</a> with official satellite data provided by the OpenStreetMap community.⚠️
 
