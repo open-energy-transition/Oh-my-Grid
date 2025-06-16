@@ -547,4 +547,11 @@
     max-width: 90% !important;
   }
 }
+
+:root  > * {
+  --md-primary-fg-color:        #036d7a;
+  --md-primary-fg-color--light: #036d7a;
+  --md-primary-fg-color--dark:  #036d7a;
+}
+
 /* --------------------------------------------------------------------------------------------------------------*/

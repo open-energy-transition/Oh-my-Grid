@@ -6,14 +6,14 @@ repo_url: 'https://github.com/open-energy-transition/Oh-my-Grid'
 
 nav:
   - The Initiative : index.md
-  - Starter-Kit Tutorial 🌱: starter-kit.md
-  - Map It! 📍: map-it.md
+  - Starter-Kit Tutorial: starter-kit.md
+  - Map It📍: map-it.md
   - Tools and Strategies: tools.md
-  - Impact 💡: impact.md
+  - Impact: impact.md
   - Guidelines : guidelines.md
-  - Awesome List 🌟: awesome.md
+  - Curated Grid Maps: awesome.md
   - Our Progress : progress.md
-  - Blog 💭:
+  - Blog:
       2025:
         - "Liberate the Grid": blog/firstrename.md
 
@@ -28,7 +28,7 @@ theme:
   palette:
     # Light Mode
     - scheme: default
-      primary: green
+      primary: custom
       accent: indigo
       toggle: false 
   features:
