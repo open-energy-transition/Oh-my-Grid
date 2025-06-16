@@ -21,10 +21,10 @@ body_class: landing-page
       <a href="https://discord.gg/a5znpdFWfD" target="_blank" rel="noopener">
         <img src="icons/discord.svg" alt="Discord" class="social-icon" /> Discord
       </a>
-      <a href="https://github.com/open-energy-transition/Oh-my-Grid" target="_blank" rel="noopener">
-        <img src="icons/github_mark.svg" alt="GitHub" class="social-icon" /> GitHub
+      <a href="https://ohmygrid.org/impact/" target="_blank" rel="noopener">
+        💡 Impact
       </a>
-      <a href="https://wiki.openstreetmap.org/wiki/Organised_Editing/Activities/Oh_my_grid_initiative" target="_blank" rel="noopener">
+      <a href="https://wiki.openstreetmap.org/wiki/Power_networks" target="_blank" rel="noopener">
         <img src="icons/OSM_wikilogo.svg" alt="Wiki" class="social-icon" /> Wiki
       </a>
     </div>

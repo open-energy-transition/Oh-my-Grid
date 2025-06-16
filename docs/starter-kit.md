@@ -3,7 +3,7 @@
 </div>
 A [starter kit](https://github.com/open-energy-transition/grid-mapping-starter-kit) for Electrical Transmission Grid Mapping in OpenStreetMap, combining Osmose and Overpass with JOSM. The tutorial for mapping using JOSM starts with "Install JOSM".
 
-## **<div class="tools-header">Get started with OpenStreetMap and Open Infrastructure Map 🗺️</div>**
+## **<div class="tools-header">Get started with OpenStreetMap and Open Infrastructure Map <img src="../images/starter-kit/osm-logo.svg" style="height: 1.2em; vertical-align: middle; margin-left: 10px;"> </div>**
 
 <div style="float: right; margin: 5px 0 20px 20px; width: 350px;">
   <a href="https://openinframap.org/#6.54/39.026/-7.548" target="_blank">
@@ -15,13 +15,9 @@ If you don't already have an OpenStreetMap account, [create one first](https://w
 
 **⚠️ Before you start mapping, please find out about the mapping restrictions in the respective country. In some countries, the mapping of transmission lines is not permitted. Get in touch with local users by finding out about [local projects](https://wiki.openstreetmap.org/wiki/Power_networks). ⚠️**
 
-## **<div class="tools-header">Install JOSM :rocket:</div>**
+## **<div class="tools-header">Install JOSM <img src="../images/josm_logo.jpg" style="height: 1.2em; vertical-align: middle; margin-left: 10px;"></div>** 
 
 JOSM is a more advanced desktop OpenStreetMap editor which is more suitable for power grid mapping.
-
-<div style="float: right; margin: -25px 20px 0 50px;">
-  <img src="../images/josm_logo.jpg"  width="90">
-</div>
 
 !!! note
     The JOSM Preferences window is accessed through the `Edit → Preferences` menu on Windows and Linux, and `JOSM → Settings` on Mac.
@@ -43,7 +39,7 @@ JOSM is a more advanced desktop OpenStreetMap editor which is more suitable for 
 7. Make sure remote control is enabled in `Preferences → Remote Control`. This must be activated for the grid data to be loaded automatically.
 
 
-## **<div class="tools-header">Coloring your grid map and legend 🎨</div>**
+## **<div class="tools-header">Coloring your grid map and legend :art:</div>**
 
 <div style="float: right; margin: 5px 0 10px 20px; width: 350px;">
   <a href="https://raw.githubusercontent.com/open-energy-transition/color-my-grid/refs/heads/main/legend/power-grid-legend.png" target="_blank">
@@ -83,7 +79,7 @@ Mapping is an iterative process, so you will make mistakes at first. However, th
 3. Whilst having the OpenStreetMap layer activated, press the green Upload arrow. Avoid ignoring validation results. The only acceptable warning when uploading data is "Possible missing line support node within power line". When you make an edit, please use the **#ohmygrid** in the changeset to help the initiative!
 
 
-## **<div class="tools-header">Unfinished lines with Osmose and the todo Plugin ✅</div>**
+## **<div class="tools-header">Unfinished lines with Osmose and the todo Plugin :white_check_mark:</div>**
 
 <div style="float: right; margin: 5px 0 20px 20px; width: 350px;">
   <img src="../images/todo.jpg" class="img-border" style="width: 100%;">
@@ -122,7 +118,7 @@ If you want to be able to map efficiently and fast, you will need to know how to
 4. Mapping beyond your experience is something you should avoid. Mapping is an iterative process and you should not expect to be able to finish all the details you are mapping. If you cannot map with a high degree of certainty, leave it to local mappers, better satellite imagery or experienced grid mappers.
 
 
-## **<div class="tools-header">Fundamentals of the Electrical Grid for Mappers 🧱</div>**
+## **<div class="tools-header">Fundamentals of the Electrical Grid for Mappers </div>**
 The following documents and materials will give you a basic understanding of how to map an electrical grid. You don't need to be a grid expert to start mapping your first transmission lines. However, to map larger parts of the grid, you need to understand typical electrical grid design. 
 
 The [Learning Curve](https://www.youtube.com/@TheLearningCurveBenila/videos) provides multiple videos that will help your understand the basic of the electrical grid needed for grid mapping:
