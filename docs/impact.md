@@ -4,19 +4,17 @@
 
 ## **<div class="tools-header">How and why is it used?</div>**
 
-**When you map towers, substations, powerplants in OpenStreetMap (OSM), you are essentially adding valuable data that is used by many different entities.**<br>
+**When you map towers, substations, powerplants in OpenStreetMap, you are essentially adding valuable data that is used by many different entities.**<br>
 
-When you contribute to mapping towers, substations, and power plants in **OpenStreetMap (OSM)**, you are adding valuable infrastructure data that supports a broad range of users and applications around the world.
-
-OpenStreetMap’s electrical grid data is actively used by academic institutions, government agencies, local authorities, and private organizations. This data plays a crucial role in energy modeling and planning, informing both policy development and investment decisions.
+OpenStreetMap’s electrical grid data is actively used by grid operators, academic institutions, government agencies, local authorities, and private organizations. This data plays a crucial role in energy modeling and planning, informing both policy development and investment decisions.
 
 These simulations help evaluate technology options, policy impacts, and pathways to full electrification—especially in developing countries. Energy models are essential for advancing decarbonization goals and achieving sustainable development. However, the effectiveness of these models depends heavily on the **quality and completeness of the data** they rely on.
 
-High-quality, up-to-date data is vital for planning and investing in power infrastructure. Enhancing the current state of the OSM electrical grid significantly improves the reliability and impact of these planning tools. For example, [PyPSA Earth](https://pypsa-earth.readthedocs.io/en/latest/index.html), an open-source global energy system model, uses OSM grid data as the foundation for constructing its electricity network.
+High-quality, up-to-date data is vital for planning and investing in power infrastructure. Enhancing the current state of the OpenStreetMap electrical grid significantly improves the reliability and impact of these planning tools. For example, [PyPSA Earth](https://pypsa-earth.readthedocs.io/en/latest/index.html), an open-source global energy system model, uses OpenStreetMap grid data as the foundation for constructing its electricity network.
 
 ### Use by Major Institutions
 
-Organizations such as the **World Bank** and the **International Energy Agency (IEA)** rely on OpenStreetMap data for regional and continental energy analyses. In many cases, OSM provides the **only available** source of open, accessible infrastructure data. Making such data publicly available adds considerable **societal value** for planning and clean energy transitions, while also creating **economic value** for the private sector.
+Organizations such as the **World Bank** and the **International Energy Agency (IEA)** rely on OpenStreetMap data for regional and continental energy analyses. In many cases, OpenStreetMap provides the **only available** source of open, accessible infrastructure data. Making such data publicly available adds considerable **societal value** for planning and clean energy transitions, while also creating **economic value** for the private sector.
 
 One of the major global challenges in the clean energy transition is the modernization and expansion of transmission infrastructure. The IEA emphasizes the need for reliable data to support this effort:
 
@@ -32,10 +30,10 @@ Reliable and open infrastructure data directly supports the **adoption and succe
 
 ### Growing Academic Impact
 
-To understand the influence of OSM electrical grid data in research, our team conducted an impact analysis using Google Scholar. We searched for publications combining **“OpenStreetMap”** with power-related terms such as **“power grid”**, **“electrical grid”**, **“renewable”**, and **“energy model.”**
+To understand the influence of OpenStreetMap electrical grid data in research, our team conducted an impact analysis using Google Scholar. We searched for publications combining **“OpenStreetMap”** with power-related terms such as **“power grid”**, **“electrical grid”**, **“renewable”**, and **“energy model.”**
 
 * **10,700 publications** since 2005 included combinations of these keywords.
-* **7,520 publications**—**70% of the total**—were published in just the last **five years**, demonstrating a rapid increase in academic engagement and recognition of OSM power data.
+* **7,520 publications**—**70% of the total**—were published in just the last **five years**, demonstrating a rapid increase in academic engagement and recognition of OpenStreetMap power data.
 
 
 ## **<div class="tools-header">Why is it important that this data is open?</div>**
@@ -109,9 +107,7 @@ Let me know if you’d like to adapt this for a specific format (like a blog pos
 
 ## **<div class="tools-header">Who uses OpenStreetMap grid data?</div>**
 
-How does mapping have an impact? When you map towers, substations, powerplants in OpenStreetMap (OSM), you are essentially adding valuable data that is used by many different entities. This data has been used by the following list of organisations, which is not exhaustive. 
-!!! info
-    Data such as the _Africa Electricity Grids Explorer_ by the World Bank are often used by other organisations and communities, so the impact of OpenStreetMap data goes even further indirectly!
+How does mapping have an impact? When you map towers, substations, powerplants in OpenStreetMap, you are essentially adding valuable data that is used by many different entities. Below is a curated list of organisations and projects that have had an impact and have used this data.
 
 **International Energy Agency**  ![IEA logo](images/impact/International-energy-agency-logo.png){width=30px} 
 ??? "Latin America Energy Outlook Interactive Map"
