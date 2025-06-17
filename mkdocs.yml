@@ -50,6 +50,11 @@ extra_css:
 
 extra:
   generator: false
+  social:
+  - icon: fontawesome/brands/github
+    link: https://github.com/open-energy-transition/OhMyGrid
+  - icon: fontawesome/brands/discord
+    link: https://discord.gg/a5znpdFWfD
 
 extra_javascript:
   - js/umami.js
