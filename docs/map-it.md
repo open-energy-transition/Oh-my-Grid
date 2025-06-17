@@ -647,7 +647,7 @@ fetch('../data/regionsv2.geojson')
   .catch(error => console.error('Regions GeoJSON error:', error));
 </script>
 
-??? info "Mapcss Legend"
+??? info "Map Legend"
     <img 
       src="https://raw.githubusercontent.com/open-energy-transition/color-my-grid/refs/heads/main/legend/power-grid-legend.png" 
       class="img-border image-caption" 
