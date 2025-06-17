@@ -23,6 +23,7 @@ body.landing-page header.md-header {
   padding: 4rem 2rem;
   gap: 2rem;
   flex-wrap: wrap;
+
 }
 
 .hero-content-left {
@@ -99,7 +100,7 @@ body.landing-page header.md-header {
   width: 20px;
   height: 20px;
 }
-
+e9f5e9
 /* — Primary “Start Mapping!” button — */
 .primary-link {
   /* push the social-links further down */
@@ -136,6 +137,7 @@ body.landing-page header.md-header {
 .initiative-section {
   padding: 1rem 2rem;
   background-color: #f8f9fa;
+
 }
 
 .initiative-content {
@@ -220,6 +222,8 @@ body.landing-page header.md-header {
   display: flex;
   flex-direction: column;
   text-align: left;
+  border-radius: 16px; /* or any desired value like 8px, 1rem, etc. */
+
 }
 
 .get-involved-card:hover {
@@ -228,6 +232,7 @@ body.landing-page header.md-header {
 }
 
 .get-involved-card h3 {
+  text-align: center;
   color: #2a6d3c;
   margin-bottom: 1rem;
   font-size: 1.5rem;
@@ -235,6 +240,7 @@ body.landing-page header.md-header {
 }
 
 .get-involved-card p {
+  text-align: center;
   color: #4a5568;
   line-height: 1.6;
   font-weight: 400;

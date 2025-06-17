@@ -36,7 +36,7 @@ You can select what power infrastructure you want by clicking on the different c
 <div id="osmose-panel" style="display:none; margin-bottom:1em;">
   <label for="osmoseIssue">Issue type:</label>
   <select id="osmoseIssue">
-    <option value="" disabled selected>Select an Osmose issue…</option>
+    <option value="" disabled selected>Select an Osmose Issue…</option>
     <optgroup label="Power lines (item 7040)">
                 <option value="7040:1">Lone power tower or pole (Class 1)</option>
                 <option value="7040:2">Unfinished power transmission line (Class 2) (recommended for beginners ⭐)</option>
@@ -202,7 +202,7 @@ async function initQueryUI() {
   // — Row 1 title —
   const overpassTitle = document.createElement('div');
   overpassTitle.className = 'tools-header';
-  overpassTitle.textContent = 'Transmission Overpass 🗼';
+  overpassTitle.textContent = 'Transmission Overpass Query';
   mapEl.parentNode.insertBefore(overpassTitle, mapEl);
 
   const overpassContainer = document.createElement('div');
@@ -212,7 +212,7 @@ async function initQueryUI() {
   // — Row 2 title —
   const toolTitle = document.createElement('div');
   toolTitle.className = 'tools-header';
-  toolTitle.textContent = 'Tools and Hints 🛠️';
+  toolTitle.textContent = 'Tools and Hints';
   mapEl.parentNode.insertBefore(toolTitle, mapEl);
 
   const toolContainer = document.createElement('div');
@@ -258,7 +258,7 @@ async function initQueryUI() {
 
 function renderOsmoseButtonGroup() {
   const btn = document.createElement('button');
-  btn.textContent = 'Osmose issues';
+  btn.textContent = 'Osmose Issues';
   btn.classList.add('query-btn');
   if (currentMode === 'Osmose_issues') btn.classList.add('active');
   btn.onclick = () => selectMode('Osmose_issues', btn);

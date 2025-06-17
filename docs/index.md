@@ -64,12 +64,12 @@ body_class: landing-page
       <p>Connect with fellow contributors on Discord and participate in our community discussions.</p>
     </a>
     <a href="https://ohmygrid.org/starter-kit/" class="get-involved-card">
-      <h3>Start Mapping</h3>
-      <p>Learn how to contribute to OpenStreetMap and help map the electrical grid in your area.</p>
+      <h3>Learn Grid Mapping</h3>
+      <p>Start contributing to OpenStreetMap and help map the electrical grid in your area.</p>
     </a>
-    <a href="https://wiki.openstreetmap.org/wiki/Power_networks" class="get-involved-card">
-      <h3>Contribute to the Wiki</h3>
-      <p>Help develop tools and improve countries' power networks page by including your progress.</p>
+    <a href="https://ohmygrid.org/map-it/" class="get-involved-card">
+      <h3>Contribute to your Country</h3>
+      <p>Apply advanced mapping strategies and tools to your local transmission grid.</p>
     </a>
   </div>
 </div>
