@@ -85,12 +85,12 @@ jobs:
           import json, math
 
           def haversine(a,b):
-          R=6371.0
-          lat1,lon1=a; lat2,lon2=b
-          dlat,dlon=math.radians(lat2-lat1), math.radians(lon2-lon1)
-          sa,ca=math.sin(dlat/2), math.cos(math.radians(lat1))*math.cos(math.radians(lat2))*math.sin(dlon/2)
-          c=2*math.atan2(math.sqrt(sa*sa+ca), math.sqrt(1-sa*sa-ca))
-          return R*c
+            R=6371.0
+            lat1,lon1=a; lat2,lon2=b
+            dlat,dlon=math.radians(lat2-lat1), math.radians(lon2-lon1)
+            sa,ca=math.sin(dlat/2), math.cos(math.radians(lat1))*math.cos(math.radians(lat2))*math.sin(dlon/2)
+            c=2*math.atan2(math.sqrt(sa*sa+ca), math.sqrt(1-sa*sa-ca))
+            return R*c
 
           data=json.load(open('lines.json'))
           total=0.0
