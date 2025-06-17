@@ -49,10 +49,81 @@ jobs:
           }
           JSON
 
-      - name: Commit & push if changed
+      - id: run-line-query
+        name: Run Overpass length query
+        run: |
+          cat << 'EOF' > query-lines.overpassql
+          [out:json][timeout:900];
+
+          node["power"="tower"](user_touched:"Andreas Hernandez", "Tobias Augspurger", "Mwiche", "davidtt92", "relaxxe")-> .my_nodes;
+
+                  
+          node["power"="tower"](user_touched: "Russ","map-dynartio","overflorian","nlehuby","ben10dynartio","InfosReseaux")(newer:"2025-03-01T00:00:00Z")->.their_towers;
+            
+
+            way["power"="line"](bn.my_nodes)-> .connected_ways;
+            way["power"="line"](bn.their_towers)-> .theirconnected_ways;
+            (
+              .my_nodes;
+              .connected_ways;
+              .theirconnected_ways;
+              .their_towers;
+                );
+
+              out body;
+              >;
+              out skel qt;
+          EOF
+
+          # fetch full geometry
+          curl -s --data-urlencode "data@query-lines.overpassql" \
+            https://overpass-api.de/api/interpreter \
+            -o lines.json
+
+          # compute total km using a small Python snippet
+          python3 - << 'PYCODE'
+          import json, math
+
+          def haversine(a,b):
+          R=6371.0
+          lat1,lon1=a; lat2,lon2=b
+          dlat,dlon=math.radians(lat2-lat1), math.radians(lon2-lon1)
+          sa,ca=math.sin(dlat/2), math.cos(math.radians(lat1))*math.cos(math.radians(lat2))*math.sin(dlon/2)
+          c=2*math.atan2(math.sqrt(sa*sa+ca), math.sqrt(1-sa*sa-ca))
+          return R*c
+
+          data=json.load(open('lines.json'))
+          total=0.0
+          for el in data['elements']:
+           if el['type']=='way' and 'geometry' in el:
+            coords=[(n['lat'],n['lon']) for n in el['geometry']]
+            seg=sum(haversine(coords[i],coords[i+1]) for i in range(len(coords)-1))
+            total += seg
+
+          out = {
+           "lengthKm": round(total,2),
+           "updated": "$(date --utc +%Y-%m-%dT%H:%M:%SZ)"
+          }
+          print(json.dumps(out))
+          PYCODE
+              mkdir -p docs/data
+              python3 - << 'SAVE'
+          import sys, json
+          txt=sys.stdin.read()
+          data=json.loads(txt)
+          with open('docs/data/line-length.json','w') as f:
+           json.dump(data, f)
+          SAVE
+
+      - name: Commit & push if changed (include line length)
         uses: EndBug/add-and-commit@v9
         with:
           author_name: github-actions[bot]
           author_email: github-actions[bot]@users.noreply.github.com
-          message: "chore: weekly tower count (${{ steps.run-query.outputs.count }})"
-          add: docs/data/tower-count.json
+          message: |
+            chore: weekly stats
+            - towers ${{ steps.run-query.outputs.count }}
+            - lines ${{ steps.run-line-query.outputs.lengthKm }} km
+          add: |
+            docs/data/tower-count.json
+            docs/data/line-length.json

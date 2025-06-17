@@ -48,6 +48,18 @@ Here are some [heatmaps](https://yosmhm.neis-one.org/) of the mapping work some 
     <br>
     <span id="tower-updated" style="font-size:0.8em; color:#666">Last updated: —</span>
   </div>
+
+  <div class="progress-item">
+    <label>Total estimated power line length added by our team (in km):</label>
+    <div class="progress">
+      <div class="progress-bar" id="line-length-bar" style="background-color: #ffc107;"></div>
+    </div>
+    <span id="line-length-count">Loading…</span><br>
+    <span id="line-length-updated" style="font-size:0.8em; color:#666">
+      Last updated: —
+    </span>
+  </div>
+
 </div>
 
 
@@ -57,6 +69,7 @@ Here are some [heatmaps](https://yosmhm.neis-one.org/) of the mapping work some 
   const CONTRIBUTORS_GOAL = 1;
   const EDITS_GOAL        = 10000;
   const TOWER_GOAL        = 10000;
+  const LINE_LENGTH_GOAL = 5000;
    // —— UPDATE Ohsome (#ohmygrid) —— 
   async function updateOhsome() {
     const contribCountEl = document.getElementById('contributors-count');
@@ -127,6 +140,31 @@ Here are some [heatmaps](https://yosmhm.neis-one.org/) of the mapping work some 
   }
 }
 
+async function loadLineLength() {
+  const lengthEl      = document.getElementById('line-length-count');
+  const lengthBar     = document.getElementById('line-length-bar');
+  const updatedEl     = document.getElementById('line-length-updated');
+
+  lengthEl.textContent   = 'Loading…';
+  lengthBar.style.width  = '0%';
+  updatedEl.textContent  = 'Last updated: —';
+
+  try {
+    const resp = await fetch('/data/line-length.json');
+    if (!resp.ok) throw new Error(resp.statusText);
+    const { lengthKm, updated } = await resp.json();
+
+    lengthEl.textContent   = lengthKm.toLocaleString(undefined, { minimumFractionDigits: 2 }) + ' km';
+    lengthBar.style.width  = Math.min(100, lengthKm / LINE_LENGTH_GOAL * 100) + '%';
+    updatedEl.textContent  = `Last updated: ${new Date(updated).toLocaleString()}`;
+  } catch(err) {
+    console.error('Error loading line length', err);
+    lengthEl.textContent = 'Error';
+    updatedEl.textContent = '';
+  }
+}
+
+
     // —— MAIN & CACHE HANDLING ——
   function attemptCacheLoad(id, maxAgeMs) {
     try {
@@ -164,14 +202,18 @@ Here are some [heatmaps](https://yosmhm.neis-one.org/) of the mapping work some 
       loadTowerCount();
     }
 
+    loadLineLength();
+
     // refresh button now refreshes both
     const btn = document.getElementById('refresh-btn');
     if (btn) {
       btn.addEventListener('click', () => {
         localStorage.removeItem('ohmygrid-ohsome');
         localStorage.removeItem('ohmygrid-towers');
+        localStorage.removeItem('ohmygrid-line-length');
         updateOhsome();
         loadTowerCount();
+        loadLineLength();
       });
     }
   });
