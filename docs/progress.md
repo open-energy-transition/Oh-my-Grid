@@ -1,5 +1,5 @@
 <div class="page-headers">
-<h1>Our Progress and Country Logbook ↗📈 </h1>
+<h1>Our Progress and Country Logbook ↗ </h1>
 </div>
 
 Welcome to our team's progress page, where you can see our mapping progress in many different countries.
@@ -180,9 +180,6 @@ Here are some [heatmaps](https://yosmhm.neis-one.org/) of the mapping work some 
 You can find more stats for #ohmygrid at [OhsomeNowstats](https://stats.now.ohsome.org/dashboard#hashtag=ohmygrid&start=2025-03-12T22:00:00Z&end=2025-05-14T21:59:59Z&interval=P1M&countries=&topics=).
 
 <!-- LOGBOOK: Add your country below the last country. Some css (in extra.css at "Hide ### from logbook") is being used to remove the ### from the table of contents so please use the same name or tell me -->
-
-<!-- You can find country flag emojis or codes here https://www.webnots.com/copy-paste-country-flag-emoji-symbols/-->
-
 <!-- End of country logbook -->
 <br>
 ###Africa
@@ -419,7 +416,7 @@ You can find more stats for #ohmygrid at [OhsomeNowstats](https://stats.now.ohso
 
 ##**Want to track and see your personal mapping progress (KPI)? :white_check_mark:** <br>
 This [repository](https://github.com/open-energy-transition/KPI-OSM/tree/main) has a few different scripts (Overpass and Python) to measure your KPI's, as well as a [web-interface](https://open-energy-transition.github.io/KPI-OSM/). You can see how many towers you have placed and the respective line voltage, the power line length you have edited in km, the amount of MW capacity you added as a % of the country's mapped capacity, and a distribution table by voltage of substations you have added. <br>
-<div style="display: flex; justify-content: left; gap: 40px; margin: 20px auto; max-width: 1200px;">
+<div class="heatmap-container">
   <img src="../images/kp3.png" class="img-border" width="400">
   <img src="../images/kp4.png" class="img-border" width="400">
 </div>

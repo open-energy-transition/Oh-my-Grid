@@ -523,7 +523,7 @@
 /* Heatmap images container - responsive layout */
 .heatmap-container {
   display: flex;
-  justify-content: space-between;
+  
   gap: 20px;
   margin: 20px 0;
 }
