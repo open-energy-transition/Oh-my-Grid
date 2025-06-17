@@ -154,7 +154,7 @@ async function loadLineLength() {
     if (!resp.ok) throw new Error(resp.statusText);
     const { lengthKm, updated } = await resp.json();
 
-    lengthEl.textContent   = lengthKm.toLocaleString(undefined, { minimumFractionDigits: 2 }) + ' km';
+    lengthEl.textContent = Math.round(lengthKm).toLocaleString() + ' km';
     lengthBar.style.width  = Math.min(100, lengthKm / LINE_LENGTH_GOAL * 100) + '%';
     updatedEl.textContent  = `Last updated: ${new Date(updated).toLocaleString()}`;
   } catch(err) {
