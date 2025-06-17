@@ -110,6 +110,13 @@ Let me know if you’d like to adapt this for a specific format (like a blog pos
 How does mapping have an impact? When you map towers, substations, powerplants in OpenStreetMap, you are essentially adding valuable data that is used by many different entities. Below is a curated list of organisations and projects that have had an impact and have used this data.
 
 **International Energy Agency**  ![IEA logo](images/impact/International-energy-agency-logo.png){width=30px} 
+??? "Energy and AI Observatory"
+    
+    === "[Energy and AI Observatory (link)](https://www.iea.org/data-and-statistics/data-tools/energy-and-ai-observatory)"
+        ![map](images/impact/powerandai.jpg){: .img-border }
+
+
+**International Energy Agency**  ![IEA logo](images/impact/International-energy-agency-logo.png){width=30px} 
 ??? "Latin America Energy Outlook Interactive Map"
     
     === "[Latin America Energy Outlook Interactive Map (link)](https://www.iea.org/data-and-statistics/data-tools/latin-america-energy-outlook-interactive-map)"
