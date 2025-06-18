@@ -23,9 +23,9 @@ International connections:<br>
 </div>
 <div style="display: inline-block;">4099 MW<br>
 33<br>
-403<br>
+396<br>
 6114 km<br>
-62<br>
+61<br>
 </div>
 
 <br><br><h4>See also :
@@ -41,15 +41,13 @@ International connections:<br>
 
 ## Progress map
 
-<center>![Map](../images/maps_countries/KG/high-voltage-network.jpg){width=60%}
-![Map](../images/maps_countries_legend_progress.jpg){width=50%}</center>
+![Map](../images/maps_countries/KG/high-voltage-network.png){width=90%}
 
 
 
 ## Grid connectivity overview
 
-Grid connectivity summary (nb of substations x nb of connections) :<br>65x180 + 12x17 + 8x9 + 3x4 + 3x3 + 3x2 + 3x2 + 2x2 + 2x2 + 2x1 + 2x1 + 2x1 + 2x1 + 2x1 + 1x3 + 1x1 + 1x1
+Grid connectivity summary (nb of substations x nb of connections) :<br>62x177 + 12x17 + 8x9 + 3x4 + 3x3 + 3x2 + 3x2 + 2x2 + 2x2 + 2x1 + 2x1 + 2x1 + 2x1 + 2x1 + 1x3 + 1x1 + 1x1
 
-<center>![Map](../images/maps_countries/KG/grid-connectivity.jpg){width=60%}
-![Map](../images/maps_countries_legend_grid.jpg){width=50%}</center>
+![Map](../images/maps_countries/KG/grid-connectivity.png){width=90%}
 
