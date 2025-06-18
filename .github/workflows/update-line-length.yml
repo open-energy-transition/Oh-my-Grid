@@ -20,8 +20,8 @@ jobs:
           cat << 'EOF' > query.overpassql
           [out:json][timeout:900];
           
-          node["power"="tower"](user_touched:"Andreas Hernandez","Tobias Augspurger","davidtt92","Mwiche") -> .towers;
-          node["power"="pole"](user_touched:"Andreas Hernandez","Tobias Augspurger","davidtt92","Mwiche") -> .poles;
+          node["power"="tower"](user_touched:"Andreas Hernandez","Tobias Augspurger","davidtt92","Mwiche","relaxxe") -> .towers;
+          node["power"="pole"](user_touched:"Andreas Hernandez","Tobias Augspurger","davidtt92","Mwiche","relaxxe") -> .poles;
           
           node["power"="tower"](user: "Russ","map-dynartio","overflorian","nlehuby","ben10dynartio","InfosReseaux")(newer:"2025-03-01T00:00:00Z")->.their_towers;
           
@@ -143,6 +143,22 @@ jobs:
             cat << 'NODEJS2' > calculate_percentage.js
             const fs = require('fs');
             
+            // Function to decode HTML entities
+            function decodeHtmlEntities(text) {
+              const entities = {
+                '&nbsp;': ' ',
+                '&ndash;': '-',
+                '&mdash;': '-',
+                '&amp;': '&',
+                '&lt;': '<',
+                '&gt;': '>',
+                '&quot;': '"',
+                '&#39;': "'",
+                '&hellip;': '...'
+              };
+              return text.replace(/&[a-zA-Z0-9#]+;/g, match => entities[match] || match);
+            }
+            
             try {
               const html = fs.readFileSync('openinframap_stats.html', 'utf8');
               console.error('HTML content length:', html.length);
@@ -157,17 +173,21 @@ jobs:
               console.error('Starting to parse table rows...');
               
               while ((match = tableRowRegex.exec(html)) !== null) {
-                const voltage = match[1].trim();
-                const lengthStr = match[2].trim();
-                const percentage = match[3].trim();
+                // Decode HTML entities in all captured groups
+                const voltage = decodeHtmlEntities(match[1].trim());
+                const lengthStr = decodeHtmlEntities(match[2].trim());
+                const percentage = decodeHtmlEntities(match[3].trim());
                 
                 console.error(`Found row: ${voltage} | ${lengthStr} | ${percentage}`);
+                console.error(`Decoded row: ${voltage} | ${lengthStr} | ${percentage}`);
                 
-                // Extract km value from length string (e.g., "35,823 km" -> 35823)
-                const kmMatch = lengthStr.match(/([\d,]+)\s*km/i);
+                // Extract km value from length string - handle both regular spaces and non-breaking spaces
+                const kmMatch = lengthStr.match(/([\d,\s]+)\s*km/i);
                 if (kmMatch) {
-                  const km = parseInt(kmMatch[1].replace(/,/g, ''));
-                  console.error(`Parsed ${lengthStr} as ${km} km`);
+                  // Remove all non-digit and non-comma characters, then parse
+                  const cleanedNumber = kmMatch[1].replace(/[^\d,]/g, '');
+                  const km = parseInt(cleanedNumber.replace(/,/g, ''));
+                  console.error(`Parsed "${lengthStr}" -> cleaned "${cleanedNumber}" -> ${km} km`);
                   
                   // Check if this is the Total row
                   if (voltage.toLowerCase().includes('total')) {
@@ -175,12 +195,14 @@ jobs:
                     console.error(`Found total: ${km} km`);
                   }
                   // Check if this is a low voltage category to exclude (first 3 rows)
-                  else if (voltage.includes('0 V – 9 kV') || 
-                           voltage.includes('10 kV – 24 kV') || 
-                           voltage.includes('25 kV – 51 kV')) {
+                  else if (voltage.includes('0 V - 9 kV') || 
+                           voltage.includes('10 kV - 24 kV') || 
+                           voltage.includes('25 kV - 51 kV')) {
                     excludedLowVoltageKm += km;
                     console.error(`Excluding ${voltage}: ${km} km`);
                   }
+                } else {
+                  console.error(`Could not match km pattern in: "${lengthStr}"`);
                 }
               }
               
