@@ -2,11 +2,7 @@
 <h1>Our Progress and Country Logbook </h1>
 </div>
 
-OhMyGrid measures its progress at user, hashtag and country level. If you use our tools and training courses, we would be honored if you support our KPI by:
-
-1. Using the #OhMyGrid hashtag in your changesets or
-2. Adding your user id to our [KPI script](https://github.com/open-energy-transition/OhMyGrid/blob/main/.github/workflows/update-tower-count.yml) or
-3. Join our [Mapping.team](https://mapping.team/teams/1570/invitations/eec8b5f8-b212-4013-8707-96245f300fa1)
+OhMyGrid measures its progress at user, hashtag and country level. If you use our tools and training courses, we would be honored if you support our KPI. Just use the #OhMyGrid hashtag in your changesets or add your user id to our [KPI script](https://github.com/open-energy-transition/OhMyGrid/blob/main/.github/workflows/update-tower-count.yml).
 
 <!-- Progress Bars Section -->
 ## **<div class="tools-header">Community Mapping Progress </div>**
