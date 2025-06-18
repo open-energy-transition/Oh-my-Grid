@@ -20,8 +20,8 @@ jobs:
           cat << 'EOF' > query.overpassql
           [out:json][timeout:900];
           
-          node["power"="tower"](user_touched:"Andreas Hernandez","Tobias Augspurger","davidtt92","Mwiche","relaxxe") -> .towers;
-          node["power"="pole"](user_touched:"Andreas Hernandez","Tobias Augspurger","davidtt92","Mwiche", "relaxxe") -> .poles;
+          node["power"="tower"](user_touched:"Andreas Hernandez","Tobias Augspurger","davidtt92","Mwiche") -> .towers;
+          node["power"="pole"](user_touched:"Andreas Hernandez","Tobias Augspurger","davidtt92","Mwiche") -> .poles;
           
           node["power"="tower"](user: "Russ","map-dynartio","overflorian","nlehuby","ben10dynartio","InfosReseaux")(newer:"2025-03-01T00:00:00Z")->.their_towers;
           
@@ -140,47 +140,70 @@ jobs:
           
           try {
             const html = fs.readFileSync('openinframap_stats.html', 'utf8');
+            console.error('HTML content length:', html.length);
             
-            // Extract the table data using regex
-            const tableRegex = /(\d{1,3}(?:,\d{3})*) km.*?(\d+\.\d+)%/g;
-            let match;
+            // Extract table rows - look for pattern: voltage | length | percentage
+            // Using more flexible regex to match the table structure
+            const tableRowRegex = /<tr[^>]*>[\s\S]*?<td[^>]*>([^<]+)<\/td>[\s\S]*?<td[^>]*>([^<]+)<\/td>[\s\S]*?<td[^>]*>([^<]+)<\/td>[\s\S]*?<\/tr>/gi;
+            
             let totalKm = 0;
             let excludedKm = 0;
+            let match;
             
-            // Parse each row
-            while ((match = tableRegex.exec(html)) !== null) {
-              const length = parseInt(match[1].replace(/,/g, ''));
-              totalKm += length;
+            console.error('Starting to parse table rows...');
+            
+            while ((match = tableRowRegex.exec(html)) !== null) {
+              const voltage = match[1].trim();
+              const lengthStr = match[2].trim();
+              const percentage = match[3].trim();
+              
+              console.error(`Found row: ${voltage} | ${lengthStr} | ${percentage}`);
+              
+              // Extract km value from length string (e.g., "35,716 km" -> 35716)
+              const kmMatch = lengthStr.match(/(\d{1,3}(?:,\d{3})*)\s*km/i);
+              if (kmMatch) {
+                const km = parseInt(kmMatch[1].replace(/,/g, ''));
+                console.error(`Parsed ${lengthStr} as ${km} km`);
+                
+                // Check if this is a low voltage category to exclude
+                if (voltage.includes('0 V – 9 kV') || 
+                    voltage.includes('10 kV – 24 kV') || 
+                    voltage.includes('25 kV – 51 kV')) {
+                  excludedKm += km;
+                  console.error(`Excluding ${voltage}: ${km} km`);
+                }
+                
+                // Don't add "Total" row to avoid double counting
+                if (!voltage.toLowerCase().includes('total')) {
+                  totalKm += km;
+                }
+              }
             }
             
-            // Find specific excluded categories
-            const excludePatterns = [
-              /0 V – 9 kV.*?(\d{1,3}(?:,\d{3})*) km/,
-              /10 kV – 24 kV.*?(\d{1,3}(?:,\d{3})*) km/,
-              /25 kV – 51 kV.*?(\d{1,3}(?:,\d{3})*) km/
-            ];
-            
-            excludePatterns.forEach(pattern => {
-              const match = html.match(pattern);
-              if (match) {
-                excludedKm += parseInt(match[1].replace(/,/g, ''));
+            // Try to find the total row separately for verification
+            const totalRowMatch = html.match(/<tr[^>]*>[\s\S]*?<td[^>]*>Total<\/td>[\s\S]*?<td[^>]*>([^<]+)<\/td>/i);
+            let reportedTotal = totalKm;
+            if (totalRowMatch) {
+              const totalKmMatch = totalRowMatch[1].match(/(\d{1,3}(?:,\d{3})*)\s*km/i);
+              if (totalKmMatch) {
+                reportedTotal = parseInt(totalKmMatch[1].replace(/,/g, ''));
+                console.error(`Found total row: ${reportedTotal} km`);
               }
-            });
-            
-            // Also extract total from "Total" row for verification
-            const totalMatch = html.match(/Total.*?(\d{1,3}(?:,\d{3})*) km/);
-            const reportedTotal = totalMatch ? parseInt(totalMatch[1].replace(/,/g, '')) : totalKm;
+            }
             
             const mediumHighVoltageKm = reportedTotal - excludedKm;
+            
+            console.error(`Summary: Total=${reportedTotal}, Excluded=${excludedKm}, Medium-High=${mediumHighVoltageKm}`);
             
             console.log(JSON.stringify({
               totalGlobalKm: reportedTotal,
               excludedLowVoltageKm: excludedKm,
               mediumHighVoltageKm: mediumHighVoltageKm
             }));
+            
           } catch (error) {
             console.error('Error parsing OpenInfraMap stats:', error);
-            // Fallback values if parsing fails
+            // Fallback values if parsing fails (current known values)
             console.log(JSON.stringify({
               totalGlobalKm: 6904040,
               excludedLowVoltageKm: 1083339,
