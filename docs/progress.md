@@ -160,7 +160,7 @@ async function loadLineLength() {
 
    // Only add percentage if we have valid data
     if (percentageOfMediumHigh !== null && percentageOfMediumHigh !== undefined && mediumHighVoltageKm) {
-      displayText += `<br><small style="color: #666; font-size: 0.85em;">${percentageOfMediumHigh}% of all high voltage lines in OpenStreetMap</small>`;
+      displayText += `<br><small style="color: #666; font-size: 0.85em;">${percentageOfMediumHigh}% of all high-voltage lines in OpenStreetMap (source: openinframap.org)</small>`;
     }
     
     lengthEl.innerHTML = displayText;
