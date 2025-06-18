@@ -155,11 +155,15 @@ async function loadLineLength() {
     const data = await resp.json();
     const { lengthKm, mediumHighVoltageKm, percentageOfMediumHigh, updated } = data;
 
-    lengthEl.innerHTML = `${Math.round(lengthKm).toLocaleString()} km` + 
-      (percentageOfMediumHigh ? 
-        `<br><small style="color: #666; font-size: 0.85em;">${percentageOfMediumHigh}% of medium-high voltage lines in OSM</small>` : 
-        '');
+    // Always show the length, even if percentage calculation failed
+    let displayText = `${Math.round(lengthKm).toLocaleString()} km`;
+
+   // Only add percentage if we have valid data
+    if (percentageOfMediumHigh !== null && percentageOfMediumHigh !== undefined && mediumHighVoltageKm) {
+      displayText += `<br><small style="color: #666; font-size: 0.85em;">${percentageOfMediumHigh}% of all high voltage lines in OpenStreetMap</small>`;
+    }
     
+    lengthEl.innerHTML = displayText;
     lengthBar.style.width  = Math.min(100, lengthKm / LINE_LENGTH_GOAL * 100) + '%';
     updatedEl.textContent  = `Last updated: ${new Date(updated).toLocaleString()}`;
   } catch(err) {
