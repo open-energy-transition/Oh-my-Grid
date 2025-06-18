@@ -13,7 +13,6 @@ body_class: landing-page
     </p>
     <div class="primary-link">
      <a href="https://ohmygrid.org/map-it/" target="_blank" rel="noopener">
-    <span class="primary-icon">🌍</span>
     Map It 📍
      </a>
     </div>

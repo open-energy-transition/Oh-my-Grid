@@ -39,10 +39,11 @@ body.landing-page header.md-header {
 
 /* Increased Specificity for Hero Title (from previous step) */
 .hero-section .hero-title {
-  font-size: 2.5rem;
+  font-size: 3rem;
   color: #54a36a;
   font-weight: 700;
   margin-bottom: 1rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .hero-logo {
@@ -56,8 +57,8 @@ body.landing-page header.md-header {
   }
 
 .mission-statement {
-  font-size: 1.5rem;
-  color: #333;
+  font-size: 1.3rem;
+  color: #555555;
   max-width: 100%;
   margin: 0 auto 2rem;
   line-height: 1.4;
@@ -113,13 +114,14 @@ e9f5e9
   align-items: center;
   gap: 0.6rem;           /* a bit more space between icon & text */
   padding: 0.6rem 1.3rem; /* increase click‐area */
-  font-size: 1.1rem;      /* slightly bigger text */
+  font-size: 1.3rem;      /* slightly bigger text */
   font-weight: 700;       /* maybe bolder? */
   color: #ffffff;         /* invert colors if you like—optional */
   background: #54a36a;    /* solid brand color for emphasis */
   border: none;
   border-radius: 0.5rem;
   text-decoration: none;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
   transition: transform 0.2s, filter 0.2s;
 }
 
