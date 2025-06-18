@@ -393,7 +393,9 @@ async function fetchQuery(mode, adminLevel) {
 
 // 2d) unified click handler for country (level 2) & region (level 4)
 async function handleAreaClick(iso, level, layer) {
-  const name = layer.feature.properties.NAME;
+  const name = level === 2 
+    ? layer.feature.properties.NAME      // Countries use NAME
+    : layer.feature.properties.NAME_1;   // Regions use NAME_1
   const sovName= layer.feature.properties.SOVEREIGNT; // for linking to Osmose
   umami.track('map-click');
   layer.setStyle({ color: '#ff7800' });
