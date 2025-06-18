@@ -35,14 +35,14 @@ Here are some [heatmaps](https://yosmhm.neis-one.org/) of the mapping work some 
   <div class="progress-item">
     <label>Total Edits for <code>#ohmygrid</code>:</label>
     <div class="progress">
-      <div class="progress-bar" id="edits-bar" style="background-color: #17a2b8;"></div> </div>
+      <div class="progress-bar" id="edits-bar" style="background-color: #28a745;"></div> </div>
     <span id="edits-count">Loading…</span>
   </div>
 
   <div class="progress-item">
     <label>Towers mapped by our team:</label>
     <div class="progress">
-      <div class="progress-bar" id="tower-bar"></div>
+      <div class="progress-bar" id="tower-bar" style="background-color: #17a2b8;"></div>
     </div>
     <span id="tower-count">Loading…</span>
     <br>
@@ -52,7 +52,7 @@ Here are some [heatmaps](https://yosmhm.neis-one.org/) of the mapping work some 
   <div class="progress-item">
     <label>Total estimated power line length added by our team (in km):</label>
     <div class="progress">
-      <div class="progress-bar" id="line-length-bar" style="background-color: #ffc107;"></div>
+      <div class="progress-bar" id="line-length-bar" style="background-color: #17a2b8;"></div>
     </div>
     <span id="line-length-count">Loading…</span><br>
     <span id="line-length-updated" style="font-size:0.8em; color:#666">
