@@ -39,15 +39,5 @@ International connections:<br>
 </table>
 
 
-## Progress map
 
-![Map](../images/maps_countries/SO/high-voltage-network.png){width=90%}
-
-
-
-## Grid connectivity overview
-
-Grid connectivity summary (nb of substations x nb of connections) :<br>
-
-![Map](../images/maps_countries/SO/grid-connectivity.png){width=90%}
 
