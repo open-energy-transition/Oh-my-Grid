@@ -1,7 +1,7 @@
 {
-  "lengthKm": 42591,
-  "totalGlobalKm": null,
-  "mediumHighVoltageKm": null,
-  "percentageOfMediumHigh": null,
-  "updated": "2025-06-18T11:05:09Z"
+  "lengthKm": 44876,
+  "totalGlobalKm": 6904040,
+  "mediumHighVoltageKm": 5820701,
+  "percentageOfMediumHigh": 0.77,
+  "updated": "2025-06-18T11:17:26Z"
 }
