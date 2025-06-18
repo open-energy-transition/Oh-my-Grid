@@ -130,104 +130,117 @@ jobs:
           
           echo "length=$LENGTH" >> $GITHUB_OUTPUT
           
+          # Initialize variables with fallback values
+          TOTAL_GLOBAL=0
+          EXCLUDED_LOW=0
+          MEDIUM_HIGH_TOTAL=0
+          PERCENTAGE="0.00"
+          
           # Fetch OpenInfraMap stats for percentage calculation
           echo "Fetching OpenInfraMap global stats..."
-          curl -s https://openinframap.org/stats > openinframap_stats.html
-          
-          # Extract voltage data and calculate medium-high voltage total
-          cat << 'NODEJS2' > calculate_percentage.js
-          const fs = require('fs');
-          
-          try {
-            const html = fs.readFileSync('openinframap_stats.html', 'utf8');
-            console.error('HTML content length:', html.length);
+          if curl -s https://openinframap.org/stats > openinframap_stats.html; then
+            # Extract voltage data and calculate medium-high voltage total
+            cat << 'NODEJS2' > calculate_percentage.js
+            const fs = require('fs');
             
-            // Extract table rows - look for pattern: voltage | length | percentage
-            // Using more flexible regex to match the table structure
-            const tableRowRegex = /<tr[^>]*>[\s\S]*?<td[^>]*>([^<]+)<\/td>[\s\S]*?<td[^>]*>([^<]+)<\/td>[\s\S]*?<td[^>]*>([^<]+)<\/td>[\s\S]*?<\/tr>/gi;
-            
-            let totalKm = 0;
-            let excludedKm = 0;
-            let match;
-            
-            console.error('Starting to parse table rows...');
-            
-            while ((match = tableRowRegex.exec(html)) !== null) {
-              const voltage = match[1].trim();
-              const lengthStr = match[2].trim();
-              const percentage = match[3].trim();
+            try {
+              const html = fs.readFileSync('openinframap_stats.html', 'utf8');
+              console.error('HTML content length:', html.length);
               
-              console.error(`Found row: ${voltage} | ${lengthStr} | ${percentage}`);
+              // Extract table rows - look for pattern: voltage | length | percentage
+              const tableRowRegex = /<tr[^>]*>[\s\S]*?<td[^>]*>([^<]+)<\/td>[\s\S]*?<td[^>]*>([^<]+)<\/td>[\s\S]*?<td[^>]*>([^<]+)<\/td>[\s\S]*?<\/tr>/gi;
               
-              // Extract km value from length string (e.g., "35,716 km" -> 35716)
-              const kmMatch = lengthStr.match(/(\d{1,3}(?:,\d{3})*)\s*km/i);
-              if (kmMatch) {
-                const km = parseInt(kmMatch[1].replace(/,/g, ''));
-                console.error(`Parsed ${lengthStr} as ${km} km`);
+              let totalGlobalKm = 0;
+              let excludedLowVoltageKm = 0;
+              let match;
+              
+              console.error('Starting to parse table rows...');
+              
+              while ((match = tableRowRegex.exec(html)) !== null) {
+                const voltage = match[1].trim();
+                const lengthStr = match[2].trim();
+                const percentage = match[3].trim();
                 
-                // Check if this is a low voltage category to exclude
-                if (voltage.includes('0 V – 9 kV') || 
-                    voltage.includes('10 kV – 24 kV') || 
-                    voltage.includes('25 kV – 51 kV')) {
-                  excludedKm += km;
-                  console.error(`Excluding ${voltage}: ${km} km`);
-                }
+                console.error(`Found row: ${voltage} | ${lengthStr} | ${percentage}`);
                 
-                // Don't add "Total" row to avoid double counting
-                if (!voltage.toLowerCase().includes('total')) {
-                  totalKm += km;
+                // Extract km value from length string (e.g., "35,823 km" -> 35823)
+                const kmMatch = lengthStr.match(/([\d,]+)\s*km/i);
+                if (kmMatch) {
+                  const km = parseInt(kmMatch[1].replace(/,/g, ''));
+                  console.error(`Parsed ${lengthStr} as ${km} km`);
+                  
+                  // Check if this is the Total row
+                  if (voltage.toLowerCase().includes('total')) {
+                    totalGlobalKm = km;
+                    console.error(`Found total: ${km} km`);
+                  }
+                  // Check if this is a low voltage category to exclude (first 3 rows)
+                  else if (voltage.includes('0 V – 9 kV') || 
+                           voltage.includes('10 kV – 24 kV') || 
+                           voltage.includes('25 kV – 51 kV')) {
+                    excludedLowVoltageKm += km;
+                    console.error(`Excluding ${voltage}: ${km} km`);
+                  }
                 }
               }
-            }
-            
-            // Try to find the total row separately for verification
-            const totalRowMatch = html.match(/<tr[^>]*>[\s\S]*?<td[^>]*>Total<\/td>[\s\S]*?<td[^>]*>([^<]+)<\/td>/i);
-            let reportedTotal = totalKm;
-            if (totalRowMatch) {
-              const totalKmMatch = totalRowMatch[1].match(/(\d{1,3}(?:,\d{3})*)\s*km/i);
-              if (totalKmMatch) {
-                reportedTotal = parseInt(totalKmMatch[1].replace(/,/g, ''));
-                console.error(`Found total row: ${reportedTotal} km`);
+              
+              const mediumHighVoltageKm = totalGlobalKm - excludedLowVoltageKm;
+              
+              console.error(`Summary: Total=${totalGlobalKm}, Excluded=${excludedLowVoltageKm}, Medium-High=${mediumHighVoltageKm}`);
+              
+              // Only output result if we have valid data
+              if (totalGlobalKm > 0 && mediumHighVoltageKm > 0) {
+                console.log(JSON.stringify({
+                  success: true,
+                  totalGlobalKm: totalGlobalKm,
+                  excludedLowVoltageKm: excludedLowVoltageKm,
+                  mediumHighVoltageKm: mediumHighVoltageKm
+                }));
+              } else {
+                console.log(JSON.stringify({
+                  success: false,
+                  error: `Could not parse valid data. Total: ${totalGlobalKm}, Excluded: ${excludedLowVoltageKm}`
+                }));
               }
+              
+            } catch (error) {
+              console.error('Error parsing OpenInfraMap stats:', error);
+              console.log(JSON.stringify({
+                success: false,
+                error: error.message
+              }));
             }
-            
-            const mediumHighVoltageKm = reportedTotal - excludedKm;
-            
-            console.error(`Summary: Total=${reportedTotal}, Excluded=${excludedKm}, Medium-High=${mediumHighVoltageKm}`);
-            
-            console.log(JSON.stringify({
-              totalGlobalKm: reportedTotal,
-              excludedLowVoltageKm: excludedKm,
-              mediumHighVoltageKm: mediumHighVoltageKm
-            }));
-            
-          } catch (error) {
-            console.error('Error parsing OpenInfraMap stats:', error);
-            // Fallback values if parsing fails (current known values)
-            console.log(JSON.stringify({
-              totalGlobalKm: 6904040,
-              excludedLowVoltageKm: 1083339,
-              mediumHighVoltageKm: 5820701
-            }));
-          }
           NODEJS2
+            
+            STATS_RESULT=$(node calculate_percentage.js)
+            SUCCESS=$(echo $STATS_RESULT | jq -r '.success // false')
+            
+            if [ "$SUCCESS" = "true" ]; then
+              TOTAL_GLOBAL=$(echo $STATS_RESULT | jq -r '.totalGlobalKm')
+              EXCLUDED_LOW=$(echo $STATS_RESULT | jq -r '.excludedLowVoltageKm')
+              MEDIUM_HIGH_TOTAL=$(echo $STATS_RESULT | jq -r '.mediumHighVoltageKm')
+              
+              # Calculate percentage with better precision
+              PERCENTAGE=$(echo "scale=3; $LENGTH * 100 / $MEDIUM_HIGH_TOTAL" | bc -l)
+              # Round to 2 decimal places
+              PERCENTAGE=$(printf "%.2f" $PERCENTAGE)
+              
+              echo "Global total: ${TOTAL_GLOBAL} km"
+              echo "Excluded low voltage: ${EXCLUDED_LOW} km"
+              echo "Medium-high voltage total: ${MEDIUM_HIGH_TOTAL} km"
+              echo "Team contribution: ${LENGTH} km (${PERCENTAGE}%)"
+            else
+              echo "Warning: Could not fetch or parse OpenInfraMap stats. Using length data only."
+              echo "Error: $(echo $STATS_RESULT | jq -r '.error // "Unknown error"')"
+            fi
+          else
+            echo "Warning: Could not fetch OpenInfraMap stats. Using length data only."
+          fi
           
-          STATS_RESULT=$(node calculate_percentage.js)
-          TOTAL_GLOBAL=$(echo $STATS_RESULT | jq -r '.totalGlobalKm')
-          EXCLUDED_LOW=$(echo $STATS_RESULT | jq -r '.excludedLowVoltageKm')
-          MEDIUM_HIGH_TOTAL=$(echo $STATS_RESULT | jq -r '.mediumHighVoltageKm')
-          
-          # Calculate percentage
-          PERCENTAGE=$(echo "scale=2; $LENGTH * 100 / $MEDIUM_HIGH_TOTAL" | bc -l)
-          
-          echo "Global total: ${TOTAL_GLOBAL} km"
-          echo "Excluded low voltage: ${EXCLUDED_LOW} km"
-          echo "Medium-high voltage total: ${MEDIUM_HIGH_TOTAL} km"
-          echo "Team contribution: ${LENGTH} km (${PERCENTAGE}%)"
-          
-          # Create the JSON file with additional stats
+          # Create the JSON file - always include length, add percentage data if available
           mkdir -p docs/data
-          cat << JSON > docs/data/line-length.json
+          if [ "$MEDIUM_HIGH_TOTAL" -gt 0 ] 2>/dev/null; then
+            cat << JSON > docs/data/line-length.json
           {
             "lengthKm": $LENGTH,
             "totalGlobalKm": $TOTAL_GLOBAL,
@@ -236,6 +249,17 @@ jobs:
             "updated": "$(date --utc +%Y-%m-%dT%H:%M:%SZ)"
           }
           JSON
+          else
+            cat << JSON > docs/data/line-length.json
+          {
+            "lengthKm": $LENGTH,
+            "totalGlobalKm": null,
+            "mediumHighVoltageKm": null,
+            "percentageOfMediumHigh": null,
+            "updated": "$(date --utc +%Y-%m-%dT%H:%M:%SZ)"
+          }
+          JSON
+          fi
           
           # Clean up temporary files
           rm -f query.overpassql overpass_data.json calculate_length.js openinframap_stats.html calculate_percentage.js
