@@ -21,7 +21,7 @@ jobs:
           [out:json][timeout:900];
           
           node["power"="tower"](user_touched:"Andreas Hernandez","Tobias Augspurger","davidtt92","Mwiche","relaxxe") -> .towers;
-          node["power"="pole"](user_touched:"Andreas Hernandez","Tobias Augspurger","davidtt92","Mwiche","relaxxe") -> .poles;
+          node["power"="pole"](user_touched:"Andreas Hernandez","Tobias Augspurger","davidtt92","Mwiche", "relaxxe") -> .poles;
           
           node["power"="tower"](user: "Russ","map-dynartio","overflorian","nlehuby","ben10dynartio","InfosReseaux")(newer:"2025-03-01T00:00:00Z")->.their_towers;
           
@@ -130,17 +130,92 @@ jobs:
           
           echo "length=$LENGTH" >> $GITHUB_OUTPUT
           
-          # Create the JSON file
+          # Fetch OpenInfraMap stats for percentage calculation
+          echo "Fetching OpenInfraMap global stats..."
+          curl -s https://openinframap.org/stats > openinframap_stats.html
+          
+          # Extract voltage data and calculate medium-high voltage total
+          cat << 'NODEJS2' > calculate_percentage.js
+          const fs = require('fs');
+          
+          try {
+            const html = fs.readFileSync('openinframap_stats.html', 'utf8');
+            
+            // Extract the table data using regex
+            const tableRegex = /(\d{1,3}(?:,\d{3})*) km.*?(\d+\.\d+)%/g;
+            let match;
+            let totalKm = 0;
+            let excludedKm = 0;
+            
+            // Parse each row
+            while ((match = tableRegex.exec(html)) !== null) {
+              const length = parseInt(match[1].replace(/,/g, ''));
+              totalKm += length;
+            }
+            
+            // Find specific excluded categories
+            const excludePatterns = [
+              /0 V – 9 kV.*?(\d{1,3}(?:,\d{3})*) km/,
+              /10 kV – 24 kV.*?(\d{1,3}(?:,\d{3})*) km/,
+              /25 kV – 51 kV.*?(\d{1,3}(?:,\d{3})*) km/
+            ];
+            
+            excludePatterns.forEach(pattern => {
+              const match = html.match(pattern);
+              if (match) {
+                excludedKm += parseInt(match[1].replace(/,/g, ''));
+              }
+            });
+            
+            // Also extract total from "Total" row for verification
+            const totalMatch = html.match(/Total.*?(\d{1,3}(?:,\d{3})*) km/);
+            const reportedTotal = totalMatch ? parseInt(totalMatch[1].replace(/,/g, '')) : totalKm;
+            
+            const mediumHighVoltageKm = reportedTotal - excludedKm;
+            
+            console.log(JSON.stringify({
+              totalGlobalKm: reportedTotal,
+              excludedLowVoltageKm: excludedKm,
+              mediumHighVoltageKm: mediumHighVoltageKm
+            }));
+          } catch (error) {
+            console.error('Error parsing OpenInfraMap stats:', error);
+            // Fallback values if parsing fails
+            console.log(JSON.stringify({
+              totalGlobalKm: 6904040,
+              excludedLowVoltageKm: 1083339,
+              mediumHighVoltageKm: 5820701
+            }));
+          }
+          NODEJS2
+          
+          STATS_RESULT=$(node calculate_percentage.js)
+          TOTAL_GLOBAL=$(echo $STATS_RESULT | jq -r '.totalGlobalKm')
+          EXCLUDED_LOW=$(echo $STATS_RESULT | jq -r '.excludedLowVoltageKm')
+          MEDIUM_HIGH_TOTAL=$(echo $STATS_RESULT | jq -r '.mediumHighVoltageKm')
+          
+          # Calculate percentage
+          PERCENTAGE=$(echo "scale=2; $LENGTH * 100 / $MEDIUM_HIGH_TOTAL" | bc -l)
+          
+          echo "Global total: ${TOTAL_GLOBAL} km"
+          echo "Excluded low voltage: ${EXCLUDED_LOW} km"
+          echo "Medium-high voltage total: ${MEDIUM_HIGH_TOTAL} km"
+          echo "Team contribution: ${LENGTH} km (${PERCENTAGE}%)"
+          
+          # Create the JSON file with additional stats
           mkdir -p docs/data
           cat << JSON > docs/data/line-length.json
           {
             "lengthKm": $LENGTH,
+            "totalGlobalKm": $TOTAL_GLOBAL,
+            "mediumHighVoltageKm": $MEDIUM_HIGH_TOTAL,
+            "percentageOfMediumHigh": $PERCENTAGE,
             "updated": "$(date --utc +%Y-%m-%dT%H:%M:%SZ)"
           }
           JSON
           
           # Clean up temporary files
-          rm -f query.overpassql overpass_data.json calculate_length.js
+          rm -f query.overpassql overpass_data.json calculate_length.js openinframap_stats.html calculate_percentage.js
           
       - name: Commit & push if changed
         uses: EndBug/add-and-commit@v9
