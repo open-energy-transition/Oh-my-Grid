@@ -1,24 +1,15 @@
 <div class="page-headers">
-<h1>Our Progress and Country Logbook ↗ </h1>
+<h1>Our Progress and Country Logbook </h1>
 </div>
 
-Welcome to our team's progress page, where you can see our mapping progress in many different countries.
+OhMyGrid measures its progress at user, hashtag and country level. If you use our tools and training courses, we would be honored if you support our KPI by:
 
-:question: If you want more detailed information about each country, visit the OSM wiki page about [power networks](https://wiki.openstreetmap.org/wiki/Power_networks).
-
-If you want to join our community, join our OSM [team](https://mapping.team/teams/1570/invitations/eec8b5f8-b212-4013-8707-96245f300fa1), and use our hashtag **#ohmygrid**!
-<br>
-
-Here are some [heatmaps](https://yosmhm.neis-one.org/) of the mapping work some of our team has done:
-<div class="heatmap-container">
-  <img src="../images/progress-page/heatmapAHD.jpg" class="img-border" width="300">
-  <img src="../images/progress-page/heatmapMWI.jpg" class="img-border" width="300">
-  <img src="../images/progress-page/heatmapTA1.jpg" class="img-border" width="300">
-</div>
-
+1. Using the #OhMyGrid hashtag in your changesets or
+2. Adding your user id to our [KPI script](https://github.com/open-energy-transition/OhMyGrid/blob/main/.github/workflows/update-tower-count.yml) or
+3. Join our [Mapping.team](https://mapping.team/teams/1570/invitations/eec8b5f8-b212-4013-8707-96245f300fa1)
 
 <!-- Progress Bars Section -->
-## **<div class="tools-header">Community mapping progress :rocket:</div>**
+## **<div class="tools-header">Community Mapping Progress </div>**
 
 <div class="progress-section"> 
    <button id="refresh-btn" style="margin-bottom:1rem;">
