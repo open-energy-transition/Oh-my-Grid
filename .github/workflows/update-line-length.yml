@@ -1,0 +1,151 @@
+name: Update line length
+on:
+  workflow_dispatch: {} # enables manual trigger
+  schedule:
+    - cron: '0 3 * * 0' # runs every Sunday at 3 UTC (1 hour after tower count)
+permissions:
+  contents: write
+jobs:
+  fetch-line-length:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y jq bc
+      - id: run-query
+        name: Run Overpass line length query
+        run: |
+          cat << 'EOF' > query.overpassql
+          [out:json][timeout:900];
+          
+          node["power"="tower"](user_touched:"Andreas Hernandez","Tobias Augspurger","davidtt92","Mwiche") -> .towers;
+          node["power"="pole"](user_touched:"Andreas Hernandez","Tobias Augspurger","davidtt92","Mwiche") -> .poles;
+          
+          node["power"="tower"](user: "Russ","map-dynartio","overflorian","nlehuby","ben10dynartio","InfosReseaux")(newer:"2025-03-01T00:00:00Z")->.their_towers;
+          
+          (
+            node.towers;
+            node.poles;
+          ) -> .my_nodes;
+          
+          way["power"="line"](bn.my_nodes)-> .connected_ways;
+          way["power"="line"](bn.their_towers)-> .theirconnected_ways;
+          
+          (
+            .my_nodes;
+            .connected_ways;
+            .theirconnected_ways;
+            .their_towers;
+          );
+          
+          out body;
+          >;
+          out skel qt;
+          EOF
+          
+          # Fetch data from Overpass API
+          echo "Fetching data from Overpass API..."
+          curl -s --data-urlencode "data@query.overpassql" \
+            https://overpass-api.de/api/interpreter > overpass_data.json
+          
+          # Check if we got valid JSON
+          if ! jq empty overpass_data.json 2>/dev/null; then
+            echo "Error: Invalid JSON response from Overpass API"
+            cat overpass_data.json
+            exit 1
+          fi
+          
+          # Create Node.js script to calculate line length
+          cat << 'NODEJS' > calculate_length.js
+          const fs = require('fs');
+          
+          // Haversine distance calculation function
+          function haversineDistance(coord1, coord2) {
+            const [lat1, lon1] = coord1;
+            const [lat2, lon2] = coord2;
+            const R = 6371; // Earth radius in km
+            const dLat = (lat2 - lat1) * Math.PI / 180;
+            const dLon = (lon2 - lon1) * Math.PI / 180;
+            const a =
+              Math.sin(dLat/2) * Math.sin(dLat/2) +
+              Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) *
+              Math.sin(dLon/2) * Math.sin(dLon/2);
+            const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+            return R * c;
+          }
+          
+          // Read the Overpass API response
+          const data = JSON.parse(fs.readFileSync('overpass_data.json', 'utf8'));
+          
+          // Build node map & prepare way list
+          const nodes = {};
+          const ways = [];
+          
+          data.elements.forEach(el => {
+            if (el.type === 'node' && el.tags && (el.tags.power === 'tower' || el.tags.power === 'pole')) {
+              nodes[el.id] = [el.lat, el.lon];
+            } else if (el.type === 'way' && el.tags && el.tags.power === 'line') {
+              ways.push(el);
+            }
+          });
+          
+          let totalLength = 0;
+          let wayCount = 0;
+          
+          ways.forEach(way => {
+            // collect only user nodes in sequence that exist in the returned nodes
+            const towerCoords = way.nodes
+              .filter(id => nodes[id]) // Only consider node IDs that were in the .my_nodes set
+              .map(id => nodes[id]);
+          
+            if (towerCoords.length >= 2) {
+              wayCount++;
+              let segLength = 0;
+              for (let i = 0; i < towerCoords.length - 1; i++) {
+                segLength += haversineDistance(towerCoords[i], towerCoords[i+1]);
+              }
+              totalLength += segLength;
+            }
+          });
+          
+          console.log(JSON.stringify({
+            totalLength: Math.round(totalLength),
+            wayCount: wayCount,
+            nodeCount: Object.keys(nodes).length
+          }));
+          NODEJS
+          
+          # Run the calculation
+          echo "Calculating line length..."
+          RESULT=$(node calculate_length.js)
+          LENGTH=$(echo $RESULT | jq -r '.totalLength')
+          WAY_COUNT=$(echo $RESULT | jq -r '.wayCount')
+          NODE_COUNT=$(echo $RESULT | jq -r '.nodeCount')
+          
+          echo "Total length: ${LENGTH} km"
+          echo "Ways processed: ${WAY_COUNT}"
+          echo "Nodes found: ${NODE_COUNT}"
+          
+          echo "length=$LENGTH" >> $GITHUB_OUTPUT
+          
+          # Create the JSON file
+          mkdir -p docs/data
+          cat << JSON > docs/data/line-length.json
+          {
+            "lengthKm": $LENGTH,
+            "updated": "$(date --utc +%Y-%m-%dT%H:%M:%SZ)"
+          }
+          JSON
+          
+          # Clean up temporary files
+          rm -f query.overpassql overpass_data.json calculate_length.js
+          
+      - name: Commit & push if changed
+        uses: EndBug/add-and-commit@v9
+        with:
+          author_name: github-actions[bot]
+          author_email: github-actions[bot]@users.noreply.github.com
+          message: "chore: weekly line length update (${{ steps.run-query.outputs.length }} km)"
+          add: docs/data/line-length.json
