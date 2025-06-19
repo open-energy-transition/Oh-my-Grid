@@ -121,7 +121,7 @@ If you want to be able to map efficiently and fast, you will need to know how to
 ## **<div class="tools-header">Fundamentals of the Electrical Grid for Mappers </div>**
 The following documents and materials will give you a basic understanding of how to map an electrical grid. You don't need to be a grid expert to start mapping your first transmission lines. However, to map larger parts of the grid, you need to understand typical electrical grid design. 
 
-The [Learning Curve](https://www.youtube.com/@TheLearningCurveBenila/videos) provides multiple videos that will help your understand the basic of the electrical grid needed for grid mapping:
+The [Learning Curve](https://www.youtube.com/@TheLearningCurveBenila/videos),is a youtube channel that provides multiple videos that will help you understand the basics of the electrical grid needed for grid mapping:
 
 1. [Electrical Line Supports - Transmission Towers & Poles](https://www.youtube.com/watch?v=AB1qYsiDm0M)
 1. [Components of Overhead Transmission Lines](https://www.youtube.com/watch?v=A6fwq3yHRXQ)
