@@ -539,13 +539,20 @@ async function fetchGEMAndDownload(sovName) {
 }
 
 async function fetchWikidataAndDownload(sovName) {
-  // grab exactly "substations" or "powerplants"
+  // grab the value of the wikidataType so "substations" or "powerplants" from the button selected (go up the script)
   const type = document.getElementById('wikidataType').value;
 
-  // now matches your two repo folders:
-  //   wikidata_substations_geojson_by_country
-  //   wikidata_powerplants_geojson_by_country
-  const folder = `wikidata_${type}_geojson_by_country`;
+  // Here it fetches the folders from the github rpo:
+  //   To add, put the value on the left (value is the value of the button wikidatatype), and on the right the name of the geojson folder from the github repo
+   const foldertypes = {
+    'substations': 'wikidata_substations_geojson_by_country',
+    'powerplants': 'wikidata_powerplants_geojson_by_country'
+  };
+
+  const folder = foldertypes[type];
+  if (!folder) {
+    return alert(`Unknown data type: ${type}`);
+  }
 
   const fileName = sovName.replace(/\s+/g,'_') + '.geojson';
   const url = `https://raw.githubusercontent.com/open-energy-transition/osm-wikidata-toolset/main/`
