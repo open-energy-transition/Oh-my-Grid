@@ -549,12 +549,17 @@ async function fetchWikidataAndDownload(sovName) {
     'powerplants': '/output_by_qid/Q159719_power_plant'
   };
 
-  const folder = foldertypes[type];
-  if (!folder) {
-    return alert(`Unknown data type: ${type}`);
-  }
+  // Manual name mapping for file name normalization
+  const nameMap = {
+    "United States of America": "United_States",
+    "Democratic Republic of the Congo": "Democratic_Republic_of_Congo"
+    // Add more as needed
+  };
 
-  const fileName = sovName.replace(/\s+/g,'_') + '.geojson';
+  const mappedName = nameMap[sovName] || sovName.replace(/\s+/g, '_');
+  const fileName = mappedName + '.geojson';
+
+
   const url = `https://raw.githubusercontent.com/open-energy-transition/osm-wikidata-toolset/main/`
             + `${folder}/${fileName}`;
 
