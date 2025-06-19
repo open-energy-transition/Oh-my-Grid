@@ -555,7 +555,7 @@ async function fetchWikidataAndDownload(sovName) {
   }
 
   const fileName = sovName.replace(/\s+/g,'_') + '.geojson';
-  const url = `https://raw.githubusercontent.com/open-energy-transition/osm-wikidata-toolset/`
+  const url = `https://raw.githubusercontent.com/open-energy-transition/osm-wikidata-toolset/main/`
             + `${folder}/${fileName}`;
 
   const resp = await fetch(url);
