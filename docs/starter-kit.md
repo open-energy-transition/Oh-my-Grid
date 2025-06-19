@@ -74,7 +74,7 @@ Mapping is an iterative process, so you will make mistakes at first. However, th
   <figcaption class="image-caption">This is a highlighted substation on OpenStreetMap, with multiple lines leading away from it.</figcaption>
 </div>
 
-1. For ease of mapping, customise your top toolbar with presets if you have not used the default preferences. Right click the toolbar and choose `Configure toolbar`, then select `Presets → Man Made → Man Made/Power` and add power towers, power portals and other presets for your mapping acticity.
+1. For ease of mapping, customise your top toolbar with presets if you have not used the default preferences. Right click the toolbar and choose `Configure toolbar`, then select `Presets → Man Made → Man Made/Power` and add power towers, power portals and other presets for your mapping activity.
 2. Start Mapping. Read more about the general mapping process in JOSM. Place nodes (eg. power towers, power portals) or place polygons to delimit an area (eg. substation, generator), and press on the preset structure you want it to be.:pencil: Example: As seen in the image, the red polygon is a substation which is mapped by adding nodes that are connected to each other and tagged as a substation. 
 3. Whilst having the OpenStreetMap layer activated, press the green Upload arrow. Avoid ignoring validation results. The only acceptable warning when uploading data is "Possible missing line support node within power line". When you make an edit, please use the **#ohmygrid** in the changeset to help the initiative!
 
