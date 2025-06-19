@@ -546,7 +546,7 @@ async function fetchWikidataAndDownload(sovName) {
   //   To add, put the value on the left (value is the value of the button wikidatatype), and on the right the name of the geojson folder from the github repo
    const foldertypes = {
     'substations': 'wikidata_substations_geojson_by_country',
-    'powerplants': 'Q159719_power_plant'
+    'powerplants': 'output_by_qid/Q159719_power_plant'
   };
 
   const folder = foldertypes[type];
@@ -555,7 +555,7 @@ async function fetchWikidataAndDownload(sovName) {
   }
 
   const fileName = sovName.replace(/\s+/g,'_') + '.geojson';
-  const url = `https://raw.githubusercontent.com/open-energy-transition/osm-wikidata-toolset/main/`
+  const url = `https://raw.githubusercontent.com/open-energy-transition/osm-wikidata-toolset/`
             + `${folder}/${fileName}`;
 
   const resp = await fetch(url);
