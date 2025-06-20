@@ -38,9 +38,6 @@ To understand the influence of OpenStreetMap electrical grid data in research, o
 
 ## **<div class="tools-header">Why is it important that this data is open?</div>**
 
-
-## Why Is It Important That This Data Is Open?
-
 Access to open and accurate data on electricity infrastructure is essential for effective planning, development, and collaboration—especially in the context of the global energy transition. The benefits are far-reaching, particularly for developing countries and emerging economies.
 
 ### Bridging Data Gaps in Developing Countries
@@ -72,12 +69,25 @@ Open data on energy infrastructure supports not just **decarbonization and elect
 
 > “**Open data is crucial for innovation that will accelerate the energy system to Net Zero.**”
 > — [*Catapult Energy Systems*](https://es.catapult.org.uk/tools-and-labs/open-data/#:~:text=Open%20data%20is%20crucial%20for,energy%20system%20to%20Net%20Zero)
+<br><br>
 
+<div style="float: right; margin: 5px 0 20px 20px; width: 350px;">
+  <a href="../images/impact/HILFD-savingspdf.png" target="_blank">
+  <img src="../images/impact/HILFD-savingspdf.png" class="img-border" style="width: 100%;"> </a>
+  <figcaption class="image-caption">Creating Foundation Electric Energy Infrastructure Data from Open-Sources document.</figcaption>
+</div> 
+
+### Economic savings and benefits compared to proprietary datasets 
+
+Open-source data from OpenStreetMap, have enabled government and local authorities to create high-quality datasets whilst not having to pay for high-cost proprietary datasets. For example, the US Department of Energy and partners have created the "Electric Energy Infrastructure Data" utilising open-source data, which led to **"estimated savings of 65% (~2 million dollars) over proprietary datasets"** ([source](https://www.energy.gov/sites/default/files/2023-01/poster-%20Creating%20Foundation%20Electric%20Energy%20Infrastructure%20Data%20from%20Open-Sources.pdf)).
+
+<br>
 ### The Urgency for Open Data in Emerging Economies
 
 Expanding access to electricity is vital for **poverty reduction, economic stability**, and **climate resilience**. However, one of the greatest barriers to grid expansion is the **lack of reliable data**. In some cases, data is deliberately withheld due to perceived security concerns, mirroring outdated "security through obscurity" practices in software development.
 
 Where official data is lacking, **OpenStreetMap becomes the de facto platform** for mapping the grid. Yet even here, progress can be limited by the **quality of satellite imagery** available in some regions, with outdated or low-resolution images provided by services such as ESRI and Microsoft.
+
 
 ### Examples from High-Income Countries
 
@@ -121,6 +131,12 @@ How does mapping have an impact? When you map towers, substations, powerplants i
     
     === "[Latin America Energy Outlook Interactive Map (link)](https://www.iea.org/data-and-statistics/data-tools/latin-america-energy-outlook-interactive-map)"
         ![map](images/impact/iea-latinmap.jpg){: .img-border }
+
+**US Department of Homeland Security**  ![US dep logo](images/impact/us-homeland.png){width=30px} 
+??? "Homeland Infrastructure Foundation-Level Data (HIFLD)"
+    
+    === "[Homeland Infrastructure Foundation-Level Data (HIFLD) (link)](https://hifld-geoplatform.hub.arcgis.com/datasets/3486fb60feb2454c99232248fdf624ec_0/explore)"
+        ![map](images/impact/HILFD-JOSM.png){: .img-border }
 
 **World Bank**  ![World Bank logo](images/impact/worldbanklogo.jpg){width=70px} 
 ??? "Africa Electricity Grids Explorer"
