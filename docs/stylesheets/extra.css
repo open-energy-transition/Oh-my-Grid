@@ -78,6 +78,12 @@
 .md-tabs__link {
   font-weight: bold;
 }
+
+/* -------------------------General all pages css stuff-------------------------------------------------------------------------------------*/
+/* make all level‑3 (###) headings use a bold font-weight */
+.md-typeset h3 {
+  font-weight: 700 !important;
+}
 /* -------------------------Pages-------------------------------------------------------------------------------------*/
 
 /* Justify regular content */
