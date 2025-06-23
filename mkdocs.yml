@@ -40,6 +40,7 @@ theme:
     - search.highlight
     - search.suggest
     - navigation.top
+    - navigation.sections
     - content.image.zoom
 
 extra_css:
@@ -47,6 +48,7 @@ extra_css:
     - stylesheets/landing.css
     - stylesheets/blog.css
     - https://cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.css
+
 
 extra:
   generator: false
@@ -58,6 +60,7 @@ extra:
 
 extra_javascript:
   - js/umami.js
+
 
 
 markdown_extensions:

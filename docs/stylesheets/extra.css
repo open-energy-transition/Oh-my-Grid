@@ -554,10 +554,37 @@
   }
 }
 
+/* -----------------------------------------nav bar colour---------------------------------------------------------------------*/
 :root  > * {
   --md-primary-fg-color:        #036d7a;
   --md-primary-fg-color--light: #036d7a;
   --md-primary-fg-color--dark:  #036d7a;
 }
 
-/* --------------------------------------------------------------------------------------------------------------*/
+/* -----------------------------------------announce banner at top---------------------------------------------------------------------*/
+aside.md-banner {
+  background-color: #7bbc8c !important;
+  color:            #ffffff !important;
+}
+
+
+aside.md-banner a,
+aside.md-banner a > div {
+  background: transparent !important;
+  color:      #000  !important;
+}
+
+/* -----------------------------------------frame around repo link top right---------------------------------------------------------------------*/
+.md-source {
+  background-color: transparent !important;
+  border: 2px solid #fff !important;
+  border-radius: 8px !important;
+  padding: 0.2rem 0.4rem !important;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
+  transition: all 0.3s ease !important;
+  text-decoration: none !important;
+  color: #ffff !important;
+  max-width: 160px !important; /* Limit the maximum width */
+  width: auto !important;
+  overflow: hidden !important; 
+}

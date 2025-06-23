@@ -17,9 +17,6 @@ body_class: landing-page
      </a>
     </div>
     <div class="social-links">
-      <a href="https://discord.gg/a5znpdFWfD" target="_blank" rel="noopener">
-        <img src="icons/discord.svg" alt="Discord" class="social-icon" /> Discord
-      </a>
       <a href="https://ohmygrid.org/impact/" target="_blank" rel="noopener">
         💡 Impact
       </a>
@@ -59,14 +56,23 @@ body_class: landing-page
   <h2>Get Involved</h2>
   <div class="get-involved-grid">
     <a href="https://discord.gg/a5znpdFWfD" class="get-involved-card">
+      <div class="card-icon">
+        <img src="/icons/discord.svg" alt="Discord" class="icon-svg">
+      </div>
       <h3>Join Our Community</h3>
       <p>Connect with fellow contributors on Discord and participate in our community discussions.</p>
     </a>
     <a href="https://ohmygrid.org/starter-kit/" class="get-involved-card">
+      <div class="card-icon">
+        <img src="/images/josm_logo.jpg" alt="Discord" class="icon-svg">
+      </div>
       <h3>Learn Grid Mapping</h3>
       <p>Start contributing to OpenStreetMap and help map the electrical grid in your area.</p>
     </a>
     <a href="https://ohmygrid.org/map-it/" class="get-involved-card">
+      <div class="card-icon">
+        <span class="icon-emoji">📍</span>
+      </div>
       <h3>Contribute to your Country</h3>
       <p>Apply advanced mapping strategies and tools to your local transmission grid.</p>
     </a>
