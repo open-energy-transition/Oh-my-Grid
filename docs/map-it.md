@@ -3,15 +3,9 @@
 </div>
 Welcome to our interactive mapping tool! Click on a country below to start mapping power infrastructure directly in JOSM. :rocket:
 If this is your first time mapping, go through the [starter-kit tutorial](https://ohmygrid.org/starter-kit/) we prepared for you. <br>
-Please use the <span class="big-font">#ohmygrid</span> hashtag in your changeset to show your support for our initiative when you make an edit!
-
-* Remember to allow remote control in `Edit>Preferences>Remote Control` and to **disable all ad blocker**.
-* Please read the common mistakes section in the starter-kit! 
-* Certain countries should not be mapped on a national level (eg. Brasil, USA, India), but you can zoom in to click on regions/states.
+Please use the **#ohmygrid** hashtag in your changeset to show your support for our initiative when you make an edit!
 
 You can select what power infrastructure you want by clicking on the different choices. The **Default Transmission (90 kV+)** pulls all **transmission** power infrastructure and should be used when mapping generally. The repository with all the overpass queries can be found [here](https://github.com/open-energy-transition/osm-grid-definition). The Osmose, Global energy monitor, and Wikidata buttons are **hint layer** tools, which you can read about in our [tools](https://ohmygrid.org/tools/) page. 
-
-⚠️Please do NOT copy any data from **hint layer** directly into your OpenStreetMap data layer. Every data point in your OpenStreetMap data layer must be manually set and [verified](https://wiki.openstreetmap.org/wiki/Verifiability). The metadata must also be verified against compatible licensed sources or by people on the ground. If you cannot verify the data using satellite images or any other compatible source, please do not add this information from hint layers. This may seem like a high burden at first, but it ensures the high quality of OpenStreetMap.⚠️
 
 <!-- Beginning of Map section-->
 <style>
@@ -719,6 +713,12 @@ fetch('../data/regionsv2.geojson')
     console.warn("Google Sheets iframe not found for scroll-prevention script.");
   }
 </script>
+
+* Remember to allow remote control in `Edit>Preferences>Remote Control` and to **disable all ad blocker**.
+* Please read the common mistakes section in the starter-kit! 
+* Certain countries should not be mapped on a national level (eg. Brasil, USA, India), but you can zoom in to click on regions/states.
+
+⚠️Please do NOT copy any data from **hint layer** directly into your OpenStreetMap data layer. Every data point in your OpenStreetMap data layer must be manually set and [verified](https://wiki.openstreetmap.org/wiki/Verifiability). The metadata must also be verified against compatible licensed sources or by people on the ground. If you cannot verify the data using satellite images or any other compatible source, please do not add this information from hint layers. This may seem like a high burden at first, but it ensures the high quality of OpenStreetMap.⚠️
 
 
 <!-- End of Map section-->
