@@ -104,6 +104,8 @@ You can select what power infrastructure you want by clicking on the different c
 // ———————————————
 const osmoseNameOverrides = {
   "Bosnia and Herzegovina": "bosnia_herzegovina",
+  "eSwatini": "swaziland",
+  "United States": "usa"
   // add more special cases here if needed
 };
 

@@ -39,9 +39,9 @@ body.landing-page header.md-header {
 
 /* Increased Specificity for Hero Title (from previous step) */
 .hero-section .hero-title {
-  font-size: 3rem;
+  font-size: 3.5rem;
   color: #54a36a;
-  font-weight: 700;
+  font-weight: 730;
   margin-bottom: 1rem;
   
 }
@@ -57,7 +57,7 @@ body.landing-page header.md-header {
   }
 
 .mission-statement {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   color: #555555;
   max-width: 100%;
   margin: 0 auto 2rem;
@@ -101,7 +101,7 @@ body.landing-page header.md-header {
   width: 20px;
   height: 20px;
 }
-e9f5e9
+
 /* — Primary “Start Mapping!” button — */
 .primary-link {
   /* push the social-links further down */
@@ -112,12 +112,12 @@ e9f5e9
   /* same base style as .social-links a, but slightly larger */
   display: inline-flex;
   align-items: center;
-  gap: 0.6rem;           /* a bit more space between icon & text */
-  padding: 0.6rem 1.3rem; /* increase click‐area */
-  font-size: 1.3rem;      /* slightly bigger text */
-  font-weight: 700;       /* maybe bolder? */
-  color: #ffffff;         /* invert colors if you like—optional */
-  background: #54a36a;    /* solid brand color for emphasis */
+  gap: 0.6rem;           
+  padding: 0.6rem 1.3rem; 
+  font-size: 1.3rem;      
+  font-weight: 700;       
+  color: #ffffff;         
+  background: #54a36a;    
   border: none;
   border-radius: 0.5rem;
   text-decoration: none;
@@ -135,21 +135,21 @@ e9f5e9
   line-height: 1;       /* prevent weird vertical alignment */
 }
 
-/* ==== INITIATIVE SECTION ==== */
+/* ==== Why it matters SECTION ==== */
 .initiative-section {
-  padding: 1rem 2rem;
+  padding: 1rem 1rem;
   background-color: #f8f9fa;
 
 }
 
 .initiative-content {
-  max-width: 800px;
+  max-width: 1000px;
   margin: 0 auto;
   text-align: center;
 }
 
 .initiative-content h2 {
-  color: #2a6d3c;
+  color: #54a36a;
   font-size: 2.5rem;
   margin-bottom: 1.5rem;
   font-weight: 700;
@@ -199,7 +199,7 @@ e9f5e9
 }
 
 .get-involved-section h2 {
-  color: #2a6d3c;
+  color: #2A6D3C;
   font-size: 2.5rem;
   margin-bottom: 2rem;
   font-weight: 700;
@@ -249,6 +249,26 @@ e9f5e9
   flex-grow: 1;
 }
 
+.card-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: -0.5rem;
+  height: 20px; /* Fixed height for consistent alignment */
+}
+
+/*  SVG icon styling */
+.icon-svg {
+  width: 43px;
+  height: 43px;
+}
+
+/* Emoji icon styling */
+.icon-emoji {
+  font-size: 36px;
+  line-height: 1;
+}
+
 /* ==== WHO WE ARE SECTION ==== */
 .who-we-are-section {
   padding: 0.5rem 2rem; /* Increased top/bottom padding */
@@ -257,7 +277,7 @@ e9f5e9
 }
 
 .who-we-are-section h2 {
-  color: #2a6d3c; /* Match other section titles */
+  color: #54a36a; /* Match other section titles */
   font-size: 2.5rem;
   margin-bottom: 1rem; /* Reduced bottom margin */
   font-weight: 700;
@@ -356,7 +376,7 @@ e9f5e9
   .get-involved-section h2 {
       font-size: 2rem;
   }
-
+  
   .initiative-illustration {
       max-width: 80%;
   }
