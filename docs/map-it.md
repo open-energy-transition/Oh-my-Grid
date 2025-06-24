@@ -421,7 +421,7 @@ setTimeout(() => {
 
   const html = `
     <div class="popup-success">
-      <p>🎉 <strong>Great!</strong> Now go back to JOSM and check if it is downloading. Depending on the country, this may take <em>30 seconds or more</em>. For "tools and hints", you should have a geojson download.</p>
+      <p>🎉 <strong>Great!</strong> Now go back to JOSM and check if it is downloading. Depending on the country, this may take <em>30 seconds or more</em>. For "tools and hints", you should have a geojson download. The grid of some countries are to large to be mapped on a national level. However, you can zoom in and click on regions or states.</p>
       <p>⚠️ <strong>If nothing happens:</strong></p>
       <ol>
         <li>Check if your ad-blocker is off</li>
@@ -715,10 +715,6 @@ fetch('../data/regionsv2.geojson')
     console.warn("Google Sheets iframe not found for scroll-prevention script.");
   }
 </script>
-
-* Remember to allow remote control in `Edit>Preferences>Remote Control` and to **disable all ad blocker**.
-* Please read the common mistakes section in the starter-kit! 
-* Certain countries should not be mapped on a national level (eg. Brasil, USA, India), but you can zoom in to click on regions/states.
 
 ⚠️Please do NOT copy any data from **hint layer** directly into your OpenStreetMap data layer. Every data point in your OpenStreetMap data layer must be manually set and [verified](https://wiki.openstreetmap.org/wiki/Verifiability). The metadata must also be verified against compatible licensed sources or by people on the ground. If you cannot verify the data using satellite images or any other compatible source, please do not add this information from hint layers. This may seem like a high burden at first, but it ensures the high quality of OpenStreetMap.⚠️
 
