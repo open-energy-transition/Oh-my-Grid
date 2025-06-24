@@ -10,17 +10,21 @@ OpenStreetMap’s electrical grid data is actively used by grid operators, acade
 
 These simulations help evaluate technology options, policy impacts, and pathways to full electrification—especially in developing countries. Energy models are essential for advancing decarbonization goals and achieving sustainable development. However, the effectiveness of these models depends heavily on the **quality and completeness of the data** they rely on.
 
-High-quality, up-to-date data is vital for planning and investing in power infrastructure. Enhancing the current state of the OpenStreetMap electrical grid significantly improves the reliability and impact of these planning tools. For example, [PyPSA Earth](https://pypsa-earth.readthedocs.io/en/latest/index.html), an open-source global energy system model, uses OpenStreetMap grid data as the foundation for constructing its electricity network.
+High-quality, up-to-date data is vital for planning and investing in power infrastructure. Enhancing the current state of the OpenStreetMap electrical grid significantly improves the reliability and impact of these planning tools. For example, [PyPSA Earth](https://pypsa-earth.readthedocs.io/en/latest/index.html), an open-source global energy system model, uses OpenStreetMap grid data as the foundation for constructing its electricity grid for [regions all around the world](https://pypsa-earth.readthedocs.io/en/latest/users_list.html#).
 
 ### Use by Major Institutions
 
 Organizations such as the **World Bank** and the **International Energy Agency (IEA)** rely on OpenStreetMap data for regional and continental energy analyses. In many cases, OpenStreetMap provides the **only available** source of open, accessible infrastructure data. Making such data publicly available adds considerable **societal value** for planning and clean energy transitions, while also creating **economic value** for the private sector.
 
-One of the major global challenges in the clean energy transition is the modernization and expansion of transmission infrastructure. The IEA emphasizes the need for reliable data to support this effort:
+One of the major global challenges in the clean energy transition is the modernization and expansion of transmission infrastructure. The IEA emphasizes the need for reliable data and collaborative platforms to support this effort:
 
 > **IEA Key Policy Recommendation**
 > “Improve data reliability and availability to better assess and manage risks for clean energy projects in emerging markets and developing economies.”
 > — [How to implement the COP28 energy goals](https://www.iea.org/events/from-taking-stock-to-taking-action-how-to-implement-the-cop28-energy-goals)
+
+> **IEA Actionable recommendations**
+> “Policy makers, regulators and utilities must support institutions, regulations, technical standards and collaboration platforms to build consensus on effective planning approaches that take full account of the changes in the profiles of power systems and their operations. Encouraging TSOs to share procurement and capacity planning data with regulators will further support informed policymaking.
+> — [Building the Future Transmission Grid](https://iea.blob.core.windows.net/assets/a688d0f5-a100-447f-91a1-50b7b0d8eaa1/BuildingtheFutureTransmissionGrid.pdf)
 
 Reliable and open infrastructure data directly supports the **adoption and success of clean energy projects** globally. These projects are being accelerated for several critical reasons:
 
@@ -69,7 +73,6 @@ Open data on energy infrastructure supports not just **decarbonization and elect
 
 > “**Open data is crucial for innovation that will accelerate the energy system to Net Zero.**”
 > — [*Catapult Energy Systems*](https://es.catapult.org.uk/tools-and-labs/open-data/#:~:text=Open%20data%20is%20crucial%20for,energy%20system%20to%20Net%20Zero)
-<br><br>
 
 <div style="float: right; margin: 5px 0 20px 20px; width: 350px;">
   <a href="../images/impact/HILFD-savingspdf.png" target="_blank">
