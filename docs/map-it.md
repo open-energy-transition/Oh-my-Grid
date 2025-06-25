@@ -82,7 +82,7 @@ You can select what power infrastructure you want by clicking on the different c
 <div id="wikidata-panel" style="display:none; margin-bottom:1em;">
   <label for="wikidataType">Data type:</label>
   <select id="wikidataType">
-    <option value="Wikidata powerassets" selected>Wikidata powerassets</option>
+    <option value="All power-related infraestructure" selected>All power-related infraestructure</option>
     <option value="substations">Substations</option>
     <option value="powerplants">Power Plants</option>
   </select>
