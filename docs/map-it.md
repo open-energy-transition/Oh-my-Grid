@@ -82,11 +82,11 @@ You can select what power infrastructure you want by clicking on the different c
 <div id="wikidata-panel" style="display:none; margin-bottom:1em;">
   <label for="wikidataType">Data type:</label>
   <select id="wikidataType">
-    <option value="substations" selected>Substations</option>
+    <option value="substations" selected>Wikidata powerassets</option>
+    <option value="substations">Substations</option>
     <option value="powerplants">Power Plants</option>
   </select>
 </div>
-
 
 
 <div id="map"></div>
@@ -541,6 +541,7 @@ async function fetchWikidataAndDownload(sovName) {
   // Here it fetches the folders from the github rpo:
   //   To add, put the value on the left (value is the value of the button wikidatatype), and on the right the name of the geojson folder from the github repo
    const foldertypes = {
+    'Wikidata powerassets': '/output_by_qid_v2/geojson_by_country',
     'substations': '/substations/geojson_by_country',
     'powerplants': '/output_by_qid/Q159719_power_plant'
   };
