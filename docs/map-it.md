@@ -541,7 +541,7 @@ async function fetchWikidataAndDownload(sovName) {
   // Here it fetches the folders from the github rpo:
   //   To add, put the value on the left (value is the value of the button wikidatatype), and on the right the name of the geojson folder from the github repo
    const foldertypes = {
-    'Wikidata powerassets': '/output_by_qid_v2/geojson_by_country',
+    'All power-related infraestructure': '/output_by_qid_v2/geojson_by_country',
     'substations': '/substations/geojson_by_country',
     'powerplants': '/output_by_qid/Q159719_power_plant'
   };
