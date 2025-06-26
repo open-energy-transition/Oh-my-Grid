@@ -1,7 +1,7 @@
 <div class="page-headers">
-<h1>Grid Mapping Starter Kit 🌱</h1>
+<h1>Starter Kit🌱</h1>
 </div>
-A [starter kit](https://github.com/open-energy-transition/grid-mapping-starter-kit) for Electrical Transmission Grid Mapping in OpenStreetMap, combining Osmose and Overpass with JOSM. The tutorial for mapping using JOSM starts with "Install JOSM".
+This starter kit for mapping the electrical transmission grid in OpenStreetMap outlines the basic skills required. The tutorial for mapping using JOSM starts with "Install JOSM".
 
 ## **<div class="tools-header">Get started with OpenStreetMap and Open Infrastructure Map <img src="../images/starter-kit/osm-logo.svg" style="height: 1.2em; vertical-align: middle; margin-left: 10px;"> </div>**
 
