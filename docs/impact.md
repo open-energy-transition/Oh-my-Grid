@@ -112,12 +112,6 @@ In the United States, the Department of Homeland Security and other agencies pub
 
 The [Homeland Infrastructure Foundation-Level Data](https://resilience.climate.gov/datasets/fedmaps::u-s-electric-power-transmission-lines/explore?location=38.846475%2C-76.984997%2C8.86) has shown **strong alignment** with OpenStreetMap data, demonstrating how open contributions can match official datasets in coverage and accuracy.
 
----
-
-Let me know if you’d like to adapt this for a specific format (like a blog post or slide deck), or if you’d like a visual version (such as an infographic or handout).
-
-
-
 ## **<div class="tools-header">Who uses OpenStreetMap grid data?</div>**
 
 How does mapping have an impact? When you map towers, substations, powerplants in OpenStreetMap, you are essentially adding valuable data that is used by many different entities. Below is a curated list of organisations and projects that have had an impact and have used this data.
