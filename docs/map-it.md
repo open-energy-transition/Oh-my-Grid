@@ -1,11 +1,12 @@
 <div class="page-headers">
 <h1>Map It 📍</h1>
 </div>
-Welcome to our interactive mapping tool! Click on a country below to start mapping power infrastructure directly in JOSM. :rocket:
-If this is your first time mapping, go through the [starter-kit tutorial](https://ohmygrid.org/starter-kit/) we prepared for you. <br>
-Please use the **#ohmygrid** hashtag in your changeset to show your support for our initiative when you make an edit!
+Welcome to our interactive launchpad and hub for contributing to power grid mapping via OpenStreetMap! Click on a country or state below to start mapping power infrastructure directly in JOSM. :rocket:
+If this is your first time grid mapping, please go through the [Starter-Kit Tutorial](https://ohmygrid.org/starter-kit/). You can use the **#ohmygrid** hashtag in your changeset to show your support for our initiative when you make an edit! <br>
+To start mapping, please open JOSM and load your data: 
 
-You can select what power infrastructure you want by clicking on the different choices. The **Default Transmission (90 kV+)** pulls all **transmission** power infrastructure and should be used when mapping generally. The repository with all the overpass queries can be found [here](https://github.com/open-energy-transition/osm-grid-definition). The Osmose, Global energy monitor, and Wikidata buttons are **hint layer** tools, which you can read about in our [tools](https://ohmygrid.org/tools/) page. 
+1. The **Default Transmission (90 kV+)** pulls all power infrastructure relevant for the **transmission grid**. For more details about which data is pulled via Overpass please read our [OpenStreetMap Grid Definitions](https://github.com/open-energy-transition/osm-grid-definition). Distribution grids are barely visible in satellite data and should therefore only be mapped in individual cases.
+2. The Osmose, Global Energy Monitor, and Wikidata buttons provide **hint layer** data, which you can read about in our [Tools and Strategies](https://ohmygrid.org/tools/) page. Please note that this hint layers only work at a national level. 
 
 <!-- Beginning of Map section-->
 <style>
@@ -428,6 +429,7 @@ setTimeout(() => {
         <li>Make sure JOSM is open</li>
         <li>Make sure Remote Control is enabled in JOSM</li>
         <li>If it’s enabled but still not working, toggle it off and on again</li>
+        <li>Note that hint layers do not work on national layers. In this case, please load the data onto a national layer.</li>
       </ol>
     </div>
   `;
@@ -541,7 +543,7 @@ async function fetchWikidataAndDownload(sovName) {
   // Here it fetches the folders from the github rpo:
   //   To add, put the value on the left (value is the value of the button wikidatatype), and on the right the name of the geojson folder from the github repo
    const foldertypes = {
-    'All power-related infraestructure': '/output_by_qid_v2/geojson_by_country',
+    'All power-related infrastructure': '/output_by_qid_v2/geojson_by_country',
     'substations': '/substations/geojson_by_country',
     'powerplants': '/output_by_qid/Q159719_power_plant'
   };
