@@ -83,7 +83,7 @@ To start mapping, please open JOSM and load your data:
 <div id="wikidata-panel" style="display:none; margin-bottom:1em;">
   <label for="wikidataType">Data type:</label>
   <select id="wikidataType">
-    <option value="All power-related infraestructure" selected>All power-related infraestructure</option>
+    <option value="All power-related infrastructure" selected>All power-related infrastructure</option>
     <option value="substations">Substations</option>
     <option value="powerplants">Power Plants</option>
   </select>
