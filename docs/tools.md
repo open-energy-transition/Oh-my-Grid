@@ -29,7 +29,6 @@ Tip: On the tool website, certain countries have different names associated, so 
   <figcaption class="image-caption">Global Energy Monitor power plants(red) in relation to the grid data(green) for Angola</figcaption>
 </div>
 
-
 ### How to use the GEM power plants per country tool</h3>
 1. Click on the Global Energy Monitor Power Plant button in [Map It📍](https://ohmygrid.org/map-it/) or go to the <a href="https://open-energy-transition.github.io/gem_per_country/">website</a>.
 1. In [Map It📍](https://ohmygrid.org/map-it/), you can simply choose the issue you want to look at, and then click on a country/region. This will download a geojson file for you.
@@ -37,10 +36,44 @@ Tip: On the tool website, certain countries have different names associated, so 
 1. You can open this geojson file in JOSM, where you will be able to see all power plants from the GEM database.
 
 ### How to use the GEM power plants per country tool</h3>
-1. Click on the Global Energy Monitor Power Plant button in [Map It📍](https://ohmygrid.org/map-it/) or go to the <a href="https://open-energy-transition.github.io/gem_per_country/">website</a>.
+1. Click on the Global Energy Monitor Power Plant button in [Map It📍](https://ohmygrid.org/map-it/).
 1. In Map It📍, you can simply choose the issue you want to look at, and then click on a country/region. This will download a geojson file for you.
 1. On the website, type the name of the country you want data for. Press preview, and download the geojson file.
 1. You can open this geojson file in JOSM, where you will be able to see all power plants from the GEM database.
+
+## <div class="tools-header">Find new lines that branch off from substations </div></h2>
+
+<div style="float: right; margin: 5px 0 20px 20px; width: 350px;">
+  <img src="../images/substation_malawi.jpg" class="img-border" alt="Substation in Malawi with unmapped interconnector in the left corner">
+  <figcaption class="image-caption">A substation in Malawi with an unmapped interconnector with the first tower in image center.</figcaption>
+</div>
+
+A simple yet efficient strategy for mapping the transmission grid is to check every substation for new lines branching out from it. 
+As most national transmission grids are entirely connected, this strategy enables you to trace and therefore map the entire grid network. 
+One single unmapped power tower can sometimes trace to a missing interconnector to another country as shown in the image of a substation in Malawi.
+Can you see the power tower that's missing from the bottom Left corner?
+
+1. Download the transmission grid data of your country using the [Map It📍](https://ohmygrid.org/map-it/) page.
+2. Press CTRL+F and filter by `power=substation`.
+3. With the installed todo plugin window press `Add`. 
+4. Switch back to your transmission grid layer.
+4. You can now step through all substations by pressing `Mark`.
+
+## <div class="tools-header">Search industrial areas for connections to the transmission grid </div></h2>
+
+<div style="float: right; margin: 5px 0 20px 20px; width: 350px;">
+  <img src="../images/industrial-area.jpg" class="img-border" alt="A car assembly plant in Nigeria which is connected directly to the grid.">
+  <figcaption class="image-caption">A substation in Malawi with an unmapped interconnector with the first tower in image center.</figcaption>
+</div>
+
+Large industrial facilities require huge amounts of energy and therefore have their own substations, and are sometimes even directly connected to the transmission grid. Stepping through all industrial areas can also reveal substations or power plants that are often tagged already as landuse=industrial. Try also to check the surrounding area too as substations are sometimes placed outside of the mapped industrial area. 
+
+1. Download the transmission grid data of your country using the [Map It📍](https://ohmygrid.org/map-it/) page.
+2. Download the industrial areas of your country using into a new layer using the [Map It📍](https://ohmygrid.org/map-it/) page.
+2. Press CTRL+F and filter by `type:way landuse=industrial`.
+3. With the installed todo plugin window press `Add`. 
+4. Switch back to your transmission grid layer.
+5. You can now step trouth all substations by pressing `Mark`.
 
 
 ## <div class="tools-header"> Searching and using fixme tags</div></h2>
@@ -52,7 +85,7 @@ OpenStreetMap allows mappers to quickly mark an object that seems to be wrong an
 </div>
 
 1. Download the grid you want to look into using at the [Map It📍](https://ohmygrid.org/map-it/) page.
-2. Press `STRG+F`and search for `fixme=*`.
+2. Press `CTRL+F`and search for `fixme=*`.
 3. In the todo list window press `Add`.
 4. After you fixed and issues please remove the fixme tag.
 
@@ -86,19 +119,6 @@ The OpenData plugin will allow you to load all kinds of GIS formats directly int
 1. Open Infrastructure Map can be used as a tool to map and find issues by utilising the nighttime lights feature.
 2. Go to the <a href="https://openinframap.org/#2/26/12">website</a> and set the background to nighttime lights. This can help see clear "holes" in a country's grid.
 3. In layers, activate the power validation feature. If you zoom in and find an unfinished power line, you can see the osmose issue affiliated to this line.
-
-## <div class="tools-header">Find new lines that branch off from substations </div></h2>
-
-<div style="float: right; margin: 5px 0 20px 20px; width: 350px;">
-  <img src="../images/substation_malawi.jpg" class="img-border" alt="Substation in Malawi with unmapped interconnector in the left corner">
-  <figcaption class="image-caption">A substation in Malawi with an unmapped interconnector with the first tower in image center.</figcaption>
-</div>
-
-A simple yet efficient strategy for mapping the transmission grid is to check every substation for new lines branching out from it. 
-As most national transmission grids are entirely connected, this strategy enables you to trace and therefore map the entire grid network. 
-One single unmapped power tower can sometimes trace to a missing interconnector to another country as shown in the image of a substation in Malawi.
-Can you see the power tower that's missing from the bottom Left corner?
-
 
 ## <div class="tools-header">Online investigation :mag:</div>
 
