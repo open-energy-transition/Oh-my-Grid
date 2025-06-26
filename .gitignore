@@ -39,3 +39,6 @@ venv/
 
 #site
 site/
+
+*.png
+*.geojson
