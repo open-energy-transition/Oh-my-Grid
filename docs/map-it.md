@@ -394,27 +394,19 @@ async function handleAreaClick(iso, level, layer) {
     ? layer.feature.properties.NAME      // Countries use NAME
     : layer.feature.properties.NAME_1;   // Regions use NAME_1
   const sovName= layer.feature.properties.SOVEREIGNT; // for linking to Osmose
-
-  // Normalize specific country names
-  const normalizedSovNameMap = {
-    "China": "People's Republic of China"
-  };
-
-  const normalizedSovName = normalizedSovNameMap[sovName] || sovName;
-
   umami.track('map-click');
   layer.setStyle({ color: '#ff7800' });
   layer.getPopup().setContent(`Loading ${name}…`).update();
 
   try {
     if (currentMode === 'Osmose_issues') {
-      await fetchOsmoseAndDownload(normalizedSovName);
+      await fetchOsmoseAndDownload(sovName);
     }
     else if (currentMode === 'GEM_powerplants') {
-      await fetchGEMAndDownload(normalizedSovName);
+      await fetchGEMAndDownload(sovName);
     }
     else if (currentMode === 'Wikidata') {
-      await fetchWikidataAndDownload(normalizedSovName);
+      await fetchWikidataAndDownload(sovName);
     }
     else {
        let tpl = await fetchQuery(currentMode, level);
