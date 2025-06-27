@@ -5,13 +5,13 @@ This starter kit for mapping the electrical transmission grid in OpenStreetMap o
 
 ## **<div class="tools-header">Get started with OpenStreetMap and Open Infrastructure Map <img src="../images/starter-kit/osm-logo.svg" style="height: 1.2em; vertical-align: middle; margin-left: 10px;"> </div>**
 
+If you don't already have an OpenStreetMap account, [create one first](https://www.openstreetmap.org/user/new). If you're new to OpenStreetMap, now is a good time to learn the basics of editing using the in-browser editor (iD) - find something which is missing from the map in your local area and add it! The [OpenStreetMap Wiki](https://wiki.openstreetmap.org) has lots of information about how to map with OpenStreetMap, and you can start by reading the [iD Beginners' Guide](https://learnosm.org/en/beginner/id-editor/). Adding missing power towers or substations can significantly improve mapping progress, as it gives other mappers a clue as to where parts of the entire grid are missing. To quickly check if anything is missing near you, go to the [Open Infrastructure Map](https://openinframap.org/). Press the 'Find my location' button in the top right corner or enter your town in the search box. See something missing next to you? Map it using your iD editor. Don't worry about making mistakes. Mapping is an iterative process, and the OpenStreetMap community automatically detects anything that is missing. The OpenStreetMap Wiki pages [The Power Network](https://wiki.openstreetmap.org/wiki/Power_networks) and [Key:Power](https://wiki.openstreetmap.org/wiki/Key:power) provide an overview of how to map different power infrastructure.
+
 <div style="float: right; margin: 5px 0 20px 20px; width: 350px;">
   <a href="https://openinframap.org/#6.54/39.026/-7.548" target="_blank">
   <img src="../images/openinframap-portugal.jpg" class="img-border" style="width: 100%;"> </a>
   <figcaption class="image-caption">Open infrastructure map showing the highly detailed transmission and distribution grid in Portugal.</figcaption>
 </div>
-
-If you don't already have an OpenStreetMap account, [create one first](https://www.openstreetmap.org/user/new). If you're new to OpenStreetMap, now is a good time to learn the basics of editing using the in-browser editor (iD) - find something which is missing from the map in your local area and add it! The [OpenStreetMap Wiki](https://wiki.openstreetmap.org) has lots of information about how to map with OpenStreetMap, and you can start by reading the [iD Beginners' Guide](https://learnosm.org/en/beginner/id-editor/). Adding missing power towers or substations can significantly improve mapping progress, as it gives other mappers a clue as to where parts of the entire grid are missing. To quickly check if anything is missing near you, go to the [Open Infrastructure Map](https://openinframap.org/). Press the 'Find my location' button in the top right corner or enter your town in the search box. See something missing next to you? Map it using your iD editor. Don't worry about making mistakes. Mapping is an iterative process, and the OpenStreetMap community automatically detects anything that is missing. The OpenStreetMap Wiki pages [The Power Network](https://wiki.openstreetmap.org/wiki/Power_networks) and [Key:Power](https://wiki.openstreetmap.org/wiki/Key:power) provide an overview of how to map different power infrastructure.
 
 **⚠️ Before you start mapping, please find out about the mapping restrictions in the respective country. In some countries, the mapping of transmission lines is not permitted. Get in touch with local users by finding out about [local projects](https://wiki.openstreetmap.org/wiki/Power_networks). ⚠️**
 
@@ -95,11 +95,6 @@ Mapping is an iterative process, so you will make mistakes at first. However, th
 
 ## <div class="tools-header">Map fast  :pushpin:</div>
 
-<div style="float: right; margin: 5px 0 20px 20px; width: 350px;">
-  <img src="../images/mapfast.png"  class="img-border" style="width: 100%;"> 
-  <figcaption class="image-caption">Selecting all the finished notes in a line enables you to quickly turn them into Power Towers.</figcaption>
-</div>
-
 
 If you want to be able to map efficiently and fast, you will need to know how to correctly place towers and power lines. This will save you loads of time:
 
@@ -109,6 +104,11 @@ If you want to be able to map efficiently and fast, you will need to know how to
 1. Then you can tag all the selected nodes as towers in one go.
 1. Use the preset power tower or poles to set all nodes at once.
 1. If you ever lose this query, click the right arrow on the search window and select it from your history.
+
+<div style="float: right; margin: 5px 0 20px 20px; width: 350px;">
+  <img src="../images/mapfast.png"  class="img-border" style="width: 100%;"> 
+  <figcaption class="image-caption">Selecting all the finished notes in a line enables you to quickly turn them into Power Towers.</figcaption>
+</div>
 
 
 ## **<div class="tools-header">Common Mistakes :name_badge:</div>**
@@ -129,12 +129,24 @@ The [Learning Curve](https://www.youtube.com/@TheLearningCurveBenila/videos),is 
 
 The following image is take from the report Key technology components of electricity grids Source: IEA - [Electricity Grids and Secure Energy Transitions](https://iea.blob.core.windows.net/assets/ea2ff609-8180-4312-8de9-494bcf21696d/ElectricityGridsandSecureEnergyTransitions.pdf).
 
-<div style="float: left; margin: 5px 0 20px 20px; width: 900px;">
+<div style="float: left; margin: 5px 0 20px 20px; width: 100%;">
   <a href="../images/grid-design.png" target="_blank">
-  <img src="../images/grid-design.png" class="img-border" style="width: 900px;"> </a>
+  <img src="../images/grid-design.png" class="img-border" style="width: 100%;"> </a>
   <figcaption class="image-caption">Key technology components of electricity grids Source: IEA - Electricity Grids and Secure Energy Transitions.</figcaption>
 </div>
 
+### <div class="tools-header">Bing attribution issue ⛔</div>
+<div style="float: right; margin: 5px 0 20px 20px; width: 350px;">
+    <img src="../images/bing_issue.png" class="img-border" width="300" alt="Bing Attribution in JOSM">
+    <figcaption class="image-caption">Bing attribution error in JOSM</figcaption>
+</div>
 
 
+At the moment, there seems to be an issue with Bing attribution in JOSM where it only loads in the mornings (CET). To work around this:
+
+1. On a day when Bing attribution is working, copy the <code>bing.attribution.xml</code> file from your JOSM folder to a safe place:
+    * <strong>Windows:</strong> <code>%APPDATA%\Local\JOSM\cache\bing.attribution.xml</code>
+    * <strong>Mac:</strong> <code>~/Library/Caches/JOSM/bing.attribution.xml</code>
+    * <strong>Linux:</strong> <code>~/.cache/JOSM/bing.attribution.xml</code>
+2. On a day when it isn’t working, replace the broken file with your saved copy, then restart or reload JOSM.</li>
 
