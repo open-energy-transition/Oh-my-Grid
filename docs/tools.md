@@ -108,15 +108,36 @@ OpenStreetMap allows mappers to quickly mark an object that seems to be wrong an
 4. After you fixed and issues please remove the fixme tag.
 
 
-### <div class="tools-header"> Wikipedia and Wikidata as a hint layer</div></h3>
+### <div class="tools-header"> Wikidata/Wikipedia Hint Layer Tool</div></h3>
 
 <div style="float: right; margin: 5px 0 20px 20px; width: 350px;">
     <img src="../images/wikigeo.jpg" class="img-border" alt="Wikidata Comparison GeoJSON Output">
     <figcaption class="image-caption">Wikidata Comparison GeoJSON Output(red) in comparision to grid data(green).</figcaption>   
 </div>
 
-This [repository](https://github.com/open-energy-transition/osm-wikidata-comparison/) contains two Python scripts that compare power plant data between OpenStreetMap (OSM) and Wikidata, and also substation data.The power plant tool fetches data from both sources using APIs, performs comparisons based on geographic proximity
-and name, and identifies missing power plants or coordinate mismatches. The comparison results are saved in CSV and GeoJSON formats.
+The [tool] (https://github.com/open-energy-transition/osm-wikidata-comparison/) extracts structured power infrastructure data from Wikidata and exports it as GeoJSON and CSV files, organized by country and by QID (e.g., substations, power plants, battery storage systems).
+
+You can use these GeoJSON files directly in JOSM as a visual hint layer to:
+
+<ul>
+  <li>Map new infrastructure not yet in OpenStreetMap (OSM).</li>
+  <li>Improve metadata (tags, names, technologies, resource, Qid tag, etc.) of existing features.</li>
+</ul>
+
+The tool supports:
+
+<ul>
+  <li>Full extraction of all power-related infrastructure types in Wikidata.</li>
+  <li>Targeted queries by specific QIDs (e.g., only substations, hydro plants, or storage systems).</li>
+</ul>
+
+Output includes:
+
+<ul>
+  <li>A folder per QID with all infrastructure found, including per-country .geojson files and CSVs with/without coordinates.</li>
+  <li>A combined <code>wikidata_all_qids_with_coordinates.csv</code> with all QIDs merged.</li>
+  <li>A <code>geojson_by_country/</code> folder containing per-country files aggregating all relevant QID types.</li>
+</ul>
 
 ## <div class="stradegy-header">Technical Mapping Strategies</div></h2>
 
