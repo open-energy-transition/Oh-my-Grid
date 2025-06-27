@@ -41,8 +41,8 @@ International connections:<br>
 
 ## Progress map
 
-![Map](../images/maps_countries/AF/high-voltage-network.png){width=90%}
 
+![Map](https://github.com/ben10dynartio/ohmygrid-website-files/releases/download/v1.0/docs/images/maps_countries/AF/high-voltage-network.jpg){width=90%}
 
 
 ## Grid connectivity overview
