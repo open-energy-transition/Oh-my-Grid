@@ -56,3 +56,12 @@ git push origin your-branch-name
 ```
 
 8. Create a pull request.
+
+## Related Repositories 
+The OhMyGrid Website combines resources from multiple repositories:
+1. [Awesome-Electric-Grid-Mapping](https://github.com/open-energy-transition/Awesome-Electric-Grid-Mapping)
+2. [ColorMyGrid](https://github.com/open-energy-transition/color-my-grid)
+3. [osm-grid-definition](https://github.com/open-energy-transition/osm-grid-definition)
+4. [osm-wikidata Toolset](https://github.com/open-energy-transition/osm-wikidata-toolset)
+5. [osmose-per-country](https://github.com/open-energy-transition/osmose_per_country)
+6. [gem-per-country](https://github.com/open-energy-transition/gem_per_country)
