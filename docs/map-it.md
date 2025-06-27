@@ -686,6 +686,9 @@ fetch('../data/regionsv2.geojson')
     </iframe>
 <!-- I couldn't make the page not go "up" when using this iframe, so for now there is this chatgpt js script that prevents this. It was very annoying, but if you have a better solution that would be great-->
 
+??? success "Curated Electrical Grid Maps"
+    --8<-- "docs/awesome.md"
+
 <script>
   let lastScrollY = window.scrollY;
   // Select your iframe by its class or ID. Make sure 'iframestyle' is unique enough

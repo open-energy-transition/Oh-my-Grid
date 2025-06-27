@@ -2,7 +2,7 @@
 <h1>Tools and Strategies</h1>
 </div>
 The following strategies and tools will help you to extend the existing transmission grid networks in OpenStreetMap. In general, the larger the tower and substation, the higher the voltage and therefore the greater the importance to the network. Priority should therefore be given to large, high-voltage infrastructure first. 
-The easiest way to start mapping the transmission network is to find the location of missing towers with the help of osmose. The Strategies can routhly been devided into two phases. You can apply these strategies in any order.: 
+The easiest way to start mapping the transmission network is to find the location of missing towers with the help of osmose. The Strategies can routhly been devided into two phases. You can apply these strategies in any order: 
 
 1. `Pioneer Mapping Strategies`: To ensure the most efficient mapping of the power grid and the highest quality of data, we recommend starting with Pioneer Mapping in a country. Several strategies are used in this phase to capture the location of all lines, power poles and substations. Detailed tags such as voltages do not need to be set at this stage. This mapping phase is much easier for beginners and does not require detailed knowledge of the electrical grid.
 
@@ -10,7 +10,6 @@ The easiest way to start mapping the transmission network is to find the locatio
 
 
 ## <div class="stradegy-header">Pioneer Mapping Strategies</div></h3>
-This are stradegies to extend the electrical grid 
 
 ### <div class="tools-header">Osmose per country</div></h3>
 
@@ -180,16 +179,20 @@ This tool estimates the voltage of a substation busbar from aerial imagery by me
 
 
 ### <div class="tools-header">Downloading transmission data of an area near a border 📥</div></h3>
+
+
+If you are mapping an interconnector between two countries and want to see what’s mapped on the “other” side of the border, you can either do a quick Download from OSM in a new layer or use the following Overpass query:
+
 <div style="float: right; margin: 5px 0 20px 20px; width: 350px;">
     <img src="../images/alternative_query.png" class="img-border" alt="Overpass Query Example" style="width:100%; float:right; margin: 5px 0 30px 20px;">
     <figcaption class="image-caption">Overpass Query Example</figcaption>
 </div>
 
-If you are mapping an interconnector between two countries and want to see what’s mapped on the “other” side of the border, you can either do a quick Download from OSM in a new layer or use the following Overpass query:
-
 1. Copy this <a href="https://raw.githubusercontent.com/open-energy-transition/osm-grid-definition/refs/heads/main/Other_queries/Border_overpass">query</a> and paste it into “Download from Overpass API” in JOSM.
 2. Draw a small bounding box in the slippy map, then run the query to download.
 3. <p><strong>Explanation:</strong> The query finds nodes in your bounding box, detects their admin area (level 4 by default), and fetches all power infrastructure within it. You can adjust the “admin level” in the query (e.g. level 2 for national, level 6 for province) by editing the <code>admin_level</code> parameter in the download tab. A smaller bounding box is better (faster execution).</p>
+
+
 
 
 ### <div class="tools-header"> Google Maps substations 🚫 </div></h2>
@@ -202,6 +205,7 @@ Google Maps would be the perfect additional data source for the locations and na
 
 Knowing only the locations of these substations would greatly accelerate the progress of grid mapping and allow the discovery of smaller substations that are relevant for estimating distribution network coverage and rural electrification levels. Together with the OpenStreetMap community, the data can be integrated using officially authorised satellite images for OpenStreetMap contributors, <strong>if</strong> permission is granted!
 Google Maps has <strong>not</strong> yet granted official authorisation for the use of its data. Google would provide a significant boost to the sustainable energy transition, tackling climate change and bringing electricity to rural communities at the same time. Therefore, we are kindly requesting formal permission to access and utilize the coordinates of ‘electrical substations’ displayed on Google Maps, for the purpose of enriching OpenStreetMap and advancing global grid mapping initiatives. 
+
 
 
 
