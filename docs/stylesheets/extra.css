@@ -627,3 +627,13 @@ aside.md-banner a>div {
   width: auto !important;
   overflow: hidden !important;
 }
+
+.no-toc h2,
+.no-toc h3,
+.no-toc h4 {
+  display: block;
+}
+
+.no-toc .md-nav__link {
+  display: none;
+}
