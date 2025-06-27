@@ -418,7 +418,7 @@ async function handleAreaClick(iso, level, layer) {
       await fetchGEMAndDownload(sovName);
     }
     else if (currentMode === 'Wikidata') {
-      await fetchWikidataAndDownload(sovName);
+      await fetchWikidataAndDownload(usedSovName);
     }
     else {
        let tpl = await fetchQuery(currentMode, level);
