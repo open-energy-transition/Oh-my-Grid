@@ -19,6 +19,7 @@ These simulations help evaluate technology options, policy impacts, and pathways
 
 High-quality, up-to-date data is vital for planning and investing in power infrastructure. Enhancing the current state of the OpenStreetMap electrical grid significantly improves the reliability and impact of these planning tools. For example, [PyPSA Earth](https://pypsa-earth.readthedocs.io/en/latest/index.html), an open-source global energy system model, uses OpenStreetMap grid data as the foundation for constructing its electricity grid for [regions all around the world](https://pypsa-earth.readthedocs.io/en/latest/users_list.html#).
 
+--- 
 
 ### Use by Major Institutions
 
@@ -27,21 +28,28 @@ Organizations such as the **World Bank** and the **International Energy Agency (
 One of the major global challenges in the clean energy transition is the modernization and expansion of transmission infrastructure. The IEA emphasizes the need for reliable data and collaborative platforms to support this effort:
 
 > **IEA Key Policy Recommendation in 2024:**
-> “Improve data reliability and availability to better assess and manage risks for clean energy projects in emerging markets and developing economies.”
-
+> “Improve data reliability and availability to better assess and manage risks for clean energy projects in emerging markets and developing economies.”           
 [How to implement the COP28 energy goals](https://www.iea.org/events/from-taking-stock-to-taking-action-how-to-implement-the-cop28-energy-goals)</br>
-
-
+--- 
 > **IEA Actionable Recommendation in 2025:**
-> “Policy makers, regulators and utilities must support institutions, regulations, technical standards and collaboration platforms to build consensus on effective planning approaches that take full account of the changes in the profiles of power systems and their operations. Encouraging TSOs to share procurement and capacity planning data with regulators will further support informed policymaking.
-
+> “Policy makers, regulators and utilities must support institutions, regulations, technical standards and collaboration platforms to build consensus on effective planning approaches that take full account of the changes in the profiles of power systems and their operations. Encouraging TSOs to share procurement and capacity planning data with regulators will further support informed policymaking.       
 [Building the Future Transmission Grid](https://iea.blob.core.windows.net/assets/a688d0f5-a100-447f-91a1-50b7b0d8eaa1/BuildingtheFutureTransmissionGrid.pdf)
+
+
+### Energy Grids Shape Our Future
+
+<div style="float: right; margin: 5px 0 20px 20px; width: 550px;">
+  <a href="https://iea.blob.core.windows.net/assets/a688d0f5-a100-447f-91a1-50b7b0d8eaa1/BuildingtheFutureTransmissionGrid.pdf" target="_blank">
+  <img src="../images/impact/expected-grid-growth.jpg" class="img-border" style="width: 100%;"> </a>
+  <figcaption class="image-caption">Expanding and modernising grids is a key component of electricity security in each of the IEA scenarios. Adequate electricity transmission networks have strategic significance in outlooks that meet national and global climate goals.</figcaption>
+</div> 
 
 Reliable and open infrastructure data directly supports the **adoption and success of clean energy projects** globally. These projects are being accelerated for several critical reasons:
 
 * **Climate mitigation:** Fossil fuels account for roughly 70% of global greenhouse gas emissions.
 * **Resilience:** Clean energy strengthens resilience against climate impacts and extreme weather events.
 * **Energy security:** Reducing reliance on imports enhances national energy independence, especially from politically unstable or hostile regions.
+
 
 ### Growing Academic Impact
 

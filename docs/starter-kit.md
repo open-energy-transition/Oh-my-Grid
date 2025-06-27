@@ -13,7 +13,7 @@ If you don't already have an OpenStreetMap account, [create one first](https://w
   <figcaption class="image-caption">Open infrastructure map showing the highly detailed transmission and distribution grid in Portugal.</figcaption>
 </div>
 
-**⚠️ Before you start mapping, please find out about the mapping restrictions in the respective country. In some countries, the mapping of transmission lines is not permitted. Get in touch with local users by finding out about [local projects](https://wiki.openstreetmap.org/wiki/Power_networks). ⚠️**
+**⚠️ Before you start mapping, please find out about the mapping restrictions in the respective country. In some countries, the mapping of transmission lines is not permitted. Get in touch with local users by finding out about [local projects](https://wiki.openstreetmap.org/wiki/Power_networks).**
 
 ## **<div class="tools-header">Install JOSM <img src="../images/josm_logo.jpg" style="height: 1.2em; vertical-align: middle; margin-left: 10px;"></div>** 
 
@@ -135,7 +135,7 @@ The following image is take from the report Key technology components of electri
   <figcaption class="image-caption">Key technology components of electricity grids Source: IEA - Electricity Grids and Secure Energy Transitions.</figcaption>
 </div>
 
-### <div class="tools-header">Bing attribution issue ⛔</div>
+## <div class="tools-header">Bing attribution issue ⛔</div>
 <div style="float: right; margin: 5px 0 20px 20px; width: 350px;">
     <img src="../images/bing_issue.png" class="img-border" width="300" alt="Bing Attribution in JOSM">
     <figcaption class="image-caption">Bing attribution error in JOSM</figcaption>
