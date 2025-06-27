@@ -394,6 +394,18 @@ async function handleAreaClick(iso, level, layer) {
     ? layer.feature.properties.NAME      // Countries use NAME
     : layer.feature.properties.NAME_1;   // Regions use NAME_1
   const sovName= layer.feature.properties.SOVEREIGNT; // for linking to Osmose
+
+  // Normalize ONLY for Wikidata
+  let usedSovName = sovName;
+  if (currentMode === 'Wikidata') {
+    const normalizedSovNameMap = {
+      "China": "People's_Republic_of_China"
+      // Add more mappings as needed
+    };
+    usedSovName = normalizedSovNameMap[sovName] || sovName;
+  }
+
+
   umami.track('map-click');
   layer.setStyle({ color: '#ff7800' });
   layer.getPopup().setContent(`Loading ${name}…`).update();
