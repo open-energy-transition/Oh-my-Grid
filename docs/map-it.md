@@ -1,3 +1,9 @@
+hide:
+  - navigation
+  - toc
+  - footer
+---
+
 <div class="page-headers">
 <h1>Map It 📍</h1>
 </div>
