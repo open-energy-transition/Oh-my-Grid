@@ -111,11 +111,11 @@ OpenStreetMap allows mappers to quickly mark an object that seems to be wrong an
 ### <div class="tools-header"> Wikidata/Wikipedia Hint Layer Tool</div></h3>
 
 <div style="float: right; margin: 5px 0 20px 20px; width: 350px;">
-    <img src="../images/wikigeo.jpg" class="img-border" alt="Wikidata Comparison GeoJSON Output">
-    <figcaption class="image-caption">Wikidata Comparison GeoJSON Output(red) in comparision to grid data(green).</figcaption>   
+    <img src="../images/wikigeo2.jpg" class="img-border" alt="Wikidata Comparison GeoJSON Output">
+    <figcaption class="image-caption">Wikidata Comparison GeoJSON Output(green) in comparision to grid data(dark-grey).</figcaption>   
 </div>
 
-The [tool] (https://github.com/open-energy-transition/osm-wikidata-comparison/) extracts structured power infrastructure data from Wikidata and exports it as GeoJSON and CSV files, organized by country and by QID (e.g., substations, power plants, battery storage systems).
+The [tool](https://github.com/open-energy-transition/osm-wikidata-comparison/) extracts structured power infrastructure data from Wikidata and exports it as GeoJSON and CSV files, organized by country and by QID (e.g., substations, power plants, battery storage systems).
 
 You can use these GeoJSON files directly in JOSM as a visual hint layer to:
 
