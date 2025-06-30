@@ -42,6 +42,7 @@ theme:
     - navigation.top
     - navigation.sections
     - content.image.zoom
+    
 
 extra_css:
     - stylesheets/extra.css

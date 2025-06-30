@@ -23,7 +23,7 @@ International connections:<br>
 </div>
 <div style="display: inline-block;">3910 MW<br>
 76<br>
-237<br>
+240<br>
 7347 km<br>
 6<br>
 </div>
@@ -41,7 +41,10 @@ International connections:<br>
 
 ## Progress map
 
-![Map](../images/maps_countries/UY/high-voltage-network.png){width=90%}
+<center>
+<img src="https://raw.githubusercontent.com/ben10dynartio/ohmygrid-website-files/refs/heads/main/docs/images/maps_countries/UY/high-voltage-network.jpg" width="60%">
+<img src="../../images/maps_countries_legend_progress.jpg" width="50%">
+</center>
 
 
 
@@ -49,5 +52,8 @@ International connections:<br>
 
 Grid connectivity summary (nb of substations x nb of connections) :<br>131x178 + 3x2 + 2x1 + 2x1 + 2x1 + 2x1 + 2x1 + 1x1
 
-![Map](../images/maps_countries/UY/grid-connectivity.png){width=90%}
+<center>
+<img src="https://raw.githubusercontent.com/ben10dynartio/ohmygrid-website-files/refs/heads/main/docs/images/maps_countries/UY/grid-connectivity.jpg" width="60%">
+<img src="../../images/maps_countries_legend_grid.jpg" width="50%">
+</center>
 
