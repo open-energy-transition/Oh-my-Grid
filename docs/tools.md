@@ -115,7 +115,47 @@ OpenStreetMap allows mappers to quickly mark an object that seems to be wrong an
     <figcaption class="image-caption">Wikidata Comparison GeoJSON Output(green) in comparision to grid data(dark-grey).</figcaption>   
 </div>
 
-The [tool](https://github.com/open-energy-transition/osm-wikidata-comparison/) extracts structured power infrastructure data from Wikidata and exports it as GeoJSON and CSV files, organized by country and by QID (e.g., substations, power plants, battery storage systems).
+
+This [repository](https://github.com/open-energy-transition/osm-wikidata-comparison/) helps identify missing or incomplete power infrastructure in OpenStreetMap by extracting structured data from Wikidata. It generates ready-to-use GeoJSON  that can be opened in JOSM as a visual hint layer to guide new mapping work or improve existing tags.
+
+#### How it works
+
+<p>
+To begin, specify the types of infrastructure you want to extract by choosing a set of Wikidata QIDs in the config.yaml file. Examples include substations, power plants, or battery storage systems. The script will query Wikidata for all matching items worldwide, then organize the results by QID and by country.
+</p>
+
+<p>
+The output includes:
+</p>
+<ul>
+  <li>One folder per QID with country-level GeoJSON and CSV files.</li>
+  <li>A merged CSV file (<code>wikidata_all_qids_with_coordinates.csv</code>) containing all results with coordinates.</li>
+  <li>A folder named <code>geojson_by_country</code> that groups all types of Qid searched by country.</li>
+</ul>
+
+
+#### How to use it for mapping in JOSM
+
+<ol>
+  <li>Clone the repository from <a href="https://github.com/open-energy-transition/osm-wikidata-toolset" target="_blank">osm-wikidata-toolset</a></li>
+  <li>Configure the infrastructure types by editing the <code>config.yaml</code> file.</li>
+  <li>Run the script <code>fetch_wiki_info_by_country_v2.py</code> using Python.</li>
+  <li>Open one of the resulting GeoJSON files in JOSM.</li>
+  <li>For each object in the layer:
+    <ul>
+      <li>If it is missing in OSM, add and tag it using the appropriate OSM guidelines.</li>
+      <li>If it exists in OSM, use the Wikidata metadata to enhance it if possible (e.g. <code>name</code>, <code>operator</code>, <code>generator:source</code>, <code>technology</code>, or <code>wikidata</code> tag).</li>
+    </ul>
+  </li>
+</ol>
+
+<p>
+This process supports the addition of verified infrastructure assets and improves the metadata quality of existing features in OpenStreetMap. For more advanced usage and documentation, visit the <a href="https://github.com/open-energy-transition/osm-wikidata-toolset" target="_blank">project repository</a>.
+</p>
+<!-- 
+
+
+
 
 You can use these GeoJSON files directly in JOSM as a visual hint layer to:
 
@@ -137,7 +177,7 @@ Output includes:
   <li>A folder per QID with all infrastructure found, including per-country .geojson files and CSVs with/without coordinates.</li>
   <li>A combined <code>wikidata_all_qids_with_coordinates.csv</code> with all QIDs merged.</li>
   <li>A <code>geojson_by_country/</code> folder containing per-country files aggregating all relevant QID types.</li>
-</ul>
+</ul> -->
 
 ## <div class="stradegy-header">Technical Mapping Strategies</div></h2>
 
