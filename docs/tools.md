@@ -128,9 +128,9 @@ To begin, specify the types of infrastructure you want to extract by choosing a 
 The output includes:
 </p>
 <ul>
-  <li>One folder per QID with country-level GeoJSON and CSV files</li>
-  <li>A merged CSV file (<code>wikidata_all_qids_with_coordinates.csv</code>) containing all results with coordinates</li>
-  <li>A folder named <code>geojson_by_country</code> that groups all types of Qid searched by country</li>
+  <li>One folder per QID with country-level GeoJSON and CSV files.</li>
+  <li>A merged CSV file (<code>wikidata_all_qids_with_coordinates.csv</code>) containing all results with coordinates.</li>
+  <li>A folder named <code>geojson_by_country</code> that groups all types of Qid searched by country.</li>
 </ul>
 
 
@@ -138,13 +138,13 @@ The output includes:
 
 <ol>
   <li>Clone the repository from <a href="https://github.com/open-energy-transition/osm-wikidata-toolset" target="_blank">osm-wikidata-toolset</a></li>
-  <li>Configure the infrastructure types by editing the <code>config.yaml</code> file</li>
-  <li>Run the script <code>fetch_wiki_info_by_country_v2.py</code> using Python</li>
-  <li>Open one of the resulting GeoJSON files in JOSM</li>
+  <li>Configure the infrastructure types by editing the <code>config.yaml</code> file.</li>
+  <li>Run the script <code>fetch_wiki_info_by_country_v2.py</code> using Python.</li>
+  <li>Open one of the resulting GeoJSON files in JOSM.</li>
   <li>For each object in the layer:
     <ul>
-      <li>If it is missing in OSM, add and tag it using the appropriate OSM guidelines</li>
-      <li>If it exists in OSM, use the Wikidata metadata to enhance it if possible(e.g. <code>name</code>, <code>operator</code>, <code>generator:source</code>, <code>technology</code>, or <code>wikidata</code> tag)</li>
+      <li>If it is missing in OSM, add and tag it using the appropriate OSM guidelines.</li>
+      <li>If it exists in OSM, use the Wikidata metadata to enhance it if possible (e.g. <code>name</code>, <code>operator</code>, <code>generator:source</code>, <code>technology</code>, or <code>wikidata</code> tag).</li>
     </ul>
   </li>
 </ol>
