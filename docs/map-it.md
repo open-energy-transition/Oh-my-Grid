@@ -745,7 +745,8 @@ fetch('../data/regionsv2.geojson')
 
 ⚠️Please do NOT copy any data from **hint layer** directly into your OpenStreetMap data layer. Every data point in your OpenStreetMap data layer must be manually set and [verified](https://wiki.openstreetmap.org/wiki/Verifiability). The metadata must also be verified against compatible licensed sources or by people on the ground. If you cannot verify the data using satellite images or any other compatible source, please do not add this information from hint layers. This may seem like a high burden at first, but it ensures the high quality of OpenStreetMap.⚠️
 
-## Mapping Guidelines
+
+## <div class="tools-header">Mapping Guidelines </div>
 The following list provides the main good practices for mapping different power infrastructure in OpenStreetMap:
 
 * [Power networks/Guidelines](https://wiki.openstreetmap.org/wiki/Power_networks/Guidelines)
