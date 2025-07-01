@@ -135,18 +135,4 @@ The following image is take from the report Key technology components of electri
   <figcaption class="image-caption">Key technology components of electricity grids Source: IEA - Electricity Grids and Secure Energy Transitions.</figcaption>
 </div>
 
-## <div class="tools-header">Bing attribution issue ⛔</div>
-<div style="float: right; margin: 5px 0 20px 20px; width: 350px;">
-    <img src="../images/bing_issue.png" class="img-border" width="300" alt="Bing Attribution in JOSM">
-    <figcaption class="image-caption">Bing attribution error in JOSM</figcaption>
-</div>
-
-
-At the moment, there seems to be an issue with Bing attribution in JOSM where it only loads in the mornings (CET). To work around this:
-
-1. On a day when Bing attribution is working, copy the <code>bing.attribution.xml</code> file from your JOSM folder to a safe place:
-    * <strong>Windows:</strong> <code>%APPDATA%\Local\JOSM\cache\bing.attribution.xml</code>
-    * <strong>Mac:</strong> <code>~/Library/Caches/JOSM/bing.attribution.xml</code>
-    * <strong>Linux:</strong> <code>~/.cache/JOSM/bing.attribution.xml</code>
-2. On a day when it isn’t working, replace the broken file with your saved copy, then restart or reload JOSM.</li>
 

@@ -12,16 +12,16 @@ body_class: landing-page
     <p class="mission-statement"> We empower individuals, communities and nations around the world to map the electrical grid.
     </p>
     <div class="primary-link">
-     <a href="https://ohmygrid.org/map-it/" target="_blank" rel="noopener">
-    Map It 📍
+     <a href="/starter-kit/" target="_blank" rel="noopener">
+      Learn Grid Mapping ⚡
      </a>
     </div>
     <div class="social-links">
-      <a href="https://ohmygrid.org/impact/" target="_blank" rel="noopener">
-        💡 Impact
+      <a href="https://discord.gg/a5znpdFWfD" target="_blank" rel="noopener">
+        Join our Community
       </a>
-      <a href="https://wiki.openstreetmap.org/wiki/Power_networks" target="_blank" rel="noopener">
-        <img src="icons/OSM_wikilogo.svg" alt="Wiki" class="social-icon" /> Wiki
+      <a href="/map-it/" target="_blank" rel="noopener">
+        Map Your Grid 📍
       </a>
     </div>
   </div>
@@ -57,21 +57,18 @@ body_class: landing-page
   <div class="get-involved-grid">
     <a href="https://discord.gg/a5znpdFWfD" class="get-involved-card">
       <div class="card-icon">
-        <img src="/icons/discord.svg" alt="Discord" class="icon-svg">
       </div>
       <h3>Join Our Community</h3>
       <p>Connect with fellow contributors on Discord and participate in our community discussions.</p>
     </a>
-    <a href="https://ohmygrid.org/starter-kit/" class="get-involved-card">
+    <a href="/starter-kit/" class="get-involved-card">
       <div class="card-icon">
-        <img src="/images/josm_logo.jpg" alt="Discord" class="icon-svg">
       </div>
       <h3>Learn Grid Mapping</h3>
       <p>Start contributing to OpenStreetMap and help map the electrical grid in your area.</p>
     </a>
-    <a href="https://ohmygrid.org/map-it/" class="get-involved-card">
+    <a href="/map-it/" class="get-involved-card">
       <div class="card-icon">
-        <span class="icon-emoji">📍</span>
       </div>
       <h3>Contribute to your Country</h3>
       <p>Apply advanced mapping strategies and tools to your local transmission grid.</p>
