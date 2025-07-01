@@ -10,8 +10,6 @@ nav:
   - Starter-Kit: starter-kit.md
   - Map It📍: map-it.md
   - Tools and Strategies: tools.md
-  # - Guidelines : guidelines.md
-  # - Curated Grid Maps: awesome.md
   - Our Progress : progress.md
   - Blog:
       2025:
@@ -85,6 +83,7 @@ markdown_extensions:
   - pymdownx.tabbed:
       alternate_style: true
   - pymdownx.snippets
+
 
 plugins:
   - glightbox

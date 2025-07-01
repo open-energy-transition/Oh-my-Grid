@@ -9,11 +9,11 @@ hide:
 <h1>Map It 📍</h1>
 </div>
 Welcome to our interactive launchpad and hub for contributing to power grid mapping via OpenStreetMap! Click on a country or state below to start mapping power infrastructure directly in JOSM. :rocket:
-If this is your first time grid mapping, please go through the [Starter-Kit Tutorial](https://ohmygrid.org/starter-kit/). You can use the **#ohmygrid** hashtag in your changeset to show your support for our initiative when you make an edit! <br>
+If this is your first time grid mapping, please go through the [Starter-Kit](/starter-kit/). You can use the **#ohmygrid** hashtag in your changeset to show your support for our initiative when you make an edit! <br>
 To start mapping, please open JOSM and load your data: 
 
 1. The **Default Transmission (90 kV+)** pulls all power infrastructure relevant for the **transmission grid**. For more details about which data is pulled via Overpass please read our [OpenStreetMap Grid Definitions](https://github.com/open-energy-transition/osm-grid-definition). Distribution grids are barely visible in satellite data and should therefore only be mapped in individual cases.
-2. The Osmose, Global Energy Monitor, and Wikidata buttons provide **hint layer** data, which you can read about in our [Tools and Strategies](https://ohmygrid.org/tools/) page. Please note that this hint layers only work at a national level. 
+2. The Osmose, Global Energy Monitor, and Wikidata buttons provide **hint layer** data, which you can read about in our [Tools and Strategies](/tools/) page. Please note that this hint layers only work at a national level. 
 
 <!-- Beginning of Map section-->
 <style>
@@ -674,13 +674,13 @@ fetch('../data/regionsv2.geojson')
   .catch(error => console.error('Regions GeoJSON error:', error));
 </script>
 
-??? info "Map Legend"
+??? info "Map Legend for the recommended [MapCSS](/starter-kit/#coloring-your-grid-map-and-legend)"
     <img 
       src="https://raw.githubusercontent.com/open-energy-transition/color-my-grid/refs/heads/main/legend/power-grid-legend.png" 
       class="img-border image-caption" 
       alt="Power Grid Legend"
       style="display: block; margin-left: auto; margin-right: auto;"
-      width="400">
+      width="600">
 
 :mag: Below you can find "Starter powerlines" where we have found some lines which you can map if you are new. <br>
 **Please** check the box if you mapped this line, so as to not waste other people's time! Once part of the community, we can grant you access to this spreadsheet so you can add other lines if you want.
@@ -746,9 +746,10 @@ fetch('../data/regionsv2.geojson')
 ⚠️Please do NOT copy any data from **hint layer** directly into your OpenStreetMap data layer. Every data point in your OpenStreetMap data layer must be manually set and [verified](https://wiki.openstreetmap.org/wiki/Verifiability). The metadata must also be verified against compatible licensed sources or by people on the ground. If you cannot verify the data using satellite images or any other compatible source, please do not add this information from hint layers. This may seem like a high burden at first, but it ensures the high quality of OpenStreetMap.⚠️
 
 
-## <div class="tools-header">Mapping Guidelines </div>
+## <div class="tools-header">Mapping Guidelines</div>
 The following list provides the main good practices for mapping different power infrastructure in OpenStreetMap:
 
+* [Power networks](https://wiki.openstreetmap.org/wiki/Power_networks)
 * [Power networks/Guidelines](https://wiki.openstreetmap.org/wiki/Power_networks/Guidelines)
 * [Power networks/Guidelines/Power lines](https://wiki.openstreetmap.org/wiki/Power_networks/Guidelines/Power_lines)
 * [Power networks/Guidelines/Substations](https://wiki.openstreetmap.org/wiki/Power_networks/Guidelines/Substations)
