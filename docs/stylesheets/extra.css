@@ -614,6 +614,14 @@ aside.md-banner a>div {
   color: #fff !important;
 }
 
+@media (max-width: 768px) {
+  /* Banner Text Font Size Adjustment for Mobile */
+  aside.md-banner a strong {
+    font-size: 0.9em; /
+  }
+}
+
+
 /* -----------------------------------------frame around repo link top right---------------------------------------------------------------------*/
 .md-source {
   background-color: transparent !important;
