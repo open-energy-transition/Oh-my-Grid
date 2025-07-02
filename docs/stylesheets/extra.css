@@ -657,7 +657,7 @@ aside.md-banner a>div {
   opacity: 1 !important;
 }
 
-/* Hide the second topic (page title) */
+/* Hide the second topic (navpage title) */
 .md-header__title .md-header__topic:last-child {
   transform: translateY(2.5rem) !important;
   opacity: 0 !important;
