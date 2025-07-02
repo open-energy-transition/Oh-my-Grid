@@ -80,6 +80,8 @@
 /* -------------------------Navigation bar css-------------------------------------------------------------------------------------*/
 .md-tabs__link {
   font-weight: bold;
+  padding: 0rem 1rem;
+  font-size: 0.75rem; /* I think default is 0.7 rem for mkdocs material, but I made it slightly bigger */
 }
 
 /* -------------------------General all pages css stuff-------------------------------------------------------------------------------------*/
@@ -615,14 +617,14 @@ aside.md-banner a>div {
 /* -----------------------------------------frame around repo link top right---------------------------------------------------------------------*/
 .md-source {
   background-color: transparent !important;
-  border: 2px solid #fff !important;
+  border: 1.3px solid #fff !important;
   border-radius: 8px !important;
-  padding: 0.2rem 0.4rem !important;
+  padding: 0.1rem 0.1rem !important;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
   transition: all 0.3s ease !important;
   text-decoration: none !important;
   color: #ffff !important;
-  max-width: 160px !important;
+  max-width: 140px !important;
   /* Limit the maximum width */
   width: auto !important;
   overflow: hidden !important;
@@ -636,4 +638,10 @@ aside.md-banner a>div {
 
 .no-toc .md-nav__link {
   display: none;
+}
+
+/* -----------------------------------------make the title (ohmygird) of page bigger in the topbar---------------------------------------------------------------------*/
+.md-header-nav__title .md-ellipsis,
+.md-header__title .md-ellipsis {
+  font-size: 1.2rem !important;      /* your larger size */
 }
