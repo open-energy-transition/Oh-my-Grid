@@ -341,37 +341,53 @@ body.landing-page header.md-header {
 
 /* ==== MEDIA QUERIES (Adjustments for smaller screens) ==== */
 @media (max-width: 768px) {
+  /* Hero Section Adjustments */
   .hero-section {
-      flex-direction: column-reverse;
-      text-align: center;
-      justify-content: center;
-      padding: 3rem 1rem;
+    flex-direction: column-reverse; /* Stack logo on top of content */
+    text-align: center;
+    justify-content: center;
+    padding: 3rem 1rem;
+    flex-wrap: wrap; /* Allow the section to wrap its children on mobile */
   }
 
   .hero-content-left {
-      text-align: center;
-      max-width: 100%;
+    text-align: center;
+    max-width: 100%; /* Allow to take full width */
+    min-width: auto; /* Remove fixed min-width for mobile */
+    flex: 1 1 auto; /* Allow growth/shrinkage based on content */
   }
 
   .hero-content-right {
-      margin-bottom: 2rem;
+    margin-bottom: 2rem; /* Add spacing below logo on mobile */
+    flex-basis: auto; /* Let content define its size */
   }
 
   .hero-section .hero-title {
-      font-size: 2.5rem;
+    font-size: 2.5rem; /* Smaller title on mobile */
+  }
+
+  .hero-logo {
+    width: 80% !important; /* Scale logo down for mobile */
+    max-width: 300px !important; /* Cap its size for slightly larger mobile screens */
   }
 
   .mission-statement {
-    font-size: 1.2rem;
+    text-align: center !important; /* Center mission statement on mobile */
+  }
+  
+  .primary-link a {
+    padding: 0.5rem 0.8rem; /* Smaller padding for mobile */
+    font-size: 1.1rem; /* Optionally slightly reduce font size for mobile too */
   }
 
   .social-links {
-      justify-content: center;
-      gap: 0.8rem;
+    justify-content: center; /* Center buttons on mobile */
+    gap: 0.8rem;
+    flex-wrap: wrap; /* Allow buttons to wrap if necessary on mobile */
   }
 
   .social-links a {
-      padding: 0.5rem 1rem;
+    padding: 0.5rem 1rem;
   }
 
   .initiative-content h2,
