@@ -14,7 +14,7 @@ Using the right tools and strategies is fundamental to mapping the electrical gr
 
 <div style="float: right; margin: 5px 0 20px 20px; width: 350px;">
     <img src="../images/osmose-unfinished-transmission-lines.jpg" class="img-border" alt="Osmose example">
-    <figcaption class="image-caption">Osmose will provide you with a GeoJSON file containing the unfinished transmission power lines (shown as blue triangles) in the specified country, in this case Columbia. </figcaption>
+    <figcaption class="image-caption">Osmose will provide you with a GeoJSON file containing the unfinished transmission power lines (shown as blue triangles) in the specified country, in this case Colombia. </figcaption>
 </div>
 
 _Continue Open Lines_ is the most efficent and most beginner friendly Strategy. It is directly integrated in [Map It📍](https://ohmygrid.org/map-it/). The strategy mainly depends on [osmose](https://osmose.openstreetmap.fr/en/map/), a quality assurance tool that detects issues in OpenStreetMap data on a daily basis. These include different power classes of issues, such as "unfinished power transmission lines" : 
@@ -42,7 +42,7 @@ As most large power plants are directly connected to the transmission grid, Conn
 
 <div style="float: right; margin: 5px 0 20px 20px; width: 350px;">
     <img src="../images/connect-power-plants.jpg" class="img-border" alt="GEM Angola Data Example in JOSM">
-  <figcaption class="image-caption">Global Energy Monitor power plants(red) in relation to the grid data(green) for Angola</figcaption>
+  <figcaption class="image-caption">A power plant in Colombia is located close to a large substation.</figcaption>
 </div>
 
 1. Select 'Global Energy Monitor – Power Plants' as the hint layer and press the country you like to map.
