@@ -603,7 +603,7 @@
 
 /* -----------------------------------------announce banner at top---------------------------------------------------------------------*/
 aside.md-banner {
-  background-color: #7bbc8c !important;
+  background-color: #037a4c !important;
   color: #ffffff !important;
 }
 
@@ -611,7 +611,7 @@ aside.md-banner {
 aside.md-banner a,
 aside.md-banner a>div {
   background: transparent !important;
-  color: #000 !important;
+  color: #fff !important;
 }
 
 /* -----------------------------------------frame around repo link top right---------------------------------------------------------------------*/
