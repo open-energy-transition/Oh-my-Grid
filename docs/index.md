@@ -19,6 +19,7 @@ body_class: landing-page
     <div class="social-links">
       <a href="https://discord.gg/a5znpdFWfD" target="_blank" rel="noopener">
         Join our Community
+        <img src="icons/discord.svg" alt="Discord" class="social-icon off-glb" >
       </a>
       <a href="/map-it/" target="_blank" rel="noopener">
         Map Your Grid 📍
