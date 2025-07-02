@@ -427,35 +427,3 @@ You can find more stats for #ohmygrid at [OhsomeNowstats](https://stats.now.ohso
 ![Flag Suriname](http://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Suriname.svg){width=20px} [Suriname](countrypages/Suriname.md) - 
 ![Flag Uruguay](http://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Uruguay.svg){width=20px} [Uruguay](countrypages/Uruguay.md) - 
 ![Flag Venezuela](http://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Venezuela.svg){width=20px} [Venezuela](countrypages/Venezuela.md) - 
-
-## [**Nepal**](https://wiki.openstreetmap.org/wiki/Power_networks/Nepal) 🇳🇵 
-??? success "Mapping progress example"
-    **Progress timeline**
-    
-    === "Before (April 2025)"
-        ![Nepal before mapping](images/logbook/nepal-march2025.png){: .img-border }
-        *April 8th, 2025*
-        
-    === "After (May 2025)"
-        ![Nepal after mapping](images/logbook/nepal-may2025.png){: .img-border }
-        *May 2, 2025*
-
-    ### Success stories 
-    - Added Nepal's largest power plant (456 MW)
-    - Mapped 132kv Nepal-India interconnector
-    - Finalised 400kv lines
-    - Connected Pokhara-Butwal substations
-
-    ### Key numbers 
-    - **+3137** power towers added (10k total)
-    - **+1120km** power lines (44% increase, as prior to our mapping, the transmission grid was 2560km)
-    - **+980 MW** added capacity (1260 MW total)
-
-
-##**Want to track and see your personal mapping progress (KPI)? :white_check_mark:** <br>
-This [repository](https://github.com/open-energy-transition/KPI-OSM/tree/main) has a few different scripts (Overpass and Python) to measure your KPI's, as well as a [web-interface](https://open-energy-transition.github.io/KPI-OSM/). You can see how many towers you have placed and the respective line voltage, the power line length you have edited in km, the amount of MW capacity you added as a % of the country's mapped capacity, and a distribution table by voltage of substations you have added. <br>
-<div class="heatmap-container">
-  <img src="../images/kp3.png" class="img-border" width="400">
-  <img src="../images/kp4.png" class="img-border" width="400">
-</div>
-
