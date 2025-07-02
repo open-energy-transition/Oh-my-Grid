@@ -27,7 +27,7 @@ body_class: landing-page
     </div>
   </div>
   <div class="hero-content-right">
-    <img src="images/logo.png" style="width: 70%; height: auto; display: block; margin: 0 auto;">
+    <img src="images/logo-t2.png" class="hero-logo off-glb">
   </div>
 </div>
 

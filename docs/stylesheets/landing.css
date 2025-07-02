@@ -20,19 +20,21 @@ body.landing-page header.md-header {
   justify-content: space-between;
   padding: 4rem 2rem;
   gap: 2rem;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 
 }
 
 .hero-content-left {
-  flex: 1;
+  flex: 1 1 50%;
   max-width: 600px;
   text-align: left;
+  min-width: 450px;
 }
 
 .hero-content-right {
   flex-shrink: 0;
   text-align: center;
+  flex-basis: auto;
 }
 
 /* Increased Specificity for Hero Title */
@@ -46,12 +48,13 @@ body.landing-page header.md-header {
 
 .hero-logo {
     /* pick the exact pixel width you want: */
-    width: 400px !important;
+    width: 700px !important;
     /* undo any “max-width:100%” from the theme */
     max-width: none !important;
     height: auto !important;
     display: block;
-    margin: 0; /* so it doesn’t accidentally center itself */
+    margin-left: auto;
+    margin-right: auto;
   }
 
 .mission-statement {
