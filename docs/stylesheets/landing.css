@@ -1,15 +1,13 @@
-/* ==== GENERAL/BODY (Optional, but good for base font) ==== */
+/* ==== GENERAL/BODY  ==== */
 body {
-    font-family: sans-serif; /* Or your preferred font */
+    font-family: sans-serif; 
 }
 
-/* Increased Specificity for Header Background - Try this if previous didn't work */
+/* Increased Specificity for Header Background -  */
 body.landing-page header.md-header {
   background-color: #e9f5e9 !important; /* Match the hero section background color */
-  box-shadow: none !important; /* Optional: remove shadow if it looks better */
-  /* Add !important for temporary debugging ONLY if nothing else works */
-  /* background-color: #e9f5e9 !important; */
-  /* box-shadow: none !important; */
+  box-shadow: none !important; 
+
 }
 
 
@@ -37,7 +35,7 @@ body.landing-page header.md-header {
   text-align: center;
 }
 
-/* Increased Specificity for Hero Title (from previous step) */
+/* Increased Specificity for Hero Title */
 .hero-section .hero-title {
   font-size: 3.5rem;
   color: #54a36a;
@@ -255,6 +253,7 @@ body.landing-page header.md-header {
   align-items: center;
   margin-bottom: -0.5rem;
   height: 20px; /* Fixed height for consistent alignment */
+  font-size: 2rem; /* Size for emojis */
 }
 
 /*  SVG icon styling */

@@ -645,3 +645,20 @@ aside.md-banner a>div {
 .md-header__title .md-ellipsis {
   font-size: 1.2rem !important;      /* your larger size */
 }
+/* ---------------------------------make the title (ohmygird) of page stay and not change when scrolling-------------------------------------------------------*/
+/* Disable the header title animation completely */
+.md-header__title[data-md-component="header-title"] {
+  pointer-events: none;
+}
+
+/* Keep only the first topic (site name) visible */
+.md-header__title .md-header__topic:first-child {
+  transform: translateY(0) !important;
+  opacity: 1 !important;
+}
+
+/* Hide the second topic (page title) */
+.md-header__title .md-header__topic:last-child {
+  transform: translateY(2.5rem) !important;
+  opacity: 0 !important;
+}
