@@ -35,7 +35,7 @@ body_class: landing-page
   <div class="initiative-content">
     <h2>Why This Matters</h2>
     <p> Transitioning away from fossil energy sources—which account for over 75% of global greenhouse gas emissions—requires rapid modernization of the <b>electrical grid</b>, <a href="https://iea.blob.core.windows.net/assets/70f2de45-6d84-4e07-bfd0-93833e205c81/ElectricityGridsandSecureEnergyTransitions.pdf" target="_blank" rel="noopener">a major bottleneck</a> to energy transition.</p>
-    <p>Despite the urgent need to expand the electricity grid, no open industrial data standard has been established for cross-border transmission. OpenStreetMap has emerged as the <b>unofficial de facto standard in academia and industry for grid data</b>. However, in developing countries, grid data remains poor, hindering both rural energy access and efforts to combat climate change:</p>
+    <p>Despite the urgent need to expand the electricity grid, no open industrial data standard has been established for cross-border transmission. OpenStreetMap has emerged as the <b>unofficial de facto standard in academia and industry for grid data</b>. However, in many developing countries, grid data remains poor, hindering both rural energy access and efforts to combat climate change:</p>
     <blockquote>
       Improve data reliability and availability to better assess and manage risks for clean energy projects in emerging market and developing economies.
     </blockquote>

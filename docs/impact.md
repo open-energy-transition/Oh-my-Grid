@@ -118,7 +118,7 @@ In contrast, some developed countries publish detailed open datasets outside of 
 * [**ENTSO-E**](https://www.entsoe.eu/data/map/) provides a Europe-wide **Transmission System Map** with geo-referenced infrastructure data.
 * The French grid operator **RTE** publishes its grid topology, including **5-minute resolution time-series data** on network operations ([RTE on GitHub](https://github.com/rte-france/structural-french-grid-data-with-detailed-topology-time-series)).
 
-<div style="float: right; margin: -25px 0 10px 50px; width: 350px;">
+<div style="float: right; margin: -25px 0 5px 50px; width: 350px;">
   <a href="../images/homeland-osm.png" target="_blank">
     <img src="../images/homeland-osm.png" class="img-border float-right" style="width: 400px;">
   </a>
@@ -142,9 +142,7 @@ Disclaimer: These organisations are not affiliated with OhMyGrid nor endorse it.
     
     === "[Energy and AI Observatory (link)](https://www.iea.org/data-and-statistics/data-tools/energy-and-ai-observatory)"
         ![map](images/impact/powerandai.jpg){: .img-border }
-
-
-**International Energy Agency**  ![IEA logo](images/impact/International-energy-agency-logo.png){width=30px} 
+ 
 ??? "Latin America Energy Outlook Interactive Map"
     
     === "[Latin America Energy Outlook Interactive Map (link)](https://www.iea.org/data-and-statistics/data-tools/latin-america-energy-outlook-interactive-map)"
