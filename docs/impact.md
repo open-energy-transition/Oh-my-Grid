@@ -215,6 +215,12 @@ Disclaimer: These organisations are not affiliated with OhMyGrid nor endorse it.
     === "[Energy Charts(link)](https://www.energy-charts.info/map/map.htm?l=en&c=DE&country=DE&lines=1110000&pp-source=bnetza&pp-bitmap=none)"
         ![map](images/impact/fraunhofermap.jpg){: .img-border }
 
+**ESMAP, IFC, VIDA** ![ESMAP](images/impact/ESMAP-logo.svg){width=45px} ![IFC](images/impact/IFC-logo.svg){width=65px} ![VIDA](images/impact/vida-logo.jpg){width=45px}
+??? "Distributed Renewable Energy (DRE) Atlas"
+    
+    === "[Distributed Renewable Energy (DRE) Atlas(link)](https://dre.energydata.info/)"
+        ![map](images/impact/DRE-atlas.jpg){: .img-border }
+
 
 
 
