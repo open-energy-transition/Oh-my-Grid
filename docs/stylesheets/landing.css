@@ -7,7 +7,6 @@ body {
 body.landing-page header.md-header {
   background-color: #e9f5e9 !important; /* Match the hero section background color */
   box-shadow: none !important; 
-
 }
 
 
@@ -21,6 +20,7 @@ body.landing-page header.md-header {
   padding: 4rem 2rem;
   gap: 2rem;
   flex-wrap: nowrap;
+  margin-top: -3rem;
 
 }
 
