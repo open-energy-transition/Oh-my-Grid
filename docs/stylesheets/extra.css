@@ -106,7 +106,8 @@
 .md-header__button.md-logo img,
 .md-header__button.md-logo svg {
   width: auto;
-  height: 2.5rem;
+  height: 3.2rem;
+  margin-bottom: -0.35rem;
   /* Adjust this value (e.g., 2.5rem, 3rem) */
 }
 
