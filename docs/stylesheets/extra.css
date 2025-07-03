@@ -106,8 +106,8 @@
 .md-header__button.md-logo img,
 .md-header__button.md-logo svg {
   width: auto;
-  height: 3.2rem;
-  margin-bottom: -0.35rem;
+  height: 4rem;
+  margin-bottom: -0.6rem;
   /* Adjust this value (e.g., 2.5rem, 3rem) */
 }
 
@@ -668,7 +668,14 @@ aside.md-banner a>div {
 /* -----------------------------------------make the title (ohmygird) of page bigger in the topbar---------------------------------------------------------------------*/
 .md-header-nav__title .md-ellipsis,
 .md-header__title .md-ellipsis {
-  font-size: 1.2rem !important;      /* your larger size */
+  font-size: 1.4rem !important;      /* your larger size */
+}
+
+@media (max-width: 768px) {
+  .md-header-nav__title .md-ellipsis,
+  .md-header__title .md-ellipsis {
+    font-size: 1rem !important;      /* smaller than laptop */
+  }  
 }
 /* ---------------------------------make the title (ohmygird) of page stay and not change when scrolling-------------------------------------------------------*/
 /* Disable the header title animation completely */
