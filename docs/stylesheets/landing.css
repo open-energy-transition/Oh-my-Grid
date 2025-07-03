@@ -328,7 +328,7 @@ body.landing-page header.md-header {
     flex-direction: column-reverse; /* Stack logo on top of content */
     text-align: center;
     justify-content: center;
-    padding: 3rem 1rem;
+    padding: 2rem 1rem 0rem;
     flex-wrap: wrap; /* Allow the section to wrap its children on mobile */
   }
 
@@ -340,8 +340,11 @@ body.landing-page header.md-header {
   }
 
   .hero-content-right {
-    margin-bottom: 2rem; /* Add spacing below logo on mobile */
-    flex-basis: auto; /* Let content define its size */
+    margin-bottom: 0rem;
+    flex-basis: auto;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
   }
 
   .hero-section .hero-title {
@@ -349,8 +352,8 @@ body.landing-page header.md-header {
   }
 
   .hero-logo {
-    width: 100% !important; /* Scale logo down for mobile */
-    max-width: 500px !important; /* Cap its size for slightly larger mobile screens */
+    width: 120% !important; /* Scale logo down for mobile */
+    max-width: 800px !important; /* Cap its size for slightly larger mobile screens */
   }
 
   .mission-statement {
