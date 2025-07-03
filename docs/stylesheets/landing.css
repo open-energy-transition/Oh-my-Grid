@@ -29,6 +29,7 @@ body.landing-page header.md-header {
   max-width: 600px;
   text-align: left;
   min-width: 450px;
+  padding-bottom: 4rem;
 }
 
 .hero-content-right {
@@ -48,7 +49,7 @@ body.landing-page header.md-header {
 
 .hero-logo {
     /* pick the exact pixel width you want: */
-    width: 700px !important;
+    width: 790px !important;
     /* undo any “max-width:100%” from the theme */
     max-width: none !important;
     height: auto !important;
@@ -67,73 +68,54 @@ body.landing-page header.md-header {
   text-align: left !important;
 }
 
-.social-links {
+/* ==== HERO BUTTONS ==== */
+.hero-buttons {
   display: flex;
   gap: 1rem;
   justify-content: flex-start;
   margin-top: 2rem;
   align-items: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 
-.social-links a {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  color: #2a6d3c;
-  text-decoration: none;
-  transition: all 0.3s;
-  padding: 0.6rem 1.2rem;
-  border-radius: 0.5rem;
-  background: white;
-  border: 1px solid #ddd;
-  font-weight: 600;
-}
-
-.social-links a:hover {
-  color: #54a36a;
-  transform: translateY(-2px);
-  background: #f8f9fa;
-  box-shadow: 0 4px 8px rgba(42, 109, 60, 0.1);
-  border-color: #ccc;
-}
-
-.social-icon {
-  width: 20px;
-  height: 20px;
-}
-
-/* — Primary “Start Mapping!” button — */
-.primary-link {
-  /* push the social-links further down */
-  margin-bottom: 1.5rem;
-}
-
-.primary-link a {
-  /* same base style as .social-links a, but slightly larger */
+.btn {
   display: inline-flex;
   align-items: center;
-  gap: 0.6rem;           
-  padding: 0.6rem 1.3rem; 
-  font-size: 1.3rem;      
-  font-weight: 700;       
-  color: #ffffff;         
-  background: #54a36a;    
-  border: none;
+  gap: 0.6rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: 700;
   border-radius: 0.5rem;
   text-decoration: none;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
   transition: transform 0.2s, filter 0.2s;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
-.primary-link a:hover {
+.btn-primary {
+  color: #ffffff !important;
+  background: #54a36a;
+  border: none;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.btn-secondary {
+  color: #2a6d3c !important;
+  background: white;
+  border: 1px solid #ddd;
+}
+
+.btn:hover {
   transform: translateY(-2px);
+}
+
+.btn-primary:hover {
   filter: brightness(1.1);
 }
 
-.primary-icon {
-  font-size: 1.2rem;    /* bump it up a bit */
-  line-height: 1;       /* prevent weird vertical alignment */
+.btn-secondary:hover {
+  background: #f8f9fa;
+  border-color: #ccc;
 }
 
 /* ==== Why it matters SECTION ==== */
@@ -367,27 +349,28 @@ body.landing-page header.md-header {
   }
 
   .hero-logo {
-    width: 80% !important; /* Scale logo down for mobile */
-    max-width: 300px !important; /* Cap its size for slightly larger mobile screens */
+    width: 100% !important; /* Scale logo down for mobile */
+    max-width: 500px !important; /* Cap its size for slightly larger mobile screens */
   }
 
   .mission-statement {
     text-align: center !important; /* Center mission statement on mobile */
   }
   
-  .primary-link a {
-    padding: 0.5rem 0.8rem; /* Smaller padding for mobile */
-    font-size: 1.1rem; /* Optionally slightly reduce font size for mobile too */
-  }
-
-  .social-links {
+  .hero-buttons {
+    flex-direction: column; /* Stack buttons vertically on mobile */
+    gap: 1rem;
     justify-content: center; /* Center buttons on mobile */
-    gap: 0.8rem;
-    flex-wrap: wrap; /* Allow buttons to wrap if necessary on mobile */
+    align-items: center; /* Center align buttons */
+    margin-top: 2rem;
   }
 
-  .social-links a {
-    padding: 0.5rem 1rem;
+  .btn {
+    width: 100%; /* Make buttons full width on mobile */
+    max-width: 280px; /* But cap the width so they don't get too wide */
+    justify-content: center; /* Center the content within buttons */
+    padding: 0.75rem 1rem; /* Slightly larger padding for easier touch */
+    font-size: 1rem;
   }
 
   .initiative-content h2,

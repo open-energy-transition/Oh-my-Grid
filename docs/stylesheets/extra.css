@@ -657,6 +657,7 @@ aside.md-banner a>div {
 /* Disable the header title animation completely */
 .md-header__title[data-md-component="header-title"] {
   pointer-events: none;
+  margin-left: -0.5rem !important;
 }
 
 /* Keep only the first topic (site name) visible */

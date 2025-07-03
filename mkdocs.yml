@@ -21,8 +21,8 @@ copyright:    <a href="https://creativecommons.org/licenses/by/4.0/" target="_bl
 theme:
   name: material
   custom_dir: docs/overrides
-  favicon: images/logo-favicon.png
-  logo: images/logo-t2.png
+  favicon: images/logos/logo-favicon.png
+  logo: images/logos/ohmygrid-logo.png
   palette:
     # Light Mode
     - scheme: default

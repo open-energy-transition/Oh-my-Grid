@@ -11,23 +11,17 @@ body_class: landing-page
     <h1 class="hero-title">OhMyGrid</h1>
     <p class="mission-statement"> We empower individuals, communities and nations around the world to map the electrical grid.
     </p>
-    <div class="primary-link">
-     <a href="/starter-kit/" target="_blank" rel="noopener">
+    <div class="hero-buttons">
+     <a href="/starter-kit/" target="_blank" rel="noopener" class="btn btn-primary">
       Learn Grid Mapping ⚡
      </a>
-    </div>
-    <div class="social-links">
-      <a href="https://discord.gg/a5znpdFWfD" target="_blank" rel="noopener">
-        Join our Community
-        <img src="icons/discord.svg" alt="Discord" class="social-icon off-glb" >
-      </a>
-      <a href="/map-it/" target="_blank" rel="noopener">
+      <a href="/map-it/" target="_blank" rel="noopener" class="btn btn-secondary">
         Map Your Grid 📍
       </a>
     </div>
   </div>
   <div class="hero-content-right">
-    <img src="images/logo-t2.png" class="hero-logo off-glb">
+    <img src="images/logos/ohmygrid-logo.png" class="hero-logo off-glb">
   </div>
 </div>
 
