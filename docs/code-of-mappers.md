@@ -54,5 +54,5 @@ This Code of Mappers outlines the shared values, responsibilities, and safe prac
 
 ---
 
-By adhering to this Code of Mappers, we collectively protect the integrity of the OSM platform, foster trust with communities, and unlock the power of open data for a more resilient and just energy future.
+By following our Code of Mappers, we collectively protect the integrity of the OSM platform, foster trust with communities, and unlock the power of open data for a more resilient and just energy future.
 
