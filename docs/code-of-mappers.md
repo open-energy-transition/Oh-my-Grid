@@ -1,10 +1,14 @@
+---
+hide:
+  - navigation
+  - toc
+  - footer
+---
 
+# **Code of Mappers**
+## For Responsible, Ethical, and Impactful Grid Mapping
 
-# Code of Mappers
-
-*For Responsible, Ethical, and Impactful Grid Mapping*
-
-This Code of Mappers outlines the shared values, responsibilities, and safe practices for individuals and organizations participating in grid mapping activities in OpenStreetMap. It is designed to safeguard communities, promote transparency, and protect sensitive areas—while enabling open data for global development and energy resilience.
+This Code of Mappers outlines the shared values, responsibilities, and safe practices for individuals and organizations participating in grid mapping activities in OpenStreetMap. It is designed to safeguard communities, promote transparency, and protect sensitive areas while enabling open data for global development and energy resilience.
 
 ---
 
@@ -24,11 +28,11 @@ This Code of Mappers outlines the shared values, responsibilities, and safe prac
 
 ---
 
-### 3. **Map What Matters — and Only What Matters**
+### 3. **Map What Matters and Only What Matters**
 
 * Map only features relevant to grid planning and modeling (e.g., line routes, towers, voltage levels, substation footprints).
 * Do **not** map sensitive internal components such as control rooms, surveillance systems, or security details.
-* Detailed mapping of bus bars, detailed routing and circuits within substations should only be carried out in collaboration with local mappers and utility operators.
+* Detailed mapping of busbars, detailed routing and circuits within substations should only be carried out in collaboration with local mappers and utility operators.
 
 ---
 
@@ -45,7 +49,7 @@ This Code of Mappers outlines the shared values, responsibilities, and safe prac
 ### 5. **Respect OpenStreetMaps License and Import Rules**
 
 
-* Respect the [Verifiability rules of OpenStreetMap](https://wiki.openstreetmap.org/wiki/Verifiability) and only map objects that you can classify with the naked eye or using official satellite data.
+* Respect the [Verifiability rules of OpenStreetMap](https://wiki.openstreetmap.org/wiki/Verifiability) and only map objects that **you** can classify with the naked eye or using official satellite data.
 * Do not directly copy any data into OpenStreetMap layers. You are allowed to use other datasets as a hint layer but never copy data/paste any data directly to OpenStreetMap data layers. If you want to import data, please refer to the offical [Import Guidelines](https://wiki.openstreetmap.org/wiki/Import/Guidelines)
 
 ---
