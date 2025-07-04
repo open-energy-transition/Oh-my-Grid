@@ -231,9 +231,9 @@ Disclaimer: These organisations are not affiliated with OhMyGrid nor endorse it.
     === "[windPRO is an industry standard for designing, planning, and evaluating wind and solar energy projects](https://help.emd.dk/mediawiki/index.php/EMD_Electrical_Grid_Map)"
         ![map](images/impact/WindPro.jpg){: .img-border } 
 
+## <div class="tools-header">Still got questions?</div>
 
-
-
+Check out our [Q&A page](q&a.md).
 
 
 
