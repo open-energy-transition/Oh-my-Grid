@@ -219,6 +219,12 @@ Disclaimer: These organisations are not affiliated with OhMyGrid nor endorse it.
     === "[Distributed Renewable Energy (DRE) Atlas(link)](https://dre.energydata.info/)"
         ![map](images/impact/DRE-atlas.jpg){: .img-border }
 
+**GridRaven** ![GridRaven](images/impact/raven.png){width=15px} 
+??? "Dynamic Line Ratings with precision weather forecasting"
+    
+    === "[Dynamic Line Ratings with precision weather forecasting](https://claw.gridraven.com/world)"
+        ![map](images/impact/GridRaven.jpg){: .img-border }
+
 
 
 
