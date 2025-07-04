@@ -49,7 +49,7 @@ body.landing-page header.md-header {
 
 .hero-logo {
     /* pick the exact pixel width you want: */
-    width: 790px !important;
+    width: 20rem !important;
     /* undo any “max-width:100%” from the theme */
     max-width: none !important;
     height: auto !important;

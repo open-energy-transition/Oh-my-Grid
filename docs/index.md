@@ -61,7 +61,7 @@ body_class: landing-page
       <div class="card-icon">
        ⚡
       </div>
-      <h3>Learn Grid Mapping</h3>
+      <h3>Get Started Grid Mapping</h3>
       <p>Start contributing to OpenStreetMap and help map the electrical grid in your area.</p>
     </a>
     <a href="/map-it/" class="get-involved-card">
