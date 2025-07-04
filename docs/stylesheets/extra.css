@@ -671,17 +671,18 @@ aside.md-banner a>div {
   font-size: 1.4rem !important;      /* your larger size */
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1220px) {
   .md-header-nav__title .md-ellipsis,
   .md-header__title .md-ellipsis {
     font-size: 1rem !important;      /* smaller than laptop */
+    margin-left: 0.75rem !important;
   }  
 }
 /* ---------------------------------make the title (ohmygird) of page stay and not change when scrolling-------------------------------------------------------*/
 /* Disable the header title animation completely */
 .md-header__title[data-md-component="header-title"] {
   pointer-events: none;
-  margin-left: -0.75rem !important;
+  margin-left: -0.6rem !important;
 }
 
 @media (max-width: 768px) {

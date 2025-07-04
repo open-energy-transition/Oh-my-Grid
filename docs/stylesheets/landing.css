@@ -318,7 +318,55 @@ body.landing-page header.md-header {
   object-fit: contain; /* Ensure the logo scales nicely without distortion */
 }
 
+/* ==== RESPONSIVE HERO SECTION FIX ==== */
+/* Add intermediate breakpoint for tablets/small laptops */
+@media (max-width: 1200px) and (min-width: 100px) {
+  .hero-section {
+    flex-direction: column-reverse; /* Stack logo above content */
+    text-align: center;
+    justify-content: center;
+    padding: 2rem 1rem;
+  }
 
+  .hero-content-left {
+    text-align: center;
+    max-width: 100%;
+    min-width: auto;
+    flex: 1 1 auto;
+  }
+
+  .hero-content-right {
+    margin-bottom: 1rem;
+    flex-basis: auto;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+
+  .hero-section .hero-title {
+    font-size: 3rem; /* Slightly smaller than desktop but larger than mobile */
+  }
+
+  .hero-logo {
+    width: 70% !important; /* Scale logo appropriately for tablet */
+    max-width: 600px !important;
+  }
+
+  .mission-statement {
+    text-align: center !important;
+    font-size: 1.1rem; /* Slightly smaller */
+  }
+
+  .hero-buttons {
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Allow wrapping if needed */
+  }
+
+  .btn {
+    max-width: 250px; /* Prevent buttons from getting too wide */
+  }
+}
 
 
 /* ==== MEDIA QUERIES (Adjustments for smaller screens) ==== */
