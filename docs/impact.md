@@ -225,6 +225,12 @@ Disclaimer: These organisations are not affiliated with OhMyGrid nor endorse it.
     === "[Dynamic Line Ratings with precision weather forecasting](https://claw.gridraven.com/world)"
         ![map](images/impact/GridRaven.jpg){: .img-border }
 
+**windPRO** ![windPRO](images/impact/Windpro_v2_rgb.png){width=15px}
+??? "windPRO is an industry standard for designing, planning, and evaluating wind and solar energy projects."
+    
+    === "[windPRO is an industry standard for designing, planning, and evaluating wind and solar energy projects](https://help.emd.dk/mediawiki/index.php/EMD_Electrical_Grid_Map)"
+        ![map](images/impact/WindPro.jpg){: .img-border } 
+
 
 
 
