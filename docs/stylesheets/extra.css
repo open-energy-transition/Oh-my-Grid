@@ -671,7 +671,7 @@ aside.md-banner a>div {
   font-size: 1.4rem !important;      /* your larger size */
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1220px) {
   .md-header-nav__title .md-ellipsis,
   .md-header__title .md-ellipsis {
     font-size: 1rem !important;      /* smaller than laptop */
