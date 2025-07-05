@@ -231,6 +231,12 @@ Disclaimer: These organisations are not affiliated with OhMyGrid nor endorse it.
     === "[windPRO is an industry standard for designing, planning, and evaluating wind and solar energy projects](https://help.emd.dk/mediawiki/index.php/EMD_Electrical_Grid_Map)"
         ![map](images/impact/WindPro.jpg){: .img-border } 
 
+**ETAP** ![ETAP](images/impact/etap.jpg){width=15px}
+??? "ETAP® provides market-leading software and hardware solutions serving all stages of the electrical system lifecycle for utilities, infrastructure, industries and buildings."
+    
+    === "[ETAP® provides market-leading software and hardware solutions serving all stages of the electrical system lifecycle for utilities, infrastructure, industries and buildings](https://etap.com/product/gis-for-electric)"
+        ![map](images/impact/etap-osm.jpg){: .img-border } 
+
 
 
 
